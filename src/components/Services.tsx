@@ -34,6 +34,14 @@ const services = [
       "Reparos em consoles de todas as gerações, manutenção preventiva e troca de componentes.",
     link: "https://wa.me/message/TMEA4ZXLGX6WN1",
   },
+  {
+    imgSrc: "/impressora.avif",
+    alt: "Manutenção de Impressoras",
+    title: "Manutenção de<br/>Impressoras",
+    description:
+      "Diagnóstico e reparo de impressoras a laser e jato de tinta. Realizamos manutenção preventiva e troca de peças para garantir a melhor qualidade de impressão.",
+    link: "https://wa.me/message/TMEA4ZXLGX6WN1",
+  },
 ];
 
 export default function Services() {

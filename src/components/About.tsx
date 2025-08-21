@@ -22,7 +22,10 @@ const features = [
 
 export default function About() {
   return (
-    <section id="about" className="about-bg text-white py-16 md:py-24">
+    <section
+      id="about"
+      className="about-bg text-white py-16 md:py-0 md:min-h-screen md:flex md:items-center"
+    >
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="md:pr-8">
