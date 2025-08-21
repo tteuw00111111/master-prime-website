@@ -42,6 +42,14 @@ const services = [
       "Diagnóstico e reparo de impressoras a laser e jato de tinta. Realizamos manutenção preventiva e troca de peças para garantir a melhor qualidade de impressão.",
     link: "https://wa.me/message/TMEA4ZXLGX6WN1",
   },
+  {
+    imgSrc: "/pcgamer.avif",
+    alt: "Montagem de PC Gamer",
+    title: "Montagem de<br/>PC Gamer",
+    description:
+      "Montamos o PC Gamer dos seus sonhos. Selecionamos as melhores peças de acordo com seu orçamento e garantimos a máxima performance para seus jogos.",
+    link: "https://wa.me/message/TMEA4ZXLGX6WN1",
+  },
 ];
 
 export default function Services() {

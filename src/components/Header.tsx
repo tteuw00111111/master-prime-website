@@ -26,15 +26,16 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
         <div>
-          <Image
-            src="/master_prime_logo.png"
-            alt="Master Prime Logo"
-            width={150}
-            height={50}
-            className="h-12 w-auto"
-          />
+          <a href="#" aria-label="Voltar ao início">
+            <Image
+              src="/master_prime_logo.png"
+              alt="Master Prime Logo"
+              width={150}
+              height={50}
+              className="h-12 w-auto"
+            />
+          </a>
         </div>
 
         {/* Navegação Desktop */}
