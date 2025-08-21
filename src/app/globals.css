@@ -1,10 +1,6 @@
-/* src/app/globals.css */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Find and replace these existing styles in your globals.css file */
 
 .waves {
   position: relative;
@@ -15,12 +11,10 @@
 }
 
 .parallax > use {
-  /* Changed cubic-bezier to 'linear' for a smoother slide */
   animation: move-forever 25s linear infinite;
 }
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
-  /* Slightly slowed down durations for a more subtle effect */
   animation-duration: 10s;
 }
 .parallax > use:nth-child(2) {
@@ -33,7 +27,7 @@
 }
 .parallax > use:nth-child(4) {
   animation-delay: -5s;
-  animation-duration: 30s; /* Slowest layer is now more distinct */
+  animation-duration: 30s;
 }
 @keyframes move-forever {
   0% {
