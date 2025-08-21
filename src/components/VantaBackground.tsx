@@ -5,10 +5,12 @@ import * as THREE from "three";
 
 export default function VantaBackground() {
   const vantaRef = useRef(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [vantaEffect, setVantaEffect] = useState<any>(null);
 
   useEffect(() => {
     if (vantaRef.current && !vantaEffect) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any).THREE = THREE;
 
       import("vanta/dist/vanta.net.min.js").then((vantaModule) => {
