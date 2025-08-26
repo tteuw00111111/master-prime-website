@@ -4,8 +4,8 @@ import AnimatedWave from "./AnimatedWave";
 const services = [
   {
     imgSrc: "/phone.jpg",
-    alt: "Reparo de Smartphones",
-    title: "Reparo de<br/>Smartphones",
+    alt: "Reparo de Celulares",
+    title: "Reparo de<br/>Celulares",
     description:
       "Troca de telas, baterias e reparos em placas com agilidade e peças de alta qualidade.",
     link: "https://wa.me/message/TMEA4ZXLGX6WN1",
@@ -14,8 +14,7 @@ const services = [
     imgSrc: "/laptop.avif",
     alt: "Manutenção de Notebooks",
     title: "Manutenção de<br/>Notebooks",
-    description:
-      "Otimização de sistema, remoção de vírus, upgrade de hardware e reparos em geral.",
+    description: "Upgrade de hardware e reparos em geral.",
     link: "https://wa.me/message/TMEA4ZXLGX6WN1",
   },
   {
