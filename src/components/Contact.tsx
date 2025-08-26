@@ -66,7 +66,7 @@ export default function Contact() {
                   Nossa Localização
                 </h4>
                 <p className="text-gray-400 mb-6">
-                  Smart Shopping Campo Grande <br />
+                  Info Shopping Campo Grande <br />
                   Loja 101 - Master Prime
                 </p>
               </div>
