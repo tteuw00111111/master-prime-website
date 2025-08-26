@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -78,6 +79,20 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} ${roboto.variable} font-inter bg-[#0A0A0A] text-gray-200 antialiased`}
       >
         {children}
+        {/* 2. Add the Google Ads Scripts here */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17383658790"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17383658790');
+          `}
+        </Script>
       </body>
     </html>
   );
