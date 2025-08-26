@@ -25,15 +25,16 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Master Prime - Assistência Técnica Especializada",
+  title: "Master Prime - Reparos de Celular e Notebook | Campo Grande, RJ",
   description:
     "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos. Qualidade e confiança que você pode ver.",
   keywords: [
-    "assistência técnica",
-    "reparo smartphone",
+    "conserto de celular",
     "manutenção notebook",
+    "manutenção de computador",
     "conserto videogame",
     "Campo Grande",
+    "loja de reparos Campo Grande",
   ],
   authors: [{ name: "Master Prime" }],
   applicationName: "Master Prime",
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Master Prime - Assistência Técnica Especializada",
+    title: "Master Prime - Reparos de Celular e Notebook | Campo Grande, RJ",
     description:
       "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos.",
     type: "website",

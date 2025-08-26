@@ -16,12 +16,12 @@ export default function Hero() {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4">
-          Assistência Técnica <br /> Especializada
+          Conserto Especializado de <br /> Celulares e Notebooks
         </h2>
 
         <p className="text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-          Soluções rápidas e confiáveis para todos os seus aparelhos
-          eletrônicos. Qualidade e confiança que você pode ver.
+          Sua loja de reparos em Campo Grande. Soluções rápidas e confiáveis
+          para todos os seus aparelhos eletrônicos.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
