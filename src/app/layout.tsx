@@ -35,6 +35,12 @@ export const metadata: Metadata = {
     "Campo Grande",
   ],
   authors: [{ name: "Master Prime" }],
+  applicationName: "Master Prime",
+  icons: {
+    icon: "/icon1.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Master Prime - Assistência Técnica Especializada",
     description:
