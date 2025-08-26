@@ -14,7 +14,8 @@ const services = [
     imgSrc: "/laptop.avif",
     alt: "Manutenção de Notebooks",
     title: "Manutenção de<br/>Notebooks",
-    description: "Upgrade de hardware e reparos em geral.",
+    description:
+      "Upgrade de SSD e memória RAM, troca de tela e teclado, limpeza interna e reparos de hardware em geral.",
     link: "https://wa.me/message/TMEA4ZXLGX6WN1",
   },
   {
