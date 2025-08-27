@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   description:
     "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos. Qualidade e confiança que você pode ver.",
   alternates: { canonical: "https://master-prime.com/" },
+  verification: {
+    google: "_s5i9STeYhyJHp10jNIJ70pmDwmxx4y5HutIZMs178s",
+  },
   keywords: [
     "conserto de celular",
     "manutenção notebook",
@@ -92,7 +95,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Master Prime - Reparos de Celular e Notebook | Campo Grande, RJ",
+    title: "Master Prime - Reparos de Eletrônicos | Campo Grande, RJ",
     description:
       "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos.",
     type: "website",
