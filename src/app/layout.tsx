@@ -25,9 +25,10 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Master Prime - Reparos de Celular e Notebook | Campo Grande, RJ",
+  title: "Master Prime - Reparos de Eletrônicos | Campo Grande, RJ",
   description:
     "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos. Qualidade e confiança que você pode ver.",
+  alternates: { canonical: "https://master-prime.com/" },
   keywords: [
     "conserto de celular",
     "manutenção notebook",
