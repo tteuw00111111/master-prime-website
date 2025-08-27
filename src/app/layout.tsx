@@ -35,6 +35,53 @@ export const metadata: Metadata = {
     "conserto videogame",
     "Campo Grande",
     "loja de reparos Campo Grande",
+    "conserto de notebook campo grande",
+
+    "loja de conserto de notebook",
+
+    "reparo de notebook campo grande",
+
+    "troca de tela de notebook",
+
+    "troca de teclado notebook",
+
+    "upgrade de ssd e ram",
+
+    "formatar notebook campo grande",
+
+    "limpeza interna notebook",
+
+    "conserto de notebook perto de mim",
+    "conserto de celular campo grande",
+
+    "troca de tela de celular",
+
+    "troca de bateria de celular",
+
+    "conserto de iphone campo grande",
+
+    "troca de tela iphone original",
+
+    "troca de tela samsung",
+
+    "conserto de celular perto de mim",
+    "conserto de impressora campo grande",
+
+    "manutenção de impressora",
+
+    "reparo de impressora hp",
+
+    "reparo de impressora epson",
+    "conserto de videogame campo grande",
+
+    "reparo de playstation",
+
+    "reparo de xbox",
+    "montagem de pc gamer",
+
+    "montar pc gamer campo grande",
+
+    "upgrade de pc gamer",
   ],
   authors: [{ name: "Master Prime" }],
   applicationName: "Master Prime",
