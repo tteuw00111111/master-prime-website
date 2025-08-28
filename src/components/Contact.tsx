@@ -1,11 +1,41 @@
+// Contact.tsx - CÓDIGO ATUALIZADO
 import {
   FaWhatsapp,
   FaInstagram,
   FaMapMarkerAlt,
-  FaPhoneAlt, // Icon added
+  FaPhoneAlt,
 } from "react-icons/fa";
 
+// Definindo a tipagem para a função gtag no objeto window
+declare global {
+  interface Window {
+    gtag: (
+      type: "event",
+      eventName: "conversion",
+      eventParams: {
+        send_to: string;
+      }
+    ) => void;
+  }
+}
+
 export default function Contact() {
+  // --- PASSO 1: CRIAR A FUNÇÃO DE CONVERSÃO ---
+  // Esta função chama o snippet de evento que o Google Ads forneceu.
+  const handleWhatsAppClick = () => {
+    // Verificamos se a função gtag existe para evitar erros
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17383658790/doflCJ2Z2I8bEKaqluFA",
+      });
+      console.log("Evento de conversão 'Clique - WhatsApp' enviado.");
+    } else {
+      console.log(
+        "gtag não encontrada. O evento de conversão não pode ser enviado."
+      );
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -26,7 +56,7 @@ export default function Contact() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-            {/* --- CARD 1: WHATSAPP & PHONE (Updated) --- */}
+            {/* --- CARD 1: WHATSAPP & PHONE --- */}
             <div className="bg-gray-800/60 p-8 rounded-xl text-center border border-gray-700 flex flex-col justify-between">
               <div>
                 <FaWhatsapp className="text-green-500 text-6xl mx-auto mb-4" />
@@ -37,7 +67,6 @@ export default function Contact() {
                   Atendimento direto via WhatsApp para tirar suas dúvidas.
                 </p>
 
-                {/* --- New Phone Section Added Below --- */}
                 <div className="text-gray-400 mb-6">
                   <span className="text-sm">Ou ligue diretamente</span>
                   <a
@@ -51,6 +80,9 @@ export default function Contact() {
               </div>
               <a
                 href="https://wa.me/message/TMEA4ZXLGX6WN1"
+                // --- PASSO 2: ADICIONAR O onClick AO BOTÃO ---
+                // Aqui nós chamamos a função que criamos quando o usuário clica.
+                onClick={handleWhatsAppClick}
                 className="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105"
               >
                 <FaWhatsapp className="text-2xl" />
