@@ -1,4 +1,6 @@
-// Contact.tsx - CÓDIGO ATUALIZADO
+// Contact.tsx - VERSÃO FINAL E CORRIGIDA (28/08/2025)
+"use client"; // Corrige o erro de build do Next.js para componentes interativos
+
 import {
   FaWhatsapp,
   FaInstagram,
@@ -20,18 +22,20 @@ declare global {
 }
 
 export default function Contact() {
-  // --- PASSO 1: CRIAR A FUNÇÃO DE CONVERSÃO ---
-  // Esta função chama o snippet de evento que o Google Ads forneceu.
   const handleWhatsAppClick = () => {
-    // Verificamos se a função gtag existe para evitar erros
+    // Usando o snippet exato que você confirmou
+    const eventSnippet = {
+      send_to: "AW-17383658790/doflCJ2Z2I8bEKaqluFA",
+    };
+
     if (typeof window.gtag === "function") {
-      window.gtag("event", "conversion", {
-        send_to: "AW-17383658790/doflCJ2Z2I8bEKaqluFA",
-      });
-      console.log("Evento de conversão 'Clique - WhatsApp' enviado.");
-    } else {
+      window.gtag("event", "conversion", eventSnippet);
       console.log(
-        "gtag não encontrada. O evento de conversão não pode ser enviado."
+        "Evento de conversão 'Clique - WhatsApp' enviado com sucesso."
+      );
+    } else {
+      console.error(
+        "Função gtag não encontrada. O evento de conversão não foi enviado."
       );
     }
   };
@@ -80,8 +84,6 @@ export default function Contact() {
               </div>
               <a
                 href="https://wa.me/message/TMEA4ZXLGX6WN1"
-                // --- PASSO 2: ADICIONAR O onClick AO BOTÃO ---
-                // Aqui nós chamamos a função que criamos quando o usuário clica.
                 onClick={handleWhatsAppClick}
                 className="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105"
               >
@@ -90,7 +92,7 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* --- CARD 2: LOCATION --- */}
+            {/* --- O RESTO DOS SEUS CARDS (LOCALIZAÇÃO E INSTAGRAM) CONTINUAM AQUI --- */}
             <div className="bg-gray-800/60 p-8 rounded-xl text-center border border-gray-700 flex flex-col justify-between">
               <div>
                 <FaMapMarkerAlt className="text-red-500 text-6xl mx-auto mb-4" />
@@ -111,8 +113,6 @@ export default function Contact() {
                 Ver no Mapa
               </a>
             </div>
-
-            {/* --- CARD 3: INSTAGRAM --- */}
             <div className="bg-gray-800/60 p-8 rounded-xl text-center border border-gray-700 flex flex-col justify-between">
               <div>
                 <FaInstagram className="text-pink-500 text-6xl mx-auto mb-4" />
