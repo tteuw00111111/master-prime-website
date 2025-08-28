@@ -130,8 +130,17 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} ${roboto.variable} font-inter bg-[#0A0A0A] text-gray-200 antialiased`}
       >
+        {/* 1. Adicione o script do Cookiebot AQUI, antes de tudo */}
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="6638f2ea-d449-4fd0-81ed-4edc2486effd"
+          strategy="beforeInteractive"
+        />
+
         {children}
-        {/* 2. Add the Google Ads Scripts here */}
+
+        {/* 2. Seus scripts do Google Ads permanecem aqui, depois do {children} */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-17383658790"
