@@ -8,19 +8,6 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 
-// Definindo a tipagem para a função gtag no objeto window
-declare global {
-  interface Window {
-    gtag: (
-      type: "event",
-      eventName: "conversion",
-      eventParams: {
-        send_to: string;
-      }
-    ) => void;
-  }
-}
-
 export default function Contact() {
   const handleWhatsAppClick = () => {
     // Usando o snippet exato que você confirmou

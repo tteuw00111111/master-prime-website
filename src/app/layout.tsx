@@ -25,7 +25,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Master Prime - Reparos de Eletrônicos | Campo Grande, RJ",
+  title: "Master Prime - Assistência | Campo Grande, RJ",
   description:
     "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos. Qualidade e confiança que você pode ver.",
   alternates: { canonical: "https://master-prime.com/" },
@@ -120,6 +120,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+const GOOGLE_ADS_ID = "AW-17383658790"; // seu ID
+
 export default function RootLayout({
   children,
 }: {
@@ -141,17 +143,18 @@ export default function RootLayout({
         {children}
 
         {/* 2. Seus scripts do Google Ads permanecem aqui, depois do {children} */}
+        {/* Google tag (gtag.js) - Google Ads */}
         <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17383658790"
+          id="gtag-src"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
           strategy="afterInteractive"
         />
-        <Script id="google-ads-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-17383658790');
+            gtag('config', '${GOOGLE_ADS_ID}');
           `}
         </Script>
       </body>
