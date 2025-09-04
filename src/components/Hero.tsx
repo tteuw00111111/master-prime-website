@@ -15,13 +15,12 @@ export default function Hero() {
       {isMobile ? <MobileFallbackBackground /> : <VantaBackground />}
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4">
-          Conserto Especializado de <br /> Celulares e Notebooks
-        </h2>
-
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4">
+          <span className="text-brand-yellow">Master Prime</span>
+        </h1>
         <p className="text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-          Sua loja de reparos em Campo Grande. Soluções rápidas e confiáveis
-          para todos os seus aparelhos eletrônicos.
+          Loja de informática em Campo Grande — acessórios, peças e soluções
+          para seus eletrônicos.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -29,13 +28,13 @@ export default function Hero() {
             href="#contact"
             className="btn-gradient hover:opacity-90 text-[#0A0A0A] font-bold py-4 px-10 rounded-full text-xl transition duration-300 transform hover:scale-105"
           >
-            Solicite um Orçamento
+            Falar no WhatsApp
           </a>
           <a
             href="#services"
             className="border-[3px] border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-[#0A0A0A] font-bold py-4 px-10 rounded-full text-xl transition duration-300"
           >
-            Conheça os Serviços
+            Ver Produtos & Opções
           </a>
         </div>
       </div>

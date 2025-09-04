@@ -1,3 +1,4 @@
+// src/components/Header.tsx (revisado)
 "use client";
 
 import { useState, useEffect } from "react";
@@ -8,14 +9,13 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const linkCls =
+    "font-poppins text-[#DEDEDE] hover:text-brand-yellow transition duration-300";
 
   return (
     <header
@@ -40,22 +40,13 @@ export default function Header() {
 
         {/* Navegação Desktop */}
         <nav className="hidden md:flex space-x-8">
-          <a
-            href="#services"
-            className="font-poppins text-[#DEDEDE] hover:text-brand-yellow transition duration-300"
-          >
-            Serviços
+          <a href="#services" className={linkCls}>
+            Soluções
           </a>
-          <a
-            href="#about"
-            className="font-poppins text-[#DEDEDE] hover:text-brand-yellow transition duration-300"
-          >
+          <a href="#about" className={linkCls}>
             Sobre
           </a>
-          <a
-            href="#contact"
-            className="font-poppins text-[#DEDEDE] hover:text-brand-yellow transition duration-300"
-          >
+          <a href="#contact" className={linkCls}>
             Contato
           </a>
         </nav>
@@ -64,7 +55,7 @@ export default function Header() {
         <button
           className="md:hidden text-white"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Abrir menu"
         >
           <svg
             className="w-6 h-6"
@@ -89,7 +80,7 @@ export default function Header() {
             href="#services"
             className="block font-poppins text-[#DEDEDE] hover:text-brand-yellow transition duration-300"
           >
-            Serviços
+            Soluções
           </a>
           <a
             href="#about"

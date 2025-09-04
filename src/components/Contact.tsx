@@ -1,6 +1,6 @@
-// Contact.tsx - VERSÃO FINAL E CORRIGIDA (28/08/2025)
-"use client"; // Corrige o erro de build do Next.js para componentes interativos
+"use client";
 
+import { useState, useEffect } from "react";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -9,45 +9,69 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   const handleWhatsAppClick = () => {
-    // Usando o snippet exato que você confirmou
     const eventSnippet = {
       send_to: "AW-17383658790/doflCJ2Z2I8bEKaqluFA",
     };
 
     if (typeof window.gtag === "function") {
       window.gtag("event", "conversion", eventSnippet);
-      console.log(
-        "Evento de conversão 'Clique - WhatsApp' enviado com sucesso."
-      );
     } else {
-      console.error(
-        "Função gtag não encontrada. O evento de conversão não foi enviado."
-      );
+      console.error("Função gtag não encontrada.");
     }
   };
 
   return (
     <section
       id="contact"
-      className="bg-brand-dark relative text-white min-h-screen flex items-center justify-center overflow-hidden py-24"
+      className="relative text-white min-h-screen flex items-center justify-center overflow-hidden py-24"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-brand-yellow/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+        <div
+          className="absolute w-full h-full transition-all duration-300"
+          style={{
+            background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(251, 191, 36, 0.15), transparent 80%)`,
+          }}
+        />
+        <div
+          className="absolute top-0 left-0 w-full h-full"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(251, 191, 36, 0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(251, 191, 36, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: "40px 40px",
+          }}
+        />
+      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto bg-gray-900/50 backdrop-blur-lg border border-gray-800 rounded-2xl shadow-2xl p-8 md:p-12">
           <div className="text-center mb-12">
             <h3 className="text-4xl md:text-5xl font-bold leading-tight">
-              Precisando de manutenção?
+              Podemos ajudar?
             </h3>
             <p className="text-gray-300 text-lg mt-4 max-w-3xl mx-auto">
-              Estamos prontos para ouvir sobre seu aparelho. Entre em contato
-              para um orçamento rápido e sem compromisso.
+              Precisa de um upgrade ou acessório? Entre em contato para um
+              orçamento rápido e sem compromisso.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-            {/* --- CARD 1: WHATSAPP & PHONE --- */}
             <div className="bg-gray-800/60 p-8 rounded-xl text-center border border-gray-700 flex flex-col justify-between">
               <div>
                 <FaWhatsapp className="text-green-500 text-6xl mx-auto mb-4" />
@@ -79,7 +103,6 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* --- O RESTO DOS SEUS CARDS (LOCALIZAÇÃO E INSTAGRAM) CONTINUAM AQUI --- */}
             <div className="bg-gray-800/60 p-8 rounded-xl text-center border border-gray-700 flex flex-col justify-between">
               <div>
                 <FaMapMarkerAlt className="text-red-500 text-6xl mx-auto mb-4" />
@@ -100,6 +123,7 @@ export default function Contact() {
                 Ver no Mapa
               </a>
             </div>
+
             <div className="bg-gray-800/60 p-8 rounded-xl text-center border border-gray-700 flex flex-col justify-between">
               <div>
                 <FaInstagram className="text-pink-500 text-6xl mx-auto mb-4" />
@@ -107,7 +131,7 @@ export default function Contact() {
                   Siga no Instagram
                 </h4>
                 <p className="text-gray-400 mb-6">
-                  Acompanhe nossos serviços e novidades em nossa rede social.
+                  Acompanhe nossos produtos e novidades em nossa rede social.
                 </p>
               </div>
               <a
