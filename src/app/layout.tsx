@@ -25,7 +25,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Master Prime - Assistência | Campo Grande, RJ",
+  title: "Master Prime - Informática | Campo Grande, RJ",
   description:
     "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos. Qualidade e confiança que você pode ver.",
   alternates: { canonical: "https://master-prime.com/" },
