@@ -37,10 +37,10 @@ export default function NotebookPage({ brandName }: NotebookPageProps) {
         <div className="container mx-auto px-6 relative z-10">
           <header className="text-center mb-14">
             <h2 className="text-5xl md:text-6xl font-semibold text-black leading-none">
-              Assistência Técnica de Notebooks {brandName}
+              Serviços de Reparo para Notebooks {brandName}
             </h2>
             <p className="text-black/80 text-xl md:text-2xl font-light mt-4 max-w-3xl mx-auto">
-              Oferecemos um serviço completo de assistência técnica para notebooks da {brandName}, com diagnóstico preciso, reparo de hardware e software, e garantia de qualidade.
+              Oferecemos um serviço completo de reparo para notebooks da marca {brandName}, com diagnóstico preciso, reparo de hardware e software, e garantia de qualidade.
             </p>
           </header>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

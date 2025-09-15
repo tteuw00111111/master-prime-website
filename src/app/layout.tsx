@@ -33,15 +33,15 @@ export const metadata: Metadata = {
     google: "_s5i9STeYhyJHp10jNIJ70pmDwmxx4y5HutIZMs178s",
   },
   keywords: [
-    "conserto de celular",
+    "manutenção de celular",
     "manutenção notebook",
     "manutenção de computador",
-    "conserto videogame",
+    "manutenção videogame",
     "Campo Grande",
     "loja de reparos Campo Grande",
-    "conserto de notebook campo grande",
+    "manutenção de notebook campo grande",
 
-    "loja de conserto de notebook",
+    "loja de manutenção de notebook",
 
     "reparo de notebook campo grande",
 
@@ -55,32 +55,14 @@ export const metadata: Metadata = {
 
     "limpeza interna notebook",
 
-    "conserto de notebook perto de mim",
-    "conserto de celular campo grande",
+    "manutenção de notebook perto de mim",
+    "manutenção de celular campo grande",
 
     "troca de tela de celular",
 
     "troca de bateria de celular",
 
-    "conserto de iphone campo grande",
-
-    "troca de tela iphone original",
-
-    "troca de tela samsung",
-
-    "conserto de celular perto de mim",
-    "conserto de impressora campo grande",
-
-    "manutenção de impressora",
-
-    "reparo de impressora hp",
-
-    "reparo de impressora epson",
-    "conserto de videogame campo grande",
-
-    "reparo de playstation",
-
-    "reparo de xbox",
+    
     "montagem de pc gamer",
 
     "montar pc gamer campo grande",
@@ -95,7 +77,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Master Prime - Reparos de Eletrônicos | Campo Grande, RJ",
+    title: "Master Prime - Soluções em Tecnologia | Campo Grande, RJ",
     description:
       "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos.",
     type: "website",

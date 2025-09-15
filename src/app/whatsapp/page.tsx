@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 // The business logic remains the same
 const PHONE = "5521967635340";
 const MESSAGE = encodeURIComponent(
-  "Olá! Gostaria de um orçamento para um reparo." // Slightly updated message
+  "Olá! Gostaria de um orçamento." // Slightly updated message
 );
 const WA_URL = `https://wa.me/${PHONE}?text=${MESSAGE}`;
 
