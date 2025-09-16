@@ -38,14 +38,12 @@ export default function About() {
 
               <p className="text-gray-200 mb-6 leading-relaxed">
                 Nascemos da paixão por tecnologia e do compromisso com a
-                transparência. Há mais de 10 anos, a Master Prime atende Campo
-                Grande com soluções em informática, sempre priorizando uma
-                experiência tranquila e objetiva.
+                transparência. Há mais de 10 anos, a Master Prime é a sua loja de informática em Campo
+                Grande, oferecendo os melhores produtos e componentes com uma
+                experiência de compra tranquila e objetiva.
               </p>
               <p className="text-gray-200 leading-relaxed">
-                Nossa missão é simples: oferecer as melhores opções para seu
-                equipamento com desempenho, durabilidade e um atendimento que
-                resolve.
+                Nossa missão é simples: oferecer as melhores opções de peças e equipamentos, garantindo desempenho, durabilidade e um atendimento focado em ajudar você a fazer a escolha certa.
               </p>
             </div>
 

@@ -40,7 +40,7 @@ export default function NotebookPage({ brandName }: NotebookPageProps) {
               Serviços de Reparo para Notebooks {brandName}
             </h2>
             <p className="text-black/80 text-xl md:text-2xl font-light mt-4 max-w-3xl mx-auto">
-              Oferecemos um serviço completo de reparo para notebooks da marca {brandName}, com diagnóstico preciso, reparo de hardware e software, e garantia de qualidade.
+              Oferecemos serviço completo de reparo para notebooks da marca {brandName}, com diagnóstico preciso, reparo de hardware e instalação/configuração presencial quando necessário, com garantia de qualidade.
             </p>
           </header>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

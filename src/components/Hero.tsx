@@ -19,8 +19,7 @@ export default function Hero() {
           <span className="text-brand-yellow">Master Prime</span>
         </h1>
         <p className="text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-          Loja de informática em Campo Grande — acessórios, peças e soluções
-          para seus eletrônicos.
+          Sua loja de informática em Campo Grande — encontre acessórios, peças e monte seu PC.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">

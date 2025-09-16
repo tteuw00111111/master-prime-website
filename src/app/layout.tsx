@@ -51,8 +51,6 @@ export const metadata: Metadata = {
 
     "upgrade de ssd e ram",
 
-    "formatar notebook campo grande",
-
     "limpeza interna notebook",
 
     "manutenção de notebook perto de mim",

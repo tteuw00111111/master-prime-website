@@ -19,6 +19,11 @@ export default function Footer() {
             respectivos detentores e são utilizados apenas para fins de
             referência.
           </p>
+          <p className="mt-3">
+            Atendemos de forma presencial/local. Não oferecemos suporte técnico
+            remoto para softwares, aplicativos ou contas de terceiros (por
+            exemplo: e-mail, redes sociais ou serviços on-line).
+          </p>
         </div>
 
         <p>
