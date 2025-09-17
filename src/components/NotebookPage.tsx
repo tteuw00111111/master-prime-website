@@ -37,10 +37,10 @@ export default function NotebookPage({ brandName }: NotebookPageProps) {
         <div className="container mx-auto px-6 relative z-10">
           <header className="text-center mb-14">
             <h2 className="text-5xl md:text-6xl font-semibold text-black leading-none">
-              Serviços de Reparo para Notebooks {brandName}
+              Reparo de Notebooks Multimarcas
             </h2>
             <p className="text-black/80 text-xl md:text-2xl font-light mt-4 max-w-3xl mx-auto">
-              Oferecemos serviço completo de reparo para notebooks da marca {brandName}, com diagnóstico preciso, reparo de hardware e instalação/configuração presencial quando necessário, com garantia de qualidade.
+              Como um centro de serviço independente, oferecemos diagnóstico e reparo de hardware para uma ampla gama de notebooks, incluindo modelos da {brandName}. Nossos serviços são realizados com peças de alta qualidade e garantia.
             </p>
           </header>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -55,6 +55,11 @@ export default function NotebookPage({ brandName }: NotebookPageProps) {
                 <p className="text-zinc-700">{service.description}</p>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <p className="text-sm text-gray-600">
+                A Master Prime é uma assistência técnica independente e não possui afiliação com a {brandName}. As marcas e nomes comerciais são usados aqui apenas para fins de referência.
+            </p>
           </div>
         </div>
       </section>
