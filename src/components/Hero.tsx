@@ -2,6 +2,7 @@
 
 import { useIsMobile } from "@/hooks/useIsMobile";
 import VantaBackground from "./VantaBackground";
+import { FiCheckCircle } from "react-icons/fi";
 
 const MobileFallbackBackground = () => (
   <div className="absolute top-0 left-0 w-full h-full bg-gray-950 hero-pattern" />
@@ -24,7 +25,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a
-            href="#contact"
+            href="/whatsapp"
             className="btn-gradient hover:opacity-90 text-[#0A0A0A] font-bold py-4 px-10 rounded-full text-xl transition duration-300 transform hover:scale-105"
           >
             Falar no WhatsApp
@@ -35,6 +36,10 @@ export default function Hero() {
           >
             Ver Produtos & Opções
           </a>
+        </div>
+        <div className="flex items-center justify-center mt-6">
+          <FiCheckCircle className="w-5 h-5 text-green-400 mr-2" />
+          <p className="text-sm text-gray-300">Serviço com Garantia de 90 Dias</p>
         </div>
       </div>
     </section>

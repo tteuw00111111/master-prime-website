@@ -30,7 +30,7 @@ const PRODUCTS: Array<{
     title: "Acessórios p/ Celular",
     bullets: ["Capas e películas", "Cabos e carregadores", "Baterias e telas"],
     icon: <FiSmartphone className="w-5 h-5" />,
-    cta: { label: "Consultar", href: "https://wa.me/message/TMEA4ZXLGX6WN1" },
+    cta: { label: "Ver Acessórios", href: "https://wa.me/message/TMEA4ZXLGX6WN1" },
   },
   {
     imgSrc: "/laptop.avif",
@@ -39,7 +39,7 @@ const PRODUCTS: Array<{
     bullets: ["SSD e memória", "Teclados e telas", "Fontes e acessórios"],
     icon: <FiPackage className="w-5 h-5" />,
     cta: {
-      label: "Quero meu kit",
+      label: "Quero meu notebook mais rápido",
       href: "https://wa.me/message/TMEA4ZXLGX6WN1",
     },
   },
@@ -53,7 +53,7 @@ const PRODUCTS: Array<{
       "Gabinetes e LEDs",
     ],
     icon: <FiCpu className="w-5 h-5" />,
-    cta: { label: "Ver opções", href: "https://wa.me/message/TMEA4ZXLGX6WN1" },
+    cta: { label: "Encontre a peça certa", href: "https://wa.me/message/TMEA4ZXLGX6WN1" },
   },
   {
     imgSrc: "/pcgamer.avif",
@@ -66,7 +66,7 @@ const PRODUCTS: Array<{
     ],
     icon: <FiMonitor className="w-5 h-5" />,
     cta: {
-      label: "Planejar meu PC",
+      label: "Monte o PC dos seus sonhos",
       href: "https://wa.me/message/TMEA4ZXLGX6WN1",
     },
   },
@@ -81,7 +81,7 @@ const PRODUCTS: Array<{
     ],
     icon: <FiPrinter className="w-5 h-5" />,
     cta: {
-      label: "Checar modelos",
+      label: "Consultar modelos",
       href: "https://wa.me/message/TMEA4ZXLGX6WN1",
     },
   },
@@ -92,7 +92,7 @@ const PRODUCTS: Array<{
     bullets: ["Controles e cabos", "Headsets e suportes", "Peças selecionadas"],
     icon: <FaGamepad className="w-5 h-5" />,
     cta: {
-      label: "Perguntar no WhatsApp",
+      label: "Ver acessórios de console",
       href: "https://wa.me/message/TMEA4ZXLGX6WN1",
     },
   },
@@ -103,7 +103,7 @@ const PRODUCTS: Array<{
     bullets: ["Teclados e mouses", "Headsets e mousepads", "Monitores e hubs"],
     icon: <FiHeadphones className="w-5 h-5" />,
     cta: {
-      label: "Ver disponibilidade",
+      label: "Conferir periféricos",
       href: "https://wa.me/message/TMEA4ZXLGX6WN1",
     },
   },
@@ -114,7 +114,7 @@ const PRODUCTS: Array<{
     bullets: ["SSDs SATA/NVMe", "Memórias DDR4/DDR5", "Cartões e adaptadores"],
     icon: <FiHardDrive className="w-5 h-5" />,
     cta: {
-      label: "Conferir opções",
+      label: "Ver SSDs e Memórias",
       href: "https://wa.me/message/TMEA4ZXLGX6WN1",
     },
   },

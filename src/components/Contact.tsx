@@ -7,6 +7,7 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
 } from "react-icons/fa";
+import { FiCheckCircle } from "react-icons/fi";
 
 export default function Contact() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -93,14 +94,20 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-              <a
-                href="https://wa.me/message/TMEA4ZXLGX6WN1"
-                onClick={handleWhatsAppClick}
-                className="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105"
-              >
-                <FaWhatsapp className="text-2xl" />
-                Iniciar Conversa
-              </a>
+              <div>
+                <a
+                  href="https://wa.me/message/TMEA4ZXLGX6WN1"
+                  onClick={handleWhatsAppClick}
+                  className="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105"
+                >
+                  <FaWhatsapp className="text-2xl" />
+                  Iniciar Conversa
+                </a>
+                <div className="flex items-center justify-center mt-4">
+                  <FiCheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <p className="text-xs text-gray-400">Serviço com Garantia</p>
+                </div>
+              </div>
             </div>
 
             <div className="bg-gray-800/60 p-8 rounded-xl text-center border border-gray-700 flex flex-col justify-between">
