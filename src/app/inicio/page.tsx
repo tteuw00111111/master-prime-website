@@ -1,0 +1,130 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FiCheckCircle, FiTruck, FiZap } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
+import Footer from '@/components/Footer';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
+import './animations.css';
+
+// Custom hook for scroll animations
+const useScrollAnimation = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in-up');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const elements = document.querySelectorAll('.scroll-animate');
+    elements.forEach(el => observer.observe(el));
+
+    return () => elements.forEach(el => observer.unobserve(el));
+  }, []);
+};
+
+const InicioHeader = () => (
+    <header className="absolute top-0 left-0 w-full z-50 py-4">
+      <div className="container mx-auto px-6 flex justify-center items-center">
+        <Image
+          src="/master_prime_logo.png"
+          alt="Master Prime Logo"
+          width={180}
+          height={60}
+          className="h-14 w-auto"
+        />
+      </div>
+    </header>
+  );
+
+const headlines = [
+  "Seu notebook quebrou?",
+  "Não Fique Sem Seu Notebook!",
+  "Resolvemos na Hora!",
+  "Vamos até você!",
+];
+
+const MobileFirstHero = () => {
+  const [headlineIndex, setHeadlineIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeadlineIndex((prevIndex) => (prevIndex + 1) % headlines.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden animated-gradient">
+      <div className="relative z-10 container mx-auto px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-focus-in">
+          {headlines[headlineIndex]}
+        </h1>
+        <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10">
+          Resolvemos com rapidez e garantia de 90 dias em Campo Grande, RJ.
+        </p>
+        <div className="flex flex-col items-center gap-4">
+            <a 
+              href="https://wa.me/message/TMEA4ZXLGX6WN1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 bg-green-500 text-white font-bold py-4 px-10 rounded-full text-xl transform hover:scale-105 transition-transform duration-300 shadow-lg w-full sm:w-auto animate-pulse-glow"
+            >
+              <FaWhatsapp /> Orçamento Grátis
+            </a>
+            <Link href="/" className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors">
+                Veja Mais
+            </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const BenefitsBar = () => (
+    <section className="bg-gray-100 py-8 scroll-animate">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-gray-900 rounded-full p-4 mb-4">
+                <FiCheckCircle className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">Garantia de 90 Dias</h3>
+            <p className="text-gray-600">Em todos os serviços e peças.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-gray-900 rounded-full p-4 mb-4">
+                <FiZap className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">Serviço Rápido</h3>
+            <p className="text-gray-600">Agilidade no diagnóstico e reparo.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-gray-900 rounded-full p-4 mb-4">
+                <FiTruck className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">Delivery</h3>
+            <p className="text-gray-600">Coletamos e entregamos seu equipamento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+export default function InicioPage() {
+  useScrollAnimation();
+
+  return (
+    <main className="bg-white">
+      <InicioHeader />
+      <MobileFirstHero />
+      <BenefitsBar />
+      <Footer />
+      <WhatsAppFloat />
+    </main>
+  );
+}
