@@ -33,17 +33,17 @@ export const metadata: Metadata = {
     google: "_s5i9STeYhyJHp10jNIJ70pmDwmxx4y5HutIZMs178s",
   },
   keywords: [
-    "manutenção de celular",
-    "manutenção notebook",
-    "manutenção de computador",
-    "manutenção videogame",
+    "serviços para smartphones",
+    "serviços para notebooks",
+    "serviços para computadores",
+    "serviços para videogames",
     "Campo Grande",
     "loja de serviços Campo Grande",
-    "manutenção de notebook campo grande",
+    "serviços para notebooks campo grande",
 
-    "loja de manutenção de notebook",
+    "loja de serviços para notebooks",
 
-    "serviços de manutenção de notebook campo grande",
+    "centro de serviços de dispositivos campo grande",
 
     "troca de tela de notebook",
 
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
 
     "limpeza interna notebook",
 
-    "manutenção de notebook perto de mim",
-    "manutenção de celular campo grande",
+    "serviços para notebooks perto de mim",
+    "serviços para smartphones campo grande",
 
     "troca de tela de celular",
 

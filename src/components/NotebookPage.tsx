@@ -11,9 +11,9 @@ interface NotebookPageProps {
 export default function NotebookPage({ brandName }: NotebookPageProps) {
   const services = [
     {
-      title: "Manutenção de Placa-Mãe",
+      title: "Serviços para Placa-Mãe",
       description:
-        "Especialistas em Manutenção de placa-mãe, um dos componentes mais críticos e caros do notebook.",
+        "Especialistas em serviços para placa-mãe, um dos componentes mais críticos e caros do notebook.",
       icon: <FiCpu className="w-8 h-8 text-yellow-400" />,
     },
     {
@@ -38,11 +38,11 @@ export default function NotebookPage({ brandName }: NotebookPageProps) {
         <div className="container mx-auto px-6 relative z-10">
           <header className="text-center mb-14">
             <h2 className="text-5xl md:text-6xl font-semibold text-black leading-none">
-              Manutenção de Notebooks Multimarcas
+              Serviços para Notebooks Multimarcas
             </h2>
             <p className="text-black/80 text-xl md:text-2xl font-light mt-4 max-w-3xl mx-auto">
               Como um centro de serviço independente, oferecemos diagnóstico e
-              manutenção de hardware para uma ampla gama de notebooks, incluindo
+              serviços de hardware para uma ampla gama de notebooks, incluindo
               modelos da {brandName}. Nossos serviços são realizados com peças
               de alta qualidade e garantia.
             </p>
@@ -65,7 +65,7 @@ export default function NotebookPage({ brandName }: NotebookPageProps) {
           </div>
           <div className="text-center mt-12">
             <p className="text-sm text-gray-600">
-              A Master Prime é uma assistência técnica independente e não possui
+              A Master Prime é um centro de serviços independente e não possui
               afiliação com a {brandName}. As marcas e nomes comerciais são
               usados aqui apenas para fins de referência.
             </p>

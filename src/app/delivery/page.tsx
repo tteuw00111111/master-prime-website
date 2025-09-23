@@ -14,7 +14,7 @@ export default function Delivery() {
           </h1>
           <p className="text-lg text-gray-700 mb-4">
             Na Master Prime, oferecemos um serviço de coleta e entrega para
-            facilitar a manutenção do seu equipamento. Entenda como funciona:
+            facilitar os serviços do seu equipamento. Entenda como funciona:
           </p>
           <div className="space-y-4">
             <div>
@@ -29,13 +29,13 @@ export default function Delivery() {
             </div>
             <div>
               <h2 className="text-2xl font-semibold text-gray-800">
-                2. Orçamento e Manutenção
+                2. Orçamento e Serviços
               </h2>
               <p className="text-gray-600">
                 Assim que o aparelho chega em nosso laboratório, nossos
                 profissionais realizam o diagnóstico e enviam o orçamento para
-                sua aprovação. Com o orçamento aprovado, a manutenção é
-                efetuada.
+                sua aprovação. Com o orçamento aprovado, os serviços são
+                efetuados.
               </p>
             </div>
             <div>
@@ -43,7 +43,7 @@ export default function Delivery() {
                 3. Entrega Segura
               </h2>
               <p className="text-gray-600">
-                Após a manutenção e testes de qualidade, agendamos a entrega do
+                Após os serviços e testes de qualidade, agendamos a entrega do
                 seu aparelho no seu endereço. Você recebe seu equipamento pronto
                 para uso, com garantia do serviço.
               </p>

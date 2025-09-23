@@ -45,9 +45,9 @@ const InicioHeader = () => (
 );
 
 const headlines = [
-  "Seu notebook quebrou?",
+  "Precisa de peças para notebook?",
   "Não Fique Sem Seu Notebook!",
-  "Resolvemos na Hora!",
+  "Atendemos na Hora!",
   "Vamos até você!",
 ];
 
@@ -68,7 +68,7 @@ const MobileFirstHero = () => {
           {headlines[headlineIndex]}
         </h1>
         <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10">
-          Resolvemos com rapidez e garantia de 90 dias em Campo Grande, RJ.
+          Atendemos com rapidez e garantia de 90 dias em Campo Grande, RJ.
         </p>
         <div className="flex flex-col items-center gap-4">
           <a
@@ -102,7 +102,7 @@ const BenefitsBar = () => (
           <h3 className="text-xl font-bold text-gray-800 mb-2">
             Garantia de 90 Dias
           </h3>
-          <p className="text-gray-600">Em todos os serviços e peças.</p>
+          <p className="text-gray-600">Em todas as peças e componentes.</p>
         </div>
         <div className="flex flex-col items-center">
           <div className="bg-yellow-400 text-gray-900 rounded-full p-4 mb-4">
@@ -111,7 +111,7 @@ const BenefitsBar = () => (
           <h3 className="text-xl font-bold text-gray-800 mb-2">
             Serviço Rápido
           </h3>
-          <p className="text-gray-600">Agilidade no diagnóstico.</p>
+          <p className="text-gray-600">Agilidade na avaliação.</p>
         </div>
         <div className="flex flex-col items-center">
           <div className="bg-yellow-400 text-gray-900 rounded-full p-4 mb-4">

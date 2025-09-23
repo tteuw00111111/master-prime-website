@@ -37,7 +37,7 @@ export default function Notebooks() {
         <div className="container mx-auto px-6 relative z-10">
           <header className="text-center mb-14">
             <h2 className="text-5xl md:text-6xl font-semibold text-black leading-none">
-              Manutenção de Notebooks
+              Serviços para Notebooks
             </h2>
             <p className="text-black/80 text-xl md:text-2xl font-light mt-4 max-w-3xl mx-auto">
               Soluções completas para todas as marcas e modelos.
