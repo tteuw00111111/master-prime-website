@@ -25,7 +25,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Master Prime - Informática | Campo Grande, RJ",
+  title: "Master Prime | Campo Grande, RJ",
   description:
     "Soluções rápidas e confiáveis para todos os seus aparelhos eletrônicos. Qualidade e confiança que você pode ver.",
   alternates: { canonical: "https://master-prime.com/" },
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     "manutenção de computador",
     "manutenção videogame",
     "Campo Grande",
-    "loja de reparos Campo Grande",
+    "loja de serviços Campo Grande",
     "manutenção de notebook campo grande",
 
     "loja de manutenção de notebook",
 
-    "reparo de notebook campo grande",
+    "serviços de manutenção de notebook campo grande",
 
     "troca de tela de notebook",
 
@@ -60,7 +60,6 @@ export const metadata: Metadata = {
 
     "troca de bateria de celular",
 
-    
     "montagem de pc gamer",
 
     "montar pc gamer campo grande",
