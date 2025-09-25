@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.124",
     "@next/font": "^14.2.15",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",

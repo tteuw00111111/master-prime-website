@@ -5,24 +5,24 @@ import AnimatedWave from "./AnimatedWave";
 
 const SERVICES = [
   {
-    imgSrc: "/manu_comp.png",
-    alt: "Manutenção de Computadores",
+    imgSrc: "/random_1.png",
+    alt: "",
   },
   {
-    imgSrc: "/manu_console.png",
-    alt: "Manutenção de Consoles",
+    imgSrc: "/random_2.png",
+    alt: "",
   },
   {
-    imgSrc: "/manu_impre.png",
-    alt: "Manutenção de Impressoras",
+    imgSrc: "/random_3.png",
+    alt: "",
   },
   {
-    imgSrc: "/manu_not.png",
-    alt: "Manutenção de Notebooks",
+    imgSrc: "/random_4.png",
+    alt: "",
   },
   {
-    imgSrc: "/montagem_pc_gamer.png",
-    alt: "Montagem de PC Gamer",
+    imgSrc: "/random_5.png",
+    alt: "",
   },
 ];
 
