@@ -41,7 +41,7 @@ export default function Header() {
         {/* Navegação Desktop */}
         <nav className="hidden md:flex space-x-8">
           <a href="#services" className={linkCls}>
-            Soluções
+            Serviços
           </a>
           <a href="#about" className={linkCls}>
             Sobre
@@ -80,7 +80,7 @@ export default function Header() {
             href="#services"
             className="block font-poppins text-[#DEDEDE] hover:text-brand-yellow transition duration-300"
           >
-            Soluções
+            Serviços
           </a>
           <a
             href="#about"
