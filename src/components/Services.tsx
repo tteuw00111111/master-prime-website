@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AnimatedWave from "./AnimatedWave";
+import { fireAdsConversion } from "@/lib/ads";
 
 const SERVICES = [
   {
@@ -26,7 +27,13 @@ const SERVICES = [
   },
 ];
 
+// Conversion ID for WhatsApp clicks
+const SEND_TO = "AW-17383658790/doflCJ2Z2I8bEKaqluFA";
+
 export default function Services() {
+  const handleWhatsAppClick = () => {
+    fireAdsConversion(SEND_TO);
+  };
   return (
     <section
       id="services"
@@ -42,6 +49,7 @@ export default function Services() {
               href="https://wa.me/message/TMEA4ZXLGX6WN1"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="group relative flex items-center justify-center flex-shrink-0 bg-white/80 backdrop-blur-md shadow-lg transition-all duration-700 ease-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-yellow-400/30 cursor-pointer overflow-hidden w-full h-[45vh] md:w-[32rem] md:h-[32rem] lg:w-[40rem] lg:h-[40rem] rounded-none md:rounded-2xl"
             >
               <Image
