@@ -45,8 +45,8 @@ const InicioHeader = () => (
 );
 
 const headlines = [
-  "Precisa de peças para notebook?",
-  "Não Fique Sem Seu Notebook!",
+  "Precisa de peças para seu dispositivo?",
+  "Não Fique Sem Seu Dispositivo!",
   "Atendemos na Hora!",
   "Vamos até você!",
 ];
