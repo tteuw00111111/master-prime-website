@@ -2,17 +2,24 @@
 
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
+import { fireAdsConversion } from "@/lib/ads";
 
 const PHONE = "5521967635340";
 const MESSAGE = encodeURIComponent("Olá! Vim do site e quero orçamento.");
 const WA_URL = `https://wa.me/${PHONE}?text=${MESSAGE}`;
+const SEND_TO = "AW-17383658790/doflCJ2Z2I8bEKaqluFA";
 
 export default function WhatsAppFloat() {
+  const handleClick = () => {
+    fireAdsConversion(SEND_TO);
+  };
+
   return (
     <Link
       href={WA_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       aria-label="Abrir WhatsApp"
       title="Fale conosco no WhatsApp"
       className="

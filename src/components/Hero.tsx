@@ -26,6 +26,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a
             href="/whatsapp"
+            onClick={() => {
+              if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                window.gtag('event', 'conversion', {
+                  send_to: 'AW-17383658790/doflCJ2Z2I8bEKaqluFA'
+                });
+              }
+            }}
             className="btn-gradient hover:opacity-90 text-[#0A0A0A] font-bold py-4 px-10 rounded-full text-xl transition duration-300 transform hover:scale-105"
           >
             Falar no WhatsApp

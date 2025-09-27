@@ -75,6 +75,13 @@ const MobileFirstHero = () => {
             href="https://wa.me/message/TMEA4ZXLGX6WN1"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                window.gtag('event', 'conversion', {
+                  send_to: 'AW-17383658790/doflCJ2Z2I8bEKaqluFA'
+                });
+              }
+            }}
             className="inline-flex items-center justify-center gap-3 bg-green-500 text-white font-bold py-4 px-10 rounded-full text-xl transform hover:scale-105 transition-transform duration-300 shadow-lg w-full sm:w-auto animate-pulse-glow"
           >
             <FaWhatsapp /> Orçamento Grátis
