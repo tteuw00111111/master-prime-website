@@ -19,19 +19,18 @@ export default function Hero() {
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4">
           <span className="text-brand-yellow">Master Prime</span>
         </h1>
-        <p className="text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-          Sua loja de informática em Campo Grande — encontre acessórios, peças e monte seu PC.
-        </p>
-
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a
             href="https://wa.me/5521967635340?text=Olá!%20Vim%20do%20site%20e%20quero%20orçamento%20para%20"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-                window.gtag('event', 'conversion', {
-                  send_to: 'AW-17383658790/XfceCMeR4KQbEKaqluFA'
+              if (
+                typeof window !== "undefined" &&
+                typeof window.gtag === "function"
+              ) {
+                window.gtag("event", "conversion", {
+                  send_to: "AW-17383658790/XfceCMeR4KQbEKaqluFA",
                 });
               }
             }}
@@ -48,7 +47,9 @@ export default function Hero() {
         </div>
         <div className="flex items-center justify-center mt-6">
           <FiCheckCircle className="w-5 h-5 text-green-400 mr-2" />
-          <p className="text-sm text-gray-300">Serviço com Garantia de 90 Dias</p>
+          <p className="text-sm text-gray-300">
+            Serviço com Garantia de 90 Dias
+          </p>
         </div>
       </div>
     </section>
