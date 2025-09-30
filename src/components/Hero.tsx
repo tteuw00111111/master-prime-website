@@ -31,7 +31,7 @@ export default function Hero() {
             onClick={() => {
               if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
                 window.gtag('event', 'conversion', {
-                  send_to: 'AW-17383658790/doflCJ2Z2I8bEKaqluFA'
+                  send_to: 'AW-17383658790/XfceCMeR4KQbEKaqluFA'
                 });
               }
             }}

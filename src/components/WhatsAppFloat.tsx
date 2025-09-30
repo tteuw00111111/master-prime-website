@@ -7,7 +7,7 @@ import { fireAdsConversion } from "@/lib/ads";
 const PHONE = "5521967635340";
 const MESSAGE = encodeURIComponent("Olá! Vim do site e quero orçamento.");
 const WA_URL = `https://wa.me/${PHONE}?text=${MESSAGE}`;
-const SEND_TO = "AW-17383658790/doflCJ2Z2I8bEKaqluFA";
+const SEND_TO = "AW-17383658790/XfceCMeR4KQbEKaqluFA";
 
 export default function WhatsAppFloat() {
   const handleClick = () => {

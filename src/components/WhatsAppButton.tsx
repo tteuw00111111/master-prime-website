@@ -11,7 +11,7 @@ const MESSAGE = encodeURIComponent(RAW_MESSAGE);
 const WA_URL = `https://wa.me/${PHONE}?text=${MESSAGE}`;
 
 // Seu ID/label de conversão
-const SEND_TO = "AW-17383658790/doflCJ2Z2I8bEKaqluFA";
+const SEND_TO = "AW-17383658790/XfceCMeR4KQbEKaqluFA";
 
 type Props = {
   ariaLabel?: string;

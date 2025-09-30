@@ -26,7 +26,7 @@ export default function Contact() {
 
   const handleWhatsAppClick = () => {
     const eventSnippet = {
-      send_to: "AW-17383658790/doflCJ2Z2I8bEKaqluFA",
+      send_to: "AW-17383658790/XfceCMeR4KQbEKaqluFA",
     };
 
     if (typeof window.gtag === "function") {
