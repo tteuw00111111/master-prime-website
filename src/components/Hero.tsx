@@ -25,7 +25,9 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a
-            href="/whatsapp"
+            href="https://wa.me/5521967635340?text=Olá!%20Vim%20do%20site%20e%20quero%20orçamento%20para%20"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => {
               if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
                 window.gtag('event', 'conversion', {
