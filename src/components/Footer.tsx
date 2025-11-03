@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 text-center text-gray-400 text-sm">
         <div className="mb-6">
           <p className="font-bold text-gray-200">Master Prime</p>
-          <p>CNPJ: 48076363000137</p>
+          <p>CNPJ: 48.076.363/0001-37</p>
           <p>Endereço: Avenida Cesário de Melo 2869 Loja 101 - Campo Grande</p>
           <p>Telefone: +55 (21) 967635340</p>
         </div>

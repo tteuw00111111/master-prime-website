@@ -36,7 +36,7 @@ export default function Services() {
   };
   return (
     <section
-      id="services"
+      id="products"
       className="relative bg-[#E2E2E2] font-roboto min-h-screen md:flex md:items-center md:justify-center overflow-hidden"
     >
       <AnimatedWave />

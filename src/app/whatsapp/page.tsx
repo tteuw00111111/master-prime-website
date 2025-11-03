@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { useRouter } from "next/navigation";
 
 const PHONE = "5521967635340";
 const MESSAGE = encodeURIComponent(
@@ -11,9 +10,6 @@ const MESSAGE = encodeURIComponent(
 const WA_URL = `https://wa.me/${PHONE}?text=${MESSAGE}`;
 
 export default function WhatsAppPage() {
-  const [countdown, setCountdown] = useState(5);
-  const router = useRouter();
-
   useEffect(() => {
     // Fire conversion tracking when component mounts
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
@@ -22,17 +18,9 @@ export default function WhatsAppPage() {
       });
     }
 
-    if (countdown === 0) {
-      window.location.href = WA_URL;
-      return;
-    }
-
-    const timer = setTimeout(() => {
-      setCountdown(countdown - 1);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [countdown, router]);
+    // Redirect immediately
+    window.location.href = WA_URL;
+  }, []);
 
   return (
     <div className="bg-brand-dark text-gray-200 antialiased">
@@ -43,8 +31,7 @@ export default function WhatsAppPage() {
           Redirecionando para o WhatsApp
         </h1>
         <p className="mb-8 max-w-md text-lg text-gray-400">
-          Você será redirecionado em{" "}
-          <span className="font-bold text-white">{countdown}</span> segundos...
+          Redirecionando agora...
         </p>
 
         <a

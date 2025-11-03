@@ -40,6 +40,9 @@ export default function Header() {
 
         {/* Navegação Desktop */}
         <nav className="hidden md:flex space-x-8">
+          <a href="#products" className={linkCls}>
+            Produtos
+          </a>
           {/* <a href="#services" className={linkCls}>
             Serviços
           </a> */}
@@ -76,6 +79,12 @@ export default function Header() {
       {/* Menu Mobile */}
       {menuOpen && (
         <div className="md:hidden bg-black/90 backdrop-blur-lg px-6 pb-4 space-y-4">
+          <a
+            href="#products"
+            className="block font-poppins text-[#DEDEDE] hover:text-brand-yellow transition duration-300"
+          >
+            Produtos
+          </a>
           {/* <a
             href="#services"
             className="block font-poppins text-[#DEDEDE] hover:text-brand-yellow transition duration-300"
