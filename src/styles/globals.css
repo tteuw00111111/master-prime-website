@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme inline {
+  --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1 var(--delay, 0ms);
+  @keyframes cell-ripple {
+    0% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Button Effect - Apple Liquid Glass Standard */
+  .glass-button {
+    @apply relative;
+
+    /* Enhanced gradient background - slightly more opaque */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.14) 0%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+
+    /* Enhanced backdrop filter with multiple effects for "refraction" */
+    backdrop-filter: blur(50px) saturate(200%) contrast(115%) brightness(105%);
+    -webkit-backdrop-filter: blur(50px) saturate(200%) contrast(115%) brightness(105%);
+
+    /* Slightly enhanced border */
+    border: 1.5px solid rgba(255, 255, 255, 0.22);
+    border-radius: 75px;
+
+    /* Multi-layer shadow system - Apple standard (6 layers) */
+    box-shadow:
+      /* Layer 1: Ambient shadow - overall elevation */
+      0 20px 60px 0 rgba(0, 0, 0, 0.5),
+      /* Layer 2: Penumbra - soft directional shadow */
+      0 8px 32px -8px rgba(0, 0, 0, 0.3),
+      /* Layer 3: Gold-tinted brand shadow - theme integration */
+      0 12px 40px -4px rgba(255, 215, 0, 0.15),
+      /* Layer 4: Inner border glow ring */
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+      /* Layer 5: Top inner glow - light source simulation */
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.35),
+      /* Layer 6: Bottom inner depth */
+      inset 0 -1px 2px 0 rgba(0, 0, 0, 0.15);
+
+    /* Smooth transitions - Apple standard easing */
+    transition:
+      background 400ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 400ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 400ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Performance optimization */
+    will-change: transform, box-shadow;
+  }
+
+  /* Enhanced highlight overlay */
+  .glass-button::before {
+    content: '';
+    @apply absolute inset-0 rounded-[75px];
+
+    /* Enhanced highlight gradient - more pronounced */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.05) 40%,
+      transparent 60%
+    );
+
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 2;
+
+    transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Enhanced hover state - premium interaction */
+  .glass-button:hover {
+    /* Brighter background on hover */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.10) 100%
+    );
+
+    /* Brighter border */
+    border-color: rgba(255, 255, 255, 0.28);
+
+    /* Subtle lift effect for premium feel */
+    transform: translateY(-2px);
+
+    /* Enhanced shadow hierarchy - all layers intensify proportionally */
+    box-shadow:
+      /* Stronger ambient shadow */
+      0 24px 72px 0 rgba(0, 0, 0, 0.6),
+      /* Enhanced penumbra */
+      0 12px 40px -8px rgba(0, 0, 0, 0.35),
+      /* More prominent gold glow */
+      0 16px 48px -4px rgba(255, 215, 0, 0.25),
+      /* Enhanced inner glow ring */
+      inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+      /* Brighter top highlight */
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+      /* Maintained inner depth */
+      inset 0 -1px 2px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .glass-button:hover::before {
+    /* Slightly more visible highlight on hover */
+    opacity: 0.85;
+  }
+
+  /* Ensure content stays above pseudo-elements */
+  .glass-button > * {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Fallback for browsers without backdrop-filter support */
+  @supports not (backdrop-filter: blur(1px)) {
+    .glass-button {
+      background: rgba(255, 255, 255, 0.20);
+      border-color: rgba(255, 255, 255, 0.30);
+    }
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .glass-button {
+      transition-duration: 0.01ms !important;
+    }
+
+    .glass-button:hover {
+      transform: none;
+    }
+  }
+
+  /* Glass Card Effect */
+  .glass-card {
+    @apply relative;
+    background: rgba(21, 21, 21, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
+  }
+
+
+
+  /* Container */
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Text gradients */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #FFD700, #FFED4E);
+  }
+
+  /* Glow effects */
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+
+  .glow-gold-strong {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+  }
+
+  /* Smooth scrolling for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
