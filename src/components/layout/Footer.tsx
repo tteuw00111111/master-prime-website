@@ -1,7 +1,7 @@
 import { FaWhatsapp, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import { SITE_CONFIG, NAVIGATION_ITEMS } from '@/utils/constants'
 import { openWhatsAppForQuote } from '@/utils/whatsapp'
-import logoImage from '@/assets/images/logo.png'
+import logoImage from '@/assets/images/logo.webp'
 
 export const Footer = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {

@@ -4,11 +4,13 @@ import { animate } from 'framer-motion';
 
 const throttle = (func: (...args: any[]) => void, limit: number) => {
   let lastCall = 0;
+  let rafId: number | null = null;
   return function (this: any, ...args: any[]) {
     const now = performance.now();
     if (now - lastCall >= limit) {
       lastCall = now;
-      func.apply(this, args);
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => func.apply(this, args));
     }
   };
 };

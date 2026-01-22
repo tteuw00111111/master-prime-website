@@ -29,10 +29,18 @@
     <link rel="preconnect" href="https://wa.me" />
     <link rel="dns-prefetch" href="https://wa.me" />
 
-    <!-- Fonts -->
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/src/assets/fonts/britanica/Britanica-Black.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/src/assets/fonts/britanica/Britanica-Regular.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Preload above-the-fold images -->
+    <link rel="preload" href="/src/assets/images/logo.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/src/assets/images/asset_phone_main_page.webp" as="image" type="image/webp" />
+
+    <!-- Google Fonts (fallback) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   </head>
   <body>
     <div id="root"></div>

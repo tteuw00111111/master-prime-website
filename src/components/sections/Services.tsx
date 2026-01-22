@@ -7,12 +7,12 @@ import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 
 // Images
-import pcGamerImage from '@/assets/images/pc_gamer.png'
-import ps5Image from '@/assets/images/ps5_sem_bg.png'
-import xboxImage from '@/assets/images/xbox_series_x.png'
-import notebookImage from '@/assets/images/note_sem_bg.png'
-import iphoneImage from '@/assets/images/iphone_sem_bg.png'
-import celularesImage from '@/assets/images/celulares.png'
+import pcGamerImage from '@/assets/images/pc_gamer.webp'
+import ps5Image from '@/assets/images/ps5_sem_bg.webp'
+import xboxImage from '@/assets/images/xbox_series_x.webp'
+import notebookImage from '@/assets/images/note_sem_bg.webp'
+import iphoneImage from '@/assets/images/iphone_sem_bg.webp'
+import celularesImage from '@/assets/images/celulares.webp'
 
 // Extract services data to module level (outside component)
 const SERVICES_DATA = [

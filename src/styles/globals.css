@@ -22,11 +22,29 @@
     @apply bg-dark text-white antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1;
     overflow-x: hidden;
+    text-rendering: optimizeSpeed;
   }
 
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+  }
+
+  /* Optimize sections for better rendering performance */
+  section {
+    contain: layout style;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -195,16 +213,4 @@
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
   }
 
-  /* Smooth scrolling for reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-
-    * {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
 }

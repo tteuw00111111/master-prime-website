@@ -8,7 +8,7 @@ import {
   heroTextContainer,
   heroTextItem,
 } from "@/utils/animations";
-import heroPhoneImage from "@/assets/images/asset_phone_main_page.png";
+import heroPhoneImage from "@/assets/images/asset_phone_main_page.webp";
 import DotGrid from "@/components/ui/DotGrid";
 import { Magnetic } from "../ui/Magnetic";
 

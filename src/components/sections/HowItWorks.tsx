@@ -6,27 +6,26 @@ import { staggerContainer, staggerItem } from '@/utils/animations'
 
 const FloatingParticles = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(20)].map((_, i) => (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ contain: 'layout paint' }}>
+      {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute bg-gold/10 rounded-full blur-xl"
+          className="absolute bg-gold/10 rounded-full blur-xl will-change-transform"
           style={{
-            width: Math.random() * 100 + 50,
-            height: Math.random() * 100 + 50,
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
+            width: 80 + (i * 15),
+            height: 80 + (i * 15),
+            top: `${(i * 12) % 100}%`,
+            left: `${(i * 13) % 100}%`,
           }}
           animate={{
-            y: [0, Math.random() * -100, 0],
-            opacity: [0.1, 0.3, 0.1],
-            scale: [1, 1.2, 1],
+            y: [0, -50 - (i * 5), 0],
+            opacity: [0.1, 0.25, 0.1],
           }}
           transition={{
-            duration: Math.random() * 10 + 10,
+            duration: 12 + (i * 2),
             repeat: Infinity,
             ease: "easeInOut",
-            delay: Math.random() * 5,
+            delay: i * 0.5,
           }}
         />
       ))}

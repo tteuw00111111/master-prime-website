@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { navAnimation } from '@/utils/animations'
-import logoImage from '@/assets/images/logo.png'
+import logoImage from '@/assets/images/logo.webp'
 
 export const Header = () => {
   return (

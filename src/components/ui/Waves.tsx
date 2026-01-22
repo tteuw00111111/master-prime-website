@@ -337,13 +337,6 @@ const Waves: React.FC<WavesProps> = ({
       setSize();
       setLines();
     }
-    function onMouseMove(e: MouseEvent) {
-      updateMouse(e.clientX, e.clientY);
-    }
-    function onTouchMove(e: TouchEvent) {
-      const touch = e.touches[0];
-      updateMouse(touch.clientX, touch.clientY);
-    }
     function updateMouse(x: number, y: number) {
       const mouse = mouseRef.current;
       const b = boundingRef.current;
@@ -358,12 +351,30 @@ const Waves: React.FC<WavesProps> = ({
       }
     }
 
+    // Throttled mouse handlers for better performance
+    let lastMouseMove = 0;
+    function onMouseMove(e: MouseEvent) {
+      const now = performance.now();
+      if (now - lastMouseMove >= 32) { // ~30fps for mouse tracking
+        lastMouseMove = now;
+        updateMouse(e.clientX, e.clientY);
+      }
+    }
+    function onTouchMove(e: TouchEvent) {
+      const now = performance.now();
+      if (now - lastMouseMove >= 32) {
+        lastMouseMove = now;
+        const touch = e.touches[0];
+        updateMouse(touch.clientX, touch.clientY);
+      }
+    }
+
     setSize();
     setLines();
     frameIdRef.current = requestAnimationFrame(tick);
     window.addEventListener('resize', onResize);
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('touchmove', onTouchMove, { passive: false });
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
 
     return () => {
       window.removeEventListener('resize', onResize);
