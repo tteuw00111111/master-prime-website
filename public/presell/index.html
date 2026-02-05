@@ -373,13 +373,26 @@
       return match ? match[1] : undefined;
     }
 
-    function trackLead() {
-      // Fire Pixel event
+    function trackLead(url) {
+      // 1. Fire GTM Event
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'whatsapp_click',
+        'event_category': 'Engagement',
+        'event_action': 'WhatsApp Click',
+        'event_label': 'Presell Page',
+        'whatsapp_action': 'custom',
+        'whatsapp_url': url,
+        'value': 1,
+        'currency': 'BRL'
+      });
+
+      // 2. Fire Pixel event
       if (window.fbq) {
         fbq('track', 'Lead');
       }
 
-      // Send to CAPI
+      // 3. Send to CAPI
       fetch('/api/meta-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -396,7 +409,7 @@
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a[href*="whatsapp"]');
       if (link) {
-        trackLead();
+        trackLead(link.href);
       }
     });
   })();

@@ -24,19 +24,23 @@ const pushWhatsAppEvent = (
 ): void => {
   const location = window.location.pathname + window.location.hash
 
-  const eventData: WhatsAppClickEvent = {
+  // Standardize for GA4 and Google Ads
+  const eventData = {
     event: 'whatsapp_click',
+    event_category: 'Engagement',
+    event_action: 'WhatsApp Click',
+    event_label: serviceName || action,
     whatsapp_action: action,
     whatsapp_location: location,
     whatsapp_url: url,
-  }
-
-  if (serviceName) {
-    eventData.whatsapp_service = serviceName
+    whatsapp_service: serviceName,
+    // Add value if needed for Google Ads (optional)
+    value: 1,
+    currency: 'BRL'
   }
 
   window.dataLayer = window.dataLayer || []
-  window.dataLayer.push(eventData as unknown as Record<string, unknown>)
+  window.dataLayer.push(eventData)
 }
 
 /**
