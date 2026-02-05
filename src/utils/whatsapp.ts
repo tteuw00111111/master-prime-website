@@ -105,6 +105,44 @@ export const openWhatsAppWithMessage = (message: string): void => {
   window.open(url, '_blank', 'noopener,noreferrer')
 }
 
+// URL generators (return URLs without opening)
+export const getWhatsAppQuoteUrl = (): string => {
+  const message = 'Olá! Vim do site e quero solicitar um orçamento grátis'
+  const encodedMessage = encodeURIComponent(message)
+  return `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
+}
+
+export const getWhatsAppServiceUrl = (serviceName: string): string => {
+  const message = `Olá! Vim do site e quero orçamento para ${serviceName}`
+  const encodedMessage = encodeURIComponent(message)
+  return `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
+}
+
+export const getWhatsAppVisitUrl = (): string => {
+  const message = 'Olá! Vim do site e gostaria de agendar uma visita à loja'
+  const encodedMessage = encodeURIComponent(message)
+  return `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
+}
+
+// Tracking-only functions (no window.open)
+export const trackWhatsAppQuote = (): void => {
+  const url = getWhatsAppQuoteUrl()
+  pushWhatsAppEvent('quote', url)
+  trackLeadEvent()
+}
+
+export const trackWhatsAppService = (serviceName: string): void => {
+  const url = getWhatsAppServiceUrl(serviceName)
+  pushWhatsAppEvent('service', url, serviceName)
+  trackLeadEvent()
+}
+
+export const trackWhatsAppVisit = (): void => {
+  const url = getWhatsAppVisitUrl()
+  pushWhatsAppEvent('visit', url)
+  trackLeadEvent()
+}
+
 // Legacy exports for backward compatibility
 export const getServiceWhatsAppMessage = (serviceName: string): string => {
   return `Olá! Vim do site e quero orçamento para ${serviceName}`

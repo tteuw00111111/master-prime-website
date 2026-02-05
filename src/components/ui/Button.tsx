@@ -62,6 +62,7 @@ export const Button: React.FC<ButtonProps> = ({
         href={href}
         className={classes}
         style={style}
+        onClick={onClick}
         whileHover={!disabled ? glassButtonHover : undefined}
         whileTap={!disabled ? glassButtonTap : undefined}
         target={href.startsWith('http') ? '_blank' : undefined}

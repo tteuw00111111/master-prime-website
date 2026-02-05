@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
 import { Header } from "@/components/layout/Header";
 import { TrustBadges } from "@/components/sections/TrustBadges";
-import { openWhatsAppForQuote } from "@/utils/whatsapp";
+import { getWhatsAppQuoteUrl, trackWhatsAppQuote } from "@/utils/whatsapp";
 import {
   heroTextContainer,
   heroTextItem,
@@ -117,7 +117,8 @@ export const Hero = () => {
                   size="lg"
                   icon={FaWhatsapp}
                   iconClassName="text-2xl sm:text-3xl"
-                  onClick={() => openWhatsAppForQuote()}
+                  href={getWhatsAppQuoteUrl()}
+                  onClick={trackWhatsAppQuote}
                   className="font-bold text-sm sm:text-base"
                   style={{
                     width: "clamp(200px, 251px, 251px)",

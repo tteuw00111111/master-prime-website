@@ -2,7 +2,7 @@ import { useMemo, useCallback, memo } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
 import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
-import { openWhatsAppForService } from '@/utils/whatsapp'
+import { getWhatsAppServiceUrl, trackWhatsAppService } from '@/utils/whatsapp'
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 
@@ -82,8 +82,10 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
     [service.titlePart1, service.titlePart2]
   );
 
+  const whatsAppUrl = useMemo(() => getWhatsAppServiceUrl(serviceName), [serviceName]);
+
   const handleWhatsAppClick = useCallback(() => {
-    openWhatsAppForService(serviceName);
+    trackWhatsAppService(serviceName);
   }, [serviceName]);
   return (
     <CardContainer className="inter-var w-full h-full">
@@ -132,6 +134,7 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
               variant="whatsapp-outline"
               size="sm"
               icon={FaWhatsapp}
+              href={whatsAppUrl}
               onClick={handleWhatsAppClick}
               className="rounded-full !px-6 border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white w-full md:w-auto"
             >

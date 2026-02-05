@@ -1,6 +1,6 @@
 import { FaWhatsapp, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import { SITE_CONFIG, NAVIGATION_ITEMS } from '@/utils/constants'
-import { openWhatsAppForQuote } from '@/utils/whatsapp'
+import { getWhatsAppQuoteUrl, trackWhatsAppQuote } from '@/utils/whatsapp'
 import logoImage from '@/assets/images/logo.webp'
 
 export const Footer = () => {
@@ -41,13 +41,16 @@ export const Footer = () => {
                   <FaInstagram className="text-xl" />
                 </a>
               )}
-              <button
-                onClick={() => openWhatsAppForQuote()}
+              <a
+                href={getWhatsAppQuoteUrl()}
+                onClick={trackWhatsAppQuote}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-whatsapp/10 flex items-center justify-center text-whatsapp hover:bg-whatsapp hover:text-white transition-all"
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp className="text-xl" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -91,12 +94,15 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <FaWhatsapp className="text-gold flex-shrink-0" />
-                <button
-                  onClick={() => openWhatsAppForQuote()}
+                <a
+                  href={getWhatsAppQuoteUrl()}
+                  onClick={trackWhatsAppQuote}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gold transition-colors text-left"
                 >
                   WhatsApp
-                </button>
+                </a>
               </li>
             </ul>
           </div>

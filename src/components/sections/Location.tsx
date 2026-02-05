@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Magnetic } from '@/components/ui/Magnetic'
 import { SITE_CONFIG } from '@/utils/constants'
-import { openWhatsAppForVisit, openWhatsAppForQuote } from '@/utils/whatsapp'
+import { getWhatsAppVisitUrl, getWhatsAppQuoteUrl, trackWhatsAppVisit, trackWhatsAppQuote } from '@/utils/whatsapp'
 import { slideInLeft, slideInRight } from '@/utils/animations'
 import { getOpeningStatus, getFormattedHours } from '@/utils/openingHours'
 
@@ -151,13 +151,16 @@ export const Location = () => {
                     <FaInstagram className="text-gold" />
                     @masterprimecg
                   </a>
-                  <button
-                    onClick={() => openWhatsAppForQuote()}
+                  <a
+                    href={getWhatsAppQuoteUrl()}
+                    onClick={trackWhatsAppQuote}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-gold transition-colors flex items-center gap-2"
                   >
                     <FaWhatsapp className="text-whatsapp" />
                     WhatsApp - Orçamento Grátis
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -169,7 +172,8 @@ export const Location = () => {
                 size="lg"
                 icon={FaWhatsapp}
                 iconClassName="text-2xl"
-                onClick={() => openWhatsAppForVisit()}
+                href={getWhatsAppVisitUrl()}
+                onClick={trackWhatsAppVisit}
                 className="flex-1 font-bold"
                 style={{
                   height: "53px",

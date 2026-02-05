@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Navigation } from './Navigation'
 import { Button } from '@/components/ui/Button'
 import { FaWhatsapp } from 'react-icons/fa'
-import { openWhatsAppForQuote } from '@/utils/whatsapp'
+import { getWhatsAppQuoteUrl, trackWhatsAppQuote } from '@/utils/whatsapp'
 import { mobileMenuAnimation, mobileMenuBackdrop } from '@/utils/animations'
 
 interface MobileMenuProps {
@@ -62,8 +62,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                   variant="whatsapp"
                   size="md"
                   icon={FaWhatsapp}
+                  href={getWhatsAppQuoteUrl()}
                   onClick={() => {
-                    openWhatsAppForQuote()
+                    trackWhatsAppQuote()
                     onClose()
                   }}
                   className="w-full"
