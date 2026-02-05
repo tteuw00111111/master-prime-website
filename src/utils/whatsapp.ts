@@ -1,7 +1,43 @@
 import { trackLeadEvent } from './metaTracking'
 
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[]
+  }
+}
+
+interface WhatsAppClickEvent {
+  event: 'whatsapp_click'
+  whatsapp_action: 'quote' | 'service' | 'visit' | 'custom'
+  whatsapp_service?: string
+  whatsapp_location: string
+  whatsapp_url: string
+}
+
 const WHATSAPP_PHONE = '5521967635340'
 const WHATSAPP_API_BASE = 'https://api.whatsapp.com/send/'
+
+const pushWhatsAppEvent = (
+  action: WhatsAppClickEvent['whatsapp_action'],
+  url: string,
+  serviceName?: string
+): void => {
+  const location = window.location.pathname + window.location.hash
+
+  const eventData: WhatsAppClickEvent = {
+    event: 'whatsapp_click',
+    whatsapp_action: action,
+    whatsapp_location: location,
+    whatsapp_url: url,
+  }
+
+  if (serviceName) {
+    eventData.whatsapp_service = serviceName
+  }
+
+  window.dataLayer = window.dataLayer || []
+  window.dataLayer.push(eventData as unknown as Record<string, unknown>)
+}
 
 /**
  * Opens WhatsApp with a pre-filled message using the official API format
@@ -13,6 +49,7 @@ export const openWhatsApp = (customMessage?: string): void => {
   const encodedMessage = encodeURIComponent(message)
   const url = `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 
+  pushWhatsAppEvent('custom', url)
   trackLeadEvent()
   window.open(url, '_blank', 'noopener,noreferrer')
 }
@@ -25,6 +62,7 @@ export const openWhatsAppForService = (serviceName: string): void => {
   const encodedMessage = encodeURIComponent(message)
   const url = `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 
+  pushWhatsAppEvent('service', url, serviceName)
   trackLeadEvent()
   window.open(url, '_blank', 'noopener,noreferrer')
 }
@@ -37,6 +75,7 @@ export const openWhatsAppForVisit = (): void => {
   const encodedMessage = encodeURIComponent(message)
   const url = `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 
+  pushWhatsAppEvent('visit', url)
   trackLeadEvent()
   window.open(url, '_blank', 'noopener,noreferrer')
 }
@@ -49,6 +88,7 @@ export const openWhatsAppForQuote = (): void => {
   const encodedMessage = encodeURIComponent(message)
   const url = `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 
+  pushWhatsAppEvent('quote', url)
   trackLeadEvent()
   window.open(url, '_blank', 'noopener,noreferrer')
 }
@@ -60,6 +100,7 @@ export const openWhatsAppWithMessage = (message: string): void => {
   const encodedMessage = encodeURIComponent(message)
   const url = `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 
+  pushWhatsAppEvent('custom', url)
   trackLeadEvent()
   window.open(url, '_blank', 'noopener,noreferrer')
 }
