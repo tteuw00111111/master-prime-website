@@ -51,7 +51,7 @@ export const FAQ = () => {
             Não encontrou a resposta que procurava?
           </p>
           <a
-            href="https://wa.me/5521999999999?text=Olá!%20Tenho%20uma%20dúvida."
+            href="https://wa.me/5521967635340?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os%20da%20Master%20Prime."
             target="_blank"
             rel="noopener noreferrer"
             className="text-gold hover:text-gold-light transition-colors font-semibold"

@@ -89,7 +89,7 @@ export const Testimonials = () => {
           transition={{ delay: 0.5 }}
         >
           <p className="text-gray-400 text-sm">
-            Mais de <span className="text-gold font-bold">500+ clientes satisfeitos</span> em 2024
+            Mais de <span className="text-gold font-bold">500 avaliações com 5 estrelas</span> no Google
           </p>
         </motion.div>
       </div>

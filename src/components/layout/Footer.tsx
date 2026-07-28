@@ -21,12 +21,14 @@ export const Footer = () => {
           <div className="space-y-4">
             <img
               src={logoImage}
-              alt="Master Prime"
+              width="639"
+              height="376"
+              alt="Master Prime Assistência"
               className="h-12 w-auto"
             />
             <p className="text-gray-400 text-sm leading-relaxed">
-              Loja de peças e acessórios para smartphones, tablets, notebooks e consoles.
-              Garantia de 1 ano em todos os produtos.
+              Master Prime Assistência: serviços técnicos para eletrônicos, peças,
+              acessórios e computadores montados em Campo Grande, RJ.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4 pt-2">
@@ -56,7 +58,7 @@ export const Footer = () => {
 
           {/* Quick Links Column */}
           <div>
-            <h4 className="text-lg font-heading font-semibold text-white mb-4">Links Rápidos</h4>
+            <h2 className="text-lg font-heading font-semibold text-white mb-4">Links Rápidos</h2>
             <ul className="space-y-3">
               {NAVIGATION_ITEMS.map((item) => (
                 <li key={item.href}>
@@ -74,13 +76,14 @@ export const Footer = () => {
 
           {/* Contact Column */}
           <div>
-            <h4 className="text-lg font-heading font-semibold text-white mb-4">Contato</h4>
+            <h2 className="text-lg font-heading font-semibold text-white mb-4">Contato</h2>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm">
                 <FaMapMarkerAlt className="text-gold mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
                   {SITE_CONFIG.address.street}<br />
-                  {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state}
+                  {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state}<br />
+                  CEP {SITE_CONFIG.address.zip}
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
@@ -101,7 +104,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gold transition-colors text-left"
                 >
-                  WhatsApp
+                  (21) 96763-5340
                 </a>
               </li>
             </ul>
@@ -109,7 +112,7 @@ export const Footer = () => {
 
           {/* Hours Column */}
           <div>
-            <h4 className="text-lg font-heading font-semibold text-white mb-4">Horário</h4>
+            <h2 className="text-lg font-heading font-semibold text-white mb-4">Horário</h2>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <FaClock className="text-gold mt-1 flex-shrink-0" />
@@ -127,6 +130,13 @@ export const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gold/10 text-center">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Master Prime. Todos os direitos reservados.
+            {' · '}
+            <a
+              href="/politica-de-privacidade"
+              className="hover:text-gold transition-colors"
+            >
+              Política de Privacidade
+            </a>
           </p>
         </div>
       </div>

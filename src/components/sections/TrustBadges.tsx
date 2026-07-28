@@ -34,19 +34,19 @@ export const TrustBadges = () => {
                 {/* Text Content */}
                 <div className="flex-1 text-left">
                   {index === 0 && (
-                    <h3 className="text-[13px] text-white leading-tight whitespace-nowrap">
-                      Entrega <span className="font-britanica font-black">segura</span> e <span className="font-britanica font-black">rastreada</span>
-                    </h3>
+                    <p className="text-[13px] text-white leading-tight whitespace-nowrap">
+                      Retirada <span className="font-britanica font-black">e entrega</span>
+                    </p>
                   )}
                   {index === 1 && (
-                    <h3 className="text-[13px] text-white leading-tight">
+                    <p className="text-[13px] text-white leading-tight">
                       Suporte <span className="font-britanica font-black">via WhatsApp</span>
-                    </h3>
+                    </p>
                   )}
                   {index === 2 && (
-                    <h3 className="text-[13px] text-white leading-tight">
-                      Garantia de <span className="font-britanica font-black">1 Ano</span>
-                    </h3>
+                    <p className="text-[13px] text-white leading-tight">
+                      Loja física em <span className="font-britanica font-black">Campo Grande</span>
+                    </p>
                   )}
                 </div>
               </div>

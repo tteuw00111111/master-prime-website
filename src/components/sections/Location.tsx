@@ -43,7 +43,10 @@ export const Location = () => {
             <div className="relative h-[400px] rounded-2xl overflow-hidden border border-gold/20">
               {/* Google Maps Embed */}
               <iframe
-                src={import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL}
+                src={
+                  import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL ||
+                  'https://www.google.com/maps?q=Avenida%20Ces%C3%A1rio%20de%20Melo%2C%202571%2C%20Campo%20Grande%2C%20Rio%20de%20Janeiro%20RJ&output=embed'
+                }
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -159,7 +162,7 @@ export const Location = () => {
                     className="text-gray-400 hover:text-gold transition-colors flex items-center gap-2"
                   >
                     <FaWhatsapp className="text-whatsapp" />
-                    WhatsApp - Orçamento Grátis
+                    WhatsApp - Solicitar orçamento
                   </a>
                 </div>
               </div>
@@ -180,14 +183,14 @@ export const Location = () => {
                   borderRadius: "75px",
                 }}
               >
-                Agendar Visita
+                Falar no WhatsApp
               </Button>
               <Magnetic strength={0.3}>
                 <Button
                   variant="secondary"
                   size="lg"
                   icon={FaMapMarkerAlt}
-                  href="https://share.google/qAUljzZmA4mBCAknf"
+                  href="https://www.google.com/maps/search/?api=1&query=Avenida%20Ces%C3%A1rio%20de%20Melo%2C%202571%2C%20Campo%20Grande%2C%20Rio%20de%20Janeiro%2C%20RJ%2C%2023052-102"
                   className="flex-1"
                   style={{
                     height: "53px",

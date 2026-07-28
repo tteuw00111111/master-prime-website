@@ -19,51 +19,63 @@ const SERVICES_DATA = [
   // Top Row
   {
     id: 1,
-    titlePart1: 'PC Gamer',
-    titlePart2: 'Customizado',
-    description: 'Peças e componentes para montagem de setups de alta performance. Placas, memórias e mais.',
+    titlePart1: 'Computadores e',
+    titlePart2: 'PC Gamer',
+    description: 'Manutenção de computador, diagnóstico de hardware, formatação, limpeza, instalação de SSD e upgrades.',
     image: pcGamerImage,
+    imageWidth: 732,
+    imageHeight: 732,
     color: 'rgba(82, 39, 255, 0.4)',
   },
   {
     id: 2,
-    titlePart1: 'Peças para',
+    titlePart1: 'Videogames e',
     titlePart2: 'Consoles',
-    description: 'Componentes e acessórios para PlayStation, Xbox e Nintendo. Controles, HDs e mais.',
+    description: 'Conserto de videogame, limpeza e diagnóstico de console que não liga ou liga e desliga.',
     image: ps5Image,
+    imageWidth: 463,
+    imageHeight: 559,
     color: 'rgba(0, 100, 255, 0.3)',
   },
   {
     id: 3,
-    titlePart1: 'Telas e',
-    titlePart2: 'Baterias',
-    description: 'Displays e baterias de alta qualidade para smartphones. Originais e compatíveis.',
+    titlePart1: 'Manutenção de',
+    titlePart2: 'Celulares',
+    description: 'Troca de tela e bateria, conector de carga, reparo de placa, desoxidação, sistema e diagnóstico.',
     image: iphoneImage,
+    imageWidth: 557,
+    imageHeight: 714,
     color: 'rgba(255, 215, 0, 0.2)',
   },
   // Bottom Row
   {
     id: 4,
-    titlePart1: 'Acessórios',
-    titlePart2: 'Gaming',
-    description: 'Controles, headsets, cabos e acessórios para sua jogatina. Diversas marcas.',
+    titlePart1: 'Controles com',
+    titlePart2: 'Drift',
+    description: 'Conserto de controle, correção de drift, manutenção e instalação de analógicos Hall Effect.',
     image: xboxImage,
+    imageWidth: 500,
+    imageHeight: 500,
     color: 'rgba(16, 124, 16, 0.3)',
   },
   {
     id: 5,
-    titlePart1: 'Peças para',
+    titlePart1: 'Manutenção de',
     titlePart2: 'Notebooks',
-    description: 'Telas, teclados, baterias e componentes para notebooks de todas as marcas.',
+    description: 'Dobradiça, tela, teclado, bateria, upgrade para SSD, placa-mãe, formatação, limpeza e diagnóstico.',
     image: notebookImage,
+    imageWidth: 1600,
+    imageHeight: 1200,
     color: 'rgba(255, 50, 50, 0.3)',
   },
   {
     id: 6,
-    titlePart1: 'Componentes',
-    titlePart2: 'Celulares',
-    description: 'Telas, baterias, conectores e peças para smartphones. Qualidade garantida.',
+    titlePart1: 'Peças e',
+    titlePart2: 'Acessórios',
+    description: 'Peças e acessórios para eletrônicos, além de computadores montados e PC gamer.',
     image: celularesImage,
+    imageWidth: 935,
+    imageHeight: 872,
     color: 'rgba(0, 255, 150, 0.2)',
   },
 ] as const;
@@ -99,6 +111,7 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
 
         <div className="flex flex-col h-full relative z-10">
           <CardItem
+            as="h3"
             translateZ="50"
             className="text-3xl md:text-4xl font-britanica text-white mb-2 leading-[0.9] flex flex-col"
           >
@@ -120,6 +133,8 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
                 <img
                   src={service.image}
                   alt={`${service.titlePart1} ${service.titlePart2}`}
+                  width={service.imageWidth}
+                  height={service.imageHeight}
                   className="h-full w-auto object-contain drop-shadow-2xl group-hover/card:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -138,7 +153,7 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
               onClick={handleWhatsAppClick}
               className="rounded-full !px-6 border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white w-full md:w-auto"
             >
-              Solicitar Orçamento
+              Solicitar Atendimento
             </Button>
           </CardItem>
         </div>
@@ -156,8 +171,8 @@ export const Services = () => {
       <div className="container-custom relative z-10">
         <div className="mb-8 md:mb-12">
           <SectionHeading
-            title="Nossos Produtos"
-            subtitle="Peças e componentes de qualidade para seus dispositivos"
+            title="Nossos Serviços"
+            subtitle="Assistência técnica para celular, notebook, computador, videogame, controle e outros eletrônicos"
           />
         </div>
 
@@ -174,9 +189,11 @@ export const Services = () => {
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
+            onClick={() => document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' })}
+            aria-label="Ver localização e formas de contato"
             className="bg-black text-[#FFD700] flex items-center space-x-2 px-8 py-3 font-semibold text-lg hover:text-[#FFED4E] transition-colors"
           >
-            <span>Saiba Mais</span>
+            <span>Falar com a Equipe</span>
           </HoverBorderGradient>
         </div>
       </div>

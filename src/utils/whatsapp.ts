@@ -24,7 +24,7 @@ const pushWhatsAppEvent = (
 ): void => {
   const location = window.location.pathname + window.location.hash
 
-  // Standardize for GA4 and Google Ads
+  // Standardize the engagement event for analytics.
   const eventData = {
     event: 'whatsapp_click',
     event_category: 'Engagement',
@@ -34,9 +34,6 @@ const pushWhatsAppEvent = (
     whatsapp_location: location,
     whatsapp_url: url,
     whatsapp_service: serviceName,
-    // Add value if needed for Google Ads (optional)
-    value: 1,
-    currency: 'BRL'
   }
 
   window.dataLayer = window.dataLayer || []
@@ -75,7 +72,7 @@ export const openWhatsAppForService = (serviceName: string): void => {
  * Opens WhatsApp for scheduling a visit
  */
 export const openWhatsAppForVisit = (): void => {
-  const message = 'Olá! Vim do site e gostaria de agendar uma visita à loja'
+  const message = 'Olá! Vim do site e gostaria de informações para visitar a loja'
   const encodedMessage = encodeURIComponent(message)
   const url = `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 
@@ -88,7 +85,7 @@ export const openWhatsAppForVisit = (): void => {
  * Opens WhatsApp for general quote from hero section
  */
 export const openWhatsAppForQuote = (): void => {
-  const message = 'Olá! Vim do site e quero solicitar um orçamento grátis'
+  const message = 'Olá! Vim do site e quero solicitar um orçamento'
   const encodedMessage = encodeURIComponent(message)
   const url = `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 
@@ -111,7 +108,7 @@ export const openWhatsAppWithMessage = (message: string): void => {
 
 // URL generators (return URLs without opening)
 export const getWhatsAppQuoteUrl = (): string => {
-  const message = 'Olá! Vim do site e quero solicitar um orçamento grátis'
+  const message = 'Olá! Vim do site e quero solicitar um orçamento'
   const encodedMessage = encodeURIComponent(message)
   return `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 }
@@ -123,7 +120,7 @@ export const getWhatsAppServiceUrl = (serviceName: string): string => {
 }
 
 export const getWhatsAppVisitUrl = (): string => {
-  const message = 'Olá! Vim do site e gostaria de agendar uma visita à loja'
+  const message = 'Olá! Vim do site e gostaria de informações para visitar a loja'
   const encodedMessage = encodeURIComponent(message)
   return `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
 }
@@ -153,7 +150,7 @@ export const getServiceWhatsAppMessage = (serviceName: string): string => {
 }
 
 export const getQuoteMessage = (): string => {
-  return 'Olá! Vim do site e quero solicitar um orçamento grátis'
+  return 'Olá! Vim do site e quero solicitar um orçamento'
 }
 
 export const getDeviceQuoteMessage = (device: string, issue: string): string => {

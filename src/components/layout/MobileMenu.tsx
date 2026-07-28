@@ -44,7 +44,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 <h2 className="text-2xl font-heading font-bold text-white mb-2">
                   Master <span className="text-gold">Prime</span>
                 </h2>
-                <p className="text-gray-400 text-sm">Peças e Acessórios para Eletrônicos</p>
+                <p className="text-gray-400 text-sm">Assistência Técnica em Campo Grande</p>
               </div>
 
               {/* Navigation */}
@@ -69,7 +69,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                   }}
                   className="w-full"
                 >
-                  Orçamento Grátis
+                  Solicitar Atendimento
                 </Button>
               </div>
             </div>

@@ -22,7 +22,9 @@ export const Header = () => {
         >
           <img
             src={logoImage}
-            alt="Master Prime Logo"
+            width="639"
+            height="376"
+            alt="Master Prime Assistência"
             className="h-12 sm:h-16 md:h-20 lg:h-24 xl:h-32 2xl:h-40 w-auto transition-transform group-hover:scale-105"
           />
         </a>

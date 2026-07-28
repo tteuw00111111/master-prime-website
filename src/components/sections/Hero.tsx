@@ -69,6 +69,8 @@ export const Hero = () => {
           >
             <img
               src={heroPhoneImage}
+              width="2048"
+              height="1838"
               alt="Smartphone com interface Master Prime"
               className="w-full h-auto"
               loading="eager"
@@ -91,10 +93,10 @@ export const Hero = () => {
               className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-britanica font-black leading-tight mb-3 sm:mb-4 md:mb-6"
             >
               <span className="text-white block mb-0 whitespace-nowrap">
-                Peças e Componentes para seu Dispositivo
+                Assistência Técnica em Campo Grande
               </span>
               <span className="text-gold block whitespace-nowrap">
-                Telas, Baterias e Acessórios!
+                Celulares, Notebooks e Eletrônicos
               </span>
             </motion.h1>
 
@@ -103,7 +105,7 @@ export const Hero = () => {
               variants={heroTextItem}
               className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl text-white mb-6 sm:mb-8 md:mb-10 lg:mb-14 font-britanica font-normal"
             >
-              Para Todo Rio de Janeiro
+              Campo Grande, Rio de Janeiro
             </motion.p>
 
             {/* CTA Button - WhatsApp Outline with Green Text and Icon */}
@@ -127,7 +129,7 @@ export const Hero = () => {
                     padding: "0",
                   }}
                 >
-                  Orçamento Grátis
+                  Solicitar Atendimento
                 </Button>
               </Magnetic>
             </motion.div>

@@ -16,7 +16,7 @@ Landing page moderna e responsiva para a Master Prime, assistência técnica esp
 
 ### Seções da Landing Page
 - **Hero** - Seção principal com CTA e showcase do dispositivo
-- **Trust Badges** - Diferenciais da empresa (pagamento, peças, garantia)
+- **Trust Badges** - Informações sobre retirada, WhatsApp e loja física
 - **Serviços** - Grid de serviços oferecidos
 - **Como Funciona** - Timeline do processo de atendimento
 - **Clientes Satisfeitos** - Depoimentos e avaliações
@@ -93,9 +93,9 @@ cp .env.example .env
 
 Edite o arquivo `.env` com suas informações:
 ```env
-VITE_WHATSAPP_NUMBER=5521999999999
-VITE_WHATSAPP_MESSAGE=Olá! Gostaria de solicitar um orçamento grátis.
-VITE_GOOGLE_MAPS_EMBED_URL=https://www.google.com/maps/embed?pb=your_embed_url
+VITE_WHATSAPP_NUMBER=5521967635340
+VITE_WHATSAPP_MESSAGE=Olá! Gostaria de solicitar um orçamento.
+VITE_GOOGLE_MAPS_EMBED_URL=https://www.google.com/maps?q=Avenida%20Ces%C3%A1rio%20de%20Melo%2C%202571%2C%20Campo%20Grande%2C%20Rio%20de%20Janeiro%20RJ&output=embed
 ```
 
 ### Desenvolvimento
@@ -143,7 +143,7 @@ O efeito de vidro estilo iPhone foi implementado com:
 Exemplo de uso:
 ```tsx
 <Button variant="glass">
-  Orçamento Grátis
+  Solicitar Orçamento
 </Button>
 ```
 

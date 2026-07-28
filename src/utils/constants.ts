@@ -16,13 +16,13 @@ import { IoShieldCheckmark } from 'react-icons/io5'
 import type { SiteConfig, TrustBadge, Service, Step, Testimonial, FAQItem, NavigationItem } from '@/types'
 
 export const SITE_CONFIG: SiteConfig = {
-  name: 'Master Prime',
-  tagline: 'Peças e Componentes para seu Dispositivo!',
-  location: 'Para Todo - Rio de Janeiro',
+  name: 'Master Prime Assistência',
+  tagline: 'Assistência Técnica em Campo Grande',
+  location: 'Campo Grande - Rio de Janeiro',
   whatsappNumber: '5521967635340',
   email: 'masterprime443@gmail.com',
   address: {
-    street: 'Av. Cesário de Melo, 2581 - Campo Grande',
+    street: 'Avenida Cesário de Melo, 2571 - Campo Grande',
     city: 'Rio de Janeiro',
     state: 'RJ',
     zip: '23052-102',
@@ -40,7 +40,7 @@ export const SITE_CONFIG: SiteConfig = {
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'Início', href: '#hero' },
-  { name: 'Produtos', href: '#services' },
+  { name: 'Serviços', href: '#services' },
   { name: 'Como Funciona', href: '#how-it-works' },
   { name: 'Clientes', href: '#testimonials' },
   { name: 'Localização', href: '#location' },
@@ -50,7 +50,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
 export const TRUST_BADGES: TrustBadge[] = [
   {
     icon: TbTruckDelivery,
-    title: 'Entrega segura e rastreada',
+    title: 'Retirada e entrega',
     description: '',
   },
   {
@@ -60,7 +60,7 @@ export const TRUST_BADGES: TrustBadge[] = [
   },
   {
     icon: IoShieldCheckmark,
-    title: 'Garantia de 1 Ano',
+    title: 'Loja física em Campo Grande',
     description: '',
   },
 ]
@@ -68,51 +68,45 @@ export const TRUST_BADGES: TrustBadge[] = [
 export const SERVICES: Service[] = [
   {
     id: 1,
-    name: 'Telas e Displays',
-    description: 'Telas de alta qualidade para diversos modelos. Originais e compatíveis com garantia.',
+    name: 'Manutenção de Celulares',
+    description: 'Troca de tela e bateria, conector de carga, placa, desoxidação, sistema e diagnóstico.',
     icon: FaMobileAlt,
-    devices: ['Smartphones', 'Tablets', 'Notebooks'],
-    price: 'A partir de R$ 150',
+    devices: ['Celulares'],
   },
   {
     id: 2,
-    name: 'Baterias',
-    description: 'Baterias novas para seu dispositivo durar o dia todo. Alta capacidade e durabilidade.',
+    name: 'Manutenção de Notebooks',
+    description: 'Dobradiça, tela, teclado, bateria, SSD, placa-mãe, formatação, limpeza e diagnóstico.',
     icon: FaBatteryFull,
-    devices: ['Celulares', 'Tablets', 'Notebooks'],
-    price: 'A partir de R$ 120',
+    devices: ['Notebooks'],
   },
   {
     id: 3,
-    name: 'Placas e Componentes',
-    description: 'Componentes eletrônicos e placas para diversos dispositivos. Qualidade garantida.',
+    name: 'Manutenção de Computadores',
+    description: 'Diagnóstico de hardware, limpeza interna, formatação, remoção de vírus, SSD e upgrades.',
     icon: FaTools,
-    devices: ['Smartphones', 'Notebooks'],
-    price: 'Consulte-nos',
+    devices: ['Computadores', 'PC gamer'],
   },
   {
     id: 4,
-    name: 'Acessórios',
-    description: 'Capas, películas, carregadores e acessórios para seu dispositivo.',
+    name: 'Manutenção de Impressoras',
+    description: 'Diagnóstico, limpeza, manutenção preventiva, instalação e desentupimento de cabeça de impressão.',
     icon: FaDesktop,
-    devices: ['Notebooks', 'Desktops', 'Consoles'],
-    price: 'A partir de R$ 30',
+    devices: ['Impressoras'],
   },
   {
     id: 5,
-    name: 'Cabos e Conectores',
-    description: 'Cabos de dados, carregamento e conectores diversos. Compatibilidade total.',
+    name: 'Videogames e Controles',
+    description: 'Manutenção de console e controle, correção de drift e instalação de analógicos Hall Effect.',
     icon: FaWater,
-    devices: ['Smartphones', 'HDs', 'SSDs'],
-    price: 'Consulte-nos',
+    devices: ['Videogames', 'Controles'],
   },
   {
     id: 6,
-    name: 'Peças para Consoles',
-    description: 'Componentes e peças para PlayStation, Xbox e Nintendo. Diversos modelos.',
+    name: 'Peças, Acessórios e PC Gamer',
+    description: 'Peças e acessórios para eletrônicos, computadores montados e PC gamer.',
     icon: FaGamepad,
-    devices: ['PS4', 'PS5', 'Xbox', 'Nintendo'],
-    price: 'A partir de R$ 100',
+    devices: ['Eletrônicos', 'Computadores'],
   },
 ]
 
@@ -120,31 +114,31 @@ export const HOW_IT_WORKS: Step[] = [
   {
     step: 1,
     title: 'Entre em Contato',
-    description: 'Fale conosco através do WhatsApp e informe qual peça ou componente você precisa.',
+    description: 'Informe pelo WhatsApp o aparelho, modelo, sintoma ou item que procura.',
     icon: FaWhatsapp,
   },
   {
     step: 2,
-    title: 'Orçamento Gratuito',
-    description: 'Enviamos o orçamento sem compromisso, com detalhes sobre a peça e disponibilidade.',
+    title: 'Solicite Orçamento',
+    description: 'A equipe confirma o atendimento e a disponibilidade depois de receber os detalhes.',
     icon: FaDollarSign,
   },
   {
     step: 3,
-    title: 'Confirmação do Pedido',
-    description: 'Após aprovação, separamos sua peça e preparamos para envio ou retirada.',
+    title: 'Combine o Atendimento',
+    description: 'Leve o aparelho à loja ou consulte a disponibilidade de retirada e entrega.',
     icon: FaMapMarkerAlt,
   },
   {
     step: 4,
-    title: 'Qualidade Garantida',
-    description: 'Todas as peças passam por verificação de qualidade antes do envio.',
+    title: 'Atendimento Técnico',
+    description: 'O equipamento é avaliado antes da indicação do serviço aplicável.',
     icon: IoShieldCheckmark,
   },
   {
     step: 5,
-    title: 'Entrega Grátis',
-    description: 'Entregamos suas peças no seu endereço em todo Rio de Janeiro, sem custos adicionais de frete.',
+    title: 'Retirada e Entrega',
+    description: 'A retirada e a devolução são combinadas pelo WhatsApp nas áreas atendidas.',
     icon: FaBoxOpen,
   },
 ]
@@ -194,35 +188,35 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: 'Quanto tempo demora a entrega?',
-    answer: 'Para peças em estoque, entregamos no mesmo dia ou em até 24 horas. Para peças sob encomenda, o prazo varia de 3 a 7 dias úteis.',
+    question: 'Vocês fazem orçamento antes do reparo?',
+    answer: 'Entre em contato para informar o aparelho, o modelo e o sintoma. A disponibilidade e as condições do atendimento são confirmadas pela equipe.',
   },
   {
-    question: 'Vocês oferecem garantia nas peças?',
-    answer: 'Sim! Todas as nossas peças vêm com garantia de 1 ano contra defeitos de fabricação.',
+    question: 'A Master Prime busca e entrega o aparelho?',
+    answer: 'Sim. A retirada é combinada pelo WhatsApp e o aparelho é devolvido depois do atendimento, conforme a disponibilidade para o endereço.',
   },
   {
-    question: 'Quais formas de pagamento aceitam?',
-    answer: 'Aceitamos dinheiro, PIX, cartões de débito e crédito (parcelamento em até 3x sem juros), e transferência bancária.',
+    question: 'Quais bairros possuem retirada e entrega?',
+    answer: 'A disponibilidade atual abrange Campo Grande, Bangu, Cosmos, Realengo, Guaratiba, Paciência, Santa Cruz e Santíssimo. Confirme o endereço pelo WhatsApp.',
   },
   {
-    question: 'Posso verificar a peça antes de comprar?',
-    answer: 'Sim! Você pode visitar nossa loja para verificar a peça pessoalmente antes de finalizar a compra.',
+    question: 'Posso levar o aparelho diretamente à loja?',
+    answer: 'Sim. A loja física fica na Avenida Cesário de Melo, 2571, em Campo Grande, Rio de Janeiro.',
   },
   {
-    question: 'Trabalham com peças para quais dispositivos?',
-    answer: 'Temos peças para smartphones, tablets, notebooks e consoles de diversas marcas e modelos.',
+    question: 'Vocês consertam notebook que não liga?',
+    answer: 'Sim. O atendimento começa pelo diagnóstico das possíveis causas. Informe o modelo e o sintoma para confirmar a disponibilidade.',
   },
   {
-    question: 'As peças são originais ou compatíveis?',
-    answer: 'Trabalhamos tanto com peças originais quanto com peças compatíveis de alta qualidade. Você escolhe a opção que melhor se adequa ao seu orçamento.',
+    question: 'Vocês fazem troca de dobradiça e upgrade para SSD?',
+    answer: 'Sim. A troca de dobradiça e o upgrade de HDD para SSD dependem da avaliação e da compatibilidade com o notebook.',
   },
   {
-    question: 'Preciso agendar para visitar a loja?',
-    answer: 'Não é necessário agendar, mas recomendamos entrar em contato antes via WhatsApp para confirmar disponibilidade da peça.',
+    question: 'Vocês fazem manutenção de impressora?',
+    answer: 'Sim. O atendimento inclui diagnóstico, limpeza, manutenção preventiva, instalação e desentupimento de cabeça de impressão quando indicado.',
   },
   {
-    question: 'Vocês fazem entrega?',
-    answer: 'Sim! A entrega é totalmente gratuita para toda a região do Rio de Janeiro.',
+    question: 'Vocês corrigem drift e instalam analógicos Hall Effect?',
+    answer: 'Sim. O controle é avaliado para confirmar o reparo de drift e a compatibilidade com analógicos Hall Effect.',
   },
 ]
