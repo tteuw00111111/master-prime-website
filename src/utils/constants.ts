@@ -2,7 +2,6 @@ import {
   FaTools,
   FaMobileAlt,
   FaBatteryFull,
-  FaDesktop,
   FaGamepad,
   FaWater,
   FaWhatsapp,
@@ -39,12 +38,12 @@ export const SITE_CONFIG: SiteConfig = {
 }
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
-  { name: 'Início', href: '#hero' },
-  { name: 'Serviços', href: '#services' },
-  { name: 'Como Funciona', href: '#how-it-works' },
-  { name: 'Clientes', href: '#testimonials' },
-  { name: 'Localização', href: '#location' },
-  { name: 'FAQ', href: '#faq' },
+  { name: 'Início', href: '/' },
+  { name: 'Serviços', href: '/servicos' },
+  { name: 'Como Funciona', href: '/#how-it-works' },
+  { name: 'Clientes', href: '/#testimonials' },
+  { name: 'Localização', href: '/#location' },
+  { name: 'FAQ', href: '/#faq' },
 ]
 
 export const TRUST_BADGES: TrustBadge[] = [
@@ -89,20 +88,13 @@ export const SERVICES: Service[] = [
   },
   {
     id: 4,
-    name: 'Manutenção de Impressoras',
-    description: 'Diagnóstico, limpeza, manutenção preventiva, instalação e desentupimento de cabeça de impressão.',
-    icon: FaDesktop,
-    devices: ['Impressoras'],
-  },
-  {
-    id: 5,
     name: 'Videogames e Controles',
     description: 'Manutenção de console e controle, correção de drift e instalação de analógicos Hall Effect.',
     icon: FaWater,
     devices: ['Videogames', 'Controles'],
   },
   {
-    id: 6,
+    id: 5,
     name: 'Peças, Acessórios e PC Gamer',
     description: 'Peças e acessórios para eletrônicos, computadores montados e PC gamer.',
     icon: FaGamepad,
@@ -210,10 +202,6 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'Vocês fazem troca de dobradiça e upgrade para SSD?',
     answer: 'Sim. A troca de dobradiça e o upgrade de HDD para SSD dependem da avaliação e da compatibilidade com o notebook.',
-  },
-  {
-    question: 'Vocês fazem manutenção de impressora?',
-    answer: 'Sim. O atendimento inclui diagnóstico, limpeza, manutenção preventiva, instalação e desentupimento de cabeça de impressão quando indicado.',
   },
   {
     question: 'Vocês corrigem drift e instalam analógicos Hall Effect?',

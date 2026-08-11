@@ -12,8 +12,9 @@ export const Navigation: React.FC<NavigationProps> = ({
   onLinkClick,
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const targetId = href.split('#')[1]
+    if (!targetId || window.location.pathname !== '/') return
     e.preventDefault()
-    const targetId = href.replace('#', '')
     const element = document.getElementById(targetId)
 
     if (element) {
@@ -33,7 +34,7 @@ export const Navigation: React.FC<NavigationProps> = ({
     <nav>
       <ul className={isMobile ? 'space-y-2' : 'flex items-center gap-1'}>
         {NAVIGATION_ITEMS.map((item) => {
-          const isActive = activeSection === item.href.replace('#', '')
+          const isActive = activeSection === item.href.split('#')[1]
 
           return (
             <li key={item.href}>

@@ -5,8 +5,9 @@ import logoImage from '@/assets/images/logo.webp'
 
 export const Footer = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const targetId = href.split('#')[1]
+    if (!targetId || window.location.pathname !== '/') return
     e.preventDefault()
-    const targetId = href.replace('#', '')
     const element = document.getElementById(targetId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
@@ -27,8 +28,8 @@ export const Footer = () => {
               className="h-12 w-auto"
             />
             <p className="text-gray-400 text-sm leading-relaxed">
-              Master Prime Assistência: serviços técnicos para eletrônicos, peças,
-              acessórios e computadores montados em Campo Grande, RJ.
+              Master Prime Assistência: conserto de notebook, computador, celular,
+              PC gamer, videogame e controle em Campo Grande, RJ.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4 pt-2">

@@ -4,10 +4,10 @@ import path from 'path'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [
     react(),
-    ViteImageOptimizer({
+    ...(!isSsrBuild ? [ViteImageOptimizer({
       png: {
         quality: 80,
       },
@@ -20,8 +20,9 @@ export default defineConfig({
       avif: {
         quality: 70,
       },
-    }),
+    })] : []),
   ],
+  publicDir: isSsrBuild ? false : 'public',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -33,7 +34,7 @@ export default defineConfig({
     },
   },
   build: {
-    rollupOptions: {
+    rollupOptions: isSsrBuild ? undefined : {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -52,4 +53,4 @@ export default defineConfig({
     chunkSizeWarningLimit: 600,
     sourcemap: false,
   },
-})
+}))

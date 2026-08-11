@@ -13,11 +13,13 @@ export const Header = () => {
       <div className="flex items-center justify-center w-full">
         {/* Logo - Centered and Large */}
         <a
-          href="#hero"
+          href="/"
           className="group"
           onClick={(e) => {
-            e.preventDefault()
-            window.scrollTo({ top: 0, behavior: 'smooth' })
+            if (window.location.pathname === '/') {
+              e.preventDefault()
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
           }}
         >
           <img

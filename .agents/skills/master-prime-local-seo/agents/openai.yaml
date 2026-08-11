@@ -1,0 +1,4 @@
+interface:
+  display_name: "Master Prime Local SEO"
+  short_description: "Auditar e expandir SEO local da Master Prime com segurança."
+  default_prompt: "Use o workflow da Master Prime para auditar ou criar páginas SEO locais sem inventar serviços ou dados comerciais."

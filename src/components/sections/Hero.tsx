@@ -74,7 +74,6 @@ export const Hero = () => {
               alt="Smartphone com interface Master Prime"
               className="w-full h-auto"
               loading="eager"
-              fetchPriority="high"
             />
           </motion.div>
         </motion.div>

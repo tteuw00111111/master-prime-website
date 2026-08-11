@@ -1,0 +1,952 @@
+[
+  {
+    "id": "conserto-notebook",
+    "path": "/conserto-de-notebook-campo-grande-rj",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Conserto de notebook em Campo Grande, RJ",
+    "metaTitle": "Conserto de Notebook em Campo Grande RJ | Master Prime",
+    "metaDescription": "Diagnóstico e conserto de notebook em Campo Grande: tela, dobradiça, teclado, SSD, memória, placa-mãe, limpeza e falhas de inicialização.",
+    "eyebrow": "Assistência técnica de notebook",
+    "answer": "O conserto de notebook começa pela identificação do sintoma e por testes que separam falhas de alimentação, tela, armazenamento, memória, refrigeração e placa-mãe. Na Master Prime Assistência, em Campo Grande, o equipamento é avaliado antes da indicação de reparo, troca de componente ou upgrade compatível.",
+    "symptomsHeading": "Quais problemas de notebook são avaliados?",
+    "symptoms": [
+      "Notebook não liga, não carrega ou apaga logo após iniciar.",
+      "Equipamento liga, acende LEDs, mas a tela permanece sem imagem.",
+      "Tela quebrada, teclado com falhas, dobradiça solta ou carcaça danificada.",
+      "Lentidão, travamentos, ruído de ventilação, aquecimento ou desligamentos.",
+      "Necessidade de SSD, memória RAM, limpeza interna ou manutenção preventiva."
+    ],
+    "causesHeading": "Por que o diagnóstico vem antes do orçamento?",
+    "causes": [
+      {"title": "Sintomas parecidos, causas diferentes", "description": "Uma tela preta pode estar ligada ao display, cabo de vídeo, memória, firmware ou circuito da placa. Trocar uma peça por tentativa não confirma a origem da falha."},
+      {"title": "Compatibilidade importa", "description": "Tela, teclado, SSD, memória e bateria variam por modelo. A identificação completa do notebook evita indicar um componente incompatível."},
+      {"title": "Dano físico precisa ser delimitado", "description": "Em dobradiças e carcaças, é necessário observar fixações, tampa, base, moldura e cabos próximos antes de definir o serviço."}
+    ],
+    "processHeading": "Como funciona a avaliação do notebook?",
+    "process": [
+      {"title": "Relato do sintoma", "description": "Informe modelo, o que ocorreu antes da falha e como o notebook reage ao botão de ligar ou ao carregador."},
+      {"title": "Inspeção e testes", "description": "O atendimento verifica o conjunto relacionado ao sintoma e procura sinais que ajudem a isolar a causa."},
+      {"title": "Indicação do serviço", "description": "Após a avaliação, a equipe informa qual intervenção é aplicável e se depende de componente compatível."},
+      {"title": "Confirmação com o cliente", "description": "Condições do atendimento são alinhadas antes da execução do serviço indicado."}
+    ],
+    "decisionHeading": "Quando vale consertar ou fazer upgrade?",
+    "decision": "A decisão depende da causa, do estado geral e da compatibilidade do equipamento. Falhas localizadas e upgrades de SSD ou RAM podem devolver uso adequado sem trocar o notebook inteiro; danos extensos exigem comparar a intervenção com o valor e a utilidade do aparelho. A avaliação fornece os dados para essa escolha, sem prometer o resultado antes dos testes.",
+    "faq": [
+      {"question": "Vocês consertam notebook que não liga?", "answer": "Sim. A Master Prime avalia notebook que não liga, não carrega ou apresenta sinais sem inicializar. O sintoma não identifica sozinho a peça; o equipamento precisa de diagnóstico."},
+      {"question": "É possível trocar tela, teclado e dobradiça?", "answer": "Esses serviços são atendidos conforme o modelo e a extensão do dano. Tela, teclado, moldura, tampa e fixações precisam ser conferidos para confirmar a intervenção adequada."},
+      {"question": "A Master Prime instala SSD e memória RAM em notebook?", "answer": "Sim, quando há compatibilidade. O tipo de conexão, formato, capacidade suportada e configuração atual são verificados antes da indicação."}
+    ],
+    "related": ["notebook-nao-liga", "notebook-tela", "notebook-dobradica", "notebook-upgrade"],
+    "photoBrief": "notebook aberto na bancada durante diagnóstico real"
+  },
+  {
+    "id": "notebook-tela",
+    "path": "/notebook/troca-de-tela",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Troca de tela de notebook",
+    "metaTitle": "Troca de Tela de Notebook em Campo Grande RJ | Master Prime",
+    "metaDescription": "Tela de notebook quebrada, com manchas, linhas, piscando ou sem imagem? Entenda a avaliação e a troca de display na Master Prime em Campo Grande.",
+    "eyebrow": "Tela e imagem do notebook",
+    "answer": "A troca de tela de notebook é indicada quando o display está fisicamente quebrado ou quando os testes confirmam defeito no painel. Tela escura, linhas e imagem intermitente também podem envolver cabo de vídeo, conector ou placa; por isso a Master Prime confirma a origem e o modelo do componente antes da substituição.",
+    "symptomsHeading": "Quais sinais podem indicar problema na tela?",
+    "symptoms": [
+      "Vidro ou painel trincado após queda, pressão ou impacto.",
+      "Manchas escuras, vazamento visual, linhas verticais ou áreas sem imagem.",
+      "Tela piscando ou mudando quando a tampa é movimentada.",
+      "Notebook funciona em monitor externo, mas o display interno não mostra imagem.",
+      "Brilho muito baixo ou imagem perceptível apenas sob luz direta."
+    ],
+    "causesHeading": "Tela quebrada e notebook sem imagem são a mesma falha?",
+    "causes": [
+      {"title": "Dano no painel", "description": "Trincas, manchas que se espalham e áreas vazadas normalmente apontam para dano físico no conjunto da tela."},
+      {"title": "Cabo ou conexão", "description": "Imagem que falha ao movimentar a tampa pode exigir inspeção do cabo e dos conectores, não apenas do display."},
+      {"title": "Circuito de vídeo", "description": "Quando não há imagem interna nem externa, ou o equipamento não completa a inicialização, a investigação pode seguir para memória e placa-mãe."}
+    ],
+    "processHeading": "Como a tela correta é identificada?",
+    "process": [
+      {"title": "Teste de imagem", "description": "O comportamento do display, do brilho e de uma saída externa ajuda a localizar a falha."},
+      {"title": "Identificação física", "description": "Modelo, tamanho, resolução, posição do conector e fixação precisam corresponder ao notebook."},
+      {"title": "Inspeção da tampa", "description": "Moldura, dobradiças, tampa e passagem do cabo são conferidas para não ignorar dano estrutural associado."},
+      {"title": "Substituição indicada", "description": "A troca é proposta somente depois de confirmar defeito e compatibilidade do display."}
+    ],
+    "decisionHeading": "Quando trocar somente a tela?",
+    "decision": "Quando o painel é o componente defeituoso e a tampa, o cabo e o circuito de vídeo estão em condição adequada, a substituição do display pode resolver o problema sem trocar o notebook. Se impacto também rompeu moldura, tampa ou dobradiça, esses danos precisam entrar na avaliação para que a nova tela não fique sob tensão.",
+    "faq": [
+      {"question": "Toda tela preta precisa ser trocada?", "answer": "Não. Tela preta pode ter origem no painel, cabo, alimentação do display, memória ou placa. Testes evitam substituir uma tela que não é a causa."},
+      {"question": "É necessário saber o modelo do notebook?", "answer": "Sim. O modelo completo ajuda a pesquisar compatibilidade, mas em alguns aparelhos também é necessário verificar o código do próprio painel."},
+      {"question": "Uma dobradiça quebrada pode danificar a tela?", "answer": "Pode. Fixações soltas podem torcer a tampa, pressionar o painel ou afetar o cabo. O conjunto estrutural deve ser inspecionado junto com a tela."}
+    ],
+    "related": ["notebook-sem-imagem", "notebook-dobradica", "conserto-notebook"],
+    "photoBrief": "tela de notebook real e identificação do painel na bancada"
+  },
+  {
+    "id": "notebook-dobradica",
+    "path": "/notebook/dobradica-e-carcaca",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Conserto de dobradiça e carcaça de notebook",
+    "metaTitle": "Conserto de Dobradiça de Notebook em Campo Grande RJ",
+    "metaDescription": "Dobradiça solta, tampa abrindo ou carcaça quebrada? Veja como a Master Prime avalia fixações, moldura, tampa e cabos do notebook.",
+    "eyebrow": "Estrutura do notebook",
+    "answer": "O conserto de dobradiça de notebook exige avaliar mais do que a peça metálica. Parafusos arrancados, suportes plásticos, tampa, base, moldura e cabo da tela podem estar envolvidos. A Master Prime examina o conjunto para definir se o atendimento requer recuperação de fixação, troca de componente estrutural ou outra intervenção compatível.",
+    "symptomsHeading": "Quais sinais pedem avaliação da carcaça?",
+    "symptoms": [
+      "A tampa estala, endurece ou abre de forma desigual.",
+      "A moldura se afasta da tela ao abrir o notebook.",
+      "Parafusos ficam soltos ou a base começa a separar.",
+      "Uma das dobradiças perdeu apoio dentro da tampa ou da base.",
+      "A imagem pisca quando a tampa é movimentada."
+    ],
+    "causesHeading": "O que costuma fazer parte do dano?",
+    "causes": [
+      {"title": "Fixações rompidas", "description": "A dobradiça pode continuar inteira enquanto os pontos que a prendem à carcaça se soltam ou quebram."},
+      {"title": "Dobradiça travada", "description": "Resistência excessiva transfere força para tampa e base a cada abertura, ampliando o dano estrutural."},
+      {"title": "Cabos próximos", "description": "Cabo de vídeo, antenas e outros elementos passam pela região e podem sofrer pressão ou atrito."}
+    ],
+    "processHeading": "Como o conjunto é avaliado?",
+    "process": [
+      {"title": "Inspeção sem forçar", "description": "A abertura é limitada quando há risco de aumentar a quebra ou atingir a tela."},
+      {"title": "Mapeamento das peças", "description": "São observados dobradiça, pontos de fixação, tampa, moldura, base e parafusos."},
+      {"title": "Verificação funcional", "description": "Imagem, cabos e fechamento são conferidos para identificar danos associados."},
+      {"title": "Definição da intervenção", "description": "A solução depende de quais partes ainda oferecem apoio e de componentes compatíveis disponíveis."}
+    ],
+    "decisionHeading": "Por que evitar continuar abrindo a tampa?",
+    "decision": "Uma fixação parcialmente solta tende a trabalhar como alavanca sobre a carcaça. Continuar abrindo pode ampliar trincas, quebrar a moldura ou pressionar o cabo e a tela. Se houver estalos ou separação visível, mantenha a tampa na posição mais segura e leve o notebook para avaliação sem aplicar cola ou força improvisada.",
+    "faq": [
+      {"question": "Dobradiça quebrada significa trocar toda a carcaça?", "answer": "Não necessariamente. A extensão do dano e os pontos de fixação determinam quais partes precisam de intervenção. A inspeção é indispensável."},
+      {"question": "Posso fechar o notebook para transportar?", "answer": "Se o movimento estiver forçando a estrutura, não insista. Transporte na posição que gere menos tensão e proteja o equipamento contra novos impactos."},
+      {"question": "O problema pode afetar o cabo da tela?", "answer": "Sim. O cabo costuma passar próximo à dobradiça; esmagamento ou atrito pode provocar imagem intermitente ou ausência de vídeo."}
+    ],
+    "related": ["notebook-tela", "notebook-teclado", "conserto-notebook"],
+    "photoBrief": "dobradiça e pontos de fixação de notebook durante reparo real"
+  },
+  {
+    "id": "notebook-placa-mae",
+    "path": "/notebook/reparo-de-placa-mae",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Reparo de placa-mãe de notebook",
+    "metaTitle": "Reparo de Placa-mãe de Notebook em Campo Grande RJ",
+    "metaDescription": "Notebook não liga, não carrega ou desliga? A Master Prime avalia alimentação e placa-mãe antes de indicar reparo em Campo Grande, RJ.",
+    "eyebrow": "Diagnóstico eletrônico de notebook",
+    "answer": "O reparo de placa-mãe de notebook só deve ser indicado quando os testes localizam a falha no circuito. Notebook sem ligar, sem carregar ou sem imagem também pode ter problema em fonte, conector, bateria, memória ou tela. A Master Prime separa essas possibilidades antes de propor intervenção na placa.",
+    "symptomsHeading": "Quais sintomas podem levar à análise da placa?",
+    "symptoms": [
+      "Ausência total de sinais mesmo com carregador adequado.",
+      "LED acende, mas o notebook não inicia ou desliga imediatamente.",
+      "Equipamento não reconhece carregamento após eliminar fonte e conector como causas.",
+      "Falha de vídeo persiste após testes de tela, cabo e memória.",
+      "Sinais de líquido, oxidação, componente aquecido ou dano elétrico."
+    ],
+    "causesHeading": "Por que não é possível diagnosticar só pelo sintoma?",
+    "causes": [
+      {"title": "Cadeia de alimentação", "description": "Fonte, conector, bateria e circuitos internos participam da entrada e distribuição de energia."},
+      {"title": "Inicialização depende de vários blocos", "description": "Memória, firmware e outros componentes podem impedir o POST e produzir sinais parecidos com falha de placa."},
+      {"title": "Líquido muda o cenário", "description": "Oxidação pode atingir mais de uma região e continuar evoluindo; a extensão precisa ser observada antes de estimar reparabilidade."}
+    ],
+    "processHeading": "O que uma avaliação de placa procura?",
+    "process": [
+      {"title": "Histórico da falha", "description": "Queda, líquido, pico elétrico, carregador usado e comportamento anterior ajudam a orientar os testes."},
+      {"title": "Eliminação de causas externas", "description": "Alimentação, periféricos e componentes removíveis são considerados antes de concluir que a placa é a origem."},
+      {"title": "Inspeção do circuito", "description": "A placa é examinada em busca de sinais físicos e comportamento elétrico relacionado ao defeito."},
+      {"title": "Decisão técnica", "description": "A equipe informa se há intervenção aplicável ou se o estado encontrado exige outra alternativa."}
+    ],
+    "decisionHeading": "Reparar a placa ou substituir o notebook?",
+    "decision": "A resposta depende do ponto defeituoso, de danos secundários e do estado geral do equipamento. Uma falha localizada pode tornar o reparo coerente; oxidação extensa, dano em múltiplas áreas ou outros problemas estruturais mudam essa relação. A Master Prime apresenta a indicação após o diagnóstico, sem atribuir “placa queimada” apenas ao relato inicial.",
+    "faq": [
+      {"question": "Notebook que não liga sempre está com a placa queimada?", "answer": "Não. Fonte, conector, bateria, botão, memória e outros elementos podem causar ausência de inicialização. A placa é uma hipótese, não um diagnóstico automático."},
+      {"question": "Contato com líquido pode exigir reparo de placa?", "answer": "Pode. Desligue o equipamento, retire o carregador e evite novas tentativas. A avaliação verifica oxidação e regiões atingidas."},
+      {"question": "O reparo depende do modelo?", "answer": "Sim. Projeto da placa, componentes envolvidos, extensão do dano e condições do equipamento influenciam a viabilidade da intervenção."}
+    ],
+    "related": ["notebook-nao-liga", "notebook-sem-imagem", "conserto-notebook"],
+    "photoBrief": "placa-mãe de notebook real sob inspeção na bancada"
+  },
+  {
+    "id": "notebook-upgrade",
+    "path": "/notebook/upgrade-ssd-e-memoria-ram",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Upgrade de SSD e memória RAM para notebook",
+    "metaTitle": "Upgrade de SSD e Memória para Notebook | Campo Grande RJ",
+    "metaDescription": "Notebook lento? A Master Prime verifica compatibilidade para instalar SSD e memória RAM e diferencia gargalo de armazenamento, memória ou outra falha.",
+    "eyebrow": "Desempenho e armazenamento",
+    "answer": "O upgrade de SSD reduz o tempo de acesso ao sistema e aos arquivos; aumentar a memória RAM ajuda quando os programas em uso excedem a capacidade disponível. Antes de instalar, a Master Prime verifica interface, formato, limite de memória, slots, sistema e estado do notebook para indicar uma combinação realmente compatível.",
+    "symptomsHeading": "Quando SSD ou RAM podem ajudar?",
+    "symptoms": [
+      "Inicialização e abertura de programas muito demoradas em notebook com HD.",
+      "Uso de disco constantemente alto durante tarefas comuns.",
+      "Travamentos ao manter vários programas ou abas abertos.",
+      "Memória próxima do limite no uso habitual.",
+      "Necessidade de mais espaço sem ignorar a compatibilidade do equipamento."
+    ],
+    "causesHeading": "SSD e memória resolvem qualquer lentidão?",
+    "causes": [
+      {"title": "Armazenamento", "description": "Um HD mecânico pode limitar respostas do sistema, enquanto um SSD compatível reduz a latência de leitura e gravação."},
+      {"title": "Memória insuficiente", "description": "Quando a RAM se esgota, o sistema usa armazenamento como apoio e perde fluidez ao alternar entre tarefas."},
+      {"title": "Outros gargalos", "description": "Aquecimento, sistema comprometido, falha de disco ou processador limitado não devem ser mascarados por uma recomendação genérica de upgrade."}
+    ],
+    "processHeading": "O que é verificado antes do upgrade?",
+    "process": [
+      {"title": "Configuração atual", "description": "Modelo, armazenamento, memória instalada, slots e uso pretendido formam o ponto de partida."},
+      {"title": "Compatibilidade", "description": "Interface SATA ou NVMe, formato físico, geração e limites suportados precisam corresponder ao equipamento."},
+      {"title": "Estado do sistema", "description": "A equipe diferencia oportunidade de melhoria de um defeito que exige diagnóstico próprio."},
+      {"title": "Opção coerente", "description": "A indicação considera o gargalo encontrado, sem presumir que a maior capacidade é sempre a melhor escolha."}
+    ],
+    "decisionHeading": "SSD, RAM ou os dois?",
+    "decision": "Notebook com HD e inicialização lenta costuma se beneficiar diretamente do SSD. Memória adicional faz mais diferença quando o uso atual encosta no limite e provoca troca frequente de dados com o disco. Em alguns casos as duas mudanças se complementam; em outros, uma delas basta. Medir a configuração e entender o uso evita gasto sem efeito prático.",
+    "faq": [
+      {"question": "Todo notebook aceita SSD NVMe?", "answer": "Não. Alguns aceitam apenas unidades SATA; outros possuem slot M.2 com suporte específico. O modelo e a placa precisam ser verificados."},
+      {"question": "É possível aumentar a memória de qualquer notebook?", "answer": "Não. Há equipamentos com memória soldada, limite de capacidade ou combinação específica de módulos. A compatibilidade deve ser confirmada."},
+      {"question": "SSD corrige notebook travando por aquecimento?", "answer": "Não. Se há calor excessivo ou desligamentos, a refrigeração precisa ser avaliada separadamente. Upgrade de armazenamento não corrige uma falha térmica."}
+    ],
+    "related": ["notebook-limpeza", "computador-upgrade", "conserto-notebook"],
+    "photoBrief": "SSD e módulos de memória compatíveis ao lado de notebook real"
+  },
+  {
+    "id": "notebook-teclado",
+    "path": "/notebook/troca-de-teclado",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Troca de teclado de notebook",
+    "metaTitle": "Troca de Teclado de Notebook em Campo Grande RJ",
+    "metaDescription": "Teclas falhando, repetindo ou sem resposta? Entenda a avaliação e troca de teclado de notebook na Master Prime Assistência em Campo Grande.",
+    "eyebrow": "Teclado e entrada de dados",
+    "answer": "A troca de teclado de notebook pode ser indicada quando teclas falham, repetem ou deixam de responder por defeito físico. Antes, é necessário diferenciar problema no teclado de configuração, sistema, cabo flat, conector ou dano por líquido. O modelo e o padrão do teclado também precisam ser compatíveis com o equipamento.",
+    "symptomsHeading": "Quais falhas de teclado são relevantes?",
+    "symptoms": [
+      "Uma ou várias teclas não respondem.",
+      "Caracteres aparecem duplicados ou sem relação com a tecla pressionada.",
+      "Tecla ficou solta, afundada ou com mecanismo danificado.",
+      "Teclado parou após contato com líquido.",
+      "O teclado interno falha, mas um teclado USB funciona normalmente."
+    ],
+    "causesHeading": "O defeito sempre está no teclado?",
+    "causes": [
+      {"title": "Mecanismo físico", "description": "Teclas e membranas podem sofrer desgaste, impacto ou quebra localizada."},
+      {"title": "Conexão interna", "description": "Cabo flat e conector precisam estar íntegros para que o conjunto envie os comandos corretamente."},
+      {"title": "Líquido ou oxidação", "description": "Resíduos podem afetar o teclado e avançar para regiões internas; a inspeção não deve se limitar à tecla aparente."}
+    ],
+    "processHeading": "Como é definida a troca?",
+    "process": [
+      {"title": "Teste das teclas", "description": "O padrão da falha ajuda a distinguir defeito localizado, conexão e comportamento de software."},
+      {"title": "Comparação externa", "description": "Quando aplicável, outro dispositivo de entrada ajuda a separar sistema e teclado interno."},
+      {"title": "Identificação do conjunto", "description": "Layout, encaixe e forma de montagem variam; alguns teclados integram a parte superior da carcaça."},
+      {"title": "Inspeção associada", "description": "Em casos de líquido, outras áreas são observadas antes de indicar somente a substituição do teclado."}
+    ],
+    "decisionHeading": "Vale usar um teclado externo?",
+    "decision": "Um teclado USB pode ser alternativa provisória quando o notebook permanece estável e o uso permite. Para mobilidade, teclas essenciais ou dano que interfere no fechamento, o reparo do conjunto interno tende a ser mais adequado. Em contato com líquido, continuar usando sem avaliar o interior pode deixar uma oxidação evoluir.",
+    "faq": [
+      {"question": "Uma única tecla pode ser reparada?", "answer": "Depende do mecanismo, das peças danificadas e do modelo. Nem toda tecla solta exige o conjunto completo, mas a possibilidade só é confirmada ao inspecionar."},
+      {"question": "Teclado digitando errado pode ser configuração?", "answer": "Sim. Layout do sistema, idioma e recursos de acessibilidade podem alterar entradas. Esses fatores devem ser eliminados antes da troca."},
+      {"question": "Líquido no teclado exige desligar o notebook?", "answer": "Sim. Desligue, retire o carregador e evite testar repetidamente. A energia pode ampliar danos em regiões atingidas."}
+    ],
+    "related": ["notebook-dobradica", "notebook-placa-mae", "conserto-notebook"],
+    "photoBrief": "teclado de notebook real desmontado para identificação"
+  },
+  {
+    "id": "notebook-nao-liga",
+    "path": "/notebook/nao-liga",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Notebook não liga: avaliação e conserto",
+    "metaTitle": "Notebook Não Liga? Conserto em Campo Grande RJ",
+    "metaDescription": "Notebook sem sinal, sem carregar ou desligando ao iniciar? Veja causas possíveis e como a Master Prime diagnostica o problema em Campo Grande.",
+    "eyebrow": "Falha de alimentação ou inicialização",
+    "answer": "Quando o notebook não liga, a causa pode estar no carregador, conector, bateria, botão, memória, firmware ou circuito da placa-mãe. LEDs e ruídos ajudam, mas não fecham o diagnóstico. A Master Prime avalia a sequência de alimentação e inicialização para localizar a etapa em que o equipamento deixa de responder.",
+    "symptomsHeading": "Como descrever um notebook que não liga?",
+    "symptoms": [
+      "Não acende nenhum LED ao conectar o carregador.",
+      "LED acende ou pisca, mas o botão não inicia o equipamento.",
+      "Ventoinha gira por alguns segundos e o notebook desliga.",
+      "Só funciona com bateria ou apenas com carregador.",
+      "Parou após queda, líquido, pico de energia ou troca de acessório."
+    ],
+    "causesHeading": "Quais conjuntos podem causar ausência de energia?",
+    "causes": [
+      {"title": "Fonte e entrada", "description": "Carregador, cabo e conector formam o primeiro caminho de energia e precisam ser verificados com segurança."},
+      {"title": "Bateria e comando", "description": "Bateria com falha, botão ou circuito de acionamento podem impedir a resposta esperada."},
+      {"title": "Inicialização interna", "description": "Memória, firmware e placa podem interromper a sequência mesmo quando LEDs e cooler apresentam algum sinal."}
+    ],
+    "processHeading": "Como o diagnóstico avança?",
+    "process": [
+      {"title": "Observação dos sinais", "description": "LEDs, consumo, ventoinha, ruídos e momento do desligamento ajudam a classificar a falha."},
+      {"title": "Checagem de alimentação", "description": "A entrada de energia e os componentes relacionados são testados antes de aprofundar a análise."},
+      {"title": "Teste de inicialização", "description": "Componentes que participam do POST são considerados conforme o comportamento encontrado."},
+      {"title": "Indicação baseada na causa", "description": "Somente depois dos testes é possível apontar a intervenção aplicável."}
+    ],
+    "decisionHeading": "O que fazer antes de levar para avaliação?",
+    "decision": "Anote o que aconteceu imediatamente antes da falha e leve o carregador usado com o notebook. Evite abrir a fonte, usar carregador incompatível ou insistir após cheiro, aquecimento anormal ou contato com líquido. Se o notebook ainda liga de forma intermitente e há arquivos importantes, interromper tentativas pode reduzir o risco de agravamento.",
+    "faq": [
+      {"question": "Notebook sem LED é placa-mãe?", "answer": "Não necessariamente. Carregador, cabo, conector e circuito de entrada também podem causar ausência total de sinais."},
+      {"question": "Notebook liga e desliga entra nesta avaliação?", "answer": "Sim. O momento do desligamento ajuda a investigar alimentação, proteção térmica, memória e outros blocos de inicialização."},
+      {"question": "Devo levar o carregador junto?", "answer": "Sim. Avaliar o conjunto usado no dia a dia ajuda a confirmar ou excluir a fonte e o cabo como parte do problema."}
+    ],
+    "related": ["notebook-placa-mae", "notebook-sem-imagem", "notebook-superaquecendo", "conserto-notebook"],
+    "photoBrief": "notebook sem ligar conectado a instrumentos de diagnóstico reais"
+  },
+  {
+    "id": "notebook-sem-imagem",
+    "path": "/notebook/liga-mas-nao-da-imagem",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Notebook liga, mas não dá imagem",
+    "metaTitle": "Notebook Liga mas Não Dá Imagem? Campo Grande RJ",
+    "metaDescription": "LED e cooler ligam, mas a tela fica preta? Entenda a diferença entre tela, cabo, memória e placa no diagnóstico da Master Prime.",
+    "eyebrow": "Falha de vídeo ou inicialização",
+    "answer": "Notebook que liga, mas não mostra imagem, pode ter defeito no display, iluminação, cabo de vídeo, memória, firmware ou placa-mãe. O fato de acender LEDs ou girar o cooler não comprova que a inicialização terminou. Testes com os sinais do aparelho e, quando aplicável, saída externa ajudam a separar as causas.",
+    "symptomsHeading": "Que detalhes ajudam a localizar a falha?",
+    "symptoms": [
+      "Tela permanece totalmente preta desde o acionamento.",
+      "Há uma imagem muito escura ou visível apenas sob iluminação direta.",
+      "O notebook parece iniciar e reproduz sons, mas não mostra vídeo.",
+      "A imagem aparece em monitor externo, mas não no painel interno.",
+      "A tela falha quando a tampa muda de posição."
+    ],
+    "causesHeading": "Como os cenários se diferenciam?",
+    "causes": [
+      {"title": "Painel ou iluminação", "description": "Imagem ausente apenas no display interno pode concentrar a análise na tela e em sua alimentação."},
+      {"title": "Cabo de vídeo", "description": "Falha ligada ao movimento da tampa torna cabo, conector e região da dobradiça relevantes."},
+      {"title": "POST incompleto", "description": "Sem imagem interna ou externa, a investigação pode envolver memória, firmware e circuitos da placa."}
+    ],
+    "processHeading": "Quais testes orientam o diagnóstico?",
+    "process": [
+      {"title": "Comportamento de partida", "description": "Sons, LEDs, teclado, ventoinha e tempo de resposta indicam se o sistema avançou na inicialização."},
+      {"title": "Caminho de vídeo", "description": "Display, brilho, cabo, conectores e saída externa são considerados conforme o modelo."},
+      {"title": "Componentes de inicialização", "description": "Memória e placa entram na análise quando a falha não está restrita à tela."},
+      {"title": "Conclusão sem tentativa", "description": "A peça só é indicada depois de evidências que relacionem o sintoma ao componente."}
+    ],
+    "decisionHeading": "Tela preta significa trocar a tela?",
+    "decision": "Não. A troca faz sentido quando o display é confirmado como origem. Se há imagem externa, falha ao mexer na tampa ou brilho ausente, o caminho de vídeo interno ganha importância; se o notebook nem completa a inicialização, trocar o painel não resolveria. Essa distinção evita custo e desmontagem desnecessários.",
+    "faq": [
+      {"question": "Monitor externo confirma que a tela está ruim?", "answer": "Ele oferece uma pista, mas não fecha o diagnóstico. Cabo, conector e alimentação do painel também podem impedir a imagem interna."},
+      {"question": "Memória RAM pode deixar a tela preta?", "answer": "Pode impedir a inicialização em alguns cenários. O comportamento do equipamento e testes controlados ajudam a confirmar ou excluir essa hipótese."},
+      {"question": "Mover a tampa e a imagem voltar indica o quê?", "answer": "Pode apontar para cabo, conexão ou pressão estrutural na região da dobradiça. Evite forçar a tampa e solicite avaliação."}
+    ],
+    "related": ["notebook-tela", "notebook-nao-liga", "notebook-placa-mae", "conserto-notebook"],
+    "photoBrief": "teste real de imagem interna e saída externa de notebook"
+  },
+  {
+    "id": "notebook-superaquecendo",
+    "path": "/notebook/superaquecendo-e-desligando",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Notebook superaquecendo ou desligando",
+    "metaTitle": "Notebook Superaquecendo e Desligando | Campo Grande RJ",
+    "metaDescription": "Notebook muito quente, ventoinha ruidosa ou desligando? Veja como limpeza, ventilação e sistema térmico são avaliados pela Master Prime.",
+    "eyebrow": "Refrigeração de notebook",
+    "answer": "Notebook superaquecendo pode perder desempenho, travar ou desligar por proteção. Poeira nas saídas, ventoinha com falha, contato térmico inadequado e carga de uso elevada são hipóteses diferentes. A avaliação da Master Prime observa temperatura, fluxo de ar, ruído e estado do conjunto de refrigeração antes de indicar manutenção.",
+    "symptomsHeading": "Quais sinais indicam problema térmico?",
+    "symptoms": [
+      "Ventoinha permanece muito ruidosa mesmo em tarefas leves.",
+      "Carcaça aquece além do padrão percebido anteriormente.",
+      "Desempenho cai depois de alguns minutos de uso.",
+      "Notebook trava ou desliga durante jogos, chamadas ou programas pesados.",
+      "Saída de ar está fraca, mesmo com a ventoinha em alta rotação."
+    ],
+    "causesHeading": "O que pode elevar a temperatura?",
+    "causes": [
+      {"title": "Fluxo de ar restrito", "description": "Acúmulo de poeira em entradas, aletas e ventoinha reduz a capacidade de remover calor."},
+      {"title": "Falha mecânica", "description": "Ventoinha desgastada ou obstruída pode girar de forma irregular e produzir ruído."},
+      {"title": "Transferência térmica", "description": "Contato inadequado entre componentes e dissipador exige inspeção do sistema, não apenas limpeza externa."},
+      {"title": "Carga e software", "description": "Processos intensos também aumentam temperatura; é preciso distinguir uso legítimo de comportamento anormal."}
+    ],
+    "processHeading": "Como a refrigeração é examinada?",
+    "process": [
+      {"title": "Reprodução do sintoma", "description": "A equipe considera quando o calor ou desligamento aparece e qual tarefa estava em execução."},
+      {"title": "Inspeção do fluxo", "description": "Entradas, saída de ar, ventoinha e dissipador são observados conforme o acesso adequado ao modelo."},
+      {"title": "Verificação térmica", "description": "O comportamento de temperatura e rotação ajuda a relacionar a falha ao conjunto."},
+      {"title": "Manutenção indicada", "description": "Limpeza ou intervenção adicional é recomendada conforme o estado encontrado."}
+    ],
+    "decisionHeading": "É seguro continuar usando o notebook quente?",
+    "decision": "Desligamentos repetidos e perda intensa de desempenho merecem interrupção do uso pesado até a avaliação. Bases improvisadas e ar comprimido aplicado sem desmontagem controlada podem deslocar sujeira ou girar a ventoinha de forma inadequada. Manter entradas livres ajuda, mas não substitui a inspeção quando o sintoma já está presente.",
+    "faq": [
+      {"question": "Limpeza resolve todo superaquecimento?", "answer": "Não. Ela ajuda quando há restrição por poeira, mas ventoinha, dissipador, contato térmico e carga de sistema também precisam ser considerados."},
+      {"question": "Notebook desligando sozinho pode ser calor?", "answer": "Pode, especialmente sob carga, mas falhas de energia e outros componentes também causam desligamento. O padrão precisa ser testado."},
+      {"question": "Posso usar o notebook sobre cama ou sofá?", "answer": "Superfícies macias podem bloquear entradas de ar. Prefira uma base firme e ventilada, sem cobrir as aberturas."}
+    ],
+    "related": ["notebook-limpeza", "notebook-nao-liga", "conserto-notebook"],
+    "photoBrief": "sistema de refrigeração de notebook real antes e depois da limpeza"
+  },
+  {
+    "id": "notebook-limpeza",
+    "path": "/notebook/limpeza-e-manutencao",
+    "clusterPath": "/conserto-de-notebook-campo-grande-rj",
+    "clusterName": "Conserto de notebook",
+    "title": "Limpeza e manutenção de notebook",
+    "metaTitle": "Limpeza e Manutenção de Notebook em Campo Grande RJ",
+    "metaDescription": "Manutenção de notebook com inspeção, limpeza interna e avaliação de refrigeração na Master Prime Assistência, em Campo Grande, RJ.",
+    "eyebrow": "Manutenção preventiva e corretiva",
+    "answer": "A limpeza interna de notebook remove acúmulos que prejudicam o fluxo de ar e permite inspecionar ventoinha, dissipador e conexões acessíveis. Ela deve responder a um estado observado, não ser tratada como cura universal. Na Master Prime, manutenção e diagnóstico são relacionados aos sintomas e às condições reais do equipamento.",
+    "symptomsHeading": "Quando procurar manutenção?",
+    "symptoms": [
+      "Ventoinha mais ruidosa ou acionada por longos períodos.",
+      "Saída de ar fraca e acúmulo visível nas aberturas.",
+      "Aquecimento, perda de desempenho ou desligamento sob carga.",
+      "Notebook passou longo período em ambiente com poeira ou pelos.",
+      "Necessidade de avaliar o estado geral antes de um upgrade."
+    ],
+    "causesHeading": "O que uma manutenção responsável considera?",
+    "causes": [
+      {"title": "Modelo e desmontagem", "description": "Cada notebook possui sequência, encaixes e cabos próprios; acesso forçado pode causar dano que não existia."},
+      {"title": "Fluxo completo", "description": "Limpar apenas a área visível não remove necessariamente a obstrução nas aletas do dissipador."},
+      {"title": "Sintoma associado", "description": "Ruído, lentidão e desligamento também podem indicar ventoinha defeituosa, armazenamento ou alimentação."}
+    ],
+    "processHeading": "O que é observado durante a manutenção?",
+    "process": [
+      {"title": "Condição externa", "description": "Carcaça, dobradiças, conectores e aberturas são vistos antes da desmontagem."},
+      {"title": "Acesso controlado", "description": "O interior é acessado respeitando cabos, parafusos e encaixes do modelo."},
+      {"title": "Limpeza e inspeção", "description": "Poeira é removida e o conjunto de refrigeração é observado em busca de desgaste ou obstrução."},
+      {"title": "Verificação posterior", "description": "O comportamento relacionado ao relato é conferido depois da intervenção aplicável."}
+    ],
+    "decisionHeading": "Manutenção preventiva ou diagnóstico de defeito?",
+    "decision": "Se o notebook funciona normalmente e há apenas acúmulo esperado, a manutenção pode ter caráter preventivo. Se já desliga, trava, faz ruído mecânico ou não inicia, é necessário tratar o caso como diagnóstico: limpar pode fazer parte do trabalho, mas não substitui localizar a causa. Essa distinção evita prometer que uma limpeza resolverá todo problema.",
+    "faq": [
+      {"question": "Com que frequência devo limpar o notebook?", "answer": "Não existe um intervalo único. Ambiente, uso, ventilação e sinais do equipamento importam mais do que uma periodicidade genérica."},
+      {"question": "Ar comprimido por fora é suficiente?", "answer": "Nem sempre e pode deslocar sujeira para dentro. Uma obstrução interna exige acesso e controle adequados."},
+      {"question": "A manutenção inclui verificar a ventoinha?", "answer": "O conjunto de refrigeração é observado durante o atendimento, e qualquer intervenção adicional depende do estado encontrado."}
+    ],
+    "related": ["notebook-superaquecendo", "notebook-upgrade", "conserto-notebook"],
+    "photoBrief": "notebook real aberto com poeira documentada antes da limpeza"
+  },
+  {
+    "id": "conserto-computador",
+    "path": "/conserto-de-computador-campo-grande-rj",
+    "clusterPath": "/conserto-de-computador-campo-grande-rj",
+    "clusterName": "Conserto de computador",
+    "title": "Conserto de computador em Campo Grande, RJ",
+    "metaTitle": "Conserto de Computador em Campo Grande RJ | Master Prime",
+    "metaDescription": "Diagnóstico e manutenção de computador em Campo Grande: limpeza, hardware, sistema, SSD, memória RAM, upgrades e PC que não liga.",
+    "eyebrow": "Assistência técnica de computadores",
+    "answer": "O conserto de computador parte do sintoma e de testes de alimentação, inicialização, vídeo, armazenamento, memória e refrigeração. A Master Prime Assistência atende em Campo Grande com diagnóstico de hardware, limpeza, sistema, instalação de SSD e upgrades, indicando o serviço somente depois de identificar o conjunto relacionado à falha.",
+    "symptomsHeading": "Quais problemas de computador são avaliados?",
+    "symptoms": [
+      "Computador não liga, reinicia ou desliga durante o uso.",
+      "Gabinete liga, mas monitor, teclado ou sistema não inicializam.",
+      "Lentidão, travamentos, erros de armazenamento ou falta de memória.",
+      "Ruído, poeira, aquecimento ou ventilação insuficiente.",
+      "Necessidade de SSD, RAM ou upgrade planejado de componentes."
+    ],
+    "causesHeading": "Por que testar o conjunto completo?",
+    "causes": [
+      {"title": "Energia e inicialização", "description": "Tomada, cabo, fonte, placa, memória e periféricos participam de etapas diferentes até o computador iniciar."},
+      {"title": "Hardware e sistema se confundem", "description": "Lentidão pode vir de armazenamento, pouca memória, temperatura, processos ou arquivos do sistema."},
+      {"title": "Upgrades têm dependências", "description": "Placa-mãe, fonte, gabinete e uso pretendido determinam se um componente é compatível e equilibrado."}
+    ],
+    "processHeading": "Como funciona o diagnóstico do computador?",
+    "process": [
+      {"title": "Contexto do defeito", "description": "Informe quando começou, mensagens exibidas e mudanças recentes de peça, cabo ou software."},
+      {"title": "Inspeção e testes", "description": "Os blocos relacionados ao sintoma são avaliados em sequência, evitando troca por tentativa."},
+      {"title": "Causa e escopo", "description": "A equipe diferencia reparo, substituição, limpeza, configuração ou upgrade."},
+      {"title": "Confirmação", "description": "A intervenção indicada é alinhada com o cliente antes do atendimento."}
+    ],
+    "decisionHeading": "Quando reparar e quando atualizar o computador?",
+    "decision": "Uma falha localizada pode ser corrigida preservando o restante do conjunto. Upgrade faz sentido quando o computador está funcional, mas um gargalo limita o uso. Se há múltiplos componentes antigos ou incompatibilidade para o objetivo desejado, é melhor comparar as alternativas após o diagnóstico. A decisão deve partir do uso real, não apenas de uma lista de peças.",
+    "faq": [
+      {"question": "Vocês consertam computador que não liga?", "answer": "Sim. Fonte, placa, memória, botão e conexões estão entre as hipóteses avaliadas conforme os sinais do equipamento."},
+      {"question": "A Master Prime instala SSD e memória RAM?", "answer": "Sim, quando os componentes são compatíveis com a placa, o gabinete e a configuração existente."},
+      {"question": "Formatação resolve toda lentidão?", "answer": "Não. Armazenamento com falha, pouca memória, aquecimento e limitações de hardware exigem diagnóstico próprio."}
+    ],
+    "related": ["computador-nao-liga", "computador-upgrade", "computador-limpeza", "pc-gamer-manutencao"],
+    "photoBrief": "computador desktop real aberto durante diagnóstico"
+  },
+  {
+    "id": "computador-nao-liga",
+    "path": "/computador/nao-liga-ou-nao-da-imagem",
+    "clusterPath": "/conserto-de-computador-campo-grande-rj",
+    "clusterName": "Conserto de computador",
+    "title": "Computador não liga ou não dá imagem",
+    "metaTitle": "Computador Não Liga ou Não Dá Imagem | Campo Grande RJ",
+    "metaDescription": "PC sem energia ou gabinete liga sem vídeo? Entenda como fonte, memória, placa e conexões são avaliadas pela Master Prime em Campo Grande.",
+    "eyebrow": "Falha de energia, POST ou vídeo",
+    "answer": "Computador que não liga e computador que liga sem imagem são cenários diferentes. No primeiro, alimentação, fonte, botão e placa ganham prioridade; no segundo, a máquina pode não completar o POST ou ter falha no caminho de vídeo. A Master Prime usa os sinais do conjunto para decidir a sequência de testes.",
+    "symptomsHeading": "Qual comportamento o computador apresenta?",
+    "symptoms": [
+      "Nenhuma luz ou ventoinha responde ao botão.",
+      "Ventoinhas e LEDs ligam, mas não há imagem nem inicialização.",
+      "O computador liga por segundos e desliga ou reinicia.",
+      "Há bipes, LEDs de diagnóstico ou comportamento diferente após troca de peça.",
+      "O monitor informa ausência de sinal apesar dos cabos conectados."
+    ],
+    "causesHeading": "Quais grupos entram no diagnóstico?",
+    "causes": [
+      {"title": "Alimentação", "description": "Cabo, fonte, botão e conexões da placa precisam entregar energia nas etapas esperadas."},
+      {"title": "POST e memória", "description": "Memória, processador, firmware e placa participam da verificação inicial antes de o sistema carregar."},
+      {"title": "Vídeo e monitor", "description": "Cabo, entrada selecionada, placa de vídeo e saída correta devem ser diferenciados de uma falha geral de inicialização."}
+    ],
+    "processHeading": "Como a falha é isolada?",
+    "process": [
+      {"title": "Mapeamento dos sinais", "description": "A equipe registra o que recebe energia e em que momento o processo para."},
+      {"title": "Verificação de conexões", "description": "Cabos e encaixes relevantes são inspecionados antes de atribuir defeito a uma peça."},
+      {"title": "Testes direcionados", "description": "Fonte, memória, vídeo e placa são considerados conforme o cenário observado."},
+      {"title": "Indicação objetiva", "description": "Reparo ou substituição só são sugeridos quando relacionados à causa encontrada."}
+    ],
+    "decisionHeading": "O que evitar ao testar em casa?",
+    "decision": "Não abra a fonte e não faça pontes elétricas sem conhecimento técnico. Se houve cheiro, estalo, líquido ou pico, desconecte o computador. Reencaixar componentes repetidamente também pode criar mau contato ou dano. Informar mudanças recentes e levar os cabos relevantes ajuda a investigação sem transformar o diagnóstico em uma sequência de tentativas.",
+    "faq": [
+      {"question": "Gabinete liga sem imagem significa placa de vídeo?", "answer": "Não necessariamente. Memória, cabo, monitor, saída selecionada e falha de POST também podem produzir esse sintoma."},
+      {"question": "Fonte ruim pode acender LEDs?", "answer": "Pode haver alimentação parcial ou instável. LEDs e ventoinhas não confirmam sozinhos que todas as tensões estão adequadas."},
+      {"question": "Devo levar o monitor junto?", "answer": "Converse com a equipe. Em muitos casos o gabinete e informações sobre cabos/monitor bastam; a necessidade depende do sintoma."}
+    ],
+    "related": ["conserto-computador", "computador-limpeza", "pc-gamer-manutencao"],
+    "photoBrief": "desktop real em teste de alimentação e inicialização"
+  },
+  {
+    "id": "computador-upgrade",
+    "path": "/computador/upgrade-ssd-e-memoria-ram",
+    "clusterPath": "/conserto-de-computador-campo-grande-rj",
+    "clusterName": "Conserto de computador",
+    "title": "Upgrade de SSD e memória RAM para computador",
+    "metaTitle": "Upgrade de SSD e Memória RAM para PC | Campo Grande RJ",
+    "metaDescription": "Planeje upgrade de SSD e RAM com verificação de placa-mãe, slots, interface e uso real na Master Prime Assistência em Campo Grande.",
+    "eyebrow": "Upgrade de computador",
+    "answer": "SSD e memória RAM resolvem gargalos diferentes. O SSD melhora acesso ao sistema e arquivos; a RAM amplia a capacidade de manter programas ativos. A Master Prime verifica placa-mãe, interfaces, slots, limites e configuração antes de indicar o upgrade, evitando comprar capacidade ou formato que o computador não aproveita.",
+    "symptomsHeading": "Qual gargalo o computador mostra?",
+    "symptoms": [
+      "Sistema demora para iniciar e programas abrem lentamente em HD.",
+      "Disco permanece em uso intenso nas tarefas diárias.",
+      "Programas fecham ou o sistema perde fluidez com várias tarefas.",
+      "Memória instalada fica próxima da capacidade durante o uso real.",
+      "Armazenamento está cheio e precisa de expansão planejada."
+    ],
+    "causesHeading": "Como escolher entre SSD e RAM?",
+    "causes": [
+      {"title": "Perfil de uso", "description": "Navegação, trabalho, criação e jogos pressionam recursos de formas diferentes; a recomendação deve refletir a rotina."},
+      {"title": "Placa-mãe", "description": "Geração de memória, frequência suportada, quantidade de slots e interfaces de armazenamento limitam as opções."},
+      {"title": "Estado atual", "description": "Um disco com falha ou sistema aquecendo precisa de diagnóstico, não apenas de mais capacidade."}
+    ],
+    "processHeading": "Como o upgrade é planejado?",
+    "process": [
+      {"title": "Inventário", "description": "Configuração atual e componentes instalados são identificados."},
+      {"title": "Objetivo", "description": "O que precisa melhorar — resposta, multitarefa ou espaço — define a prioridade."},
+      {"title": "Compatibilidade", "description": "Formato, interface, slots, limite e combinação com peças existentes são conferidos."},
+      {"title": "Instalação coerente", "description": "A mudança indicada busca resolver o gargalo observado sem prometer desempenho genérico."}
+    ],
+    "decisionHeading": "Mais capacidade sempre significa mais desempenho?",
+    "decision": "Não. RAM além do uso máximo pode ficar ociosa, e um SSD mais rápido pode operar limitado pela interface da placa. O melhor upgrade é o que remove o gargalo atual e permanece compatível com o conjunto. Para PC gamer, fonte, processador e placa de vídeo também podem ser determinantes, por isso há uma página específica para esse planejamento.",
+    "faq": [
+      {"question": "Posso manter o HD junto com o SSD?", "answer": "Em muitos desktops, sim, desde que haja conexão, espaço e alimentação disponíveis. A configuração precisa ser conferida."},
+      {"question": "Memórias de capacidades diferentes funcionam juntas?", "answer": "Algumas combinações funcionam, mas geração, frequência, tensão e suporte da placa devem ser verificados para evitar instabilidade."},
+      {"question": "O upgrade inclui diagnóstico de lentidão?", "answer": "O comportamento é avaliado para diferenciar gargalo de uma falha. A indicação depende do que estiver limitando o computador."}
+    ],
+    "related": ["pc-gamer-upgrade", "notebook-upgrade", "conserto-computador"],
+    "photoBrief": "SSD e memória sendo instalados em computador real"
+  },
+  {
+    "id": "computador-limpeza",
+    "path": "/computador/limpeza-e-manutencao",
+    "clusterPath": "/conserto-de-computador-campo-grande-rj",
+    "clusterName": "Conserto de computador",
+    "title": "Limpeza e manutenção de computador",
+    "metaTitle": "Limpeza e Manutenção de Computador | Campo Grande RJ",
+    "metaDescription": "Limpeza interna, inspeção de ventilação e diagnóstico de computador na Master Prime Assistência em Campo Grande, Rio de Janeiro.",
+    "eyebrow": "Manutenção de desktop",
+    "answer": "A limpeza de computador remove poeira que restringe ventoinhas, filtros e dissipadores, mas a manutenção também observa cabos, fixação e sinais de falha. Ruído, calor, travamento ou desligamento exigem diagnóstico além da remoção de sujeira. A Master Prime relaciona a intervenção ao estado real do gabinete e ao relato do cliente.",
+    "symptomsHeading": "Quando a manutenção se torna importante?",
+    "symptoms": [
+      "Poeira visível em filtros, ventoinhas e entradas de ar.",
+      "Ruído novo, vibração ou ventoinha trabalhando em alta rotação.",
+      "Temperatura elevada e queda de desempenho durante o uso.",
+      "Desligamentos ou reinicializações sob carga.",
+      "Longo período sem inspeção em ambiente com muita poeira."
+    ],
+    "causesHeading": "Por que limpeza e diagnóstico não são sinônimos?",
+    "causes": [
+      {"title": "Poeira é uma causa possível", "description": "Obstrução reduz fluxo de ar, mas não explica automaticamente toda falha de estabilidade."},
+      {"title": "Ventoinhas sofrem desgaste", "description": "Ruído mecânico e rotação irregular podem exigir avaliação do componente, mesmo após remover sujeira."},
+      {"title": "Energia e software também importam", "description": "Reinícios podem vir de fonte, memória, placa ou sistema; uma limpeza isolada não confirma solução."}
+    ],
+    "processHeading": "O que a manutenção observa?",
+    "process": [
+      {"title": "Organização e estado", "description": "Cabos, filtros, ventoinhas, dissipadores e placas são inspecionados antes da intervenção."},
+      {"title": "Remoção controlada", "description": "A sujeira é removida sem espalhá-la para conectores ou girar componentes de forma inadequada."},
+      {"title": "Ventilação", "description": "Entrada, exaustão e obstruções são analisadas como um fluxo, não como peças isoladas."},
+      {"title": "Teste relacionado", "description": "Quando há sintoma, o comportamento é conferido para saber se existe outra causa."}
+    ],
+    "decisionHeading": "Quando procurar limpeza preventiva?",
+    "decision": "Não há calendário universal: ambiente, filtros, posição do gabinete e intensidade de uso mudam a necessidade. Poeira visível, ruído e temperatura diferente do habitual são sinais mais úteis. Em computador que já reinicia ou perde vídeo, procure diagnóstico completo para não atribuir o defeito automaticamente à sujeira.",
+    "faq": [
+      {"question": "Posso usar aspirador doméstico dentro do PC?", "answer": "Não é recomendado improvisar: contato, descarga estática e força sobre componentes podem causar dano. A remoção deve ser controlada."},
+      {"question": "Limpeza melhora FPS?", "answer": "Somente se temperatura ou obstrução estiver causando limitação. Ela não aumenta a capacidade original dos componentes."},
+      {"question": "PC gamer exige atenção diferente?", "answer": "Configurações com maior consumo e mais ventoinhas podem ter fluxo específico. A manutenção de PC gamer considera esse conjunto em página própria."}
+    ],
+    "related": ["pc-gamer-manutencao", "computador-nao-liga", "conserto-computador"],
+    "photoBrief": "gabinete de computador real com filtros e dissipadores antes da limpeza"
+  },
+  {
+    "id": "pc-gamer-manutencao",
+    "path": "/manutencao-de-pc-gamer",
+    "clusterPath": "/manutencao-de-pc-gamer",
+    "clusterName": "Manutenção de PC gamer",
+    "title": "Manutenção de PC gamer em Campo Grande, RJ",
+    "metaTitle": "Manutenção de PC Gamer em Campo Grande RJ | Master Prime",
+    "metaDescription": "Diagnóstico, limpeza e manutenção de PC gamer com atenção a temperatura, fonte, vídeo e estabilidade na Master Prime em Campo Grande.",
+    "eyebrow": "Assistência técnica de PC gamer",
+    "answer": "A manutenção de PC gamer precisa considerar temperatura, alimentação, placa de vídeo, memória, armazenamento e estabilidade sob carga. Travamento em jogos não aponta sozinho para uma peça. A Master Prime avalia o comportamento do conjunto, a refrigeração e mudanças recentes antes de indicar limpeza, correção ou upgrade compatível.",
+    "symptomsHeading": "Quais problemas aparecem em um PC gamer?",
+    "symptoms": [
+      "Jogos fecham, travam ou perdem desempenho depois de aquecer.",
+      "Computador reinicia ou desliga durante carga gráfica.",
+      "Ventoinhas fazem ruído novo ou permanecem em rotação alta.",
+      "Tela perde sinal enquanto o gabinete continua ligado.",
+      "Instabilidade começou após troca de componente ou configuração."
+    ],
+    "causesHeading": "Por que testar sob o contexto correto?",
+    "causes": [
+      {"title": "Carga combinada", "description": "Processador e placa de vídeo podem elevar consumo e temperatura de forma diferente do uso leve."},
+      {"title": "Fonte e conexões", "description": "Capacidade, estado e cabos precisam sustentar a configuração sem atribuir toda falha à placa de vídeo."},
+      {"title": "Refrigeração", "description": "Fluxo do gabinete, filtros, dissipadores e ventoinhas trabalham como um sistema."},
+      {"title": "Software e drivers", "description": "Comportamento em jogos também pode envolver sistema, driver e configuração, que precisam ser separados de defeito físico."}
+    ],
+    "processHeading": "Como a manutenção é direcionada?",
+    "process": [
+      {"title": "Relato reproduzível", "description": "Jogo, tempo até a falha, mensagem e mudança recente ajudam a criar um cenário de teste."},
+      {"title": "Inspeção do conjunto", "description": "Conexões, poeira, ventilação e montagem são observadas antes de alterar peças."},
+      {"title": "Estabilidade", "description": "O diagnóstico busca relacionar a falha a temperatura, energia, memória, vídeo ou software."},
+      {"title": "Intervenção adequada", "description": "Limpeza, correção ou upgrade são tratados como respostas diferentes ao que foi encontrado."}
+    ],
+    "decisionHeading": "Manutenção ou upgrade?",
+    "decision": "Se o PC já entregava o desempenho esperado e começou a falhar, diagnosticar a instabilidade vem antes de comprar peças. Upgrade é apropriado quando o conjunto está estável, mas não atende mais ao objetivo. Misturar as duas decisões pode ocultar um defeito antigo em uma configuração nova ou levar a investimento que não resolve a causa.",
+    "faq": [
+      {"question": "PC gamer reiniciando é fonte fraca?", "answer": "É uma hipótese, mas temperatura, conexões, memória, placa e software também podem causar reinício. O conjunto precisa ser testado."},
+      {"question": "A limpeza pode reduzir temperatura?", "answer": "Pode quando poeira e obstrução prejudicam o fluxo. Outras causas térmicas exigem inspeção adicional."},
+      {"question": "Vocês fazem upgrade de PC gamer?", "answer": "Sim. A Master Prime avalia compatibilidade e equilíbrio entre os componentes antes da indicação."}
+    ],
+    "related": ["pc-gamer-upgrade", "computador-limpeza", "computador-nao-liga", "conserto-computador"],
+    "photoBrief": "PC gamer real na bancada durante teste e limpeza"
+  },
+  {
+    "id": "pc-gamer-upgrade",
+    "path": "/upgrade-de-pc-gamer",
+    "clusterPath": "/manutencao-de-pc-gamer",
+    "clusterName": "Manutenção de PC gamer",
+    "title": "Upgrade de PC gamer",
+    "metaTitle": "Upgrade de PC Gamer em Campo Grande RJ | Master Prime",
+    "metaDescription": "Planejamento de upgrade de PC gamer com verificação de compatibilidade entre placa-mãe, fonte, gabinete, memória, SSD e demais componentes.",
+    "eyebrow": "Compatibilidade e desempenho",
+    "answer": "Upgrade de PC gamer deve começar pelo objetivo e pelo gargalo, não pela peça mais nova. Resolução, jogos, programas e configuração atual mostram onde a melhoria pode fazer diferença. A Master Prime verifica compatibilidade de placa-mãe, fonte, gabinete, memória e armazenamento antes de indicar alterações no conjunto.",
+    "symptomsHeading": "Quando um upgrade faz sentido?",
+    "symptoms": [
+      "O PC está estável, mas não alcança o desempenho desejado no uso atual.",
+      "Memória limita multitarefa ou jogos específicos.",
+      "Armazenamento lento ou insuficiente compromete carregamentos e sistema.",
+      "Uma nova peça exige confirmar fonte, espaço físico ou conexões.",
+      "A configuração precisa ser equilibrada sem trocar componentes desnecessários."
+    ],
+    "causesHeading": "Quais dependências precisam ser verificadas?",
+    "causes": [
+      {"title": "Placa-mãe", "description": "Soquete, chipset, slots, firmware e interfaces definem a compatibilidade básica."},
+      {"title": "Fonte", "description": "Potência nominal sozinha não basta; conexões, capacidade adequada e estado da unidade entram na análise."},
+      {"title": "Gabinete e refrigeração", "description": "Dimensões, fluxo de ar e posição dos componentes podem limitar a instalação."},
+      {"title": "Gargalo real", "description": "O componente que limita um jogo ou trabalho depende da resolução, qualidade e tipo de carga."}
+    ],
+    "processHeading": "Como planejar a atualização?",
+    "process": [
+      {"title": "Definir o objetivo", "description": "Informe jogos, resolução, programas e o que precisa melhorar."},
+      {"title": "Levantar a configuração", "description": "Modelos dos componentes atuais evitam recomendações baseadas apenas em nomes genéricos."},
+      {"title": "Checar dependências", "description": "Energia, encaixe, interface e equilíbrio são avaliados em conjunto."},
+      {"title": "Priorizar mudanças", "description": "A indicação busca ganho útil e compatível, sem prometer números sem medição."}
+    ],
+    "decisionHeading": "Trocar uma peça ou várias?",
+    "decision": "Às vezes um SSD ou memória resolve o gargalo percebido; em outras configurações, processador, vídeo e fonte estão interligados. Trocar várias peças só faz sentido quando as dependências justificam. Se o PC apresenta travamentos ou reinícios, primeiro trate a manutenção: um equipamento instável não é uma base confiável para avaliar ganho de desempenho.",
+    "faq": [
+      {"question": "Qual é o melhor upgrade para PC gamer?", "answer": "Não há resposta única. O melhor depende da configuração, jogo, resolução, objetivo e gargalo medido."},
+      {"question": "Uma placa de vídeo nova funciona em qualquer PC?", "answer": "Não. Slot, fonte, conectores, espaço do gabinete e equilíbrio com o restante precisam ser verificados."},
+      {"question": "SSD aumenta FPS?", "answer": "Normalmente melhora sistema e carregamentos, mas não substitui capacidade gráfica ou de processamento. O efeito depende do gargalo."}
+    ],
+    "related": ["pc-gamer-manutencao", "computador-upgrade", "conserto-computador"],
+    "photoBrief": "componentes reais de PC gamer sendo conferidos antes de upgrade"
+  },
+  {
+    "id": "conserto-celular",
+    "path": "/conserto-de-celular-campo-grande-rj",
+    "clusterPath": "/conserto-de-celular-campo-grande-rj",
+    "clusterName": "Conserto de celular",
+    "title": "Conserto de celular em Campo Grande, RJ",
+    "metaTitle": "Conserto de Celular em Campo Grande RJ | Master Prime",
+    "metaDescription": "Conserto de celular em Campo Grande com avaliação de tela, bateria, conector de carga, placa, desoxidação, sistema e diagnóstico.",
+    "eyebrow": "Assistência técnica de celular",
+    "answer": "O conserto de celular começa por identificar se o sintoma está na tela, bateria, carga, sistema ou placa. Queda, líquido e aquecimento podem afetar mais de um componente. A Master Prime Assistência, em Campo Grande, avalia o aparelho antes de indicar troca de peça, reparo de placa, desoxidação ou intervenção de sistema.",
+    "symptomsHeading": "Quais problemas de celular são atendidos?",
+    "symptoms": [
+      "Tela trincada, sem toque, com manchas ou sem imagem.",
+      "Bateria descarrega rápido, desliga ou altera a estrutura do aparelho.",
+      "Aparelho não carrega ou exige posição específica no cabo.",
+      "Celular não liga, reinicia, aquece ou apresenta falha após líquido.",
+      "Problemas de sistema que precisam ser separados de defeito físico."
+    ],
+    "causesHeading": "Por que a avaliação do aparelho é importante?",
+    "causes": [
+      {"title": "Queda pode afetar várias partes", "description": "Tela, chassi, conectores e placa podem sofrer impacto mesmo quando apenas uma trinca fica visível."},
+      {"title": "Carga é um caminho", "description": "Cabo, fonte, conector, bateria e circuito participam do carregamento; um ícone na tela não identifica sozinho a falha."},
+      {"title": "Líquido continua reagindo", "description": "Resíduo e oxidação podem se espalhar. Ligar repetidamente aumenta o risco quando o interior ainda está úmido."}
+    ],
+    "processHeading": "Como funciona o atendimento do celular?",
+    "process": [
+      {"title": "Identificação", "description": "Modelo, sintoma e evento anterior são registrados para orientar compatibilidade e testes."},
+      {"title": "Inspeção", "description": "Danos físicos, resposta do aparelho e funções ligadas ao relato são observados."},
+      {"title": "Diagnóstico", "description": "A equipe diferencia componente, placa e sistema antes de indicar o serviço."},
+      {"title": "Confirmação", "description": "Condições e intervenção aplicável são alinhadas com o cliente após a avaliação."}
+    ],
+    "decisionHeading": "Quando reparar e quando considerar outro aparelho?",
+    "decision": "Uma tela ou bateria confirmada pode ser uma falha localizada; dano estrutural, líquido ou placa exigem olhar o conjunto. A decisão depende da extensão, do estado geral e da disponibilidade compatível, não apenas da idade do aparelho. A avaliação serve para comparar a intervenção possível com o uso e a condição reais do celular.",
+    "faq": [
+      {"question": "Vocês trocam tela e bateria de celular?", "answer": "Sim, conforme o modelo e após confirmar qual componente está causando o sintoma."},
+      {"question": "A Master Prime faz reparo de placa de celular?", "answer": "O serviço está entre os atendimentos atuais. A viabilidade depende do diagnóstico e da extensão do dano."},
+      {"question": "Celular molhado deve ser colocado no arroz?", "answer": "Não. Desligue, não carregue e procure avaliação. O arroz não remove resíduos nem interrompe a oxidação interna."}
+    ],
+    "related": ["celular-tela", "celular-bateria", "celular-placa"],
+    "photoBrief": "celular real aberto na bancada durante diagnóstico"
+  },
+  {
+    "id": "celular-tela",
+    "path": "/celular/troca-de-tela",
+    "clusterPath": "/conserto-de-celular-campo-grande-rj",
+    "clusterName": "Conserto de celular",
+    "title": "Troca de tela de celular",
+    "metaTitle": "Troca de Tela de Celular em Campo Grande RJ | Master Prime",
+    "metaDescription": "Tela trincada, sem toque, com manchas ou sem imagem? Veja como a Master Prime avalia display, touch e estrutura antes da troca.",
+    "eyebrow": "Display e touch do celular",
+    "answer": "A troca de tela de celular é indicada quando o conjunto de display ou toque está danificado e o restante do aparelho permite a intervenção. Trinca, mancha e ausência de toque ajudam a descrever o problema, mas queda também pode empenar a estrutura ou afetar conexões. O modelo e o dano são conferidos antes da indicação.",
+    "symptomsHeading": "Quais sinais aparecem em uma tela danificada?",
+    "symptoms": [
+      "Vidro trincado ou com partes soltas após impacto.",
+      "Toque não responde, aciona sozinho ou falha em uma região.",
+      "Manchas, linhas, cores alteradas ou display totalmente escuro.",
+      "Imagem aparece, mas o vidro se separou da estrutura.",
+      "Aparelho vibra e recebe notificações sem mostrar imagem."
+    ],
+    "causesHeading": "O que precisa ser diferenciado?",
+    "causes": [
+      {"title": "Vidro, touch e display", "description": "Os elementos podem formar um conjunto no modelo; o padrão do dano orienta a inspeção, mas não substitui a identificação da peça."},
+      {"title": "Estrutura", "description": "Chassi empenado ou bordas danificadas podem impedir encaixe adequado e pressionar a nova tela."},
+      {"title": "Placa e conexão", "description": "Ausência de imagem após queda também pode envolver conectores ou circuito, especialmente sem dano visual claro no painel."}
+    ],
+    "processHeading": "Como a troca é avaliada?",
+    "process": [
+      {"title": "Teste de funções", "description": "Imagem, toque e comportamento geral ajudam a delimitar o defeito."},
+      {"title": "Inspeção do chassi", "description": "Bordas e estrutura são conferidas em busca de deformações associadas à queda."},
+      {"title": "Identificação do modelo", "description": "Variações do mesmo nome comercial podem usar conjuntos diferentes; a compatibilidade precisa ser precisa."},
+      {"title": "Indicação", "description": "A substituição é proposta após confirmar o componente e as condições do aparelho."}
+    ],
+    "decisionHeading": "É seguro continuar usando a tela trincada?",
+    "decision": "Trincas podem soltar fragmentos, permitir entrada de umidade e piorar com pressão. Se houver manchas crescendo, toque involuntário ou partes levantadas, interrompa o uso sempre que possível. Películas podem conter fragmentos provisoriamente, mas não restauram o painel nem corrigem dano estrutural.",
+    "faq": [
+      {"question": "Tela com imagem, mas sem toque, precisa ser avaliada?", "answer": "Sim. O display pode continuar visível enquanto a camada de toque ou sua conexão falha. O conjunto varia conforme o modelo."},
+      {"question": "Tela preta depois de queda sempre quebrou o display?", "answer": "Não sempre. Conectores, estrutura e circuito também podem ser afetados. A inspeção confirma a origem."},
+      {"question": "É preciso informar o modelo exato?", "answer": "Sim. O modelo completo ajuda a verificar a compatibilidade da tela e as variações existentes."}
+    ],
+    "related": ["conserto-celular", "celular-bateria", "celular-placa"],
+    "photoBrief": "tela de celular real e chassi inspecionados antes da troca"
+  },
+  {
+    "id": "celular-bateria",
+    "path": "/celular/troca-de-bateria",
+    "clusterPath": "/conserto-de-celular-campo-grande-rj",
+    "clusterName": "Conserto de celular",
+    "title": "Troca de bateria de celular",
+    "metaTitle": "Troca de Bateria de Celular em Campo Grande RJ",
+    "metaDescription": "Bateria descarregando, desligando ou levantando a tela? Entenda a avaliação e troca de bateria de celular na Master Prime em Campo Grande.",
+    "eyebrow": "Energia e autonomia do celular",
+    "answer": "A troca de bateria de celular pode ser indicada quando a capacidade caiu, o aparelho desliga sob carga ou há alteração física no componente. Autonomia ruim também pode vir de uso intenso, sinal, aplicativos, sistema ou circuito. A Master Prime observa comportamento, carregamento e estrutura antes de atribuir o problema apenas à bateria.",
+    "symptomsHeading": "Quais sinais pedem atenção à bateria?",
+    "symptoms": [
+      "Carga cai rapidamente em uso semelhante ao de antes.",
+      "Celular desliga com porcentagem ainda indicada.",
+      "Aparelho reinicia ao abrir câmera, jogo ou tarefa mais exigente.",
+      "Tela ou tampa começou a levantar sem impacto recente.",
+      "Aquecimento anormal durante carga ou uso leve."
+    ],
+    "causesHeading": "Autonomia baixa sempre é bateria?",
+    "causes": [
+      {"title": "Desgaste químico", "description": "Baterias perdem capacidade com ciclos e tempo, mas o ritmo varia conforme uso e temperatura."},
+      {"title": "Consumo do sistema", "description": "Aplicativos, sinal fraco, brilho e tarefas em segundo plano podem aumentar o gasto sem defeito físico."},
+      {"title": "Carregamento", "description": "Cabo, fonte, conector e circuito influenciam o processo e precisam ser separados de uma bateria degradada."}
+    ],
+    "processHeading": "Como o problema é avaliado?",
+    "process": [
+      {"title": "Histórico", "description": "Mudança recente de autonomia, quedas, calor e comportamento da porcentagem ajudam a formar o cenário."},
+      {"title": "Inspeção física", "description": "Tela, tampa e chassi são observados em busca de pressão ou deformação."},
+      {"title": "Carga e consumo", "description": "O atendimento diferencia falha de entrada, uso do sistema e possível degradação da bateria."},
+      {"title": "Compatibilidade", "description": "A substituição depende de componente correspondente ao modelo e do estado geral do aparelho."}
+    ],
+    "decisionHeading": "O que fazer se a bateria estiver estufada?",
+    "decision": "Pare de pressionar a tela ou tampa de volta, evite carregar e mantenha o aparelho longe de calor e perfurações. Uma bateria alterada fisicamente exige manuseio cuidadoso; continuar usando pode aumentar a pressão sobre a tela e outros componentes. Procure avaliação e transporte o aparelho sem comprimi-lo.",
+    "faq": [
+      {"question": "Bateria ruim pode desligar o celular de repente?", "answer": "Pode, principalmente sob carga, mas sistema e placa também podem causar reinícios. O padrão precisa ser avaliado."},
+      {"question": "Tela levantando pode ser bateria?", "answer": "Pode indicar alteração física da bateria. Não force a tela para baixo e evite carregar até a inspeção."},
+      {"question": "Trocar o carregador resolve autonomia baixa?", "answer": "Carregador afeta a recarga, não a capacidade já degradada. Primeiro é preciso distinguir carga lenta de descarga rápida."}
+    ],
+    "related": ["conserto-celular", "celular-tela", "celular-placa"],
+    "photoBrief": "bateria de celular real removida com segurança e aparelho inspecionado"
+  },
+  {
+    "id": "celular-placa",
+    "path": "/celular/reparo-de-placa",
+    "clusterPath": "/conserto-de-celular-campo-grande-rj",
+    "clusterName": "Conserto de celular",
+    "title": "Reparo de placa de celular",
+    "metaTitle": "Reparo de Placa de Celular em Campo Grande RJ",
+    "metaDescription": "Celular não liga, não carrega ou sofreu líquido? A Master Prime avalia componentes externos e placa antes de indicar reparo em Campo Grande.",
+    "eyebrow": "Diagnóstico eletrônico de celular",
+    "answer": "O reparo de placa de celular é considerado quando os testes relacionam o defeito ao circuito e excluem causas como tela, bateria, conector ou sistema. Queda e líquido podem produzir falhas em várias regiões. A Master Prime avalia a extensão e só então informa se existe intervenção aplicável.",
+    "symptomsHeading": "Quando a placa entra como hipótese?",
+    "symptoms": [
+      "Celular não liga após eliminar bateria e tela como causas.",
+      "Carregamento falha mesmo com cabo, fonte e conector avaliados.",
+      "Aparelho aquece em uma região e não completa a inicialização.",
+      "Função específica parou após impacto ou contato com líquido.",
+      "Há sinais internos de oxidação ou dano elétrico."
+    ],
+    "causesHeading": "Por que o diagnóstico precisa ser cuidadoso?",
+    "causes": [
+      {"title": "Componentes externos imitam placa", "description": "Tela sem imagem e bateria sem capacidade podem fazer um aparelho parecer totalmente inativo."},
+      {"title": "Líquido atinge múltiplas áreas", "description": "Resíduos e oxidação não seguem um único caminho; a viabilidade depende do que foi afetado."},
+      {"title": "Impacto pode romper conexão", "description": "Queda pode danificar conectores, trilhas, chassi e módulos ao mesmo tempo."}
+    ],
+    "processHeading": "Como a avaliação de placa é conduzida?",
+    "process": [
+      {"title": "Evento e resposta", "description": "O histórico da falha e qualquer sinal do aparelho orientam prioridades."},
+      {"title": "Exclusão de conjuntos", "description": "Tela, bateria, carga e sistema são considerados conforme o sintoma."},
+      {"title": "Inspeção interna", "description": "A placa é observada em busca de dano físico, resíduo ou comportamento relacionado."},
+      {"title": "Viabilidade", "description": "A indicação depende de a causa ser localizada e do estado geral permitir a intervenção."}
+    ],
+    "decisionHeading": "Quando a extensão do dano muda a decisão?",
+    "decision": "Uma falha localizada pode ter caminho de reparo; oxidação extensa, chassi deformado e danos em vários módulos tornam o caso diferente. Também é importante considerar dados e funções do aparelho sem prometer recuperação antes dos testes. A avaliação técnica delimita o que pode ser tratado e quais riscos permanecem.",
+    "faq": [
+      {"question": "Celular que não liga está com placa queimada?", "answer": "Não necessariamente. Tela, bateria, carga e sistema também podem impedir sinais visíveis. A placa só deve ser apontada após testes."},
+      {"question": "Desoxidação garante que o aparelho volte?", "answer": "Não. Ela faz parte do atendimento quando há resíduo, mas o resultado depende das regiões e componentes já afetados."},
+      {"question": "Devo tentar ligar depois de molhar?", "answer": "Não. Desligue, não carregue e procure avaliação. Energia em um circuito úmido pode ampliar o dano."}
+    ],
+    "related": ["conserto-celular", "celular-bateria", "celular-tela"],
+    "photoBrief": "placa de celular real durante inspeção técnica"
+  },
+  {
+    "id": "videogame-conserto",
+    "path": "/conserto-de-videogame",
+    "clusterPath": "/conserto-de-videogame",
+    "clusterName": "Conserto de videogame",
+    "title": "Conserto de videogame em Campo Grande, RJ",
+    "metaTitle": "Conserto de Videogame em Campo Grande RJ | Master Prime",
+    "metaDescription": "Videogame não liga, liga e desliga ou aquece? A Master Prime faz diagnóstico, manutenção e limpeza de consoles em Campo Grande, RJ.",
+    "eyebrow": "Assistência técnica de consoles",
+    "answer": "O conserto de videogame começa por diferenciar alimentação, inicialização, vídeo e refrigeração. Console que não liga, desliga ou aquece pode apresentar causas diferentes mesmo com sintomas parecidos. A Master Prime realiza diagnóstico, manutenção e limpeza de videogames conforme o modelo e o estado encontrado.",
+    "symptomsHeading": "Quais sinais podem exigir diagnóstico?",
+    "symptoms": [
+      "Console não acende ou não responde ao botão.",
+      "Liga por alguns segundos e desliga.",
+      "Permanece ligado, mas não envia imagem ao televisor.",
+      "Ventoinha ruidosa, calor excessivo ou aviso de temperatura.",
+      "Falha começou após queda, líquido, pico ou movimentação de cabos."
+    ],
+    "causesHeading": "O que precisa ser separado no console?",
+    "causes": [
+      {"title": "Energia", "description": "Cabo, fonte e circuito interno participam da alimentação e não devem ser diagnosticados apenas pelo LED."},
+      {"title": "Vídeo", "description": "Cabo, entrada da TV, conector e circuito podem causar ausência de imagem."},
+      {"title": "Refrigeração", "description": "Poeira, ventoinha e dissipação inadequada alteram temperatura e estabilidade."},
+      {"title": "Inicialização", "description": "Armazenamento, sistema e placa também podem interromper o processo em pontos diferentes."}
+    ],
+    "processHeading": "Como o videogame é avaliado?",
+    "process": [
+      {"title": "Modelo e histórico", "description": "Informe versão do console, sintoma, sinais e evento anterior à falha."},
+      {"title": "Teste do cenário", "description": "Alimentação, resposta, vídeo e ruído são observados conforme o relato."},
+      {"title": "Inspeção direcionada", "description": "O conjunto relacionado é examinado, incluindo limpeza quando ela é tecnicamente indicada."},
+      {"title": "Definição", "description": "A equipe informa a intervenção possível depois de localizar a causa."}
+    ],
+    "decisionHeading": "Limpeza resolve console desligando?",
+    "decision": "Ela pode ajudar quando poeira e temperatura causam proteção, mas desligamento também pode estar ligado à energia ou placa. Limpar sem testar pode coincidir com o sintoma e deixar a causa real sem tratamento. O diagnóstico deve confirmar se a refrigeração está envolvida e se há outra falha no conjunto.",
+    "faq": [
+      {"question": "Videogame que liga e desliga pode estar superaquecendo?", "answer": "Pode, mas alimentação e circuitos internos também causam esse comportamento. O tempo e os sinais orientam o teste."},
+      {"question": "Sem imagem significa defeito no HDMI?", "answer": "É uma hipótese. Cabo, entrada da TV, configuração e circuito de vídeo precisam ser diferenciados."},
+      {"question": "A Master Prime faz limpeza de console?", "answer": "Sim, como parte dos serviços atuais de manutenção, quando indicada pelo estado e pelo diagnóstico do videogame."}
+    ],
+    "related": ["controle-conserto", "controle-drift", "pc-gamer-manutencao"],
+    "photoBrief": "console real aberto na bancada para limpeza e diagnóstico"
+  },
+  {
+    "id": "controle-conserto",
+    "path": "/conserto-de-controle",
+    "clusterPath": "/conserto-de-controle",
+    "clusterName": "Conserto de controle",
+    "title": "Conserto de controle de videogame",
+    "metaTitle": "Conserto de Controle em Campo Grande RJ | Master Prime",
+    "metaDescription": "Controle com drift, botão falhando ou problema de funcionamento? Veja como a Master Prime avalia controles e analógicos em Campo Grande.",
+    "eyebrow": "Manutenção de controles",
+    "answer": "O conserto de controle de videogame exige identificar se a falha está no analógico, botão, conexão, alimentação ou placa. Drift é um sintoma específico de movimento sem comando, mas nem toda falha de direção tem a mesma causa. A Master Prime avalia o controle antes de indicar manutenção ou troca de analógico.",
+    "symptomsHeading": "Quais falhas devem ser descritas?",
+    "symptoms": [
+      "Personagem ou câmera se move sem tocar no analógico.",
+      "Botão não responde, aciona duas vezes ou fica preso.",
+      "Controle desconecta, não liga ou não mantém funcionamento.",
+      "Gatilho ou direção apresenta resposta irregular.",
+      "Problema surgiu após queda, líquido ou tentativa de abertura."
+    ],
+    "causesHeading": "Por que testar o controle completo?",
+    "causes": [
+      {"title": "Analógico", "description": "Desgaste e alteração de leitura podem gerar drift, zonas mortas ou movimento irregular."},
+      {"title": "Botões e mecanismos", "description": "Membranas, contatos e partes mecânicas variam conforme o comando afetado."},
+      {"title": "Energia e conexão", "description": "Bateria, conector e comunicação podem ser responsáveis por desconexões ou ausência de resposta."},
+      {"title": "Placa", "description": "Queda, líquido ou tentativa de reparo podem criar danos que não se limitam ao componente aparente."},
+      {"title": "Configuração e calibração", "description": "Ajustes do jogo ou do sistema podem mudar zonas mortas e resposta; esses fatores precisam ser separados de desgaste físico."}
+    ],
+    "processHeading": "Como o controle é avaliado?",
+    "process": [
+      {"title": "Teste dos comandos", "description": "Analógicos, botões, gatilhos e conexão são observados conforme o relato."},
+      {"title": "Inspeção externa", "description": "Carcaça, portas e sinais de impacto ajudam a identificar danos associados."},
+      {"title": "Diagnóstico interno", "description": "Quando necessário, o conjunto relacionado é examinado antes de trocar peças."},
+      {"title": "Confirmação da solução", "description": "Manutenção e analógico compatível são indicados conforme o defeito localizado."}
+    ],
+    "decisionHeading": "Vale consertar um controle com drift?",
+    "decision": "A decisão depende do modelo, do estado da placa, de outros comandos e da intervenção possível. Drift localizado pode justificar troca do conjunto analógico; dano por líquido ou múltiplas falhas exige uma visão mais ampla. Analógico Hall Effect é uma opção atendida pela Master Prime quando compatível, mas não deve ser prometido para todo controle sem avaliação.",
+    "faq": [
+      {"question": "Todo movimento sozinho é drift?", "answer": "Pode ser, mas configuração, calibração e falha de conexão também devem ser consideradas. O teste identifica o padrão."},
+      {"question": "A Master Prime instala Hall Effect?", "answer": "Sim, conforme a compatibilidade do controle e o diagnóstico do conjunto."},
+      {"question": "Botões também são avaliados?", "answer": "Sim. A manutenção de controles inclui diagnóstico de comandos, e a intervenção depende do defeito encontrado."}
+    ],
+    "related": ["controle-drift", "videogame-conserto"],
+    "photoBrief": "controle real desmontado durante teste de comandos"
+  },
+  {
+    "id": "controle-drift",
+    "path": "/controle/correcao-de-drift-e-hall-effect",
+    "clusterPath": "/conserto-de-controle",
+    "clusterName": "Conserto de controle",
+    "title": "Correção de drift e analógico Hall Effect",
+    "metaTitle": "Correção de Drift e Hall Effect em Controle | Campo Grande RJ",
+    "metaDescription": "Controle puxando sozinho? Entenda o diagnóstico de drift e quando a instalação de analógico Hall Effect pode ser compatível na Master Prime.",
+    "eyebrow": "Analógicos de controle",
+    "answer": "Drift ocorre quando o controle registra movimento do analógico sem o comando correspondente. Desgaste do módulo é uma causa comum, mas calibração, placa e montagem também influenciam a leitura. A Master Prime testa o controle e oferece correção de drift e instalação de analógicos Hall Effect quando o modelo e o estado são compatíveis.",
+    "symptomsHeading": "Como o drift costuma aparecer?",
+    "symptoms": [
+      "Personagem anda sem o analógico ser movimentado.",
+      "Câmera gira ou continua se movendo depois que o comando para.",
+      "Direção não alcança todo o curso ou responde de forma desigual.",
+      "Zona morta precisa ser aumentada para esconder movimento involuntário.",
+      "Falha volta rapidamente após limpeza externa ou recalibração temporária."
+    ],
+    "causesHeading": "Hall Effect e drift são a mesma intenção?",
+    "causes": [
+      {"title": "Drift é o sintoma", "description": "Ele descreve leitura involuntária; a origem precisa ser verificada no controle específico."},
+      {"title": "Hall Effect é uma tecnologia", "description": "O módulo usa leitura magnética e pode ser uma alternativa de substituição quando compatível."},
+      {"title": "Instalação não é só solda", "description": "Montagem, centralização, calibração e integridade da placa influenciam o resultado do comando."},
+      {"title": "Compatibilidade varia", "description": "Modelo, revisão do controle e módulo disponível precisam ser confirmados antes da indicação."}
+    ],
+    "processHeading": "Como o serviço é definido?",
+    "process": [
+      {"title": "Medição do comportamento", "description": "O movimento dos eixos e a resposta do analógico são testados para confirmar o padrão."},
+      {"title": "Inspeção do controle", "description": "Estado da placa, carcaça e tentativas anteriores entram na avaliação."},
+      {"title": "Escolha do módulo", "description": "A opção convencional ou Hall Effect depende de compatibilidade e do atendimento confirmado."},
+      {"title": "Teste posterior", "description": "Movimento, centralização e demais comandos são conferidos depois da intervenção aplicável."}
+    ],
+    "decisionHeading": "Hall Effect elimina qualquer possibilidade de drift?",
+    "decision": "Não é correto prometer falha zero. A tecnologia reduz o desgaste de contato no sensor, mas molas, montagem, calibração, placa e software continuam participando da leitura. O benefício deve ser avaliado no modelo específico. A página reúne drift e Hall Effect para responder à mesma decisão do cliente sem criar duas URLs concorrentes.",
+    "faq": [
+      {"question": "Limpar o analógico resolve drift?", "answer": "Pode alterar temporariamente alguns casos, mas não corrige todo desgaste ou dano. O comportamento precisa ser testado antes e depois."},
+      {"question": "Hall Effect serve em qualquer controle?", "answer": "Não. Modelo, revisão e compatibilidade do módulo devem ser confirmados pela equipe."},
+      {"question": "É necessário calibrar após a troca?", "answer": "Centralização e resposta precisam ser verificadas. O procedimento aplicável varia conforme o controle e o módulo."}
+    ],
+    "related": ["controle-conserto", "videogame-conserto"],
+    "photoBrief": "analógico de controle real e módulo Hall Effect compatível na bancada"
+  }
+]

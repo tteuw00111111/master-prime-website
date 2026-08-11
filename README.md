@@ -1,12 +1,13 @@
-# Master Prime - Landing Page
+# Master Prime Assistência — site oficial
 
-Landing page moderna e responsiva para a Master Prime, assistência técnica especializada em conserto de dispositivos eletrônicos no Rio de Janeiro.
+Site responsivo da Master Prime Assistência, com home e clusters de serviços pré-renderizados para Campo Grande, Rio de Janeiro.
 
 ## 🚀 Tecnologias Utilizadas
 
 - **React 18** - Biblioteca JavaScript para construção de interfaces
 - **TypeScript** - Superset JavaScript com tipagem estática
 - **Vite** - Build tool rápido e moderno
+- **React DOM Server** - Pré-renderização estática das páginas indexáveis
 - **Tailwind CSS** - Framework CSS utility-first
 - **Framer Motion** - Biblioteca de animações
 - **React Icons** - Ícones SVG como componentes React
@@ -56,6 +57,7 @@ master_prime_website/
 │   │   ├── layout/          # Header, Footer, Navigation
 │   │   ├── sections/        # Seções da landing page
 │   │   └── ui/              # Componentes UI reutilizáveis
+│   ├── data/                # Conteúdo canônico das páginas SEO
 │   ├── hooks/               # Custom React hooks
 │   ├── types/               # TypeScript types
 │   ├── utils/               # Funções utilitárias
@@ -63,6 +65,8 @@ master_prime_website/
 │   ├── App.tsx              # Componente principal
 │   └── main.tsx             # Entry point
 ├── public/                  # Assets estáticos
+├── scripts/                 # Pré-renderização e validação SEO
+├── .agents/skills/          # Workflow local reutilizável
 ├── .env                     # Variáveis de ambiente
 └── package.json
 ```
@@ -109,10 +113,12 @@ O site estará disponível em `http://localhost:5173/`
 
 ### Build para Produção
 
-Gere a build otimizada:
+Gere o cliente, o bundle SSR e os documentos HTML estáticos:
 ```bash
 npm run build
 ```
+
+O build cria 25 documentos React pré-renderizados e preserva a política de privacidade estática, totalizando 26 URLs indexáveis no sitemap.
 
 Preview da build:
 ```bash
@@ -165,20 +171,24 @@ Breakpoints utilizados:
 - [ ] Chat ao vivo
 
 ### Melhorias Planejadas
-- [ ] Otimização de imagens (WebP)
+- [x] Otimização de imagens (WebP)
+- [x] Páginas de serviço pré-renderizadas
+- [x] Sitemap, robots, canonicals e structured data
+- [ ] Fotos reais de bancada e reparos nos slots preparados
 - [ ] PWA (Progressive Web App)
-- [ ] SEO avançado
-- [ ] Testes automatizados
+- [x] SEO técnico e conteúdo por intenção
+- [x] Testes automatizados de SEO
 - [ ] Storybook para componentes
 
 ## 📝 Customização de Conteúdo
 
-Todo o conteúdo do site está centralizado no arquivo:
+Conteúdo da home e conteúdo das páginas de serviço ficam, respectivamente, em:
 ```
 src/utils/constants.ts
+src/data/seo-pages.json
 ```
 
-Para atualizar textos, serviços, depoimentos ou FAQ, basta editar este arquivo.
+Ao adicionar ou alterar uma página, mantenha metadata, intenção, links e regras de `AGENTS.md` consistentes e execute o build/teste completo.
 
 ## 🤝 Contribuindo
 

@@ -12,7 +12,6 @@ import ps5Image from '@/assets/images/ps5_sem_bg.webp'
 import xboxImage from '@/assets/images/xbox_series_x.webp'
 import notebookImage from '@/assets/images/note_sem_bg.webp'
 import iphoneImage from '@/assets/images/iphone_sem_bg.webp'
-import celularesImage from '@/assets/images/celulares.webp'
 
 // Extract services data to module level (outside component)
 const SERVICES_DATA = [
@@ -26,6 +25,7 @@ const SERVICES_DATA = [
     imageWidth: 732,
     imageHeight: 732,
     color: 'rgba(82, 39, 255, 0.4)',
+    href: '/conserto-de-computador-campo-grande-rj',
   },
   {
     id: 2,
@@ -36,6 +36,7 @@ const SERVICES_DATA = [
     imageWidth: 463,
     imageHeight: 559,
     color: 'rgba(0, 100, 255, 0.3)',
+    href: '/conserto-de-videogame',
   },
   {
     id: 3,
@@ -46,6 +47,7 @@ const SERVICES_DATA = [
     imageWidth: 557,
     imageHeight: 714,
     color: 'rgba(255, 215, 0, 0.2)',
+    href: '/conserto-de-celular-campo-grande-rj',
   },
   // Bottom Row
   {
@@ -57,6 +59,7 @@ const SERVICES_DATA = [
     imageWidth: 500,
     imageHeight: 500,
     color: 'rgba(16, 124, 16, 0.3)',
+    href: '/conserto-de-controle',
   },
   {
     id: 5,
@@ -67,16 +70,18 @@ const SERVICES_DATA = [
     imageWidth: 1600,
     imageHeight: 1200,
     color: 'rgba(255, 50, 50, 0.3)',
+    href: '/conserto-de-notebook-campo-grande-rj',
   },
   {
     id: 6,
-    titlePart1: 'Peças e',
-    titlePart2: 'Acessórios',
-    description: 'Peças e acessórios para eletrônicos, além de computadores montados e PC gamer.',
-    image: celularesImage,
-    imageWidth: 935,
-    imageHeight: 872,
+    titlePart1: 'Upgrade de',
+    titlePart2: 'PC Gamer',
+    description: 'Avaliação de compatibilidade para SSD, memória e upgrades de PC gamer conforme a configuração e o objetivo.',
+    image: pcGamerImage,
+    imageWidth: 732,
+    imageHeight: 732,
     color: 'rgba(0, 255, 150, 0.2)',
+    href: '/upgrade-de-pc-gamer',
   },
 ] as const;
 
@@ -126,6 +131,10 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
           >
             {service.description}
           </CardItem>
+
+          <a href={service.href} className="mb-4 inline-flex text-sm font-bold text-gold hover:underline">
+            Conhecer o serviço →
+          </a>
           
           {/* Image Pop-out */}
           <CardItem translateZ="100" className="w-full mt-auto mb-6 flex justify-center items-center">
@@ -172,7 +181,7 @@ export const Services = () => {
         <div className="mb-8 md:mb-12">
           <SectionHeading
             title="Nossos Serviços"
-            subtitle="Assistência técnica para celular, notebook, computador, videogame, controle e outros eletrônicos"
+            subtitle="Assistência técnica para celular, notebook, computador, PC gamer, videogame e controle"
           />
         </div>
 
@@ -186,15 +195,15 @@ export const Services = () => {
 
         {/* Saiba Mais Button */}
         <div className="flex justify-center" style={{ marginTop: '60px' }}>
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            as="button"
-            onClick={() => document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' })}
-            aria-label="Ver localização e formas de contato"
-            className="bg-black text-[#FFD700] flex items-center space-x-2 px-8 py-3 font-semibold text-lg hover:text-[#FFED4E] transition-colors"
-          >
-            <span>Falar com a Equipe</span>
-          </HoverBorderGradient>
+          <a href="/servicos" aria-label="Ver todos os serviços da Master Prime">
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="span"
+              className="bg-black text-[#FFD700] flex items-center space-x-2 px-8 py-3 font-semibold text-lg hover:text-[#FFED4E] transition-colors"
+            >
+              <span>Ver Todos os Serviços</span>
+            </HoverBorderGradient>
+          </a>
         </div>
       </div>
     </section>
