@@ -97,11 +97,18 @@ assert(new Set(descriptions).size === descriptions.length, 'descriptions duplica
 assert(new Set(seoPages.map((page) => page.title)).size === seoPages.length, 'H1 duplicados nos dados de serviço')
 
 const sitemap = read('public/sitemap.xml')
+assert(read('dist/sitemap.xml') === sitemap, 'sitemap publicado difere do sitemap de origem')
 const sitemapLocations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1])
 const expectedLocations = expectedPaths.map((pathname) => `${siteUrl}${pathname === '/' ? '/' : pathname}`)
 assert(sitemapLocations.length === expectedLocations.length, `sitemap deve conter ${expectedLocations.length} URLs`)
 assert(new Set(sitemapLocations).size === sitemapLocations.length, 'sitemap contém URLs duplicadas')
 for (const location of expectedLocations) assert(sitemapLocations.includes(location), `sitemap sem ${location}`)
+for (const page of seoPages.filter((page) => page.lastModified)) {
+  const entry = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)]
+    .find((match) => match[1].includes(`<loc>${siteUrl}${page.path}</loc>`))?.[1]
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(page.lastModified), `${page.path}: lastmod inválido`)
+  assert(entry?.includes(`<lastmod>${page.lastModified}</lastmod>`), `${page.path}: lastmod ausente ou inconsistente`)
+}
 assert(!/presell|inicio/i.test(sitemap), 'sitemap contém URL redirecionada')
 
 const robots = read('public/robots.txt')
@@ -131,6 +138,36 @@ for (const page of pageReports) {
 }
 for (const pathname of expectedPaths.filter((path) => path !== '/')) {
   assert((inbound.get(pathname) ?? 0) > 0, `${pathname}: página órfã`)
+}
+
+const videogamePaths = [
+  '/videogame/ps4-nao-liga',
+  '/videogame/ps4-liga-e-desliga',
+  '/videogame/ps4-sem-imagem',
+  '/videogame/limpeza-e-manutencao-ps4',
+  '/videogame/ps5-sem-imagem',
+  '/videogame/limpeza-e-manutencao-ps5',
+]
+const videogameParent = pageReports.find((page) => page.pathname === '/conserto-de-videogame')
+for (const pathname of videogamePaths) {
+  const page = pageReports.find((report) => report.pathname === pathname)
+  assert(page, `${pathname}: página de videogame não gerada`)
+  assert(videogameParent.html.includes(`href="${pathname}"`), `${pathname}: link da página-pai ausente`)
+  assert(page.html.includes('href="/conserto-de-videogame"'), `${pathname}: retorno à página-pai ausente`)
+  assert(page.html.includes('api.whatsapp.com/send/?phone=5521967635340'), `${pathname}: CTA WhatsApp incorreto`)
+  const nodes = page.schemas.flatMap((schema) => schema['@graph'] ?? [])
+  const service = nodes.find((node) => node['@type'] === 'Service')
+  const breadcrumb = nodes.find((node) => node['@type'] === 'BreadcrumbList')
+  assert(service?.provider?.['@id'] === `${siteUrl}/#localbusiness`, `${pathname}: provider inconsistente`)
+  assert(breadcrumb?.itemListElement.length === 4, `${pathname}: hierarquia do breadcrumb incorreta`)
+  assert(breadcrumb?.itemListElement[2].item === `${siteUrl}/conserto-de-videogame`, `${pathname}: breadcrumb sem página-pai`)
+  assert(breadcrumb?.itemListElement[3].item === `${siteUrl}${pathname}`, `${pathname}: breadcrumb sem URL própria`)
+}
+
+for (const page of seoPages) {
+  for (const id of page.related) {
+    assert(seoPages.some((candidate) => candidate.id === id), `${page.path}: serviço relacionado inexistente (${id})`)
+  }
 }
 
 const activePublicFiles = [

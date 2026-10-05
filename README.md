@@ -118,7 +118,7 @@ Gere o cliente, o bundle SSR e os documentos HTML estáticos:
 npm run build
 ```
 
-O build cria 25 documentos React pré-renderizados e preserva a política de privacidade estática, totalizando 26 URLs indexáveis no sitemap.
+O build cria 31 documentos React pré-renderizados e preserva a política de privacidade estática, totalizando 32 URLs indexáveis no sitemap. O cluster de videogame inclui seis páginas específicas de PS4 e PS5, com links da página-pai e datas de alteração de conteúdo estáveis no sitemap.
 
 Preview da build:
 ```bash

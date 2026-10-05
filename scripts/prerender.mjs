@@ -7,6 +7,11 @@ const dist = resolve(root, 'dist')
 const serverEntry = pathToFileURL(resolve(root, 'dist-ssr/entry-server.js')).href
 const { render, getPageMetadata, PUBLIC_INDEXABLE_PATHS } = await import(serverEntry)
 const baseTemplate = readFileSync(resolve(dist, 'index.html'), 'utf8')
+// Content dates stay stable across builds; omit dates not verified for older pages.
+const servicePages = JSON.parse(readFileSync(resolve(root, 'src/data/seo-pages.json'), 'utf8'))
+const lastModifiedByPath = new Map(servicePages
+  .filter((page) => page.lastModified)
+  .map((page) => [page.path, page.lastModified]))
 
 const escapeAttribute = (value) => value
   .replaceAll('&', '&amp;')
@@ -69,7 +74,13 @@ for (const pathname of PUBLIC_INDEXABLE_PATHS) {
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${PUBLIC_INDEXABLE_PATHS.map((pathname) => `  <url>\n    <loc>https://master-prime.com${pathname === '/' ? '/' : pathname}</loc>\n  </url>`).join('\n')}
+${PUBLIC_INDEXABLE_PATHS.map((pathname) => {
+  const lastModified = lastModifiedByPath.get(pathname)
+  if (lastModified && !/^\d{4}-\d{2}-\d{2}$/.test(lastModified)) {
+    throw new Error(`Invalid content modification date for ${pathname}`)
+  }
+  return `  <url>\n    <loc>https://master-prime.com${pathname === '/' ? '/' : pathname}</loc>${lastModified ? `\n    <lastmod>${lastModified}</lastmod>` : ''}\n  </url>`
+}).join('\n')}
 </urlset>
 `
 

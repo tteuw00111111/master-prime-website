@@ -43,6 +43,12 @@ Não houve acesso a Google Search Console, Planejador de Palavras-chave ou Semru
 | `/celular/troca-de-bateria` | troca de bateria de celular | bateria descarrega rápido; celular desligando; bateria estufada | Diagnóstico de autonomia, carga e alteração física |
 | `/celular/reparo-de-placa` | reparo de placa de celular | celular não liga; celular molhado; desoxidação; falha de carga | Diagnóstico eletrônico e reparo quando viável |
 | `/conserto-de-videogame` | conserto de videogame em Campo Grande RJ | manutenção de console; videogame não liga; liga e desliga; sem imagem | Diagnóstico, manutenção e limpeza de console |
+| `/videogame/ps4-nao-liga` | PS4 não liga em Campo Grande RJ | PS4 sem luz; sem resposta ao botão | Ausência de alimentação; diferenciar tentativa de início e falta de vídeo |
+| `/videogame/ps4-liga-e-desliga` | PS4 liga e desliga em Campo Grande RJ | PS4 apaga ao iniciar; desliga em jogos | Interrupção após ligar; distinguir alimentação, temperatura e reinício |
+| `/videogame/ps4-sem-imagem` | PS4 sem imagem em Campo Grande RJ | PS4 ligado sem sinal; tela preta | Vídeo, conexão HDMI e inicialização, sem presumir troca de conector |
+| `/videogame/limpeza-e-manutencao-ps4` | limpeza e manutenção de PS4 em Campo Grande RJ | poeira no PS4; ruído; ventilação | Avaliação de limpeza e refrigeração por versão original, Slim ou Pro |
+| `/videogame/ps5-sem-imagem` | PS5 sem imagem em Campo Grande RJ | PS5 sem sinal; tela preta ao abrir jogo | Diferenciar falha total de vídeo de incompatibilidade de modo de exibição |
+| `/videogame/limpeza-e-manutencao-ps5` | limpeza e manutenção de PS5 em Campo Grande RJ | poeira no PS5; aviso de temperatura | Ventilação, poeira sob tampas e ruído em uso; intervenção conforme o modelo |
 | `/conserto-de-controle` | conserto de controle em Campo Grande RJ | manutenção de controle; botão falhando; controle desconectando | Hub de controles e comandos |
 | `/controle/correcao-de-drift-e-hall-effect` | conserto de controle com drift | analógico puxando sozinho; troca de analógico; instalar Hall Effect | Diagnóstico de drift e Hall Effect quando compatível |
 
@@ -53,6 +59,8 @@ Não houve acesso a Google Search Console, Planejador de Palavras-chave ou Semru
 - Drift e Hall Effect permanecem juntos: drift é o sintoma e Hall Effect é uma opção de componente, não um segundo serviço independente para todo controle.
 - Manutenção e upgrade de PC gamer são separados: o primeiro trata instabilidade/defeito; o segundo trata melhoria de um conjunto estável.
 - Tela, bateria e placa de celular têm decisões e riscos próprios e justificam documentos distintos.
+- O hub de videogame mantém a intenção comercial ampla. As filhas de PS4 distinguem ausência de energia, perda de energia após ligar, ausência de vídeo e manutenção de refrigeração. A página de limpeza não promete corrigir desligamentos.
+- PS4 e PS5 mantêm páginas de vídeo e manutenção próprias: o conteúdo de PS5 trata modos de exibição e acesso à poeira conforme o modelo, sem replicar a página de PS4. A separação é editorial; canibalização real deve ser acompanhada por consultas e URLs no Search Console.
 
 ## Intenções excluídas
 
@@ -70,7 +78,8 @@ Home
     ├── hub notebook → 9 páginas relacionadas
     ├── hub computador → 3 páginas + manutenção/upgrade PC gamer
     ├── hub celular → 3 páginas relacionadas
-    └── hub videogame → hub controle → drift/Hall Effect
+    └── hub videogame → 4 páginas PS4 + 2 páginas PS5
+        └── hub controle → drift/Hall Effect
 ```
 
 Cada página específica retorna ao hub do cluster, aponta para serviços realmente relacionados e recebe link do hub geral. A política de privacidade permanece no rodapé; `/presell` e `/inicio` ficam fora do sitemap e redirecionam para `/`.

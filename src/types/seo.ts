@@ -16,6 +16,7 @@ export interface ServiceSeoPage {
   title: string
   metaTitle: string
   metaDescription: string
+  lastModified?: string
   eyebrow: string
   answer: string
   symptomsHeading: string

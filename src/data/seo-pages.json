@@ -861,8 +861,484 @@
       {"question": "Sem imagem significa defeito no HDMI?", "answer": "É uma hipótese. Cabo, entrada da TV, configuração e circuito de vídeo precisam ser diferenciados."},
       {"question": "A Master Prime faz limpeza de console?", "answer": "Sim, como parte dos serviços atuais de manutenção, quando indicada pelo estado e pelo diagnóstico do videogame."}
     ],
-    "related": ["controle-conserto", "controle-drift", "pc-gamer-manutencao"],
+    "lastModified": "2026-10-05",
+    "related": ["ps4-nao-liga", "ps4-liga-e-desliga", "ps4-sem-imagem", "ps4-limpeza", "ps5-sem-imagem", "ps5-limpeza", "controle-conserto", "controle-drift", "pc-gamer-manutencao"],
     "photoBrief": "console real aberto na bancada para limpeza e diagnóstico"
+  },
+  {
+    "id": "ps4-nao-liga",
+    "path": "/videogame/ps4-nao-liga",
+    "clusterPath": "/conserto-de-videogame",
+    "clusterName": "Conserto de videogame",
+    "lastModified": "2026-10-05",
+    "title": "PS4 não liga: diagnóstico em Campo Grande, RJ",
+    "metaTitle": "PS4 Não Liga: Avaliação em Campo Grande RJ | Master Prime",
+    "metaDescription": "PS4 sem luz ou resposta ao botão? Entenda as possíveis falhas de alimentação e solicite avaliação na Master Prime, em Campo Grande/RJ, pelo WhatsApp da loja.",
+    "eyebrow": "PS4 sem resposta ao ligar",
+    "answer": "Quando o PS4 não liga, o primeiro passo é esclarecer se não há nenhum sinal de energia ou se o console tenta iniciar. Ausência de luz, bipe e resposta ao botão exige uma investigação diferente de tela preta com o aparelho ligado. A Master Prime Assistência, em Campo Grande, Rio de Janeiro, realiza diagnóstico de videogames antes de indicar a manutenção aplicável. Informe se o seu PS4 é original, Slim ou Pro e o que aconteceu antes da falha.",
+    "symptomsHeading": "Como o PS4 se comporta ao tentar ligar?",
+    "symptoms": [
+      "Nenhuma luz acende e o console não responde ao botão físico de ligar.",
+      "O controle não consegue iniciar o aparelho, mas ainda falta conferir a resposta no próprio console.",
+      "O equipamento parou de responder depois de uma interrupção de energia ou mudança de tomada.",
+      "Houve contato com líquido, queda ou manutenção anterior antes de desaparecerem os sinais de funcionamento.",
+      "Há um bipe ou uma luz breve, sem que o PS4 permaneça ligado; esse detalhe muda o caminho do diagnóstico."
+    ],
+    "causesHeading": "Quais causas podem impedir a alimentação do PS4?",
+    "causes": [
+      {
+        "title": "Tomada e cabo de alimentação",
+        "description": "Mau contato, cabo danificado ou falta de energia no ponto de uso podem imitar defeito interno. A conexão externa precisa ser diferenciada da alimentação dentro do console, sem adaptar cabos ou forçar encaixes."
+      },
+      {
+        "title": "Fonte e circuito interno",
+        "description": "Fonte e circuitos da placa participam da distribuição de energia. Um PS4 completamente apagado não permite concluir, apenas pelo sintoma, qual desses conjuntos falhou ou se será necessária uma substituição."
+      },
+      {
+        "title": "Comando de ligar",
+        "description": "Falha ao iniciar pelo controle pode estar ligada ao próprio controle ou à conexão. Comparar esse comportamento com o botão do aparelho ajuda a delimitar o problema antes de tratar o console como sem energia."
+      },
+      {
+        "title": "Histórico de dano",
+        "description": "Queda, líquido e interrupções elétricas são informações úteis para direcionar a inspeção. Esses eventos não confirmam uma peça defeituosa, mas devem ser relatados para evitar uma avaliação sem contexto."
+      }
+    ],
+    "processHeading": "Como é conduzida a avaliação do PS4 que não liga?",
+    "process": [
+      {
+        "title": "Identificar a versão",
+        "description": "Modelo completo, sinais ao pressionar o botão e histórico ajudam a distinguir ausência de alimentação de tentativa de inicialização."
+      },
+      {
+        "title": "Separar a conexão externa",
+        "description": "A avaliação considera cabo, conexão e resposta do aparelho antes de atribuir a falha à fonte ou à placa."
+      },
+      {
+        "title": "Inspecionar o conjunto",
+        "description": "Os sinais encontrados orientam o diagnóstico da alimentação e a procura por danos relacionados ao relato."
+      },
+      {
+        "title": "Definir a intervenção",
+        "description": "A equipe informa a manutenção possível e as condições do atendimento após avaliar o equipamento; não se escolhe uma peça apenas por tentativa."
+      }
+    ],
+    "decisionHeading": "E se houver luz ou bipe, mas nenhum jogo iniciar?",
+    "decision": "Se o PS4 acende e depois apaga, descreva quanto tempo ele permanece ligado: o caso passa a exigir análise do desligamento. Se a luz permanece acesa e somente a TV fica preta, a investigação inclui vídeo e inicialização. Essa separação evita confundir três problemas diferentes sob o relato de que o console não liga. Limpeza não é uma solução automática para ausência de energia. Ao falar com a loja, envie a versão e os sinais observados, sem abrir a fonte ou insistir em tentativas após líquido ou dano físico.",
+    "faq": [
+      {
+        "question": "PS4 sem luz precisa de uma fonte nova?",
+        "answer": "Não é possível afirmar sem avaliação. Cabo, tomada, fonte, comando de ligar e circuito interno precisam ser diferenciados; ausência de luz não identifica sozinha o componente defeituoso."
+      },
+      {
+        "question": "Se não liga pelo controle, o console está quebrado?",
+        "answer": "Essa falha também pode envolver o controle ou sua conexão. Informe à equipe se o botão físico do PS4 responde e se há luz, bipe ou qualquer tentativa de início."
+      },
+      {
+        "question": "O que informar para avaliar meu PS4 em Campo Grande?",
+        "answer": "Envie pelo WhatsApp o modelo, se há luz ou bipe e o evento anterior à falha. O atendimento é na Master Prime Assistência, Avenida Cesário de Melo, 2571, Campo Grande, Rio de Janeiro/RJ."
+      }
+    ],
+    "related": [
+      "ps4-liga-e-desliga",
+      "ps4-sem-imagem",
+      "videogame-conserto"
+    ],
+    "photoBrief": "PS4 real da empresa durante avaliação de alimentação, com identificação da versão"
+  },
+  {
+    "id": "ps4-liga-e-desliga",
+    "path": "/videogame/ps4-liga-e-desliga",
+    "clusterPath": "/conserto-de-videogame",
+    "clusterName": "Conserto de videogame",
+    "lastModified": "2026-10-05",
+    "title": "PS4 liga e desliga: avaliação em Campo Grande, RJ",
+    "metaTitle": "PS4 Liga e Desliga em Campo Grande RJ | Master Prime",
+    "metaDescription": "PS4 desliga ao iniciar ou durante jogos? Veja como diferenciar energia, aquecimento e inicialização. Fale com a Master Prime em Campo Grande/RJ pelo WhatsApp.",
+    "eyebrow": "PS4 com desligamento inesperado",
+    "answer": "Um PS4 que liga e desliga precisa ser avaliado pelo momento da falha. Apagar logo após o botão, desligar depois de aquecer e reiniciar durante um jogo não são necessariamente o mesmo defeito. Na Master Prime, em Campo Grande, RJ, o diagnóstico de videogames considera alimentação, refrigeração e inicialização antes de indicar manutenção ou limpeza. Anote a duração aproximada, o comportamento da luz e se houve aviso na tela.",
+    "symptomsHeading": "Em que situação o PS4 desliga?",
+    "symptoms": [
+      "O console emite um bipe, acende por alguns segundos e apaga antes de mostrar o menu.",
+      "O PS4 entra no menu, mas interrompe o funcionamento ao abrir um jogo.",
+      "A ventoinha fica mais ruidosa ou surge aviso de temperatura antes do desligamento.",
+      "O aparelho desliga sem aviso, mesmo sem estar quente, ou só volta a responder depois.",
+      "O menu reaparece após uma interrupção; diferenciar reinício de desligamento completo ajuda a descrever a falha."
+    ],
+    "causesHeading": "Por que o tempo até desligar importa?",
+    "causes": [
+      {
+        "title": "Alimentação instável",
+        "description": "A conexão externa, a fonte e os circuitos de alimentação entram na investigação quando o console perde energia. O fato de ligar brevemente não confirma que a fonte sustenta o funcionamento nem que seja ela a causa."
+      },
+      {
+        "title": "Refrigeração insuficiente",
+        "description": "Poeira, circulação de ar limitada e problemas no conjunto de ventilação podem contribuir para aquecimento. Aviso de temperatura e falha após uso orientam essa hipótese, mas não dispensam testes de outras causas."
+      },
+      {
+        "title": "Inicialização interrompida",
+        "description": "Se o console permanece aceso, reinicia ou apresenta erro, sistema e armazenamento também precisam ser considerados. Esse comportamento deve ser separado de um corte completo de alimentação."
+      },
+      {
+        "title": "Condições do uso",
+        "description": "Informe se a falha ocorre com o console frio, no menu, em um jogo específico ou após longo uso. Mudança de ambiente, cabo e manutenção anterior ajudam a reproduzir o cenário sem presumir um reparo."
+      }
+    ],
+    "processHeading": "Como separar desligamento por calor de falha elétrica?",
+    "process": [
+      {
+        "title": "Registrar o intervalo",
+        "description": "Modelo, tempo até apagar, luz, ruído e mensagens na tela orientam a avaliação do comportamento relatado."
+      },
+      {
+        "title": "Observar o funcionamento",
+        "description": "O diagnóstico procura distinguir perda de energia, reinício e interrupção da imagem durante a inicialização ou o uso."
+      },
+      {
+        "title": "Inspeção direcionada",
+        "description": "Alimentação e refrigeração são examinadas conforme os sinais; limpeza entra quando o estado do conjunto justificar a intervenção."
+      },
+      {
+        "title": "Indicar a manutenção",
+        "description": "A equipe explica o serviço aplicável após a avaliação. Se houver outra falha além de poeira, ela precisa entrar na decisão."
+      }
+    ],
+    "decisionHeading": "Vale pedir apenas limpeza para um PS4 que desliga?",
+    "decision": "Limpeza pode ser indicada quando o diagnóstico encontra obstrução e participação da temperatura no problema. Um console que apaga ainda frio ou imediatamente ao iniciar exige atenção à alimentação e aos circuitos; contratar limpeza por suposição pode deixar a origem da falha sem tratamento. Caso a luz continue acesa e apenas a TV perca o sinal, descreva isso como ausência de imagem. Se há aviso de superaquecimento, interrompa o uso e informe à assistência em que situação ele aparece, em vez de insistir em sessões para testar.",
+    "faq": [
+      {
+        "question": "PS4 que desliga depois de alguns segundos está superaquecendo?",
+        "answer": "O intervalo curto não confirma aquecimento. Alimentação e circuitos internos também podem impedir que o aparelho permaneça ligado. A temperatura, os sinais e o momento da falha precisam ser observados."
+      },
+      {
+        "question": "Ventoinha alta significa que limpeza resolverá?",
+        "answer": "Ruído isolado não confirma a causa. Poeira, circulação de ar e funcionamento da ventilação entram na avaliação, junto de possíveis falhas de alimentação ou inicialização."
+      },
+      {
+        "question": "Que informações enviar pelo WhatsApp?",
+        "answer": "Informe a versão do PS4, se ele apaga ou reinicia, quanto tempo leva e se surge aviso de temperatura. Esses detalhes ajudam a organizar a avaliação na Master Prime em Campo Grande, Rio de Janeiro."
+      }
+    ],
+    "related": [
+      "ps4-nao-liga",
+      "ps4-limpeza",
+      "videogame-conserto"
+    ],
+    "photoBrief": "PS4 real em diagnóstico de desligamento, mostrando o conjunto de refrigeração examinado"
+  },
+  {
+    "id": "ps4-sem-imagem",
+    "path": "/videogame/ps4-sem-imagem",
+    "clusterPath": "/conserto-de-videogame",
+    "clusterName": "Conserto de videogame",
+    "lastModified": "2026-10-05",
+    "title": "PS4 sem imagem: diagnóstico em Campo Grande, RJ",
+    "metaTitle": "PS4 Sem Imagem: Avaliação em Campo Grande RJ | Master Prime",
+    "metaDescription": "PS4 liga, mas a TV fica sem sinal? Entenda a avaliação de cabo, conexão HDMI e inicialização. Peça avaliação na Master Prime em Campo Grande/RJ pelo WhatsApp.",
+    "eyebrow": "PS4 ligado e TV sem sinal",
+    "answer": "PS4 ligado sem imagem na TV pode envolver conexão HDMI, entrada selecionada, saída de vídeo ou uma inicialização que não terminou. Antes de atribuir o defeito ao conector, é preciso confirmar se o console permanece funcionando e se a falta de sinal também ocorre com outra conexão externa. A Master Prime Assistência, em Campo Grande, Rio de Janeiro, avalia o videogame e informa a intervenção possível conforme a causa encontrada.",
+    "symptomsHeading": "Quais sinais ajudam a descrever a tela preta?",
+    "symptoms": [
+      "A TV informa sem sinal enquanto o PS4 mantém luz acesa e ruído de funcionamento.",
+      "A tela fica preta, com ou sem som, e o menu não aparece.",
+      "A imagem falha depois de trocar cabo, mudar de TV ou movimentar o console.",
+      "O encaixe HDMI parece danificado ou o cabo não fica firme, sem ser necessário forçá-lo para conferir.",
+      "A luz não chega a estabilizar e o console parece não completar a inicialização."
+    ],
+    "causesHeading": "Ausência de imagem é sempre defeito no HDMI do PS4?",
+    "causes": [
+      {
+        "title": "Cabo e entrada da TV",
+        "description": "Cabo com falha, conexão incompleta ou entrada incorreta podem impedir a exibição. Conferir a entrada selecionada e comparar outro cabo ou outra porta disponível ajuda a separar a TV do console."
+      },
+      {
+        "title": "Equipamentos intermediários",
+        "description": "Receptor, barra de som e dispositivo de captura acrescentam conexões ao caminho do sinal. Comparar a ligação direta à TV ajuda a identificar se a falha depende desses equipamentos."
+      },
+      {
+        "title": "Conector e circuito de vídeo",
+        "description": "Dano no encaixe, nos contatos ou no circuito associado é uma hipótese quando as conexões externas não explicam o sintoma. Aparência do conector, sozinha, não determina toda a extensão de uma falha interna."
+      },
+      {
+        "title": "Saída e inicialização",
+        "description": "Configuração de exibição e inicialização incompleta também entram na investigação. Se o aparelho não conclui o início, não se deve tratar a tela preta automaticamente como defeito restrito à porta HDMI."
+      }
+    ],
+    "processHeading": "O que orienta o diagnóstico de vídeo no PS4?",
+    "process": [
+      {
+        "title": "Histórico e sinais",
+        "description": "Versão original, Slim ou Pro, estado da luz e evento anterior à perda de imagem ajudam a delimitar o cenário."
+      },
+      {
+        "title": "Conexão externa",
+        "description": "A avaliação diferencia cabo, entrada e tela da saída do videogame, considerando também aparelhos intermediários."
+      },
+      {
+        "title": "Inspeção do console",
+        "description": "Conector, comportamento de inicialização e conjunto relacionado à imagem são examinados conforme o sintoma."
+      },
+      {
+        "title": "Serviço aplicável",
+        "description": "Depois do diagnóstico, a equipe informa qual manutenção pode ser realizada. Troca de conector não é prometida antes da avaliação."
+      }
+    ],
+    "decisionHeading": "O PS4 está sem vídeo ou está desligando?",
+    "decision": "A luz permanecer acesa enquanto a TV perde sinal é diferente de o console apagar junto com a imagem. Se ele desliga, alimentação e refrigeração entram no diagnóstico; se não dá nenhum sinal ao botão, o ponto de partida é a energia. Para uma falha de vídeo, informe se existe som e se o problema começou após movimentar cabos. Não force um conector torto nem escolha reinstalação ou inicialização do sistema apenas para tentar recuperar imagem: opções que alteram dados exigem uma decisão informada.",
+    "faq": [
+      {
+        "question": "Se o PS4 funciona em outra TV, ainda pode precisar de conserto?",
+        "answer": "Esse resultado aponta para investigar cabo, entrada, configuração e equipamentos do primeiro conjunto. É uma informação útil para o diagnóstico e não uma confirmação automática de defeito no console."
+      },
+      {
+        "question": "Luz azul que não estabiliza confirma defeito no conector?",
+        "answer": "Não. O comportamento da luz também pode estar relacionado à inicialização. Informe à assistência se há som, resposta do controle e se o aparelho permanece ligado."
+      },
+      {
+        "question": "A avaliação já inclui uma troca de HDMI?",
+        "answer": "A indicação depende do que for encontrado. A Master Prime realiza diagnóstico de vídeo em videogames; a equipe confirma a intervenção aplicável após examinar o PS4, sem presumir troca de peça."
+      }
+    ],
+    "related": [
+      "ps4-nao-liga",
+      "ps4-liga-e-desliga",
+      "videogame-conserto"
+    ],
+    "photoBrief": "conexão de vídeo de PS4 real durante inspeção na bancada da Master Prime"
+  },
+  {
+    "id": "ps4-limpeza",
+    "path": "/videogame/limpeza-e-manutencao-ps4",
+    "clusterPath": "/conserto-de-videogame",
+    "clusterName": "Conserto de videogame",
+    "lastModified": "2026-10-05",
+    "title": "Limpeza e manutenção de PS4 em Campo Grande, RJ",
+    "metaTitle": "Limpeza e Manutenção PS4 em Campo Grande RJ | Master Prime",
+    "metaDescription": "PS4 com poeira, ruído ou aquecimento? Conheça os critérios para limpeza e manutenção do console. Fale com a Master Prime em Campo Grande/RJ pelo WhatsApp.",
+    "eyebrow": "Refrigeração e manutenção do PS4",
+    "answer": "A limpeza e manutenção do PS4 são orientadas pelo estado do console e pelo funcionamento da refrigeração. Poeira visível, ventoinha mais ruidosa e aquecimento merecem atenção, mas não identificam sozinhos a causa de travamentos ou desligamentos. A Master Prime, em Campo Grande, RJ, realiza diagnóstico, manutenção e limpeza de videogames quando indicados. O modelo original, Slim ou Pro precisa ser identificado para avaliar o conjunto correto.",
+    "symptomsHeading": "Quando avaliar a refrigeração do PS4?",
+    "symptoms": [
+      "Poeira acumulada nas entradas ou saídas de ar e uso em local com circulação limitada.",
+      "Ruído de ventilação mudou em relação ao comportamento habitual do mesmo console.",
+      "Aparece aviso de temperatura durante o uso ou o equipamento interrompe o funcionamento após aquecer.",
+      "O PS4 tem histórico de manutenção desconhecido e apresenta sinais novos de instabilidade.",
+      "A carcaça parece limpa, mas há suspeita de obstrução interna que só pode ser avaliada pela inspeção."
+    ],
+    "causesHeading": "O que uma limpeza precisa considerar além da carcaça?",
+    "causes": [
+      {
+        "title": "Caminho do ar",
+        "description": "Limpar apenas a parte externa não confirma que a passagem de ar interna esteja livre. Poeira nas regiões de ventilação e dissipação pode exigir uma intervenção conforme o acesso e o estado do modelo."
+      },
+      {
+        "title": "Versão do PS4",
+        "description": "Original, Slim e Pro não devem ser tratados como conjuntos idênticos. Identificação da versão e histórico de abertura orientam a inspeção e evitam pressupor o mesmo procedimento para todos os aparelhos."
+      },
+      {
+        "title": "Ventoinha e dissipação",
+        "description": "Ruído pode acompanhar maior esforço de refrigeração ou um problema no conjunto. A avaliação precisa distinguir sujeira de falha de funcionamento, sem vender limpeza como correção universal."
+      },
+      {
+        "title": "Local de instalação",
+        "description": "Móvel fechado, tecido próximo às aberturas e poeira no ambiente podem limitar a ventilação. O modo de uso precisa ser considerado para que a avaliação não fique restrita ao interior do PS4."
+      }
+    ],
+    "processHeading": "Como é definida a manutenção do PS4?",
+    "process": [
+      {
+        "title": "Modelo e rotina",
+        "description": "Informe a versão, local de uso, mudança de ruído e se há avisos ou desligamentos durante os jogos."
+      },
+      {
+        "title": "Avaliação inicial",
+        "description": "O comportamento relatado e o estado da ventilação ajudam a separar necessidade de limpeza de outras falhas."
+      },
+      {
+        "title": "Limpeza indicada",
+        "description": "A Master Prime informa o escopo aplicável ao estado encontrado. Procedimentos e materiais não são presumidos antes da inspeção."
+      },
+      {
+        "title": "Critérios de continuidade",
+        "description": "A avaliação orienta se a limpeza é suficiente para a necessidade encontrada ou se outro problema requer manutenção específica."
+      }
+    ],
+    "decisionHeading": "Limpeza preventiva e reparo de desligamento têm a mesma intenção?",
+    "decision": "Na manutenção, a pergunta é se o conjunto de refrigeração precisa de cuidados e qual intervenção é adequada. No PS4 que desliga, a pergunta inicial é por que o funcionamento é interrompido: a causa também pode ser elétrica ou de inicialização. Por isso, a limpeza não substitui o diagnóstico desse sintoma. Não há um intervalo único de manutenção que sirva para todo console; ambiente, frequência de uso e estado encontrado orientam a decisão. Ao solicitar avaliação, relate sintomas reais em vez de pedir materiais ou trocas como pacote obrigatório.",
+    "faq": [
+      {
+        "question": "Um PS4 com ventoinha alta está necessariamente sujo?",
+        "answer": "Não. O ruído precisa ser comparado com o comportamento habitual e com o cenário de uso. Poeira, circulação de ar e funcionamento da ventilação são possibilidades que a avaliação diferencia."
+      },
+      {
+        "question": "Toda limpeza exige troca de material térmico?",
+        "answer": "Não se deve presumir uma troca apenas pelo nome do serviço. Modelo, condição e necessidade técnica definem o escopo; confirme com a equipe quais intervenções são aplicáveis ao seu PS4."
+      },
+      {
+        "question": "Preciso levar o PS4 mesmo se ele ainda funciona?",
+        "answer": "Informe pelo WhatsApp os sinais e a versão para organizar o atendimento. O estado do equipamento precisa ser avaliado para indicar manutenção; não há promessa de resultado apenas por um relato de poeira."
+      }
+    ],
+    "related": [
+      "ps4-liga-e-desliga",
+      "videogame-conserto"
+    ],
+    "photoBrief": "PS4 real aberto para avaliação de poeira e passagem de ar, sem imagens ilustrativas de reparos"
+  },
+  {
+    "id": "ps5-sem-imagem",
+    "path": "/videogame/ps5-sem-imagem",
+    "clusterPath": "/conserto-de-videogame",
+    "clusterName": "Conserto de videogame",
+    "lastModified": "2026-10-05",
+    "title": "PS5 sem imagem: avaliação em Campo Grande, RJ",
+    "metaTitle": "PS5 Sem Imagem: Avaliação em Campo Grande RJ | Master Prime",
+    "metaDescription": "PS5 ligado sem sinal na TV ou com tela preta ao abrir jogos? Entenda a avaliação de vídeo e peça diagnóstico na Master Prime em Campo Grande/RJ pelo WhatsApp.",
+    "eyebrow": "Saída de vídeo e conexão do PS5",
+    "answer": "Quando o PS5 fica sem imagem, vale distinguir falta total de sinal de uma tela preta que aparece somente ao entrar em um jogo. Cabo, porta da TV e configuração da saída podem participar do problema, além de dano no conector ou falha interna do console. A Master Prime Assistência, em Campo Grande, Rio de Janeiro, realiza diagnóstico de vídeo em videogames antes de indicar manutenção. Informe o modelo e se o menu ainda aparece em alguma condição.",
+    "symptomsHeading": "A imagem do PS5 some em que momento?",
+    "symptoms": [
+      "O console permanece ligado, mas a TV indica ausência de sinal desde o início.",
+      "O menu aparece e a tela fica preta quando um jogo muda o modo de vídeo.",
+      "Há falha ou intermitência após mudar de TV, cabo, receptor ou entrada HDMI.",
+      "A imagem funciona em uma tela ou configuração e falha em outra.",
+      "O encaixe HDMI sofreu impacto ou foi forçado antes de a imagem desaparecer."
+    ],
+    "causesHeading": "O que diferencia o diagnóstico de vídeo do PS5?",
+    "causes": [
+      {
+        "title": "Modo de exibição",
+        "description": "No PS5, uma falha que surge ao ativar recursos como 120 Hz ou HDR pede conferir o conjunto formado por TV, cabo e configuração. Isso é diferente de não receber sinal em nenhuma condição de uso."
+      },
+      {
+        "title": "Cabo e porta compatíveis",
+        "description": "A capacidade da conexão importa para o modo de vídeo escolhido. Falha com um modo mais exigente não comprova que o conector do console esteja quebrado; comparação com outra conexão ajuda a delimitar o caso."
+      },
+      {
+        "title": "Caminho até a TV",
+        "description": "Receptor, barra de som ou captura podem interferir no sinal. Comparar a ligação direta com o cenário original diferencia uma falha externa de um problema que acompanha o videogame."
+      },
+      {
+        "title": "Dano ou falha interna",
+        "description": "Se o sintoma persiste com as conexões externas verificadas, conector, circuito de vídeo e inicialização precisam entrar na avaliação. O serviço é definido pela causa, sem assumir troca de HDMI pelo relato de tela preta."
+      }
+    ],
+    "processHeading": "Como a avaliação separa configuração de defeito?",
+    "process": [
+      {
+        "title": "Registrar o cenário",
+        "description": "Informe modelo do PS5, TV utilizada e se a imagem some no início, no menu ou somente durante jogos."
+      },
+      {
+        "title": "Comparar a conexão",
+        "description": "Cabo, entrada, ligação direta e condições de exibição ajudam a verificar se a falha depende do conjunto externo."
+      },
+      {
+        "title": "Inspecionar o vídeo",
+        "description": "O diagnóstico observa o conector e os sinais de inicialização para direcionar a investigação no console."
+      },
+      {
+        "title": "Definir a manutenção",
+        "description": "A equipe informa a intervenção aplicável ao PS5 depois da avaliação e alinha as condições antes do serviço indicado."
+      }
+    ],
+    "decisionHeading": "Tela preta ao abrir jogo exige conserto do console?",
+    "decision": "Se o menu funciona, mas um modo de vídeo específico deixa a TV sem sinal, é preciso considerar a configuração e a compatibilidade da conexão antes de concluir defeito físico. Caso a falha acompanhe o PS5 em cenários diferentes, a avaliação do console ganha importância. Não force o cabo para recuperar contato nem inicie procedimentos que apaguem dados como tentativa genérica. Informe à Master Prime se a luz permanece acesa, se há áudio e o que mudou antes da falha; esses detalhes permitem distinguir vídeo de um desligamento do aparelho.",
+    "faq": [
+      {
+        "question": "PS5 sem imagem precisa sempre de cabo HDMI 2.1?",
+        "answer": "Não. O cabo e a tela precisam atender ao modo de vídeo utilizado. A falta de imagem em uma configuração não confirma, sozinha, que um novo cabo ou reparo seja necessário."
+      },
+      {
+        "question": "Se o menu aparece e o jogo fica preto, a porta HDMI quebrou?",
+        "answer": "Esse comportamento pede conferir modos de vídeo, cabo, entrada e TV. Ainda pode haver uma falha que exija diagnóstico, mas o sintoma não determina automaticamente dano no conector."
+      },
+      {
+        "question": "Limpeza é o atendimento indicado para PS5 sem sinal?",
+        "answer": "A falta de sinal é investigada como problema de vídeo ou inicialização. Limpeza tem indicação própria conforme o estado da refrigeração e não substitui a avaliação da ausência de imagem."
+      }
+    ],
+    "related": [
+      "videogame-conserto"
+    ],
+    "photoBrief": "PS5 real durante diagnóstico de ausência de imagem e inspeção da conexão de vídeo"
+  },
+  {
+    "id": "ps5-limpeza",
+    "path": "/videogame/limpeza-e-manutencao-ps5",
+    "clusterPath": "/conserto-de-videogame",
+    "clusterName": "Conserto de videogame",
+    "lastModified": "2026-10-05",
+    "title": "Limpeza e manutenção de PS5 em Campo Grande, RJ",
+    "metaTitle": "Limpeza e Manutenção PS5 em Campo Grande RJ | Master Prime",
+    "metaDescription": "PS5 com poeira, ventilação obstruída ou aviso de temperatura? Veja quando avaliar limpeza e manutenção na Master Prime em Campo Grande/RJ. Fale pelo WhatsApp.",
+    "eyebrow": "Ventilação e cuidados com o PS5",
+    "answer": "A limpeza e manutenção do PS5 devem considerar as regiões de entrada e saída de ar, o estado interno e o modelo do console. Aumentar o ruído durante jogos não confirma, por si só, necessidade de reparo. Na Master Prime, em Campo Grande, RJ, o atendimento de videogames inclui diagnóstico, manutenção e limpeza quando o estado encontrado justificar o serviço. Relate avisos de temperatura, mudança de comportamento e como o aparelho fica instalado.",
+    "symptomsHeading": "Quais situações justificam avaliar o PS5?",
+    "symptoms": [
+      "Poeira acumulada ao redor das aberturas de ventilação e circulação de ar limitada pelo móvel.",
+      "Aviso de temperatura ou interrupção do uso após aquecimento.",
+      "Mudança persistente no ruído da ventoinha em situações nas quais antes funcionava de outra maneira.",
+      "Histórico de abertura ou limpeza anterior sem informação sobre a intervenção realizada.",
+      "Dúvida sobre sujeira interna mesmo com tampas e superfícies externas aparentemente limpas."
+    ],
+    "causesHeading": "Por que o PS5 precisa de uma avaliação própria?",
+    "causes": [
+      {
+        "title": "Ventilação ao redor do console",
+        "description": "As aberturas do PS5 precisam de passagem de ar livre. Espaço apertado e objetos próximos podem prejudicar essa circulação mesmo quando o equipamento não tem sujeira externa evidente."
+      },
+      {
+        "title": "Poeira sob as tampas",
+        "description": "Limpar superfícies não mostra toda a condição interna. Regiões de coleta de poeira e caminho do ar exigem atenção conforme o modelo e o acesso; retirar tampas não equivale a uma manutenção completa."
+      },
+      {
+        "title": "Ruído durante jogos",
+        "description": "A ventoinha pode aumentar a rotação para resfriar o sistema durante jogos e aplicações. O diagnóstico considera mudanças em relação ao uso habitual e outros sinais, evitando tratar todo aumento de ruído como defeito."
+      },
+      {
+        "title": "Modelo e intervenção anterior",
+        "description": "A identificação do modelo do PS5 orienta a avaliação do conjunto. Não se deve aplicar automaticamente um procedimento de PS4 nem presumir materiais ou intervenções térmicas somente porque foi solicitada limpeza."
+      }
+    ],
+    "processHeading": "Como definir o escopo da manutenção do PS5?",
+    "process": [
+      {
+        "title": "Identificação e relato",
+        "description": "Envie o modelo e descreva avisos, desligamentos, alteração de ruído e o local em que o console é usado."
+      },
+      {
+        "title": "Avaliar a refrigeração",
+        "description": "Estado da ventilação e comportamento orientam a distinção entre sujeira, condições do ambiente e falha de funcionamento."
+      },
+      {
+        "title": "Indicar a limpeza",
+        "description": "A equipe confirma a intervenção aplicável ao estado do PS5, sem incluir trocas ou materiais como rotina automática."
+      },
+      {
+        "title": "Separar outras falhas",
+        "description": "Se a instabilidade exigir investigação além da refrigeração, a manutenção necessária é explicada antes da execução."
+      }
+    ],
+    "decisionHeading": "Quando o ruído é uma pista e quando observar outros sinais?",
+    "decision": "Ventoinha mais audível em um jogo exigente pode acompanhar o trabalho de resfriamento do PS5. O que merece ser relatado é a mudança persistente, especialmente com aviso de temperatura ou interrupção do funcionamento. Um desligamento também pode envolver alimentação e não deve ser atribuído à sujeira sem avaliação. Não há frequência de limpeza única para todos os ambientes. Se a necessidade for preventiva, a condição encontrada orienta o serviço; se houver uma falha, o diagnóstico precisa delimitar sua origem antes de tratar manutenção como solução pronta.",
+    "faq": [
+      {
+        "question": "Limpar as tampas resolve o aquecimento do PS5?",
+        "answer": "Pode retirar sujeira superficial, mas não confirma o estado do caminho de ar interno nem a causa de um aviso de temperatura. A necessidade de manutenção depende da avaliação do conjunto."
+      },
+      {
+        "question": "O PS5 precisa do mesmo serviço térmico que um PS4?",
+        "answer": "Não se deve transferir um procedimento entre modelos sem avaliar a construção e o estado do aparelho. Confirme com a equipe o escopo técnico aplicável, sem presumir troca de material térmico em toda limpeza."
+      },
+      {
+        "question": "Quando agendar avaliação de limpeza em Campo Grande?",
+        "answer": "Fale pelo WhatsApp com a Master Prime e informe modelo, sinais e histórico. A loja fica na Avenida Cesário de Melo, 2571, Campo Grande, Rio de Janeiro/RJ; as condições do atendimento são confirmadas pela equipe."
+      }
+    ],
+    "related": [
+      "videogame-conserto"
+    ],
+    "photoBrief": "PS5 real da Master Prime durante inspeção das regiões de poeira e ventilação, identificando o modelo"
   },
   {
     "id": "controle-conserto",
