@@ -118,7 +118,11 @@ Gere o cliente, o bundle SSR e os documentos HTML estáticos:
 npm run build
 ```
 
-O build cria 31 documentos React pré-renderizados e preserva a política de privacidade estática, totalizando 32 URLs indexáveis no sitemap. O cluster de videogame inclui seis páginas específicas de PS4 e PS5, com links da página-pai e datas de alteração de conteúdo estáveis no sitemap.
+O build cria 33 documentos React pré-renderizados e preserva a política de privacidade estática, totalizando 34 URLs indexáveis no sitemap. O cluster de videogame inclui seis páginas específicas de PS4 e PS5, com links da página-pai e datas de alteração de conteúdo estáveis no sitemap.
+
+A área `/orcamento/notebook` inicia o fluxo guiado de notebook e continua pelo WhatsApp. Inclui catálogo local pesquisável, sintomas, perguntas condicionais, consulta de retirada/entrega e revisão. A importação do Open Icecat é executada separadamente com `npm run catalog:import`; consulte [a documentação do orçamento](docs/orcamento-notebook.md) para configuração, limites e validação.
+
+A rota `/orcamento/videogame` atende videogame, controle ou ambos, com o mesmo fluxo visual de notebook. Inclui identificação PS4/PS5 e Xbox One/Series, sintomas por aparelho, rascunho independente e resumo combinado no WhatsApp. Veja [o fluxo e a validação de videogame/controle](docs/orcamento-videogame.md).
 
 Preview da build:
 ```bash

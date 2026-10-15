@@ -1,0 +1,15 @@
+{
+  "base": "http://127.0.0.1:4181",
+  "report": [
+    {
+      "width": 390,
+      "height": 844,
+      "status": "pass",
+      "checks": "flow, field validation, multiple symptoms, optional questions, skip preservation, edit, draft restore, catalog failure, WhatsApp, copy fallback, touch targets, Axe, overflow"
+    },
+    {
+      "scenario": "denied storage and keyboard",
+      "status": "pass"
+    }
+  ]
+}

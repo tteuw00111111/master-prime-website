@@ -1,0 +1,47 @@
+{
+  "status": "pass",
+  "reports": [
+    {
+      "browser": "chromium",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "scrolled service to notes",
+        "heading and textarea in reading area",
+        "heading focus without keyboard",
+        "selection and typing do not scroll",
+        "one native navigation scroll",
+        "Back retains choice",
+        "upgrade follow-up",
+        "skip details",
+        "review edit and return",
+        "notes persist",
+        "overflow",
+        "Axe WCAG AA"
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "scrolled service to notes",
+        "heading and textarea in reading area",
+        "heading focus without keyboard",
+        "selection and typing do not scroll",
+        "one native navigation scroll",
+        "Back retains choice",
+        "upgrade follow-up",
+        "skip details",
+        "review edit and return",
+        "notes persist",
+        "overflow",
+        "Axe WCAG AA"
+      ]
+    }
+  ]
+}

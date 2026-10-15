@@ -1,10 +1,12 @@
-import { FaCheck, FaGoogle, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
+import { FaCheck, FaGamepad, FaGoogle, FaLaptop, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
 import { Footer } from '@/components/layout/Footer'
 import { InnerHeader } from '@/components/layout/InnerHeader'
 import { ExperienceImage } from '@/components/seo/ExperienceImage'
 import type { ServiceSeoPage } from '@/types/seo'
 import { getBreadcrumbs, MAPS_URL, serviceSeoPages } from '@/utils/seo'
 import { getWhatsAppServiceUrl, trackWhatsAppService } from '@/utils/whatsapp'
+import { NOTEBOOK_QUOTE_PATH } from '@/data/notebook-quote'
+import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
 
 interface ServicePageProps {
   page: ServiceSeoPage
@@ -25,6 +27,10 @@ export const ServicePage = ({ page }: ServicePageProps) => {
     .map((id) => serviceSeoPages.find((candidate) => candidate.id === id))
     .filter((candidate): candidate is ServiceSeoPage => Boolean(candidate))
   const whatsappUrl = getWhatsAppServiceUrl(page.title)
+  const isNotebookPage = page.clusterPath === '/conserto-de-notebook-campo-grande-rj'
+  const isControllerPage = page.clusterPath === '/conserto-de-controle'
+  const isGamingPage = isControllerPage || page.clusterPath === '/conserto-de-videogame'
+  const quotePath = isNotebookPage ? NOTEBOOK_QUOTE_PATH : isGamingPage ? `${GAMING_QUOTE_PATH}?aparelho=${isControllerPage ? 'controle' : 'videogame'}` : null
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-black text-white">
@@ -55,14 +61,15 @@ export const ServicePage = ({ page }: ServicePageProps) => {
                 <p className="mt-7 max-w-3xl text-lg leading-8 text-gray-300">{page.answer}</p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
-                    href={whatsappUrl}
-                    onClick={() => trackWhatsAppService(page.title)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex min-h-12 items-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-bold text-white transition-transform hover:-translate-y-0.5"
+                    href={quotePath ?? whatsappUrl}
+                    onClick={quotePath ? undefined : () => trackWhatsAppService(page.title)}
+                    target={quotePath ? undefined : '_blank'}
+                    rel={quotePath ? undefined : 'noopener noreferrer'}
+                    className={`inline-flex min-h-12 items-center gap-2 rounded-full px-6 py-3 font-bold transition-transform hover:-translate-y-0.5 ${quotePath ? 'bg-gold text-black' : 'bg-whatsapp text-white'}`}
                   >
-                    <FaWhatsapp aria-hidden="true" /> Solicitar avaliação
+                    {isNotebookPage ? <FaLaptop aria-hidden="true" /> : isGamingPage ? <FaGamepad aria-hidden="true" /> : <FaWhatsapp aria-hidden="true" />} {isNotebookPage ? 'Orçamento de notebook' : isGamingPage ? `Orçamento de ${isControllerPage ? 'controle' : 'videogame'}` : 'Solicitar avaliação'}
                   </a>
+                  {isGamingPage && <a href={whatsappUrl} onClick={() => trackWhatsAppService(page.title)} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center gap-2 rounded-full border border-whatsapp/50 px-6 py-3 font-bold text-whatsapp"><FaWhatsapp aria-hidden="true" /> Falar pelo WhatsApp</a>}
                   <a href="#como-funciona" className="inline-flex min-h-12 items-center rounded-full border border-gold/50 px-6 py-3 font-bold text-gold transition-colors hover:bg-gold hover:text-black">
                     Entender o diagnóstico
                   </a>

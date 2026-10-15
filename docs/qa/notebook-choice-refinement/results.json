@@ -1,0 +1,35 @@
+{
+  "status": "pass",
+  "results": [
+    {
+      "browser": "chromium",
+      "status": "pass",
+      "checks": [
+        "brand context and change action",
+        "unknown model toggle preserves text",
+        "unknown model draft restores without data loss",
+        "11 distinct icons in 6 muted tones",
+        "icon and color persist when selected",
+        "selection check and aria-pressed",
+        "single-line labels and 48px targets at 390px",
+        "deselect symptom removes its follow-up",
+        "service-only completion and WhatsApp summary"
+      ]
+    },
+    {
+      "browser": "webkit",
+      "status": "pass",
+      "checks": [
+        "brand context and change action",
+        "unknown model toggle preserves text",
+        "unknown model draft restores without data loss",
+        "11 distinct icons in 6 muted tones",
+        "icon and color persist when selected",
+        "selection check and aria-pressed",
+        "single-line labels and 48px targets at 390px",
+        "deselect symptom removes its follow-up",
+        "service-only completion and WhatsApp summary"
+      ]
+    }
+  ]
+}

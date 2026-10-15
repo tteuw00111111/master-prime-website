@@ -17,6 +17,10 @@ interface WhatsAppClickEvent {
 const WHATSAPP_PHONE = '5521967635340'
 const WHATSAPP_API_BASE = 'https://api.whatsapp.com/send/'
 
+// Pure URL builder for the guided quote. Tracking must never receive its message.
+export const getWhatsAppMessageUrl = (message: string): string =>
+  `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`
+
 const pushWhatsAppEvent = (
   action: WhatsAppClickEvent['whatsapp_action'],
   url: string,

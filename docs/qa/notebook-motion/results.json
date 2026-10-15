@@ -1,0 +1,88 @@
+{
+  "status": "pass",
+  "reports": [
+    {
+      "browser": "chromium",
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "dropdown entry and exit frames",
+        "overlay does not change form height",
+        "panel stays inside short viewport",
+        "selection automatically dismisses keyboard",
+        "no input, checkbox, heading or scroll movement on selection",
+        "Escape and help dismiss suggestions",
+        "animated help disclosure",
+        "step entry and exit frames",
+        "heading focus after transition",
+        "back navigation preserves text",
+        "Axe WCAG AA"
+      ]
+    },
+    {
+      "browser": "chromium",
+      "reducedMotion": true,
+      "status": "pass",
+      "checks": [
+        "dropdown entry and exit frames",
+        "overlay does not change form height",
+        "panel stays inside short viewport",
+        "selection automatically dismisses keyboard",
+        "no input, checkbox, heading or scroll movement on selection",
+        "Escape and help dismiss suggestions",
+        "animated help disclosure",
+        "step entry and exit frames",
+        "heading focus after transition",
+        "back navigation preserves text",
+        "Axe WCAG AA"
+      ]
+    },
+    {
+      "browser": "webkit",
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "dropdown entry and exit frames",
+        "overlay does not change form height",
+        "panel stays inside short viewport",
+        "selection automatically dismisses keyboard",
+        "no input, checkbox, heading or scroll movement on selection",
+        "Escape and help dismiss suggestions",
+        "animated help disclosure",
+        "step entry and exit frames",
+        "heading focus after transition",
+        "back navigation preserves text",
+        "Axe WCAG AA"
+      ]
+    },
+    {
+      "browser": "webkit",
+      "reducedMotion": true,
+      "status": "pass",
+      "checks": [
+        "dropdown entry and exit frames",
+        "overlay does not change form height",
+        "panel stays inside short viewport",
+        "selection automatically dismisses keyboard",
+        "no input, checkbox, heading or scroll movement on selection",
+        "Escape and help dismiss suggestions",
+        "animated help disclosure",
+        "step entry and exit frames",
+        "heading focus after transition",
+        "back navigation preserves text",
+        "Axe WCAG AA"
+      ]
+    },
+    {
+      "browser": "chromium",
+      "catalog": "actual local ASUS catalog",
+      "status": "pass",
+      "checks": [
+        "TUF Gaming search and selection",
+        "automatic keyboard dismissal",
+        "input does not move after selection"
+      ]
+    }
+  ],
+  "limitation": "Virtual keyboard geometry is simulated. Native iOS/Android keyboard animation and browser panning require physical-device confirmation."
+}

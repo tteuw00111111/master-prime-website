@@ -1,0 +1,67 @@
+[
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "mode",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:platform",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:model",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "mode",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:platform",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:model",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "controller:model",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "delivery",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  }
+]

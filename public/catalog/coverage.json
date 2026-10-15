@@ -1,0 +1,60 @@
+{
+  "updatedAt": "2026-10-15T20:07:02.810749+00:00",
+  "index": "https://data.icecat.biz/export/freexml/BR/files.index.xml.gz",
+  "categories": [
+    "151"
+  ],
+  "indexRows": 7801002,
+  "notebookRows": 967158,
+  "uniqueModelNames": 226114,
+  "brands": 36,
+  "skipped": {
+    "restricted": 1742031,
+    "non_manufacturer_or_test_record": 15500,
+    "missing_name_or_brand": 2564,
+    "semantic_model_labels": 2
+  },
+  "modelsPerBrand": {
+    "Acer": 64808,
+    "Alienware": 88,
+    "ASUS": 76859,
+    "BenQ": 90,
+    "bluechip": 110,
+    "Canon": 1,
+    "CyberPower": 3,
+    "Deep Gaming": 8,
+    "DELL": 1465,
+    "Dell Wyse": 16,
+    "Epson": 1,
+    "ERAZER": 237,
+    "Fujitsu": 1469,
+    "GIGABYTE": 2211,
+    "Grundig": 14,
+    "Haier": 105,
+    "Hannspree": 7,
+    "Hercules": 14,
+    "Honor": 21,
+    "HP": 34171,
+    "iiyama": 3,
+    "Lenovo": 5889,
+    "LG": 1811,
+    "MEDION": 537,
+    "MSI": 27813,
+    "NEC": 584,
+    "Nilox": 6,
+    "PEAQ": 6,
+    "Philips": 24,
+    "Samsung": 5032,
+    "TCL": 4,
+    "TERRA": 654,
+    "Dynabook": 2018,
+    "Viewsonic": 20,
+    "XPG": 10,
+    "Zoostorm": 5
+  },
+  "limitations": [
+    "BR is a language index, not proof of sale in Brazil.",
+    "Names may represent families or configurations; not all are a distinct chassis.",
+    "Open Icecat coverage is partial; unlisted models can be typed in the form."
+  ]
+}

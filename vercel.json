@@ -30,9 +30,33 @@
       "source": "/inicio/",
       "destination": "/",
       "statusCode": 301
+    },
+    {
+      "source": "/orcamento",
+      "destination": "/orcamento/notebook",
+      "statusCode": 302
+    },
+    {
+      "source": "/orcamento/",
+      "destination": "/orcamento/notebook",
+      "statusCode": 302
+    },
+    {
+      "source": "/orcamento/index.html",
+      "destination": "/orcamento/notebook",
+      "statusCode": 302
     }
   ],
   "headers": [
+    {
+      "source": "/catalog/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [
@@ -44,6 +68,9 @@
     }
   ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" }
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
   ]
 }

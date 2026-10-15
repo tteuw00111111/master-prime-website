@@ -1,0 +1,39 @@
+{
+  "base": "http://localhost:4178",
+  "report": [
+    {
+      "width": 320,
+      "height": 568,
+      "status": "pass",
+      "checks": "flow, field validation, multiple symptoms, optional questions, skip preservation, edit, draft restore, catalog failure, WhatsApp, copy fallback, touch targets, Axe, overflow"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": "pass",
+      "checks": "flow, field validation, multiple symptoms, optional questions, skip preservation, edit, draft restore, catalog failure, WhatsApp, copy fallback, touch targets, Axe, overflow"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "status": "pass",
+      "checks": "flow, field validation, multiple symptoms, optional questions, skip preservation, edit, draft restore, catalog failure, WhatsApp, copy fallback, touch targets, Axe, overflow"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "status": "pass",
+      "checks": "flow, field validation, multiple symptoms, optional questions, skip preservation, edit, draft restore, catalog failure, WhatsApp, copy fallback, touch targets, Axe, overflow"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "pass",
+      "checks": "flow, field validation, multiple symptoms, optional questions, skip preservation, edit, draft restore, catalog failure, WhatsApp, copy fallback, touch targets, Axe, overflow"
+    },
+    {
+      "scenario": "denied storage and keyboard",
+      "status": "pass"
+    }
+  ]
+}

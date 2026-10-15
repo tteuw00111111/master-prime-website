@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "report": [
+    {
+      "browser": "chromium",
+      "status": "pass",
+      "checks": [
+        "touch suggestion selection and keyboard dismissal",
+        "suggestions dismiss on external focus",
+        "hardware keyboard access",
+        "visual viewport-only keyboard animation",
+        "layout viewport keyboard animation",
+        "stable input and heading geometry",
+        "dismiss with input still focused",
+        "pinch zoom",
+        "Enter advances",
+        "multiline notes",
+        "orientation change",
+        "200% reflow",
+        "no programmatic scrolling",
+        "WCAG AA Axe scan"
+      ]
+    },
+    {
+      "browser": "webkit",
+      "status": "pass",
+      "checks": [
+        "touch suggestion selection and keyboard dismissal",
+        "suggestions dismiss on external focus",
+        "hardware keyboard access",
+        "visual viewport-only keyboard animation",
+        "layout viewport keyboard animation",
+        "stable input and heading geometry",
+        "dismiss with input still focused",
+        "pinch zoom",
+        "Enter advances",
+        "multiline notes",
+        "orientation change",
+        "200% reflow",
+        "no programmatic scrolling",
+        "WCAG AA Axe scan"
+      ]
+    }
+  ],
+  "limitation": "Keyboard geometry is simulated. Native iOS/Android keyboard animation and browser panning still need physical-device confirmation."
+}

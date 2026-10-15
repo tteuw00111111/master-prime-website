@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checks": [
+    "no programmatic scrolling on navigation, focus, typing or viewport resize",
+    "compact keyboard layout",
+    "keyboard Done navigation",
+    "toolbar returns after dismiss",
+    "pinch zoom",
+    "landscape",
+    "200% zoom"
+  ],
+  "limitation": "Keyboard geometry is simulated; native iOS/Android panning and keyboard need real-device confirmation."
+}

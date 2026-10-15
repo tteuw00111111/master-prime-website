@@ -1,0 +1,1597 @@
+[
+  {
+    "screen": "review",
+    "x": -5.98034,
+    "opacity": 0.70505
+  },
+  {
+    "screen": "review",
+    "x": -8.95434,
+    "opacity": 0.559761
+  },
+  {
+    "screen": "review",
+    "x": -12.117,
+    "opacity": 0.394896
+  },
+  {
+    "screen": "review",
+    "x": -15.8499,
+    "opacity": 0.213006
+  },
+  {
+    "screen": "review",
+    "x": -19.738,
+    "opacity": 0.00915454
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 21.504,
+    "opacity": 0.226742
+  },
+  {
+    "screen": "review",
+    "x": 14.8701,
+    "opacity": 0.472813
+  },
+  {
+    "screen": "review",
+    "x": 9.6221,
+    "opacity": 0.655226
+  },
+  {
+    "screen": "review",
+    "x": 6.05834,
+    "opacity": 0.781863
+  },
+  {
+    "screen": "review",
+    "x": 3.73582,
+    "opacity": 0.863981
+  },
+  {
+    "screen": "review",
+    "x": 2.31736,
+    "opacity": 0.917147
+  },
+  {
+    "screen": "review",
+    "x": 1.36145,
+    "opacity": 0.950739
+  },
+  {
+    "screen": "review",
+    "x": 0.767501,
+    "opacity": 0.971929
+  },
+  {
+    "screen": "review",
+    "x": 0.423552,
+    "opacity": 0.984902
+  },
+  {
+    "screen": "review",
+    "x": 0.206278,
+    "opacity": 0.992517
+  },
+  {
+    "screen": "review",
+    "x": 0.0866964,
+    "opacity": 0.99677
+  },
+  {
+    "screen": "review",
+    "x": 0.0312784,
+    "opacity": 0.998882
+  },
+  {
+    "screen": "review",
+    "x": 0.0064431,
+    "opacity": 0.999757
+  },
+  {
+    "screen": "review",
+    "x": 0.000307,
+    "opacity": 0.999987
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "mode",
+    "x": 0.392773,
+    "opacity": 0.982723
+  },
+  {
+    "screen": "mode",
+    "x": 1.61552,
+    "opacity": 0.920602
+  },
+  {
+    "screen": "mode",
+    "x": 3.60448,
+    "opacity": 0.824547
+  },
+  {
+    "screen": "mode",
+    "x": 5.98034,
+    "opacity": 0.701009
+  },
+  {
+    "screen": "mode",
+    "x": 8.95434,
+    "opacity": 0.555099
+  },
+  {
+    "screen": "mode",
+    "x": 12.3318,
+    "opacity": 0.390722
+  },
+  {
+    "screen": "mode",
+    "x": 15.8499,
+    "opacity": 0.207248
+  },
+  {
+    "screen": "mode",
+    "x": 20,
+    "opacity": 0.0052497
+  },
+  {
+    "screen": "mode",
+    "x": 20,
+    "opacity": 0
+  },
+  {
+    "screen": "mode",
+    "x": -28,
+    "opacity": 0
+  },
+  {
+    "screen": "mode",
+    "x": -21.0599,
+    "opacity": 0.486868
+  },
+  {
+    "screen": "mode",
+    "x": -14.1556,
+    "opacity": 0.666941
+  },
+  {
+    "screen": "mode",
+    "x": -9.38264,
+    "opacity": 0.789053
+  },
+  {
+    "screen": "mode",
+    "x": -5.89719,
+    "opacity": 0.868261
+  },
+  {
+    "screen": "mode",
+    "x": -3.62974,
+    "opacity": 0.920122
+  },
+  {
+    "screen": "mode",
+    "x": -2.17996,
+    "opacity": 0.952619
+  },
+  {
+    "screen": "mode",
+    "x": -1.3182,
+    "opacity": 0.973094
+  },
+  {
+    "screen": "mode",
+    "x": -0.741695,
+    "opacity": 0.985602
+  },
+  {
+    "screen": "mode",
+    "x": -0.406232,
+    "opacity": 0.992918
+  },
+  {
+    "screen": "mode",
+    "x": -0.1971,
+    "opacity": 0.996964
+  },
+  {
+    "screen": "mode",
+    "x": -0.0824123,
+    "opacity": 0.998986
+  },
+  {
+    "screen": "mode",
+    "x": -0.028703,
+    "opacity": 0.999789
+  },
+  {
+    "screen": "mode",
+    "x": -0.0058465,
+    "opacity": 0.999991
+  },
+  {
+    "screen": "mode",
+    "x": -0.0002165,
+    "opacity": 0
+  },
+  {
+    "screen": "mode",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:platform",
+    "x": -0.340835,
+    "opacity": 0.98444
+  },
+  {
+    "screen": "console:platform",
+    "x": -1.52378,
+    "opacity": 0.923493
+  },
+  {
+    "screen": "console:platform",
+    "x": -3.4666,
+    "opacity": 0.828517
+  },
+  {
+    "screen": "console:platform",
+    "x": -5.98034,
+    "opacity": 0.705856
+  },
+  {
+    "screen": "console:platform",
+    "x": -8.76502,
+    "opacity": 0.561622
+  },
+  {
+    "screen": "console:platform",
+    "x": -12.117,
+    "opacity": 0.396979
+  },
+  {
+    "screen": "console:platform",
+    "x": -15.8499,
+    "opacity": 0.214155
+  },
+  {
+    "screen": "console:platform",
+    "x": -19.738,
+    "opacity": 0.0130403
+  },
+  {
+    "screen": "console:platform",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "console:platform",
+    "x": 20.5886,
+    "opacity": 0.25149
+  },
+  {
+    "screen": "console:platform",
+    "x": 14.1556,
+    "opacity": 0.494414
+  },
+  {
+    "screen": "console:platform",
+    "x": 9.12774,
+    "opacity": 0.669596
+  },
+  {
+    "screen": "console:platform",
+    "x": 5.72467,
+    "opacity": 0.791401
+  },
+  {
+    "screen": "console:platform",
+    "x": 3.62974,
+    "opacity": 0.870543
+  },
+  {
+    "screen": "console:platform",
+    "x": 2.17996,
+    "opacity": 0.921092
+  },
+  {
+    "screen": "console:platform",
+    "x": 1.3182,
+    "opacity": 0.953384
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.741695,
+    "opacity": 0.973473
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.389392,
+    "opacity": 0.985829
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.1971,
+    "opacity": 0.99308
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.0824123,
+    "opacity": 0.997066
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.0266681,
+    "opacity": 0.999017
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.005154,
+    "opacity": 0.999799
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.0002165,
+    "opacity": 0.999992
+  },
+  {
+    "screen": "console:platform",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:platform",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:model",
+    "x": -0.340835,
+    "opacity": 0.983306
+  },
+  {
+    "screen": "console:model",
+    "x": -1.61552,
+    "opacity": 0.921571
+  },
+  {
+    "screen": "console:model",
+    "x": -3.4666,
+    "opacity": 0.825211
+  },
+  {
+    "screen": "console:model",
+    "x": -5.98034,
+    "opacity": 0.701819
+  },
+  {
+    "screen": "console:model",
+    "x": -8.95434,
+    "opacity": 0.556966
+  },
+  {
+    "screen": "console:model",
+    "x": -12.117,
+    "opacity": 0.391767
+  },
+  {
+    "screen": "console:model",
+    "x": -15.8499,
+    "opacity": 0.209553
+  },
+  {
+    "screen": "console:model",
+    "x": -20,
+    "opacity": 0.00655371
+  },
+  {
+    "screen": "console:model",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "console:model",
+    "x": 28,
+    "opacity": 0
+  },
+  {
+    "screen": "console:model",
+    "x": 21.0599,
+    "opacity": 0.485602
+  },
+  {
+    "screen": "console:model",
+    "x": 14.1556,
+    "opacity": 0.665162
+  },
+  {
+    "screen": "console:model",
+    "x": 9.38264,
+    "opacity": 0.787276
+  },
+  {
+    "screen": "console:model",
+    "x": 5.89719,
+    "opacity": 0.867877
+  },
+  {
+    "screen": "console:model",
+    "x": 3.73582,
+    "opacity": 0.919632
+  },
+  {
+    "screen": "console:model",
+    "x": 2.24796,
+    "opacity": 0.95231
+  },
+  {
+    "screen": "console:model",
+    "x": 1.3182,
+    "opacity": 0.972903
+  },
+  {
+    "screen": "console:model",
+    "x": 0.767501,
+    "opacity": 0.98543
+  },
+  {
+    "screen": "console:model",
+    "x": 0.406232,
+    "opacity": 0.992852
+  },
+  {
+    "screen": "console:model",
+    "x": 0.1971,
+    "opacity": 0.996946
+  },
+  {
+    "screen": "console:model",
+    "x": 0.0824123,
+    "opacity": 0.998971
+  },
+  {
+    "screen": "console:model",
+    "x": 0.028703,
+    "opacity": 0.999784
+  },
+  {
+    "screen": "console:model",
+    "x": 0.0058465,
+    "opacity": 0.99999
+  },
+  {
+    "screen": "console:model",
+    "x": 0.000307,
+    "opacity": 0
+  },
+  {
+    "screen": "console:model",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": -0.340835,
+    "opacity": 0.982304
+  },
+  {
+    "screen": "review",
+    "x": -1.61552,
+    "opacity": 0.919628
+  },
+  {
+    "screen": "review",
+    "x": -3.60448,
+    "opacity": 0.823216
+  },
+  {
+    "screen": "review",
+    "x": -5.98034,
+    "opacity": 0.698574
+  },
+  {
+    "screen": "review",
+    "x": -8.95434,
+    "opacity": 0.553229
+  },
+  {
+    "screen": "review",
+    "x": -12.3318,
+    "opacity": 0.387585
+  },
+  {
+    "screen": "review",
+    "x": -15.8499,
+    "opacity": 0.20494
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0.00131956
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 28,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 21.0599,
+    "opacity": 0.484334
+  },
+  {
+    "screen": "review",
+    "x": 14.4967,
+    "opacity": 0.664269
+  },
+  {
+    "screen": "review",
+    "x": 9.38264,
+    "opacity": 0.786681
+  },
+  {
+    "screen": "review",
+    "x": 5.89719,
+    "opacity": 0.867492
+  },
+  {
+    "screen": "review",
+    "x": 3.73582,
+    "opacity": 0.919141
+  },
+  {
+    "screen": "review",
+    "x": 2.24796,
+    "opacity": 0.952155
+  },
+  {
+    "screen": "review",
+    "x": 1.3182,
+    "opacity": 0.972807
+  },
+  {
+    "screen": "review",
+    "x": 0.741695,
+    "opacity": 0.98543
+  },
+  {
+    "screen": "review",
+    "x": 0.406232,
+    "opacity": 0.992852
+  },
+  {
+    "screen": "review",
+    "x": 0.1971,
+    "opacity": 0.996929
+  },
+  {
+    "screen": "review",
+    "x": 0.0866964,
+    "opacity": 0.998963
+  },
+  {
+    "screen": "review",
+    "x": 0.028703,
+    "opacity": 0.999781
+  },
+  {
+    "screen": "review",
+    "x": 0.0058465,
+    "opacity": 0.99999
+  },
+  {
+    "screen": "review",
+    "x": 0.0002165,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "mode",
+    "x": 0.392773,
+    "opacity": 0.982471
+  },
+  {
+    "screen": "mode",
+    "x": 1.61552,
+    "opacity": 0.919628
+  },
+  {
+    "screen": "mode",
+    "x": 3.60448,
+    "opacity": 0.822549
+  },
+  {
+    "screen": "mode",
+    "x": 5.98034,
+    "opacity": 0.699386
+  },
+  {
+    "screen": "mode",
+    "x": 8.95434,
+    "opacity": 0.553229
+  },
+  {
+    "screen": "mode",
+    "x": 12.3318,
+    "opacity": 0.387585
+  },
+  {
+    "screen": "mode",
+    "x": 15.8499,
+    "opacity": 0.20494
+  },
+  {
+    "screen": "mode",
+    "x": 20,
+    "opacity": 0.0026331
+  },
+  {
+    "screen": "mode",
+    "x": 20,
+    "opacity": 0
+  },
+  {
+    "screen": "mode",
+    "x": -28,
+    "opacity": 0
+  },
+  {
+    "screen": "mode",
+    "x": -20.5886,
+    "opacity": 0.49691
+  },
+  {
+    "screen": "mode",
+    "x": -13.8199,
+    "opacity": 0.672231
+  },
+  {
+    "screen": "mode",
+    "x": -9.12774,
+    "opacity": 0.792566
+  },
+  {
+    "screen": "mode",
+    "x": -5.72467,
+    "opacity": 0.87092
+  },
+  {
+    "screen": "mode",
+    "x": -3.5154,
+    "opacity": 0.921812
+  },
+  {
+    "screen": "mode",
+    "x": -2.17996,
+    "opacity": 0.953687
+  },
+  {
+    "screen": "mode",
+    "x": -1.27588,
+    "opacity": 0.973754
+  },
+  {
+    "screen": "mode",
+    "x": -0.712918,
+    "opacity": 0.985942
+  },
+  {
+    "screen": "mode",
+    "x": -0.389392,
+    "opacity": 0.993144
+  },
+  {
+    "screen": "mode",
+    "x": -0.188199,
+    "opacity": 0.997099
+  },
+  {
+    "screen": "mode",
+    "x": -0.0774607,
+    "opacity": 0.999039
+  },
+  {
+    "screen": "mode",
+    "x": -0.0266681,
+    "opacity": 0.999806
+  },
+  {
+    "screen": "mode",
+    "x": -0.005154,
+    "opacity": 0.999992
+  },
+  {
+    "screen": "mode",
+    "x": -0.0001585,
+    "opacity": 0
+  },
+  {
+    "screen": "mode",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:platform",
+    "x": -0.292378,
+    "opacity": 0.985694
+  },
+  {
+    "screen": "console:platform",
+    "x": -1.52378,
+    "opacity": 0.926341
+  },
+  {
+    "screen": "console:platform",
+    "x": -3.34192,
+    "opacity": 0.832453
+  },
+  {
+    "screen": "console:platform",
+    "x": -5.81842,
+    "opacity": 0.710675
+  },
+  {
+    "screen": "console:platform",
+    "x": -8.76502,
+    "opacity": 0.567185
+  },
+  {
+    "screen": "console:platform",
+    "x": -11.9157,
+    "opacity": 0.403213
+  },
+  {
+    "screen": "console:platform",
+    "x": -15.6295,
+    "opacity": 0.221038
+  },
+  {
+    "screen": "console:platform",
+    "x": -19.738,
+    "opacity": 0.0207647
+  },
+  {
+    "screen": "console:platform",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "console:platform",
+    "x": 20.5886,
+    "opacity": 0.25801
+  },
+  {
+    "screen": "console:platform",
+    "x": 14.1556,
+    "opacity": 0.49691
+  },
+  {
+    "screen": "console:platform",
+    "x": 9.12774,
+    "opacity": 0.673106
+  },
+  {
+    "screen": "console:platform",
+    "x": 5.72467,
+    "opacity": 0.793146
+  },
+  {
+    "screen": "console:platform",
+    "x": 3.62974,
+    "opacity": 0.871671
+  },
+  {
+    "screen": "console:platform",
+    "x": 2.17996,
+    "opacity": 0.921812
+  },
+  {
+    "screen": "console:platform",
+    "x": 1.27588,
+    "opacity": 0.953687
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.741695,
+    "opacity": 0.973848
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.389392,
+    "opacity": 0.986054
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.188199,
+    "opacity": 0.993176
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.0824123,
+    "opacity": 0.997099
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.0266681,
+    "opacity": 0.999046
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.005154,
+    "opacity": 0.999808
+  },
+  {
+    "screen": "console:platform",
+    "x": 0.0002165,
+    "opacity": 0.999993
+  },
+  {
+    "screen": "console:platform",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:platform",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:model",
+    "x": -0.392773,
+    "opacity": 0.981015
+  },
+  {
+    "screen": "console:model",
+    "x": -1.61552,
+    "opacity": 0.917666
+  },
+  {
+    "screen": "console:model",
+    "x": -3.60448,
+    "opacity": 0.819871
+  },
+  {
+    "screen": "console:model",
+    "x": -6.14339,
+    "opacity": 0.695317
+  },
+  {
+    "screen": "console:model",
+    "x": -9.144,
+    "opacity": 0.548542
+  },
+  {
+    "screen": "console:model",
+    "x": -12.3318,
+    "opacity": 0.383393
+  },
+  {
+    "screen": "console:model",
+    "x": -16.0904,
+    "opacity": 0.200317
+  },
+  {
+    "screen": "console:model",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "console:model",
+    "x": 20.5886,
+    "opacity": 0.249855
+  },
+  {
+    "screen": "console:model",
+    "x": 14.1556,
+    "opacity": 0.491908
+  },
+  {
+    "screen": "console:model",
+    "x": 9.12774,
+    "opacity": 0.668713
+  },
+  {
+    "screen": "console:model",
+    "x": 5.89719,
+    "opacity": 0.79023
+  },
+  {
+    "screen": "console:model",
+    "x": 3.62974,
+    "opacity": 0.869786
+  },
+  {
+    "screen": "console:model",
+    "x": 2.17996,
+    "opacity": 0.92085
+  },
+  {
+    "screen": "console:model",
+    "x": 1.3182,
+    "opacity": 0.95308
+  },
+  {
+    "screen": "console:model",
+    "x": 0.741695,
+    "opacity": 0.973379
+  },
+  {
+    "screen": "console:model",
+    "x": 0.389392,
+    "opacity": 0.985716
+  },
+  {
+    "screen": "console:model",
+    "x": 0.1971,
+    "opacity": 0.993016
+  },
+  {
+    "screen": "console:model",
+    "x": 0.0824123,
+    "opacity": 0.997032
+  },
+  {
+    "screen": "console:model",
+    "x": 0.0266681,
+    "opacity": 0.999001
+  },
+  {
+    "screen": "console:model",
+    "x": 0.0058465,
+    "opacity": 0.999796
+  },
+  {
+    "screen": "console:model",
+    "x": 0.0002165,
+    "opacity": 0.999992
+  },
+  {
+    "screen": "console:model",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "console:model",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "controller:platform",
+    "x": -0.340835,
+    "opacity": 0.982723
+  },
+  {
+    "screen": "controller:platform",
+    "x": -1.61552,
+    "opacity": 0.920116
+  },
+  {
+    "screen": "controller:platform",
+    "x": -3.60448,
+    "opacity": 0.823216
+  },
+  {
+    "screen": "controller:platform",
+    "x": -5.98034,
+    "opacity": 0.700198
+  },
+  {
+    "screen": "controller:platform",
+    "x": -8.95434,
+    "opacity": 0.555099
+  },
+  {
+    "screen": "controller:platform",
+    "x": -12.3318,
+    "opacity": 0.389677
+  },
+  {
+    "screen": "controller:platform",
+    "x": -15.8499,
+    "opacity": 0.206095
+  },
+  {
+    "screen": "controller:platform",
+    "x": -20,
+    "opacity": 0.0026331
+  },
+  {
+    "screen": "controller:platform",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "controller:platform",
+    "x": 28,
+    "opacity": 0
+  },
+  {
+    "screen": "controller:platform",
+    "x": 20.5886,
+    "opacity": 0.488131
+  },
+  {
+    "screen": "controller:platform",
+    "x": 14.1556,
+    "opacity": 0.666941
+  },
+  {
+    "screen": "controller:platform",
+    "x": 9.12774,
+    "opacity": 0.789053
+  },
+  {
+    "screen": "controller:platform",
+    "x": 5.89719,
+    "opacity": 0.868644
+  },
+  {
+    "screen": "controller:platform",
+    "x": 3.62974,
+    "opacity": 0.920365
+  },
+  {
+    "screen": "controller:platform",
+    "x": 2.17996,
+    "opacity": 0.952619
+  },
+  {
+    "screen": "controller:platform",
+    "x": 1.3182,
+    "opacity": 0.973094
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0.741695,
+    "opacity": 0.985602
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0.389392,
+    "opacity": 0.992951
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0.1971,
+    "opacity": 0.996998
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0.0824123,
+    "opacity": 0.998986
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0.0266681,
+    "opacity": 0.999791
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0.0058465,
+    "opacity": 0.999991
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0.0002165,
+    "opacity": 0
+  },
+  {
+    "screen": "controller:platform",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "controller:model",
+    "x": -0.392773,
+    "opacity": 0.981015
+  },
+  {
+    "screen": "controller:model",
+    "x": -1.71816,
+    "opacity": 0.917666
+  },
+  {
+    "screen": "controller:model",
+    "x": -3.60448,
+    "opacity": 0.819871
+  },
+  {
+    "screen": "controller:model",
+    "x": -6.14339,
+    "opacity": 0.695317
+  },
+  {
+    "screen": "controller:model",
+    "x": -9.144,
+    "opacity": 0.549481
+  },
+  {
+    "screen": "controller:model",
+    "x": -12.3318,
+    "opacity": 0.383393
+  },
+  {
+    "screen": "controller:model",
+    "x": -16.0904,
+    "opacity": 0.199159
+  },
+  {
+    "screen": "controller:model",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "controller:model",
+    "x": 20.5886,
+    "opacity": 0.25801
+  },
+  {
+    "screen": "controller:model",
+    "x": 14.1556,
+    "opacity": 0.498155
+  },
+  {
+    "screen": "controller:model",
+    "x": 9.12774,
+    "opacity": 0.673978
+  },
+  {
+    "screen": "controller:model",
+    "x": 5.72467,
+    "opacity": 0.793146
+  },
+  {
+    "screen": "controller:model",
+    "x": 3.62974,
+    "opacity": 0.871671
+  },
+  {
+    "screen": "controller:model",
+    "x": 2.17996,
+    "opacity": 0.921812
+  },
+  {
+    "screen": "controller:model",
+    "x": 1.27588,
+    "opacity": 0.953838
+  },
+  {
+    "screen": "controller:model",
+    "x": 0.741695,
+    "opacity": 0.973848
+  },
+  {
+    "screen": "controller:model",
+    "x": 0.389392,
+    "opacity": 0.985998
+  },
+  {
+    "screen": "controller:model",
+    "x": 0.188199,
+    "opacity": 0.993176
+  },
+  {
+    "screen": "controller:model",
+    "x": 0.0824123,
+    "opacity": 0.997116
+  },
+  {
+    "screen": "controller:model",
+    "x": 0.0266681,
+    "opacity": 0.999039
+  },
+  {
+    "screen": "controller:model",
+    "x": 0.005154,
+    "opacity": 0.999808
+  },
+  {
+    "screen": "controller:model",
+    "x": 0.0002165,
+    "opacity": 0.999993
+  },
+  {
+    "screen": "controller:model",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "controller:model",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": -0.340835,
+    "opacity": 0.982808
+  },
+  {
+    "screen": "review",
+    "x": -1.61552,
+    "opacity": 0.920602
+  },
+  {
+    "screen": "review",
+    "x": -3.4666,
+    "opacity": 0.824547
+  },
+  {
+    "screen": "review",
+    "x": -5.98034,
+    "opacity": 0.701009
+  },
+  {
+    "screen": "review",
+    "x": -8.95434,
+    "opacity": 0.556033
+  },
+  {
+    "screen": "review",
+    "x": -12.117,
+    "opacity": 0.390722
+  },
+  {
+    "screen": "review",
+    "x": -15.8499,
+    "opacity": 0.207248
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0.003943
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 28,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 21.0599,
+    "opacity": 0.486868
+  },
+  {
+    "screen": "review",
+    "x": 14.1556,
+    "opacity": 0.666053
+  },
+  {
+    "screen": "review",
+    "x": 9.38264,
+    "opacity": 0.788462
+  },
+  {
+    "screen": "review",
+    "x": 5.89719,
+    "opacity": 0.868644
+  },
+  {
+    "screen": "review",
+    "x": 3.62974,
+    "opacity": 0.919877
+  },
+  {
+    "screen": "review",
+    "x": 2.24796,
+    "opacity": 0.952619
+  },
+  {
+    "screen": "review",
+    "x": 1.3182,
+    "opacity": 0.973094
+  },
+  {
+    "screen": "review",
+    "x": 0.741695,
+    "opacity": 0.985545
+  },
+  {
+    "screen": "review",
+    "x": 0.389392,
+    "opacity": 0.992918
+  },
+  {
+    "screen": "review",
+    "x": 0.1971,
+    "opacity": 0.996981
+  },
+  {
+    "screen": "review",
+    "x": 0.0824123,
+    "opacity": 0.998978
+  },
+  {
+    "screen": "review",
+    "x": 0.028703,
+    "opacity": 0.999789
+  },
+  {
+    "screen": "review",
+    "x": 0.0058465,
+    "opacity": 0.999991
+  },
+  {
+    "screen": "review",
+    "x": 0.0002165,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "delivery",
+    "x": 0.392773,
+    "opacity": 0.981706
+  },
+  {
+    "screen": "delivery",
+    "x": 1.61552,
+    "opacity": 0.918159
+  },
+  {
+    "screen": "delivery",
+    "x": 3.60448,
+    "opacity": 0.821212
+  },
+  {
+    "screen": "delivery",
+    "x": 6.14339,
+    "opacity": 0.697761
+  },
+  {
+    "screen": "delivery",
+    "x": 8.95434,
+    "opacity": 0.551356
+  },
+  {
+    "screen": "delivery",
+    "x": 12.3318,
+    "opacity": 0.38549
+  },
+  {
+    "screen": "delivery",
+    "x": 16.0904,
+    "opacity": 0.201474
+  },
+  {
+    "screen": "delivery",
+    "x": 20,
+    "opacity": 0
+  },
+  {
+    "screen": "delivery",
+    "x": -21.0599,
+    "opacity": 0.243293
+  },
+  {
+    "screen": "delivery",
+    "x": -14.1556,
+    "opacity": 0.486868
+  },
+  {
+    "screen": "delivery",
+    "x": -9.38264,
+    "opacity": 0.665162
+  },
+  {
+    "screen": "delivery",
+    "x": -5.89719,
+    "opacity": 0.78787
+  },
+  {
+    "screen": "delivery",
+    "x": -3.22552,
+    "opacity": 0.867877
+  },
+  {
+    "screen": "delivery",
+    "x": -2.24796,
+    "opacity": 0.919632
+  },
+  {
+    "screen": "delivery",
+    "x": -1.3182,
+    "opacity": 0.952465
+  },
+  {
+    "screen": "delivery",
+    "x": -0.767501,
+    "opacity": 0.972903
+  },
+  {
+    "screen": "delivery",
+    "x": -0.406232,
+    "opacity": 0.985487
+  },
+  {
+    "screen": "delivery",
+    "x": -0.1971,
+    "opacity": 0.992885
+  },
+  {
+    "screen": "delivery",
+    "x": -0.0824123,
+    "opacity": 0.996964
+  },
+  {
+    "screen": "delivery",
+    "x": -0.028703,
+    "opacity": 0.998978
+  },
+  {
+    "screen": "delivery",
+    "x": -0.0058465,
+    "opacity": 0.999786
+  },
+  {
+    "screen": "delivery",
+    "x": -0.0002165,
+    "opacity": 0.999991
+  },
+  {
+    "screen": "delivery",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "delivery",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": -0.340835,
+    "opacity": 0.983469
+  },
+  {
+    "screen": "review",
+    "x": -1.61552,
+    "opacity": 0.921571
+  },
+  {
+    "screen": "review",
+    "x": -3.4666,
+    "opacity": 0.825874
+  },
+  {
+    "screen": "review",
+    "x": -5.98034,
+    "opacity": 0.702628
+  },
+  {
+    "screen": "review",
+    "x": -8.95434,
+    "opacity": 0.557898
+  },
+  {
+    "screen": "review",
+    "x": -12.117,
+    "opacity": 0.39281
+  },
+  {
+    "screen": "review",
+    "x": -15.8499,
+    "opacity": 0.209553
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0.00655371
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 28,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 21.0599,
+    "opacity": 0.484334
+  },
+  {
+    "screen": "review",
+    "x": 14.1556,
+    "opacity": 0.664269
+  },
+  {
+    "screen": "review",
+    "x": 9.38264,
+    "opacity": 0.787276
+  },
+  {
+    "screen": "review",
+    "x": 5.89719,
+    "opacity": 0.867877
+  },
+  {
+    "screen": "review",
+    "x": 3.62974,
+    "opacity": 0.919387
+  },
+  {
+    "screen": "review",
+    "x": 2.24796,
+    "opacity": 0.95231
+  },
+  {
+    "screen": "review",
+    "x": 1.3182,
+    "opacity": 0.972903
+  },
+  {
+    "screen": "review",
+    "x": 0.767501,
+    "opacity": 0.985487
+  },
+  {
+    "screen": "review",
+    "x": 0.406232,
+    "opacity": 0.992852
+  },
+  {
+    "screen": "review",
+    "x": 0.1971,
+    "opacity": 0.996946
+  },
+  {
+    "screen": "review",
+    "x": 0.0824123,
+    "opacity": 0.998971
+  },
+  {
+    "screen": "review",
+    "x": 0.028703,
+    "opacity": 0.999784
+  },
+  {
+    "screen": "review",
+    "x": 0.0058465,
+    "opacity": 0.99999
+  },
+  {
+    "screen": "review",
+    "x": 0.000307,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  }
+]

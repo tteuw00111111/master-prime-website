@@ -1,0 +1,135 @@
+{
+  "status": "pass",
+  "reports": [
+    {
+      "browser": "chromium",
+      "width": 320,
+      "reducedMotion": true,
+      "status": "pass",
+      "checks": [
+        "independent SSD/RAM choices",
+        "distinct hardware icons",
+        "multiple goals",
+        "Space toggles one goal",
+        "single shared question",
+        "back/reload preservation",
+        "review and WhatsApp include every selected goal once",
+        "editing details",
+        "removing one hardware preserves goals",
+        "removing last hardware removes stale goals",
+        "Axe WCAG AA",
+        "overflow"
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 390,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "independent SSD/RAM choices",
+        "distinct hardware icons",
+        "multiple goals",
+        "Space toggles one goal",
+        "single shared question",
+        "back/reload preservation",
+        "review and WhatsApp include every selected goal once",
+        "editing details",
+        "removing one hardware preserves goals",
+        "removing last hardware removes stale goals",
+        "Axe WCAG AA",
+        "overflow"
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "independent SSD/RAM choices",
+        "distinct hardware icons",
+        "multiple goals",
+        "Space toggles one goal",
+        "single shared question",
+        "back/reload preservation",
+        "review and WhatsApp include every selected goal once",
+        "editing details",
+        "removing one hardware preserves goals",
+        "removing last hardware removes stale goals",
+        "Axe WCAG AA",
+        "overflow"
+      ]
+    },
+    {
+      "browser": "chromium",
+      "scenario": "legacy draft",
+      "status": "pass"
+    },
+    {
+      "browser": "webkit",
+      "width": 320,
+      "reducedMotion": true,
+      "status": "pass",
+      "checks": [
+        "independent SSD/RAM choices",
+        "distinct hardware icons",
+        "multiple goals",
+        "Space toggles one goal",
+        "single shared question",
+        "back/reload preservation",
+        "review and WhatsApp include every selected goal once",
+        "editing details",
+        "removing one hardware preserves goals",
+        "removing last hardware removes stale goals",
+        "Axe WCAG AA",
+        "overflow"
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "independent SSD/RAM choices",
+        "distinct hardware icons",
+        "multiple goals",
+        "Space toggles one goal",
+        "single shared question",
+        "back/reload preservation",
+        "review and WhatsApp include every selected goal once",
+        "editing details",
+        "removing one hardware preserves goals",
+        "removing last hardware removes stale goals",
+        "Axe WCAG AA",
+        "overflow"
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 1440,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "independent SSD/RAM choices",
+        "distinct hardware icons",
+        "multiple goals",
+        "Space toggles one goal",
+        "single shared question",
+        "back/reload preservation",
+        "review and WhatsApp include every selected goal once",
+        "editing details",
+        "removing one hardware preserves goals",
+        "removing last hardware removes stale goals",
+        "Axe WCAG AA",
+        "overflow"
+      ]
+    },
+    {
+      "browser": "webkit",
+      "scenario": "legacy draft",
+      "status": "pass"
+    }
+  ]
+}

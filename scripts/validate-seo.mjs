@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 const root = resolve(import.meta.dirname, '..')
 const siteUrl = 'https://master-prime.com'
 const seoPages = JSON.parse(readFileSync(resolve(root, 'src/data/seo-pages.json'), 'utf8'))
-const expectedPaths = ['/', '/servicos', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
+const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
 const expectedPathSet = new Set(expectedPaths)
 
 const read = (path) => readFileSync(resolve(root, path), 'utf8')
@@ -77,7 +77,7 @@ for (const pathname of expectedPaths) {
     }
   }
 
-  if (pathname !== '/' && pathname !== '/servicos' && pathname !== '/politica-de-privacidade') {
+  if (pathname !== '/' && pathname !== '/servicos' && pathname !== '/orcamento/notebook' && pathname !== '/orcamento/videogame' && pathname !== '/politica-de-privacidade') {
     const visibleText = html
       .replace(/<script[\s\S]*?<\/script>/gi, ' ')
       .replace(/<style[\s\S]*?<\/style>/gi, ' ')
@@ -95,6 +95,31 @@ const descriptions = pageReports.map((page) => page.description)
 assert(new Set(titles).size === titles.length, 'titles duplicados entre páginas indexáveis')
 assert(new Set(descriptions).size === descriptions.length, 'descriptions duplicadas entre páginas indexáveis')
 assert(new Set(seoPages.map((page) => page.title)).size === seoPages.length, 'H1 duplicados nos dados de serviço')
+
+const quoteReport = pageReports.find(page => page.pathname === '/orcamento/notebook')
+assert(quoteReport.html.includes('Orçamento de') && quoteReport.html.includes('notebook.'), 'orçamento: conteúdo principal não pré-renderizado')
+assert(quoteReport.html.includes('Qual é a marca?') && quoteReport.html.includes('Marca do notebook'), 'orçamento: pergunta inicial de identificação ausente no HTML')
+assert(!quoteReport.html.includes('id="notebook-model"'), 'orçamento: modelo deve aparecer após a escolha da marca')
+assert(quoteReport.html.includes('<noscript>') && quoteReport.html.includes('solicitar seu orçamento pelo WhatsApp'), 'orçamento: contato sem JavaScript ausente')
+for (const page of seoPages.filter(page => page.clusterPath === '/conserto-de-notebook-campo-grande-rj')) {
+  assert(pageReports.find(report => report.pathname === page.path).html.includes('href="/orcamento/notebook"'), `${page.path}: acesso ao orçamento de notebook ausente`)
+}
+
+const gamingReport = pageReports.find(page => page.pathname === '/orcamento/videogame')
+assert(gamingReport.html.includes('videogame e controle.') && gamingReport.html.includes('O que precisa de atendimento?'), 'gaming: conteúdo e pergunta inicial ausentes no HTML')
+assert(gamingReport.html.includes('<noscript>') && gamingReport.html.includes('solicitar seu orçamento pelo WhatsApp'), 'gaming: contato sem JavaScript ausente')
+assert(!gamingReport.html.includes('id="gaming-console-model"'), 'gaming: perguntas posteriores não devem aparecer na primeira tela')
+const gamingNodes = gamingReport.schemas.flatMap(schema => schema['@graph'] ?? [])
+assert(gamingNodes.some(node => node['@type'] === 'WebPage' && node.about?.length === 2), 'gaming: WebPage deve referenciar os dois serviços')
+for (const servicePath of ['/conserto-de-videogame', '/conserto-de-controle']) {
+  assert(gamingNodes.some(node => node['@type'] === 'Service' && node['@id'] === `${siteUrl}${servicePath}#service` && node.provider?.['@id'] === `${siteUrl}/#localbusiness`), 'gaming: entidade Service/provider inconsistente')
+  for (const page of seoPages.filter(page => page.clusterPath === servicePath)) {
+    const html = pageReports.find(report => report.pathname === page.path).html
+    const preset = servicePath === '/conserto-de-controle' ? 'controle' : 'videogame'
+    assert(html.includes(`href="/orcamento/videogame?aparelho=${preset}"`), `${page.path}: entrada contextual do orçamento ausente`)
+    assert(html.includes('api.whatsapp.com/send/?phone=5521967635340'), `${page.path}: contato direto deve ser preservado`)
+  }
+}
 
 const sitemap = read('public/sitemap.xml')
 assert(read('dist/sitemap.xml') === sitemap, 'sitemap publicado difere do sitemap de origem')
@@ -123,13 +148,17 @@ assert(!(vercel.rewrites ?? []).some((rewrite) => rewrite.source === '/(.*)'), '
 for (const source of ['/presell', '/inicio']) {
   assert((vercel.redirects ?? []).some((redirect) => redirect.source === source && redirect.destination === '/' && redirect.statusCode === 301), `redirect 301 ausente: ${source}`)
 }
+for (const source of ['/orcamento', '/orcamento/', '/orcamento/index.html']) {
+  assert((vercel.redirects ?? []).some(redirect => redirect.source === source && redirect.destination === '/orcamento/notebook' && redirect.statusCode === 302), `redirect temporário de orçamento ausente: ${source}`)
+  assert(!sitemapLocations.includes(`${siteUrl}${source}`), `sitemap contém orçamento redirecionado: ${source}`)
+}
 
 const inbound = new Map(expectedPaths.map((pathname) => [pathname, 0]))
 for (const page of pageReports) {
   const links = [...page.html.matchAll(/href=["']([^"']+)["']/gi)].map((match) => match[1].replaceAll('&amp;', '&'))
   for (const href of links) {
     if (!href.startsWith('/') || href.startsWith('//')) continue
-    const target = href.split('#')[0] || '/'
+    const target = new URL(href, siteUrl).pathname
     const assetTarget = target.split('?')[0]
     const existingAsset = existsSync(resolve(root, 'dist', assetTarget.slice(1)))
     assert(expectedPathSet.has(target) || existingAsset, `${page.pathname}: link interno quebrado para ${target}`)

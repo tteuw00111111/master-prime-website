@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-15T20:07:02.810749+00:00",
+  "source": "Open Icecat",
+  "license": "/catalog/icecat-license.txt",
+  "brands": [
+    {
+      "id": "acer",
+      "name": "Acer",
+      "file": "/catalog/notebooks/acer-e1f885de4675.json",
+      "compressedFile": "/catalog/notebooks/acer-e1f885de4675.json.gz",
+      "count": 64808
+    },
+    {
+      "id": "alienware",
+      "name": "Alienware",
+      "file": "/catalog/notebooks/alienware-49616f954c0b.json",
+      "compressedFile": "/catalog/notebooks/alienware-49616f954c0b.json.gz",
+      "count": 88
+    },
+    {
+      "id": "asus",
+      "name": "ASUS",
+      "file": "/catalog/notebooks/asus-a22a0c8542b6.json",
+      "compressedFile": "/catalog/notebooks/asus-a22a0c8542b6.json.gz",
+      "count": 76859
+    },
+    {
+      "id": "benq",
+      "name": "BenQ",
+      "file": "/catalog/notebooks/benq-ea796f014031.json",
+      "compressedFile": "/catalog/notebooks/benq-ea796f014031.json.gz",
+      "count": 90
+    },
+    {
+      "id": "bluechip",
+      "name": "bluechip",
+      "file": "/catalog/notebooks/bluechip-ec07cac9f77d.json",
+      "compressedFile": "/catalog/notebooks/bluechip-ec07cac9f77d.json.gz",
+      "count": 110
+    },
+    {
+      "id": "canon",
+      "name": "Canon",
+      "file": "/catalog/notebooks/canon-51ffb32eebcd.json",
+      "compressedFile": "/catalog/notebooks/canon-51ffb32eebcd.json.gz",
+      "count": 1
+    },
+    {
+      "id": "cyberpower",
+      "name": "CyberPower",
+      "file": "/catalog/notebooks/cyberpower-9de823925aeb.json",
+      "compressedFile": "/catalog/notebooks/cyberpower-9de823925aeb.json.gz",
+      "count": 3
+    },
+    {
+      "id": "deep-gaming",
+      "name": "Deep Gaming",
+      "file": "/catalog/notebooks/deep-gaming-c58df1542b15.json",
+      "compressedFile": "/catalog/notebooks/deep-gaming-c58df1542b15.json.gz",
+      "count": 8
+    },
+    {
+      "id": "dell",
+      "name": "DELL",
+      "file": "/catalog/notebooks/dell-6441e55b0640.json",
+      "compressedFile": "/catalog/notebooks/dell-6441e55b0640.json.gz",
+      "count": 1465
+    },
+    {
+      "id": "dell-wyse",
+      "name": "Dell Wyse",
+      "file": "/catalog/notebooks/dell-wyse-f88a5211e45f.json",
+      "compressedFile": "/catalog/notebooks/dell-wyse-f88a5211e45f.json.gz",
+      "count": 16
+    },
+    {
+      "id": "epson",
+      "name": "Epson",
+      "file": "/catalog/notebooks/epson-e553c7b7f3da.json",
+      "compressedFile": "/catalog/notebooks/epson-e553c7b7f3da.json.gz",
+      "count": 1
+    },
+    {
+      "id": "erazer",
+      "name": "ERAZER",
+      "file": "/catalog/notebooks/erazer-b52bf971d727.json",
+      "compressedFile": "/catalog/notebooks/erazer-b52bf971d727.json.gz",
+      "count": 237
+    },
+    {
+      "id": "fujitsu",
+      "name": "Fujitsu",
+      "file": "/catalog/notebooks/fujitsu-717fbf846c26.json",
+      "compressedFile": "/catalog/notebooks/fujitsu-717fbf846c26.json.gz",
+      "count": 1469
+    },
+    {
+      "id": "gigabyte",
+      "name": "GIGABYTE",
+      "file": "/catalog/notebooks/gigabyte-3046d564dc85.json",
+      "compressedFile": "/catalog/notebooks/gigabyte-3046d564dc85.json.gz",
+      "count": 2211
+    },
+    {
+      "id": "grundig",
+      "name": "Grundig",
+      "file": "/catalog/notebooks/grundig-06201401c029.json",
+      "compressedFile": "/catalog/notebooks/grundig-06201401c029.json.gz",
+      "count": 14
+    },
+    {
+      "id": "haier",
+      "name": "Haier",
+      "file": "/catalog/notebooks/haier-7c03cf2b8495.json",
+      "compressedFile": "/catalog/notebooks/haier-7c03cf2b8495.json.gz",
+      "count": 105
+    },
+    {
+      "id": "hannspree",
+      "name": "Hannspree",
+      "file": "/catalog/notebooks/hannspree-65b4dfe48868.json",
+      "compressedFile": "/catalog/notebooks/hannspree-65b4dfe48868.json.gz",
+      "count": 7
+    },
+    {
+      "id": "hercules",
+      "name": "Hercules",
+      "file": "/catalog/notebooks/hercules-c8dce1d33c17.json",
+      "compressedFile": "/catalog/notebooks/hercules-c8dce1d33c17.json.gz",
+      "count": 14
+    },
+    {
+      "id": "honor",
+      "name": "Honor",
+      "file": "/catalog/notebooks/honor-f29ef5f39531.json",
+      "compressedFile": "/catalog/notebooks/honor-f29ef5f39531.json.gz",
+      "count": 21
+    },
+    {
+      "id": "hp",
+      "name": "HP",
+      "file": "/catalog/notebooks/hp-6959a86c60ec.json",
+      "compressedFile": "/catalog/notebooks/hp-6959a86c60ec.json.gz",
+      "count": 34171
+    },
+    {
+      "id": "iiyama",
+      "name": "iiyama",
+      "file": "/catalog/notebooks/iiyama-f464e719c418.json",
+      "compressedFile": "/catalog/notebooks/iiyama-f464e719c418.json.gz",
+      "count": 3
+    },
+    {
+      "id": "lenovo",
+      "name": "Lenovo",
+      "file": "/catalog/notebooks/lenovo-2de980bd4aad.json",
+      "compressedFile": "/catalog/notebooks/lenovo-2de980bd4aad.json.gz",
+      "count": 5889
+    },
+    {
+      "id": "lg",
+      "name": "LG",
+      "file": "/catalog/notebooks/lg-225b1f08aedb.json",
+      "compressedFile": "/catalog/notebooks/lg-225b1f08aedb.json.gz",
+      "count": 1811
+    },
+    {
+      "id": "medion",
+      "name": "MEDION",
+      "file": "/catalog/notebooks/medion-723d6a15636b.json",
+      "compressedFile": "/catalog/notebooks/medion-723d6a15636b.json.gz",
+      "count": 537
+    },
+    {
+      "id": "msi",
+      "name": "MSI",
+      "file": "/catalog/notebooks/msi-95b328a70ea3.json",
+      "compressedFile": "/catalog/notebooks/msi-95b328a70ea3.json.gz",
+      "count": 27813
+    },
+    {
+      "id": "nec",
+      "name": "NEC",
+      "file": "/catalog/notebooks/nec-0066da241756.json",
+      "compressedFile": "/catalog/notebooks/nec-0066da241756.json.gz",
+      "count": 584
+    },
+    {
+      "id": "nilox",
+      "name": "Nilox",
+      "file": "/catalog/notebooks/nilox-5a081d13095e.json",
+      "compressedFile": "/catalog/notebooks/nilox-5a081d13095e.json.gz",
+      "count": 6
+    },
+    {
+      "id": "peaq",
+      "name": "PEAQ",
+      "file": "/catalog/notebooks/peaq-5bf62fa062a2.json",
+      "compressedFile": "/catalog/notebooks/peaq-5bf62fa062a2.json.gz",
+      "count": 6
+    },
+    {
+      "id": "philips",
+      "name": "Philips",
+      "file": "/catalog/notebooks/philips-c6a417bf8f68.json",
+      "compressedFile": "/catalog/notebooks/philips-c6a417bf8f68.json.gz",
+      "count": 24
+    },
+    {
+      "id": "samsung",
+      "name": "Samsung",
+      "file": "/catalog/notebooks/samsung-23da35c7e06f.json",
+      "compressedFile": "/catalog/notebooks/samsung-23da35c7e06f.json.gz",
+      "count": 5032
+    },
+    {
+      "id": "tcl",
+      "name": "TCL",
+      "file": "/catalog/notebooks/tcl-2b2e6271fe4d.json",
+      "compressedFile": "/catalog/notebooks/tcl-2b2e6271fe4d.json.gz",
+      "count": 4
+    },
+    {
+      "id": "terra",
+      "name": "TERRA",
+      "file": "/catalog/notebooks/terra-6eb8306e7180.json",
+      "compressedFile": "/catalog/notebooks/terra-6eb8306e7180.json.gz",
+      "count": 654
+    },
+    {
+      "id": "toshiba",
+      "name": "Dynabook",
+      "file": "/catalog/notebooks/toshiba-dbafe6b1a29c.json",
+      "compressedFile": "/catalog/notebooks/toshiba-dbafe6b1a29c.json.gz",
+      "count": 2018
+    },
+    {
+      "id": "viewsonic",
+      "name": "Viewsonic",
+      "file": "/catalog/notebooks/viewsonic-8b10f8b69d20.json",
+      "compressedFile": "/catalog/notebooks/viewsonic-8b10f8b69d20.json.gz",
+      "count": 20
+    },
+    {
+      "id": "xpg",
+      "name": "XPG",
+      "file": "/catalog/notebooks/xpg-f90bdea5a066.json",
+      "compressedFile": "/catalog/notebooks/xpg-f90bdea5a066.json.gz",
+      "count": 10
+    },
+    {
+      "id": "zoostorm",
+      "name": "Zoostorm",
+      "file": "/catalog/notebooks/zoostorm-65ed0637ff54.json",
+      "compressedFile": "/catalog/notebooks/zoostorm-65ed0637ff54.json.gz",
+      "count": 5
+    }
+  ],
+  "models": []
+}

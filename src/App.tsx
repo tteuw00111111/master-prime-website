@@ -8,6 +8,10 @@ import { Footer } from '@/components/layout/Footer'
 import { InnerHeader } from '@/components/layout/InnerHeader'
 import { ServicePage } from '@/components/pages/ServicePage'
 import { ServicesHub } from '@/components/pages/ServicesHub'
+import { NotebookQuotePage } from '@/components/pages/NotebookQuotePage'
+import { GamingQuotePage } from '@/components/pages/GamingQuotePage'
+import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
+import { NOTEBOOK_QUOTE_PATH } from '@/data/notebook-quote'
 import { JsonLd } from '@/components/seo/JsonLd'
 import Waves from '@/components/ui/Waves'
 import { getPageSchemas, getServicePage, normalizePath } from '@/utils/seo'
@@ -75,6 +79,8 @@ function App({ pathname }: AppProps) {
   let pageContent: React.ReactNode
   if (path === '/') pageContent = <HomePage />
   else if (path === '/servicos') pageContent = <ServicesHub />
+  else if (path === NOTEBOOK_QUOTE_PATH) pageContent = <NotebookQuotePage />
+  else if (path === GAMING_QUOTE_PATH) pageContent = <GamingQuotePage />
   else if (servicePage) pageContent = <ServicePage page={servicePage} />
   else pageContent = <NotFoundPage />
 

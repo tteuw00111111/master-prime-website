@@ -1,11 +1,40 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import type { IncomingMessage, ServerResponse } from 'node:http'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import { NOTEBOOK_QUOTE_PATH } from './src/data/notebook-quote'
+import { GAMING_QUOTE_PATH } from './src/data/gaming-quote'
+import serviceSeoPages from './src/data/seo-pages.json'
+
+// Keep the temporary category redirect identical in development and preview.
+const quoteRedirect = (): Plugin => {
+  const prerenderedPaths = new Set([NOTEBOOK_QUOTE_PATH, GAMING_QUOTE_PATH, '/servicos', '/politica-de-privacidade', ...serviceSeoPages.map(page => page.path)])
+  const redirect = (request: IncomingMessage, response: ServerResponse, next: () => void) => {
+    const url = new URL(request.url ?? '/', 'http://localhost')
+    if (!['/orcamento', '/orcamento/', '/orcamento/index.html'].includes(url.pathname)) return next()
+    response.writeHead(302, { Location: `${NOTEBOOK_QUOTE_PATH}${url.search}` })
+    response.end()
+  }
+  return {
+    name: 'notebook-quote-redirect',
+    configureServer(server) { server.middlewares.use(redirect) },
+    configurePreviewServer(server) {
+      server.middlewares.use(redirect)
+      server.middlewares.use((request, _response, next) => {
+        const url = new URL(request.url ?? '/', 'http://localhost')
+        // Serve the prerendered document at its clean canonical URL in preview.
+        if (prerenderedPaths.has(url.pathname)) request.url = `${url.pathname}/index.html${url.search}`
+        next()
+      })
+    },
+  }
+}
 
 // https://vitejs.dev/config/
 export default defineConfig(({ isSsrBuild }) => ({
   plugins: [
+    quoteRedirect(),
     react(),
     ...(!isSsrBuild ? [ViteImageOptimizer({
       png: {

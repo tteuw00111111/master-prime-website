@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:4189",
+  "reports": [
+    {
+      "path": "/videogame/ps5-sem-imagem",
+      "status": "pass",
+      "checks": [
+        "real service-page entry",
+        "category preselection",
+        "customer can change to both",
+        "same-tab navigation",
+        "canonical excludes parameters",
+        "direct WhatsApp preserved"
+      ]
+    },
+    {
+      "path": "/controle/correcao-de-drift-e-hall-effect",
+      "status": "pass",
+      "checks": [
+        "real service-page entry",
+        "category preselection",
+        "customer can change to both",
+        "same-tab navigation",
+        "canonical excludes parameters",
+        "direct WhatsApp preserved"
+      ]
+    },
+    {
+      "status": "pass",
+      "checks": [
+        "302 preserves query string",
+        "parameterized gaming route without JavaScript",
+        "notebook route without JavaScript"
+      ]
+    }
+  ]
+}
