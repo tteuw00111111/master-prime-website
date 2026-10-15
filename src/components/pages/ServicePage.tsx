@@ -10,6 +10,15 @@ interface ServicePageProps {
   page: ServiceSeoPage
 }
 
+const videogameProblemLinks = [
+  { href: '/videogame/ps4-nao-liga', label: 'PS4 não liga' },
+  { href: '/videogame/ps4-liga-e-desliga', label: 'PS4 liga e desliga' },
+  { href: '/videogame/ps4-sem-imagem', label: 'PS4 sem imagem' },
+  { href: '/videogame/limpeza-e-manutencao-ps4', label: 'Limpeza e manutenção de PS4' },
+  { href: '/videogame/ps5-sem-imagem', label: 'PS5 sem imagem' },
+  { href: '/videogame/limpeza-e-manutencao-ps5', label: 'Limpeza e manutenção de PS5' },
+] as const
+
 export const ServicePage = ({ page }: ServicePageProps) => {
   const breadcrumbs = getBreadcrumbs(page)
   const relatedPages = page.related
@@ -87,6 +96,19 @@ export const ServicePage = ({ page }: ServicePageProps) => {
                   </li>
                 ))}
               </ul>
+              {page.id === 'videogame-conserto' && (
+                <section aria-labelledby="problemas-videogame" className="mt-10">
+                  <h3 id="problemas-videogame" className="text-2xl font-bold">Problemas e serviços que atendemos</h3>
+                  <p className="mt-4 leading-7 text-gray-300">Consulte os sintomas e os critérios de avaliação para o seu modelo de console:</p>
+                  <ul className="mt-4 space-y-2">
+                    {videogameProblemLinks.map((link) => (
+                      <li key={link.href}>
+                        <a href={link.href} className="inline-block py-2 font-semibold text-gold underline underline-offset-4 hover:text-white">{link.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
             </div>
             <div>
               <h2 className="text-3xl font-bold md:text-4xl">{page.causesHeading}</h2>

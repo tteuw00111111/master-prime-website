@@ -62,6 +62,16 @@ export const ServicesHub = () => (
                   <div>
                     <h2 className="text-3xl font-black">{cluster.title}</h2>
                     <p className="mt-4 leading-7 text-gray-400">{cluster.description}</p>
+                    {cluster.rootId === 'videogame-conserto' && (
+                      <p className="mt-4 leading-7 text-gray-400">
+                        Para falhas de energia ou vídeo, consulte a avaliação de{' '}
+                        <a href="/videogame/ps4-nao-liga" className="font-semibold text-gold underline underline-offset-4 hover:text-white">PS4 não liga</a>{' '}
+                        e{' '}
+                        <a href="/videogame/ps5-sem-imagem" className="font-semibold text-gold underline underline-offset-4 hover:text-white">PS5 sem imagem</a>.
+                        {' '}Para poeira, ruído ou aquecimento, veja os critérios de{' '}
+                        <a href="/videogame/limpeza-e-manutencao-ps5" className="font-semibold text-gold underline underline-offset-4 hover:text-white">limpeza e manutenção de PS5</a>.
+                      </p>
+                    )}
                     <a href={root.path} className="mt-6 inline-flex items-center gap-2 font-bold text-gold hover:underline">
                       {root.title} <FaArrowRight aria-hidden="true" />
                     </a>

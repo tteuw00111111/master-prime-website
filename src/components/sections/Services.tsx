@@ -132,6 +132,15 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
             {service.description}
           </CardItem>
 
+          {service.id === 2 && (
+            <p className="mb-4 max-w-sm text-sm leading-relaxed text-gray-400">
+              Veja a avaliação de{' '}
+              <a href="/videogame/ps4-nao-liga" className="font-semibold text-gold underline underline-offset-4 hover:text-white">PS4 não liga</a>{' '}
+              e{' '}
+              <a href="/videogame/ps5-sem-imagem" className="font-semibold text-gold underline underline-offset-4 hover:text-white">PS5 sem imagem</a>.
+            </p>
+          )}
+
           <a href={service.href} className="mb-4 inline-flex text-sm font-bold text-gold hover:underline">
             Conhecer o serviço →
           </a>
