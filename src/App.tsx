@@ -10,6 +10,8 @@ import { ServicePage } from '@/components/pages/ServicePage'
 import { ServicesHub } from '@/components/pages/ServicesHub'
 import { NotebookQuotePage } from '@/components/pages/NotebookQuotePage'
 import { GamingQuotePage } from '@/components/pages/GamingQuotePage'
+import { SmartphoneQuotePage } from '@/components/pages/SmartphoneQuotePage'
+import { SMARTPHONE_QUOTE_PATH } from '@/data/smartphone-quote'
 import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
 import { NOTEBOOK_QUOTE_PATH } from '@/data/notebook-quote'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -81,6 +83,7 @@ function App({ pathname }: AppProps) {
   else if (path === '/servicos') pageContent = <ServicesHub />
   else if (path === NOTEBOOK_QUOTE_PATH) pageContent = <NotebookQuotePage />
   else if (path === GAMING_QUOTE_PATH) pageContent = <GamingQuotePage />
+  else if (path === SMARTPHONE_QUOTE_PATH) pageContent = <SmartphoneQuotePage />
   else if (servicePage) pageContent = <ServicePage page={servicePage} />
   else pageContent = <NotFoundPage />
 

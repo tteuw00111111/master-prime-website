@@ -11,11 +11,12 @@
     "prerender": "node scripts/prerender.mjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
-    "test": "node scripts/test-quote.mjs && node scripts/test-gaming-quote.mjs && node scripts/validate-seo.mjs",
+    "test": "node scripts/test-quote.mjs && node scripts/test-gaming-quote.mjs && node scripts/test-smartphone-quote.mjs && node scripts/validate-seo.mjs",
     "test:quote": "node scripts/test-quote.mjs",
     "catalog:import": "python3 scripts/import-notebook-catalog.py",
     "preview": "vite preview",
-    "test:gaming": "node scripts/test-gaming-quote.mjs"
+    "test:gaming": "node scripts/test-gaming-quote.mjs",
+    "test:smartphone": "node scripts/test-smartphone-quote.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

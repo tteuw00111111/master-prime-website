@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 const root = resolve(import.meta.dirname, '..')
 const siteUrl = 'https://master-prime.com'
 const seoPages = JSON.parse(readFileSync(resolve(root, 'src/data/seo-pages.json'), 'utf8'))
-const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
+const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', '/orcamento/celular', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
 const expectedPathSet = new Set(expectedPaths)
 
 const read = (path) => readFileSync(resolve(root, path), 'utf8')
@@ -77,7 +77,7 @@ for (const pathname of expectedPaths) {
     }
   }
 
-  if (pathname !== '/' && pathname !== '/servicos' && pathname !== '/orcamento/notebook' && pathname !== '/orcamento/videogame' && pathname !== '/politica-de-privacidade') {
+  if (pathname !== '/' && pathname !== '/servicos' && !pathname.startsWith('/orcamento/') && pathname !== '/politica-de-privacidade') {
     const visibleText = html
       .replace(/<script[\s\S]*?<\/script>/gi, ' ')
       .replace(/<style[\s\S]*?<\/style>/gi, ' ')
@@ -119,6 +119,22 @@ for (const servicePath of ['/conserto-de-videogame', '/conserto-de-controle']) {
     assert(html.includes(`href="/orcamento/videogame?aparelho=${preset}"`), `${page.path}: entrada contextual do orçamento ausente`)
     assert(html.includes('api.whatsapp.com/send/?phone=5521967635340'), `${page.path}: contato direto deve ser preservado`)
   }
+}
+
+const smartphoneReport = pageReports.find(page => page.pathname === '/orcamento/celular')
+assert(smartphoneReport.html.includes('celular.') && smartphoneReport.html.includes('Qual é a marca?') && smartphoneReport.html.includes('Marca do celular'), 'celular: conteúdo e pergunta inicial ausentes no HTML')
+assert(smartphoneReport.html.includes('<noscript>') && smartphoneReport.html.includes('solicitar seu orçamento pelo WhatsApp'), 'celular: contato sem JavaScript ausente')
+assert(!smartphoneReport.html.includes('id="smartphone-model"'), 'celular: modelo deve aparecer após a marca')
+const smartphoneNodes = smartphoneReport.schemas.flatMap(schema => schema['@graph'] ?? [])
+const smartphoneServiceId = `${siteUrl}/conserto-de-celular-campo-grande-rj#service`
+assert(smartphoneNodes.some(node => node['@type'] === 'WebPage' && node.about?.['@id'] === smartphoneServiceId), 'celular: WebPage sem vínculo ao serviço existente')
+assert(smartphoneNodes.some(node => node['@type'] === 'Service' && node['@id'] === smartphoneServiceId && node.provider?.['@id'] === `${siteUrl}/#localbusiness`), 'celular: Service/provider inconsistente')
+const smartphoneBreadcrumb = smartphoneNodes.find(node => node['@type'] === 'BreadcrumbList')
+assert(smartphoneBreadcrumb?.itemListElement.map(item => item.name).join(' → ') === 'Início → Serviços → Orçamento de celular', 'celular: breadcrumb inconsistente')
+for (const page of seoPages.filter(page => page.clusterPath === '/conserto-de-celular-campo-grande-rj')) {
+  const html = pageReports.find(report => report.pathname === page.path).html
+  assert(html.includes('href="/orcamento/celular"') && html.includes('Orçamento de celular'), `${page.path}: entrada do orçamento de celular ausente`)
+  assert(html.includes('Falar pelo WhatsApp') && html.includes('api.whatsapp.com/send/?phone=5521967635340'), `${page.path}: contato direto deve ser preservado`)
 }
 
 const sitemap = read('public/sitemap.xml')

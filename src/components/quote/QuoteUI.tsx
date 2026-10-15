@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { AnimatePresence, motion, useIsPresent, useReducedMotion } from 'framer-motion'
 import { FiCheck, FiChevronDown, FiCopy, FiEdit2, FiHelpCircle, FiMapPin, FiMonitor, FiSearch, FiTruck, FiX } from 'react-icons/fi'
-import { LuBatteryCharging, LuBrush, LuDisc3, LuGamepad2, LuGauge, LuHardDrive, LuKeyboard, LuLaptop, LuMemoryStick, LuMessageSquareMore, LuMonitorOff, LuPanelTop, LuPower, LuThermometer, LuWifi } from 'react-icons/lu'
+import { LuBatteryCharging, LuBrush, LuDisc3, LuDroplets, LuGamepad2, LuGauge, LuHardDrive, LuKeyboard, LuLaptop, LuMemoryStick, LuMessageSquareMore, LuMonitorOff, LuPanelTop, LuPlugZap, LuPower, LuThermometer, LuWifi } from 'react-icons/lu'
 import type { IconType } from 'react-icons'
 import { FaWhatsapp } from 'react-icons/fa'
 import logoImage from '@/assets/images/logo.webp'
@@ -13,7 +13,7 @@ import '@/styles/quote.css'
 
 const quoteEase = [0.22, 1, 0.36, 1] as const
 
-export const ModelSuggestions = ({ models, onSelect, onDismiss, reducedMotion, inputId = 'notebook-model' }: { models: CatalogModel[]; onSelect: (model: CatalogModel) => void; onDismiss: () => void; reducedMotion: boolean; inputId?: string }) => {
+export const ModelSuggestions = ({ models, onSelect, onDismiss, reducedMotion, inputId = 'notebook-model', suggestionIcon: SuggestionIcon = FiMonitor }: { models: CatalogModel[]; onSelect: (model: CatalogModel) => void; onDismiss: () => void; reducedMotion: boolean; inputId?: string; suggestionIcon?: IconType }) => {
   const present = useIsPresent()
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -54,7 +54,7 @@ export const ModelSuggestions = ({ models, onSelect, onDismiss, reducedMotion, i
     <motion.div ref={ref} id={`${inputId}-suggestions`} className="quote-model-suggestions" aria-label="Sugestões de modelo" aria-hidden={!present || undefined}
       initial={{ opacity: 0, y: reducedMotion ? 0 : -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reducedMotion ? 0 : -4 }}
       transition={{ duration: reducedMotion ? 0 : 0.18, ease: quoteEase }} style={{ pointerEvents: present ? 'auto' : 'none' }}>
-      {models.map(model => <button key={model.id} type="button" tabIndex={present ? 0 : -1} onMouseDown={event => event.preventDefault()} onClick={() => onSelect(model)}><FiMonitor aria-hidden="true" /><span>{model.name}</span><FiArrowUpRightMark /></button>)}
+      {models.map(model => <button key={model.id} type="button" tabIndex={present ? 0 : -1} onMouseDown={event => event.preventDefault()} onClick={() => onSelect(model)}><SuggestionIcon aria-hidden="true" /><span>{model.name}</span><FiArrowUpRightMark /></button>)}
     </motion.div>
   )
 }
@@ -86,6 +86,9 @@ const issueVisuals: Record<string, { icon: IconType; tone: string }> = {
   triggers: { icon: LuGamepad2, tone: 'violet' },
   connection: { icon: LuWifi, tone: 'sky' },
   hall: { icon: LuGamepad2, tone: 'mint' },
+  charging: { icon: LuPlugZap, tone: 'mint' },
+  liquid: { icon: LuDroplets, tone: 'sky' },
+  system: { icon: LuGauge, tone: 'violet' },
 }
 
 export const IssueChoice = ({ issue, selected, onToggle }: { issue: QuoteIssue; selected: boolean; onToggle: () => void }) => {
@@ -169,15 +172,16 @@ interface QuoteModelFieldProps {
   credit?: ReactNode
   allowUnknown?: boolean
   modelPolicy?: ReactNode
+  suggestionIcon?: IconType
 }
 
-export const QuoteModelField = ({ id, label, model, unknown, error, platformLabel, onPlatformEdit, platformEditLabel = 'Alterar marca', placeholder, help, helpOpen, onHelpToggle, focused, showSuggestions, suggestions, hint, reducedMotion, onFocus, onChange, onUnknownChange, onSelect, credit, allowUnknown = true, modelPolicy }: QuoteModelFieldProps) => (
+export const QuoteModelField = ({ id, label, model, unknown, error, platformLabel, onPlatformEdit, platformEditLabel = 'Alterar marca', placeholder, help, helpOpen, onHelpToggle, focused, showSuggestions, suggestions, hint, reducedMotion, onFocus, onChange, onUnknownChange, onSelect, credit, allowUnknown = true, modelPolicy, suggestionIcon }: QuoteModelFieldProps) => (
   <div className="quote-step-fields"><div className="quote-model-field" id="quote-model-section" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) onFocus(false) }}>
     <p className="quote-model-brand"><span>{platformLabel}</span><button type="button" onClick={onPlatformEdit} aria-label={platformEditLabel}><FiEdit2 aria-hidden="true" /> Alterar</button></p>
     <label className="sr-only" htmlFor={id}>{label}</label>
     <div className="quote-model-search">
       <div className="quote-search-field"><FiSearch aria-hidden="true" /><input id={id} enterKeyHint="done" aria-invalid={!!error} value={model} disabled={unknown} onChange={event => onChange(event.target.value)} onFocus={() => onFocus(true)} onKeyDown={event => { if (event.key === 'Escape') { onFocus(false); event.stopPropagation() } }} maxLength={120} placeholder={placeholder} autoComplete="off" autoCapitalize="none" autoCorrect="off" spellCheck={false} aria-controls={showSuggestions ? `${id}-suggestions` : undefined} aria-describedby={`model-help model-search-status${error ? ' quote-model-error' : ''}`} /><button type="button" className="quote-suggestions-dismiss" aria-label="Fechar sugestões" aria-hidden={!showSuggestions || undefined} tabIndex={showSuggestions ? 0 : -1} data-visible={showSuggestions} onMouseDown={event => event.preventDefault()} onClick={() => onFocus(false)}><FiX aria-hidden="true" /></button></div>
-      <AnimatePresence initial={false}>{showSuggestions && <ModelSuggestions key="models" inputId={id} models={suggestions} reducedMotion={reducedMotion} onDismiss={() => onFocus(false)} onSelect={onSelect} />}</AnimatePresence>
+      <AnimatePresence initial={false}>{showSuggestions && <ModelSuggestions key="models" inputId={id} models={suggestions} reducedMotion={reducedMotion} onDismiss={() => onFocus(false)} onSelect={onSelect} suggestionIcon={suggestionIcon} />}</AnimatePresence>
     </div>
     {error && <p id="quote-model-error" className="quote-inline-error">{error}</p>}
     <div id="model-search-status" className="sr-only" role="status">{focused && !unknown && suggestions.length ? `${suggestions.length} sugestões de modelo abaixo.` : ''}</div>

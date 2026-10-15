@@ -61,6 +61,7 @@ html:has(.quote-page), body:has(.quote-page) { overflow-x: clip; }
 .quote-form legend, .quote-field { font-size: 16px; font-weight: 500; color: #f2f2f3; }
 .quote-form legend:not(.sr-only) { margin-bottom: 14px; }
 .quote-brands { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.quote-brands-smartphone:not(.expanded) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .quote-brands.expanded { max-height: 260px; overflow-y: auto; overscroll-behavior: contain; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding: 5px; margin: -5px; scrollbar-width: thin; scrollbar-color: #555 #171717; }
 .quote-brand { position: relative; min-height: 70px; border: 1px solid var(--quote-border); background: #161616; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 22px; font-size: 17px; font-weight: 600; transition: border-color .15s, background .15s, transform .15s; }
 .quote-brand > span { min-width: 0; overflow-wrap: anywhere; }
