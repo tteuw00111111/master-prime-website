@@ -8,12 +8,15 @@ import { SITE_CONFIG } from '@/utils/constants'
 import { getWhatsAppVisitUrl, getWhatsAppQuoteUrl, trackWhatsAppVisit, trackWhatsAppQuote } from '@/utils/whatsapp'
 import { slideInLeft, slideInRight } from '@/utils/animations'
 import { getOpeningStatus, getFormattedHours } from '@/utils/openingHours'
+import type { OpenStatus } from '@/utils/openingHours'
 
 export const Location = () => {
-  const [openStatus, setOpenStatus] = useState(getOpeningStatus())
+  const [openStatus, setOpenStatus] = useState<OpenStatus | null>(null)
 
-  // Update status every minute
+  // Keep SSR and the first client render identical; calculate only after mount.
   useEffect(() => {
+    setOpenStatus(getOpeningStatus())
+
     const interval = setInterval(() => {
       setOpenStatus(getOpeningStatus())
     }, 60000) // Update every minute
@@ -102,7 +105,7 @@ export const Location = () => {
                 </h3>
 
                 {/* Dynamic Status */}
-                <div className="mb-3 space-y-1">
+                {openStatus && <div className="mb-3 space-y-1">
                   <div className="flex items-center gap-2">
                     <span className={`inline-block w-2 h-2 rounded-full ${openStatus.isOpen ? 'bg-green-500' : 'bg-red-500'}`} />
                     <span className={`font-semibold ${openStatus.isOpen ? 'text-green-400' : 'text-red-400'}`}>
@@ -114,7 +117,7 @@ export const Location = () => {
                       {openStatus.nextOpenTime}
                     </p>
                   )}
-                </div>
+                </div>}
 
                 {/* Full Schedule */}
                 <div className="text-gray-400 space-y-1 text-sm">
