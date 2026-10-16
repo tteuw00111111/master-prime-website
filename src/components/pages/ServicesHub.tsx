@@ -2,6 +2,7 @@ import { FaArrowRight, FaGoogle, FaMapMarkerAlt } from 'react-icons/fa'
 import { Footer } from '@/components/layout/Footer'
 import { InnerHeader } from '@/components/layout/InnerHeader'
 import { MAPS_URL, serviceSeoPages } from '@/utils/seo'
+import { PC_BUILD_QUOTE_PATH } from '@/data/pc-build-quote'
 
 const clusters = [
   {
@@ -75,6 +76,7 @@ export const ServicesHub = () => (
                     <a href={root.path} className="mt-6 inline-flex items-center gap-2 font-bold text-gold hover:underline">
                       {root.title} <FaArrowRight aria-hidden="true" />
                     </a>
+                    {cluster.rootId === 'conserto-computador' && <p className="mt-5 text-sm leading-6 text-gray-300">Para um PC novo ou montagem com suas peças, <a href={PC_BUILD_QUOTE_PATH} className="font-semibold text-gold underline underline-offset-4">planeje seu PC para jogos ou trabalho</a>.</p>}
                   </div>
                   <ul className="grid gap-3 sm:grid-cols-2">
                     {pages.map((page) => page && (

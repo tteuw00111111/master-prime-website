@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { FaMapMarkerAlt, FaClock, FaWhatsapp, FaInstagram, FaPhone } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaClock, FaInstagram, FaPhone } from 'react-icons/fa'
+import { FiArrowRight } from 'react-icons/fi'
 import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Magnetic } from '@/components/ui/Magnetic'
 import { SITE_CONFIG } from '@/utils/constants'
-import { getWhatsAppVisitUrl, getWhatsAppQuoteUrl, trackWhatsAppVisit, trackWhatsAppQuote } from '@/utils/whatsapp'
+import { HOME_QUOTE_HREF } from '@/data/quote-entry'
 import { slideInLeft, slideInRight } from '@/utils/animations'
 import { getOpeningStatus, getFormattedHours } from '@/utils/openingHours'
 import type { OpenStatus } from '@/utils/openingHours'
@@ -158,14 +159,11 @@ export const Location = () => {
                     @masterprimecg
                   </a>
                   <a
-                    href={getWhatsAppQuoteUrl()}
-                    onClick={trackWhatsAppQuote}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={HOME_QUOTE_HREF}
                     className="text-gray-400 hover:text-gold transition-colors flex items-center gap-2"
                   >
-                    <FaWhatsapp className="text-whatsapp" />
-                    WhatsApp - Solicitar orçamento
+                    <FiArrowRight className="text-gold" />
+                    Solicitar orçamento pelo site
                   </a>
                 </div>
               </div>
@@ -174,19 +172,18 @@ export const Location = () => {
             {/* CTA Buttons */}
             <div className="pt-6 flex flex-col sm:flex-row gap-4">
               <Button
-                variant="whatsapp-outline"
+                variant="primary"
                 size="lg"
-                icon={FaWhatsapp}
+                icon={FiArrowRight}
                 iconClassName="text-2xl"
-                href={getWhatsAppVisitUrl()}
-                onClick={trackWhatsAppVisit}
+                href={HOME_QUOTE_HREF}
                 className="flex-1 font-bold"
                 style={{
                   height: "53px",
                   borderRadius: "75px",
                 }}
               >
-                Falar no WhatsApp
+                Solicitar orçamento
               </Button>
               <Magnetic strength={0.3}>
                 <Button

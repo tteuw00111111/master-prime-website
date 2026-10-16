@@ -1,0 +1,51 @@
+{
+  "updatedAt": "2026-10-16T15:18:24.320Z",
+  "provider": "IGDB",
+  "images": {
+    "valorant": {
+      "image": "/images/pc-games/valorant-4dbad4a1e6.webp",
+      "source": "https://www.igdb.com/games/valorant",
+      "provider": "IGDB"
+    },
+    "cs2": {
+      "image": "/images/pc-games/cs2-2b6287b698.webp",
+      "source": "https://www.igdb.com/games/counter-strike-2",
+      "provider": "IGDB"
+    },
+    "fortnite": {
+      "image": "/images/pc-games/fortnite-d59abeb3ae.webp",
+      "source": "https://www.igdb.com/games/fortnite",
+      "provider": "IGDB"
+    },
+    "minecraft": {
+      "image": "/images/pc-games/minecraft-59347ef0cb.webp",
+      "source": "https://www.igdb.com/games/minecraft--1",
+      "provider": "IGDB"
+    },
+    "lol": {
+      "image": "/images/pc-games/lol-ea3ac17428.webp",
+      "source": "https://www.igdb.com/games/league-of-legends",
+      "provider": "IGDB"
+    },
+    "dota2": {
+      "image": "/images/pc-games/dota2-6f6a34c3a3.webp",
+      "source": "https://www.igdb.com/games/dota-2",
+      "provider": "IGDB"
+    },
+    "gtav": {
+      "image": "/images/pc-games/gtav-88bfa1f85f.webp",
+      "source": "https://www.igdb.com/games/grand-theft-auto-v",
+      "provider": "IGDB"
+    },
+    "roblox": {
+      "image": "/images/pc-games/roblox-439bfac89d.webp",
+      "source": "https://www.igdb.com/games/roblox",
+      "provider": "IGDB"
+    },
+    "warzone": {
+      "image": "/images/pc-games/warzone-39fa7bfea8.webp",
+      "source": "https://www.igdb.com/games/call-of-duty-warzone--2",
+      "provider": "IGDB"
+    }
+  }
+}

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
 import { Button } from "@/components/ui/Button";
 import { Header } from "@/components/layout/Header";
 import { TrustBadges } from "@/components/sections/TrustBadges";
-import { getWhatsAppQuoteUrl, trackWhatsAppQuote } from "@/utils/whatsapp";
+import { HOME_QUOTE_HREF } from "@/data/quote-entry";
 import {
   heroTextContainer,
   heroTextItem,
@@ -107,19 +107,18 @@ export const Hero = () => {
               Campo Grande, Rio de Janeiro
             </motion.p>
 
-            {/* CTA Button - WhatsApp Outline with Green Text and Icon */}
+            {/* Start the guided quote on the homepage. */}
             <motion.div
               variants={heroTextItem}
               className="flex justify-center mb-8 sm:mb-12 md:mb-[60px]"
             >
               <Magnetic>
                 <Button
-                  variant="whatsapp-outline"
+                  variant="primary"
                   size="lg"
-                  icon={FaWhatsapp}
+                  icon={FiArrowRight}
                   iconClassName="text-2xl sm:text-3xl"
-                  href={getWhatsAppQuoteUrl()}
-                  onClick={trackWhatsAppQuote}
+                  href={HOME_QUOTE_HREF}
                   className="font-bold text-sm sm:text-base"
                   style={{
                     width: "clamp(200px, 251px, 251px)",
@@ -128,7 +127,7 @@ export const Hero = () => {
                     padding: "0",
                   }}
                 >
-                  Solicitar Atendimento
+                  Solicitar orçamento
                 </Button>
               </Magnetic>
             </motion.div>

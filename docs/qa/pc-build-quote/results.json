@@ -1,0 +1,260 @@
+{
+  "base": "http://127.0.0.1:4192",
+  "checkedAt": "2026-10-16T15:44:28.234Z",
+  "reports": [
+    {
+      "label": "chromium-320",
+      "passed": true,
+      "checks": [
+        "full mixed flow",
+        "validation/focus",
+        "catalog/custom search",
+        "240 FPS advisory",
+        "GPU guidance",
+        "appearance",
+        "delivery",
+        "refresh",
+        "clipboard fallback",
+        "WhatsApp",
+        "privacy",
+        "review edits",
+        "conditional pruning",
+        "axe",
+        "overflow",
+        "motion"
+      ]
+    },
+    {
+      "label": "chromium-390",
+      "passed": true,
+      "checks": [
+        "full mixed flow",
+        "validation/focus",
+        "catalog/custom search",
+        "240 FPS advisory",
+        "GPU guidance",
+        "appearance",
+        "delivery",
+        "refresh",
+        "clipboard fallback",
+        "WhatsApp",
+        "privacy",
+        "review edits",
+        "conditional pruning",
+        "axe",
+        "overflow",
+        "motion"
+      ]
+    },
+    {
+      "label": "chromium-430",
+      "passed": true,
+      "checks": [
+        "full mixed flow",
+        "validation/focus",
+        "catalog/custom search",
+        "240 FPS advisory",
+        "GPU guidance",
+        "appearance",
+        "delivery",
+        "refresh",
+        "clipboard fallback",
+        "WhatsApp",
+        "privacy",
+        "review edits",
+        "conditional pruning",
+        "axe",
+        "overflow",
+        "motion"
+      ]
+    },
+    {
+      "label": "chromium-1440",
+      "passed": true,
+      "checks": [
+        "full mixed flow",
+        "validation/focus",
+        "catalog/custom search",
+        "240 FPS advisory",
+        "GPU guidance",
+        "appearance",
+        "delivery",
+        "refresh",
+        "clipboard fallback",
+        "WhatsApp",
+        "privacy",
+        "review edits",
+        "conditional pruning",
+        "axe",
+        "overflow",
+        "motion"
+      ]
+    },
+    {
+      "label": "chromium-edgecases-1",
+      "passed": true,
+      "checks": [
+        "assembly only",
+        "unknown budget/programs",
+        "storage denied",
+        "rapid navigation",
+        "keyboard viewport simulation",
+        "missing covers",
+        "expired draft"
+      ]
+    },
+    {
+      "label": "chromium-edgecases-2",
+      "passed": true,
+      "checks": [
+        "assembly only",
+        "unknown budget/programs",
+        "storage denied",
+        "rapid navigation",
+        "keyboard viewport simulation",
+        "missing covers",
+        "expired draft"
+      ]
+    },
+    {
+      "label": "chromium-edgecases-3",
+      "passed": true,
+      "checks": [
+        "assembly only",
+        "unknown budget/programs",
+        "storage denied",
+        "rapid navigation",
+        "keyboard viewport simulation",
+        "missing covers",
+        "expired draft"
+      ]
+    },
+    {
+      "label": "webkit-320",
+      "passed": true,
+      "checks": [
+        "full mixed flow",
+        "validation/focus",
+        "catalog/custom search",
+        "240 FPS advisory",
+        "GPU guidance",
+        "appearance",
+        "delivery",
+        "refresh",
+        "clipboard fallback",
+        "WhatsApp",
+        "privacy",
+        "review edits",
+        "conditional pruning",
+        "axe",
+        "overflow",
+        "motion"
+      ]
+    },
+    {
+      "label": "webkit-390",
+      "passed": true,
+      "checks": [
+        "full mixed flow",
+        "validation/focus",
+        "catalog/custom search",
+        "240 FPS advisory",
+        "GPU guidance",
+        "appearance",
+        "delivery",
+        "refresh",
+        "clipboard fallback",
+        "WhatsApp",
+        "privacy",
+        "review edits",
+        "conditional pruning",
+        "axe",
+        "overflow",
+        "motion"
+      ]
+    },
+    {
+      "label": "webkit-430",
+      "passed": true,
+      "checks": [
+        "full mixed flow",
+        "validation/focus",
+        "catalog/custom search",
+        "240 FPS advisory",
+        "GPU guidance",
+        "appearance",
+        "delivery",
+        "refresh",
+        "clipboard fallback",
+        "WhatsApp",
+        "privacy",
+        "review edits",
+        "conditional pruning",
+        "axe",
+        "overflow",
+        "motion"
+      ]
+    },
+    {
+      "label": "webkit-1440",
+      "passed": true,
+      "checks": [
+        "full mixed flow",
+        "validation/focus",
+        "catalog/custom search",
+        "240 FPS advisory",
+        "GPU guidance",
+        "appearance",
+        "delivery",
+        "refresh",
+        "clipboard fallback",
+        "WhatsApp",
+        "privacy",
+        "review edits",
+        "conditional pruning",
+        "axe",
+        "overflow",
+        "motion"
+      ]
+    },
+    {
+      "label": "webkit-edgecases-1",
+      "passed": true,
+      "checks": [
+        "assembly only",
+        "unknown budget/programs",
+        "storage denied",
+        "rapid navigation",
+        "keyboard viewport simulation",
+        "missing covers",
+        "expired draft"
+      ]
+    },
+    {
+      "label": "webkit-edgecases-2",
+      "passed": true,
+      "checks": [
+        "assembly only",
+        "unknown budget/programs",
+        "storage denied",
+        "rapid navigation",
+        "keyboard viewport simulation",
+        "missing covers",
+        "expired draft"
+      ]
+    },
+    {
+      "label": "webkit-edgecases-3",
+      "passed": true,
+      "checks": [
+        "assembly only",
+        "unknown budget/programs",
+        "storage denied",
+        "rapid navigation",
+        "keyboard viewport simulation",
+        "missing covers",
+        "expired draft"
+      ]
+    }
+  ]
+}

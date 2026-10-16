@@ -4,6 +4,7 @@ import { NOTEBOOK_QUOTE_PATH } from '@/data/notebook-quote'
 import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
 import { SMARTPHONE_QUOTE_PATH } from '@/data/smartphone-quote'
 import { COMPUTER_QUOTE_PATH } from '@/data/computer-quote'
+import { PC_BUILD_QUOTE_PATH } from '@/data/pc-build-quote'
 
 export const SITE_URL = 'https://master-prime.com'
 export const BUSINESS_ID = `${SITE_URL}/#localbusiness`
@@ -44,6 +45,12 @@ export const getPageMetadata = (pathname: string): PageMetadata => {
   const path = normalizePath(pathname)
   if (path === '/') return HOME_METADATA
   if (path === '/servicos') return SERVICES_METADATA
+  if (path === PC_BUILD_QUOTE_PATH) return {
+    title: 'Orçamento de PC gamer e para trabalho | Master Prime',
+    description: 'Planeje seu PC para jogos ou trabalho. Informe investimento, programas e peças que já possui, revise suas preferências e consulte a montagem pelo WhatsApp.',
+    canonical: `${SITE_URL}${PC_BUILD_QUOTE_PATH}`,
+    ogType: 'website',
+  }
   if (path === COMPUTER_QUOTE_PATH) return {
     title: 'Orçamento de computador e PC gamer | Master Prime Campo Grande',
     description: 'Informe os problemas do computador ou PC gamer e consulte diagnóstico, limpeza, sistema e upgrades pelo WhatsApp com a Master Prime em Campo Grande, RJ.',
@@ -186,6 +193,16 @@ export const getPageSchemas = (pathname: string) => {
   const path = normalizePath(pathname)
   const localBusiness = getLocalBusinessSchema()
 
+  if (path === PC_BUILD_QUOTE_PATH) return [{
+    '@context': 'https://schema.org',
+    '@graph': [
+      localBusiness,
+      { '@type': 'WebPage', '@id': `${SITE_URL}${PC_BUILD_QUOTE_PATH}#webpage`, url: `${SITE_URL}${PC_BUILD_QUOTE_PATH}`, name: 'Orçamento para montar seu PC', about: { '@id': `${SITE_URL}${PC_BUILD_QUOTE_PATH}#service` } },
+      { '@type': 'Service', '@id': `${SITE_URL}${PC_BUILD_QUOTE_PATH}#service`, name: 'Planejamento e montagem de PC', url: `${SITE_URL}${PC_BUILD_QUOTE_PATH}`, description: 'Consulta de planejamento e montagem de PC para jogos, trabalho ou uso misto, com peças a definir ou fornecidas pelo cliente. Configuração, compatibilidade, valores e condições dependem de avaliação.', provider: { '@id': BUSINESS_ID } },
+      breadcrumbSchema([{ name: 'Início', path: '/' }, { name: 'Serviços', path: '/servicos' }, { name: 'Montar seu PC', path: PC_BUILD_QUOTE_PATH }]),
+    ],
+  }]
+
   if (path === COMPUTER_QUOTE_PATH) {
     const services = ['/conserto-de-computador-campo-grande-rj', '/manutencao-de-pc-gamer'].map(servicePath => {
       const service = getServicePage(servicePath)!
@@ -294,6 +311,7 @@ export const PUBLIC_INDEXABLE_PATHS = [
   GAMING_QUOTE_PATH,
   SMARTPHONE_QUOTE_PATH,
   COMPUTER_QUOTE_PATH,
+  PC_BUILD_QUOTE_PATH,
   ...serviceSeoPages.map((page) => page.path),
   '/politica-de-privacidade',
 ]

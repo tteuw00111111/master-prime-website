@@ -1,4 +1,5 @@
 import { Hero } from '@/components/sections/Hero'
+import { QuoteEntry } from '@/components/sections/QuoteEntry'
 import { Services } from '@/components/sections/Services'
 import { HowItWorks } from '@/components/sections/HowItWorks'
 import { Testimonials } from '@/components/sections/Testimonials'
@@ -12,6 +13,8 @@ import { NotebookQuotePage } from '@/components/pages/NotebookQuotePage'
 import { GamingQuotePage } from '@/components/pages/GamingQuotePage'
 import { SmartphoneQuotePage } from '@/components/pages/SmartphoneQuotePage'
 import { ComputerQuotePage } from '@/components/pages/ComputerQuotePage'
+import { PcBuildQuotePage } from '@/components/pages/PcBuildQuotePage'
+import { PC_BUILD_QUOTE_PATH } from '@/data/pc-build-quote'
 import { COMPUTER_QUOTE_PATH } from '@/data/computer-quote'
 import { SMARTPHONE_QUOTE_PATH } from '@/data/smartphone-quote'
 import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
@@ -29,6 +32,7 @@ const HomePage = () => {
     <div className="App bg-black text-white overflow-x-hidden min-h-screen">
       <main>
         <Hero />
+        <QuoteEntry />
         
         {/* Shared Background for Services and HowItWorks */}
         <div className="relative bg-black">
@@ -87,6 +91,7 @@ function App({ pathname }: AppProps) {
   else if (path === GAMING_QUOTE_PATH) pageContent = <GamingQuotePage />
   else if (path === SMARTPHONE_QUOTE_PATH) pageContent = <SmartphoneQuotePage />
   else if (path === COMPUTER_QUOTE_PATH) pageContent = <ComputerQuotePage />
+  else if (path === PC_BUILD_QUOTE_PATH) pageContent = <PcBuildQuotePage />
   else if (servicePage) pageContent = <ServicePage page={servicePage} />
   else pageContent = <NotFoundPage />
 

@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 const root = resolve(import.meta.dirname, '..')
 const siteUrl = 'https://master-prime.com'
 const seoPages = JSON.parse(readFileSync(resolve(root, 'src/data/seo-pages.json'), 'utf8'))
-const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', '/orcamento/celular', '/orcamento/computador', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
+const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', '/orcamento/celular', '/orcamento/computador', '/orcamento/pc-gamer', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
 const expectedPathSet = new Set(expectedPaths)
 
 const read = (path) => readFileSync(resolve(root, path), 'utf8')
@@ -166,6 +166,17 @@ for (const page of seoPages.filter(page => ['/conserto-de-computador-campo-grand
   assert(html.includes(`href="/orcamento/computador${suffix}"`), `${page.path}: entrada contextual de computador ausente`)
   assert(html.includes('Falar pelo WhatsApp'), `${page.path}: contato direto ausente`)
 }
+
+const pcBuildReport = pageReports.find(page => page.pathname === '/orcamento/pc-gamer')
+assert(pcBuildReport.html.includes('montar seu PC.') && pcBuildReport.html.includes('Como você quer montar seu PC?'), 'montagem: primeira pergunta e H1 ausentes no HTML')
+assert(pcBuildReport.html.includes('<noscript>') && pcBuildReport.html.includes('solicitar seu orçamento pelo WhatsApp'), 'montagem: alternativa sem JavaScript ausente')
+assert(!pcBuildReport.html.includes('id="pcb-budget"'), 'montagem: perguntas posteriores não devem aparecer na primeira tela')
+const pcBuildNodes = pcBuildReport.schemas.flatMap(schema => schema['@graph'] ?? [])
+const pcBuildServiceId = `${siteUrl}/orcamento/pc-gamer#service`
+assert(pcBuildNodes.some(node => node['@type'] === 'Service' && node['@id'] === pcBuildServiceId && node.provider?.['@id'] === `${siteUrl}/#localbusiness`), 'montagem: Service/provider inconsistente')
+assert(pcBuildNodes.find(node => node['@type'] === 'WebPage')?.about?.['@id'] === pcBuildServiceId, 'montagem: WebPage sem vínculo ao serviço')
+assert(pcBuildNodes.find(node => node['@type'] === 'BreadcrumbList')?.itemListElement.map(item => item.name).join(' → ') === 'Início → Serviços → Montar seu PC', 'montagem: breadcrumb inconsistente')
+for (const path of ['/servicos', '/manutencao-de-pc-gamer', '/upgrade-de-pc-gamer']) assert(pageReports.find(page => page.pathname === path).html.includes('href="/orcamento/pc-gamer"'), `${path}: link natural para montagem ausente`)
 
 const robots = read('public/robots.txt')
 assert(robots.includes('User-agent: *') && robots.includes('Allow: /'), 'robots não permite páginas públicas')

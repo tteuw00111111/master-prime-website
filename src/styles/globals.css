@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+.home-quote-entry {
+  scroll-margin-top: 24px;
+}
+
+.home-quote-option {
+  transition: border-color 180ms ease-out, background-color 180ms ease-out, transform 180ms ease-out;
+}
+
+.home-quote-option:hover,
+.home-quote-option:focus-visible {
+  border-color: #ffd700;
+  background-color: #14120a;
+}
+
+.home-quote-option:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 4px;
+}
+
+.home-quote-option:active {
+  transform: scale(0.98);
+}
+
+.home-quote-arrow {
+  transition: transform 180ms ease-out;
+}
+
+.home-quote-option:hover .home-quote-arrow,
+.home-quote-option:focus-visible .home-quote-arrow {
+  transform: translateX(4px);
+}
+
 @theme inline {
   --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1 var(--delay, 0ms);
   @keyframes cell-ripple {

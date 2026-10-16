@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { Navigation } from './Navigation'
 import { Button } from '@/components/ui/Button'
-import { FaWhatsapp } from 'react-icons/fa'
-import { getWhatsAppQuoteUrl, trackWhatsAppQuote } from '@/utils/whatsapp'
+import { FiArrowRight } from 'react-icons/fi'
+import { HOME_QUOTE_HREF } from '@/data/quote-entry'
 import { mobileMenuAnimation, mobileMenuBackdrop } from '@/utils/animations'
 
 interface MobileMenuProps {
@@ -59,17 +59,14 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               {/* CTA Button */}
               <div className="pt-4 border-t border-gold/20">
                 <Button
-                  variant="whatsapp"
+                  variant="primary"
                   size="md"
-                  icon={FaWhatsapp}
-                  href={getWhatsAppQuoteUrl()}
-                  onClick={() => {
-                    trackWhatsAppQuote()
-                    onClose()
-                  }}
+                  icon={FiArrowRight}
+                  href={HOME_QUOTE_HREF}
+                  onClick={onClose}
                   className="w-full"
                 >
-                  Solicitar Atendimento
+                  Solicitar orçamento
                 </Button>
               </div>
             </div>

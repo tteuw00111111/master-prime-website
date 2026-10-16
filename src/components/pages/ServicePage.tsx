@@ -9,6 +9,7 @@ import { NOTEBOOK_QUOTE_PATH } from '@/data/notebook-quote'
 import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
 import { SMARTPHONE_QUOTE_PATH } from '@/data/smartphone-quote'
 import { COMPUTER_QUOTE_PATH } from '@/data/computer-quote'
+import { PC_BUILD_QUOTE_PATH } from '@/data/pc-build-quote'
 
 interface ServicePageProps {
   page: ServiceSeoPage
@@ -79,6 +80,7 @@ export const ServicePage = ({ page }: ServicePageProps) => {
                     Entender o diagnóstico
                   </a>
                 </div>
+                {isPcGamerPage && <p className="mt-6 text-base text-gray-300">Quer planejar um PC novo ou montar as peças que já tem? <a href={PC_BUILD_QUOTE_PATH} className="font-semibold text-gold underline underline-offset-4">Montar meu PC</a>.</p>}
               </div>
 
               <aside className="rounded-3xl border border-gold/20 bg-dark-card p-6" aria-label="Informações da Master Prime">

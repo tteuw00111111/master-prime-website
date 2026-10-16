@@ -6,7 +6,7 @@ Página pública `/orcamento/computador` para problemas de computadores desktop 
 
 Não há preço automático, prazo, promessa de diagnóstico, garantia nova, seleção de peças ou aprovação de compatibilidade. Informar que há arquivos a preservar não garante recuperação nem preservação; é um relato para a avaliação da equipe. O resumo usa linguagem de consulta e não autoriza uma intervenção.
 
-“Montar PC gamer” fica reservado somente na documentação de `ComputerQuoteIntent`, ao lado do único intent aceito, `repair`. Não há opção pública, rota de montagem, anúncio em schema ou coleta de configuração para montagem. A futura intenção `build` exige uma implementação própria de perguntas, validação, mensagens e restauração; os testes atuais comprovam sua rejeição.
+O contrato `ComputerQuoteIntent` deste fluxo continua aceitando somente `repair`. A intenção `build` não é exposta nem aceita nesta página; os testes comprovam sua rejeição. O planejamento e a montagem agora têm implementação independente em [`/orcamento/pc-gamer`](orcamento-pc-gamer.md), com perguntas, validação, mensagens e restauração próprios, sem migrar os rascunhos de reparo.
 
 ## Fluxo e interface
 

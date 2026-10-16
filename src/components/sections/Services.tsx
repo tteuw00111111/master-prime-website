@@ -1,8 +1,8 @@
-import { useMemo, useCallback, memo } from 'react'
-import { FaWhatsapp } from 'react-icons/fa'
+import { useMemo, memo } from 'react'
+import { FiArrowRight } from 'react-icons/fi'
 import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
-import { getWhatsAppServiceUrl, trackWhatsAppService } from '@/utils/whatsapp'
+import { QUOTE_DESTINATIONS } from '@/data/quote-entry'
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 
@@ -26,6 +26,7 @@ const SERVICES_DATA = [
     imageHeight: 732,
     color: 'rgba(82, 39, 255, 0.4)',
     href: '/conserto-de-computador-campo-grande-rj',
+    quoteHref: QUOTE_DESTINATIONS.computer,
   },
   {
     id: 2,
@@ -37,6 +38,7 @@ const SERVICES_DATA = [
     imageHeight: 559,
     color: 'rgba(0, 100, 255, 0.3)',
     href: '/conserto-de-videogame',
+    quoteHref: QUOTE_DESTINATIONS.console,
   },
   {
     id: 3,
@@ -48,6 +50,7 @@ const SERVICES_DATA = [
     imageHeight: 714,
     color: 'rgba(255, 215, 0, 0.2)',
     href: '/conserto-de-celular-campo-grande-rj',
+    quoteHref: QUOTE_DESTINATIONS.smartphone,
   },
   // Bottom Row
   {
@@ -60,6 +63,7 @@ const SERVICES_DATA = [
     imageHeight: 500,
     color: 'rgba(16, 124, 16, 0.3)',
     href: '/conserto-de-controle',
+    quoteHref: QUOTE_DESTINATIONS.controller,
   },
   {
     id: 5,
@@ -71,6 +75,7 @@ const SERVICES_DATA = [
     imageHeight: 1200,
     color: 'rgba(255, 50, 50, 0.3)',
     href: '/conserto-de-notebook-campo-grande-rj',
+    quoteHref: QUOTE_DESTINATIONS.notebook,
   },
   {
     id: 6,
@@ -82,6 +87,7 @@ const SERVICES_DATA = [
     imageHeight: 732,
     color: 'rgba(0, 255, 150, 0.2)',
     href: '/upgrade-de-pc-gamer',
+    quoteHref: QUOTE_DESTINATIONS.pcGamer,
   },
 ] as const;
 
@@ -93,17 +99,6 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
     background: `radial-gradient(circle at 50% 50%, ${service.color}, transparent 70%)`
   }), [service.color]);
 
-  // Memoize service name
-  const serviceName = useMemo(
-    () => `${service.titlePart1} ${service.titlePart2}`,
-    [service.titlePart1, service.titlePart2]
-  );
-
-  const whatsAppUrl = useMemo(() => getWhatsAppServiceUrl(serviceName), [serviceName]);
-
-  const handleWhatsAppClick = useCallback(() => {
-    trackWhatsAppService(serviceName);
-  }, [serviceName]);
   return (
     <CardContainer className="inter-var w-full h-full">
       <CardBody className="bg-[#050505] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] border-white/5 w-full h-auto rounded-[30px] p-6 border transition-colors duration-300">
@@ -164,14 +159,13 @@ const ServiceCard = memo(({ service }: { service: ServiceType }) => {
             className="mt-auto"
           >
             <Button
-              variant="whatsapp-outline"
+              variant="secondary"
               size="sm"
-              icon={FaWhatsapp}
-              href={whatsAppUrl}
-              onClick={handleWhatsAppClick}
-              className="rounded-full !px-6 border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white w-full md:w-auto"
+              icon={FiArrowRight}
+              href={service.quoteHref}
+              className="rounded-full !px-6 w-full md:w-auto"
             >
-              Solicitar Atendimento
+              Solicitar orçamento
             </Button>
           </CardItem>
         </div>

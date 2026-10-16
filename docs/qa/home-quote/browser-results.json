@@ -1,0 +1,79 @@
+[
+  {
+    "width": 320,
+    "layout": "passed",
+    "heroAnchor": "passed",
+    "keyboard": "passed",
+    "links": "7 selector + 6 service links",
+    "errors": []
+  },
+  {
+    "width": 390,
+    "layout": "passed",
+    "heroAnchor": "passed",
+    "keyboard": "passed",
+    "links": "7 selector + 6 service links",
+    "errors": []
+  },
+  {
+    "width": 768,
+    "layout": "passed",
+    "heroAnchor": "passed",
+    "keyboard": "passed",
+    "links": "7 selector + 6 service links",
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "layout": "passed",
+    "heroAnchor": "passed",
+    "keyboard": "passed",
+    "links": "7 selector + 6 service links",
+    "errors": []
+  },
+  {
+    "route": "/orcamento/celular",
+    "navigation": "passed",
+    "preset": "not applicable",
+    "prematureWhatsapp": false
+  },
+  {
+    "route": "/orcamento/notebook",
+    "navigation": "passed",
+    "preset": "not applicable",
+    "prematureWhatsapp": false
+  },
+  {
+    "route": "/orcamento/computador",
+    "navigation": "passed",
+    "preset": "not applicable",
+    "prematureWhatsapp": false
+  },
+  {
+    "route": "/orcamento/computador?tipo=pc-gamer",
+    "navigation": "passed",
+    "preset": "passed",
+    "prematureWhatsapp": false
+  },
+  {
+    "route": "/orcamento/videogame?aparelho=videogame",
+    "navigation": "passed",
+    "preset": "passed",
+    "prematureWhatsapp": false
+  },
+  {
+    "route": "/orcamento/videogame?aparelho=controle",
+    "navigation": "passed",
+    "preset": "passed",
+    "prematureWhatsapp": false
+  },
+  {
+    "route": "/orcamento/pc-gamer",
+    "navigation": "passed",
+    "preset": "not applicable",
+    "prematureWhatsapp": false
+  },
+  {
+    "javascriptDisabled": "selector and destination fallback passed"
+  }
+]

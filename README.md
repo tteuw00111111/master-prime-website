@@ -122,6 +122,8 @@ O build cria 33 documentos React pré-renderizados e preserva a política de pri
 
 A área `/orcamento/notebook` inicia o fluxo guiado de notebook e continua pelo WhatsApp. Inclui catálogo local pesquisável, sintomas, perguntas condicionais, consulta de retirada/entrega e revisão. A importação do Open Icecat é executada separadamente com `npm run catalog:import`; consulte [a documentação do orçamento](docs/orcamento-notebook.md) para configuração, limites e validação.
 
+A página `/orcamento/pc-gamer` reúne investimento, jogos/programas, peças existentes, preferências de hardware/visual e atendimento para uma consulta de montagem. Usa capas locais do IGDB e continua pelo WhatsApp após revisão. Veja [a documentação do planejador de PC](docs/orcamento-pc-gamer.md); a atualização opcional de capas é feita com `npm run catalog:games`, usando credenciais locais.
+
 A rota `/orcamento/videogame` atende videogame, controle ou ambos, com o mesmo fluxo visual de notebook. Inclui identificação PS4/PS5 e Xbox One/Series, sintomas por aparelho, rascunho independente e resumo combinado no WhatsApp. Veja [o fluxo e a validação de videogame/controle](docs/orcamento-videogame.md).
 
 Preview da build:

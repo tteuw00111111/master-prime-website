@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-10-16T15:47:21.056Z",
+  "reports": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "screen": "games",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "screen": "appearance",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "screen": "games",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "screen": "appearance",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 430,
+      "screen": "games",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 430,
+      "screen": "appearance",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "screen": "games",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "screen": "appearance",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "screen": "games",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "screen": "appearance",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "screen": "games",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "screen": "appearance",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 430,
+      "screen": "games",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 430,
+      "screen": "appearance",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "screen": "games",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "screen": "appearance",
+      "passed": true
+    }
+  ]
+}

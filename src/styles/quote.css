@@ -42,16 +42,16 @@ html:has(.quote-page), body:has(.quote-page) { overflow-x: clip; }
 .quote-step-fields { display: flex; flex-direction: column; gap: 22px; }
 /* Staggered entry for choice tiles; re-runs because each screen remounts. */
 @keyframes quote-item-in { from { opacity: 0; transform: translateY(12px); } }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > * { animation: quote-item-in .34s var(--quote-ease) backwards; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(2) { animation-delay: .035s; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(3) { animation-delay: .07s; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(4) { animation-delay: .105s; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(5) { animation-delay: .14s; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(6) { animation-delay: .175s; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(7) { animation-delay: .21s; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(8) { animation-delay: .245s; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(9) { animation-delay: .28s; }
-.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options) > :nth-child(n+10) { animation-delay: .315s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > * { animation: quote-item-in .34s var(--quote-ease) backwards; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(2) { animation-delay: .035s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(3) { animation-delay: .07s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(4) { animation-delay: .105s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(5) { animation-delay: .14s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(6) { animation-delay: .175s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(7) { animation-delay: .21s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(8) { animation-delay: .245s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(9) { animation-delay: .28s; }
+.quote-step :is(.quote-brands, .quote-issues, .quote-answers, .quote-delivery-options, .pcb-swatches, .pcb-catalog) > :nth-child(n+10) { animation-delay: .315s; }
 .quote-private { overflow-x: clip; }
 .quote-form fieldset { min-width: 0; }
 .quote-form fieldset:focus { outline: none; }

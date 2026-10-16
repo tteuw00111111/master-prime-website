@@ -5,14 +5,15 @@ import {
   FaGamepad,
   FaWater,
   FaWhatsapp,
+  FaClipboardList,
   FaBoxOpen,
-  FaDollarSign,
   FaMapMarkerAlt,
 } from 'react-icons/fa'
 import { TbTruckDelivery } from 'react-icons/tb'
 import { BiSupport } from 'react-icons/bi'
 import { IoShieldCheckmark } from 'react-icons/io5'
 import type { SiteConfig, TrustBadge, Service, Step, Testimonial, FAQItem, NavigationItem } from '@/types'
+import { HOME_QUOTE_HREF } from '@/data/quote-entry'
 
 export const SITE_CONFIG: SiteConfig = {
   name: 'Master Prime Assistência',
@@ -40,6 +41,7 @@ export const SITE_CONFIG: SiteConfig = {
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'Início', href: '/' },
   { name: 'Serviços', href: '/servicos' },
+  { name: 'Orçamento', href: HOME_QUOTE_HREF },
   { name: 'Como Funciona', href: '/#how-it-works' },
   { name: 'Clientes', href: '/#testimonials' },
   { name: 'Localização', href: '/#location' },
@@ -105,15 +107,15 @@ export const SERVICES: Service[] = [
 export const HOW_IT_WORKS: Step[] = [
   {
     step: 1,
-    title: 'Entre em Contato',
-    description: 'Informe pelo WhatsApp o aparelho, modelo, sintoma ou item que procura.',
-    icon: FaWhatsapp,
+    title: 'Comece pelo Site',
+    description: 'Escolha o aparelho e informe o modelo e o que precisa no formulário de orçamento.',
+    icon: FaClipboardList,
   },
   {
     step: 2,
-    title: 'Solicite Orçamento',
-    description: 'A equipe confirma o atendimento e a disponibilidade depois de receber os detalhes.',
-    icon: FaDollarSign,
+    title: 'Revise e Envie',
+    description: 'Confira seu pedido e continue no WhatsApp para consultar valores e condições com a equipe.',
+    icon: FaWhatsapp,
   },
   {
     step: 3,
