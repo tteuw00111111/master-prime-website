@@ -155,7 +155,7 @@ export const restoreQuoteDraft = (raw: string | null, now = Date.now()): QuoteDr
   } catch { return null }
 }
 
-export const trackQuoteEvent = (event: 'quote_started' | 'quote_step_completed' | 'quote_reviewed' | 'quote_whatsapp_click', step: QuoteStep, category: 'notebook' | 'videogame' = 'notebook') => {
+export const trackQuoteEvent = (event: 'quote_started' | 'quote_step_completed' | 'quote_reviewed' | 'quote_whatsapp_click', step: QuoteStep, category: 'notebook' | 'videogame' | 'computador' = 'notebook') => {
   // Deliberate allowlist: no message, href, brand/model, free text or location data.
   if (typeof window === 'undefined') return
   window.dataLayer = window.dataLayer || []

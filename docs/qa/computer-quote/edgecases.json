@@ -1,0 +1,100 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:4186",
+  "reports": [
+    {
+      "engine": "chromium",
+      "repetition": 1,
+      "status": "pass",
+      "checks": [
+        "identity editing",
+        "detail editing",
+        "shared upgrade retention and removal",
+        "skip preserves existing details",
+        "required selection after edit",
+        "progress and back navigation",
+        "rapid clicks",
+        "malformed/expired/build drafts rejected",
+        "simulated keyboard",
+        "200% zoom"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "repetition": 2,
+      "status": "pass",
+      "checks": [
+        "identity editing",
+        "detail editing",
+        "shared upgrade retention and removal",
+        "skip preserves existing details",
+        "required selection after edit",
+        "progress and back navigation",
+        "rapid clicks",
+        "malformed/expired/build drafts rejected"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "repetition": 3,
+      "status": "pass",
+      "checks": [
+        "identity editing",
+        "detail editing",
+        "shared upgrade retention and removal",
+        "skip preserves existing details",
+        "required selection after edit",
+        "progress and back navigation",
+        "rapid clicks",
+        "malformed/expired/build drafts rejected"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "repetition": 1,
+      "status": "pass",
+      "checks": [
+        "identity editing",
+        "detail editing",
+        "shared upgrade retention and removal",
+        "skip preserves existing details",
+        "required selection after edit",
+        "progress and back navigation",
+        "rapid clicks",
+        "malformed/expired/build drafts rejected",
+        "simulated keyboard",
+        "200% zoom"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "repetition": 2,
+      "status": "pass",
+      "checks": [
+        "identity editing",
+        "detail editing",
+        "shared upgrade retention and removal",
+        "skip preserves existing details",
+        "required selection after edit",
+        "progress and back navigation",
+        "rapid clicks",
+        "malformed/expired/build drafts rejected"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "repetition": 3,
+      "status": "pass",
+      "checks": [
+        "identity editing",
+        "detail editing",
+        "shared upgrade retention and removal",
+        "skip preserves existing details",
+        "required selection after edit",
+        "progress and back navigation",
+        "rapid clicks",
+        "malformed/expired/build drafts rejected"
+      ]
+    }
+  ]
+}

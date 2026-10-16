@@ -2,6 +2,7 @@ import seoPagesData from '@/data/seo-pages.json'
 import type { ServiceSeoPage } from '@/types/seo'
 import { NOTEBOOK_QUOTE_PATH } from '@/data/notebook-quote'
 import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
+import { COMPUTER_QUOTE_PATH } from '@/data/computer-quote'
 
 export const SITE_URL = 'https://master-prime.com'
 export const BUSINESS_ID = `${SITE_URL}/#localbusiness`
@@ -42,6 +43,12 @@ export const getPageMetadata = (pathname: string): PageMetadata => {
   const path = normalizePath(pathname)
   if (path === '/') return HOME_METADATA
   if (path === '/servicos') return SERVICES_METADATA
+  if (path === COMPUTER_QUOTE_PATH) return {
+    title: 'Orçamento de computador e PC gamer | Master Prime Campo Grande',
+    description: 'Informe os problemas do computador ou PC gamer e consulte diagnóstico, limpeza, sistema e upgrades pelo WhatsApp com a Master Prime em Campo Grande, RJ.',
+    canonical: `${SITE_URL}${COMPUTER_QUOTE_PATH}`,
+    ogType: 'website',
+  }
   if (path === GAMING_QUOTE_PATH) return {
     title: 'Orçamento de videogame e controle | Master Prime Campo Grande',
     description: 'Informe os modelos e sintomas do videogame, controle ou dos dois e continue pelo WhatsApp. Consulte avaliação e atendimento com a Master Prime em Campo Grande, RJ.',
@@ -172,6 +179,22 @@ export const getPageSchemas = (pathname: string) => {
   const path = normalizePath(pathname)
   const localBusiness = getLocalBusinessSchema()
 
+  if (path === COMPUTER_QUOTE_PATH) {
+    const services = ['/conserto-de-computador-campo-grande-rj', '/manutencao-de-pc-gamer'].map(servicePath => {
+      const service = getServicePage(servicePath)!
+      return { '@type': 'Service', '@id': `${SITE_URL}${servicePath}#service`, name: service.title, url: `${SITE_URL}${servicePath}`, provider: { '@id': BUSINESS_ID } }
+    })
+    return [{
+      '@context': 'https://schema.org',
+      '@graph': [
+        localBusiness,
+        { '@type': 'WebPage', '@id': `${SITE_URL}${COMPUTER_QUOTE_PATH}#webpage`, url: `${SITE_URL}${COMPUTER_QUOTE_PATH}`, name: 'Orçamento de computador', about: services.map(service => ({ '@id': service['@id'] })) },
+        ...services,
+        breadcrumbSchema([{ name: 'Início', path: '/' }, { name: 'Serviços', path: '/servicos' }, { name: 'Orçamento de computador', path: COMPUTER_QUOTE_PATH }]),
+      ],
+    }]
+  }
+
   if (path === GAMING_QUOTE_PATH) {
     const services = ['/conserto-de-videogame', '/conserto-de-controle'].map(servicePath => {
       const service = getServicePage(servicePath)!
@@ -252,6 +275,7 @@ export const PUBLIC_INDEXABLE_PATHS = [
   '/servicos',
   NOTEBOOK_QUOTE_PATH,
   GAMING_QUOTE_PATH,
+  COMPUTER_QUOTE_PATH,
   ...serviceSeoPages.map((page) => page.path),
   '/politica-de-privacidade',
 ]

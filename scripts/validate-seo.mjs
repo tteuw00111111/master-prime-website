@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 const root = resolve(import.meta.dirname, '..')
 const siteUrl = 'https://master-prime.com'
 const seoPages = JSON.parse(readFileSync(resolve(root, 'src/data/seo-pages.json'), 'utf8'))
-const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
+const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', '/orcamento/computador', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
 const expectedPathSet = new Set(expectedPaths)
 
 const read = (path) => readFileSync(resolve(root, path), 'utf8')
@@ -77,7 +77,7 @@ for (const pathname of expectedPaths) {
     }
   }
 
-  if (pathname !== '/' && pathname !== '/servicos' && pathname !== '/orcamento/notebook' && pathname !== '/orcamento/videogame' && pathname !== '/politica-de-privacidade') {
+  if (pathname !== '/' && pathname !== '/servicos' && !pathname.startsWith('/orcamento/') && pathname !== '/politica-de-privacidade') {
     const visibleText = html
       .replace(/<script[\s\S]*?<\/script>/gi, ' ')
       .replace(/<style[\s\S]*?<\/style>/gi, ' ')
@@ -135,6 +135,21 @@ for (const page of seoPages.filter((page) => page.lastModified)) {
   assert(entry?.includes(`<lastmod>${page.lastModified}</lastmod>`), `${page.path}: lastmod ausente ou inconsistente`)
 }
 assert(!/presell|inicio/i.test(sitemap), 'sitemap contém URL redirecionada')
+
+const computerReport = pageReports.find(page => page.pathname === '/orcamento/computador')
+assert(computerReport.html.includes('Qual é o seu computador?') && computerReport.html.includes('Tipo de computador'), 'computador: pergunta inicial não pré-renderizada')
+assert(computerReport.html.includes('<noscript>') && computerReport.html.includes('solicitar seu orçamento pelo WhatsApp'), 'computador: contato sem JavaScript ausente')
+assert(!computerReport.html.includes('Montar PC gamer'), 'computador: montagem futura exposta')
+const computerNodes = computerReport.schemas.flatMap(schema => schema['@graph'] ?? [])
+const computerServices = computerNodes.filter(node => node['@type'] === 'Service')
+assert(computerServices.length === 2 && computerServices.every(service => service.provider?.['@id'] === `${siteUrl}/#localbusiness`), 'computador: vínculos dos serviços incorretos')
+assert(computerNodes.find(node => node['@type'] === 'WebPage')?.about.length === 2, 'computador: WebPage sem os dois serviços')
+for (const page of seoPages.filter(page => ['/conserto-de-computador-campo-grande-rj', '/manutencao-de-pc-gamer'].includes(page.clusterPath))) {
+  const html = pageReports.find(report => report.pathname === page.path).html
+  const suffix = page.clusterPath === '/manutencao-de-pc-gamer' ? '?tipo=pc-gamer' : ''
+  assert(html.includes(`href="/orcamento/computador${suffix}"`), `${page.path}: entrada contextual de computador ausente`)
+  assert(html.includes('Falar pelo WhatsApp'), `${page.path}: contato direto ausente`)
+}
 
 const robots = read('public/robots.txt')
 assert(robots.includes('User-agent: *') && robots.includes('Allow: /'), 'robots não permite páginas públicas')

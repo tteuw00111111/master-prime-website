@@ -85,6 +85,7 @@ const issueVisuals: Record<string, { icon: IconType; tone: string }> = {
   buttons: { icon: LuGamepad2, tone: 'mint' },
   triggers: { icon: LuGamepad2, tone: 'violet' },
   connection: { icon: LuWifi, tone: 'sky' },
+  system: { icon: LuGauge, tone: 'violet' },
   hall: { icon: LuGamepad2, tone: 'mint' },
 }
 

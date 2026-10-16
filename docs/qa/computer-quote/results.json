@@ -1,0 +1,254 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:4186",
+  "reports": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "reducedMotion": true,
+      "status": "pass",
+      "checks": [
+        "full journey",
+        "validation focus",
+        "optional hardware",
+        "multiple requests",
+        "shared upgrade question",
+        "draft and edit restoration",
+        "scoped edits",
+        "obsolete answers removed",
+        "pickup and store",
+        "copy success and fallback",
+        "WhatsApp intercepted",
+        "private tracking",
+        "motion",
+        "axe",
+        "no overflow"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "full journey",
+        "validation focus",
+        "optional hardware",
+        "multiple requests",
+        "shared upgrade question",
+        "draft and edit restoration",
+        "scoped edits",
+        "obsolete answers removed",
+        "pickup and store",
+        "copy success and fallback",
+        "WhatsApp intercepted",
+        "private tracking",
+        "motion",
+        "axe",
+        "no overflow"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 430,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "full journey",
+        "validation focus",
+        "optional hardware",
+        "multiple requests",
+        "shared upgrade question",
+        "draft and edit restoration",
+        "scoped edits",
+        "obsolete answers removed",
+        "pickup and store",
+        "copy success and fallback",
+        "WhatsApp intercepted",
+        "private tracking",
+        "motion",
+        "axe",
+        "no overflow"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "full journey",
+        "validation focus",
+        "optional hardware",
+        "multiple requests",
+        "shared upgrade question",
+        "draft and edit restoration",
+        "scoped edits",
+        "obsolete answers removed",
+        "pickup and store",
+        "copy success and fallback",
+        "WhatsApp intercepted",
+        "private tracking",
+        "motion",
+        "axe",
+        "no overflow"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "status": "pass",
+      "checks": [
+        "real entry links",
+        "PC gamer preset",
+        "saved draft wins preset",
+        "draft key isolation",
+        "keyboard unknown kind",
+        "request-only path"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "status": "pass",
+      "checks": [
+        "unavailable storage",
+        "preset without storage",
+        "rapid transition clicks",
+        "WhatsApp without persistence"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "status": "pass",
+      "unknownPreviewStatus": 200,
+      "checks": [
+        "five clean/parameterized routes without JavaScript",
+        "legacy redirect unchanged",
+        "unknown route renders existing not-found page"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "reducedMotion": true,
+      "status": "pass",
+      "checks": [
+        "full journey",
+        "validation focus",
+        "optional hardware",
+        "multiple requests",
+        "shared upgrade question",
+        "draft and edit restoration",
+        "scoped edits",
+        "obsolete answers removed",
+        "pickup and store",
+        "copy success and fallback",
+        "WhatsApp intercepted",
+        "private tracking",
+        "motion",
+        "axe",
+        "no overflow"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "full journey",
+        "validation focus",
+        "optional hardware",
+        "multiple requests",
+        "shared upgrade question",
+        "draft and edit restoration",
+        "scoped edits",
+        "obsolete answers removed",
+        "pickup and store",
+        "copy success and fallback",
+        "WhatsApp intercepted",
+        "private tracking",
+        "motion",
+        "axe",
+        "no overflow"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 430,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "full journey",
+        "validation focus",
+        "optional hardware",
+        "multiple requests",
+        "shared upgrade question",
+        "draft and edit restoration",
+        "scoped edits",
+        "obsolete answers removed",
+        "pickup and store",
+        "copy success and fallback",
+        "WhatsApp intercepted",
+        "private tracking",
+        "motion",
+        "axe",
+        "no overflow"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "reducedMotion": false,
+      "status": "pass",
+      "checks": [
+        "full journey",
+        "validation focus",
+        "optional hardware",
+        "multiple requests",
+        "shared upgrade question",
+        "draft and edit restoration",
+        "scoped edits",
+        "obsolete answers removed",
+        "pickup and store",
+        "copy success and fallback",
+        "WhatsApp intercepted",
+        "private tracking",
+        "motion",
+        "axe",
+        "no overflow"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "status": "pass",
+      "checks": [
+        "real entry links",
+        "PC gamer preset",
+        "saved draft wins preset",
+        "draft key isolation",
+        "keyboard unknown kind",
+        "request-only path"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "status": "pass",
+      "checks": [
+        "unavailable storage",
+        "preset without storage",
+        "rapid transition clicks",
+        "WhatsApp without persistence"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "status": "pass",
+      "unknownPreviewStatus": 200,
+      "checks": [
+        "five clean/parameterized routes without JavaScript",
+        "legacy redirect unchanged",
+        "unknown route renders existing not-found page"
+      ]
+    }
+  ]
+}

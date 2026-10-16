@@ -5,11 +5,12 @@ import type { IncomingMessage, ServerResponse } from 'node:http'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { NOTEBOOK_QUOTE_PATH } from './src/data/notebook-quote'
 import { GAMING_QUOTE_PATH } from './src/data/gaming-quote'
+import { COMPUTER_QUOTE_PATH } from './src/data/computer-quote'
 import serviceSeoPages from './src/data/seo-pages.json'
 
 // Keep the temporary category redirect identical in development and preview.
 const quoteRedirect = (): Plugin => {
-  const prerenderedPaths = new Set([NOTEBOOK_QUOTE_PATH, GAMING_QUOTE_PATH, '/servicos', '/politica-de-privacidade', ...serviceSeoPages.map(page => page.path)])
+  const prerenderedPaths = new Set([NOTEBOOK_QUOTE_PATH, GAMING_QUOTE_PATH, COMPUTER_QUOTE_PATH, '/servicos', '/politica-de-privacidade', ...serviceSeoPages.map(page => page.path)])
   const redirect = (request: IncomingMessage, response: ServerResponse, next: () => void) => {
     const url = new URL(request.url ?? '/', 'http://localhost')
     if (!['/orcamento', '/orcamento/', '/orcamento/index.html'].includes(url.pathname)) return next()

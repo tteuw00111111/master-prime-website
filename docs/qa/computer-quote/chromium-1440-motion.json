@@ -1,0 +1,130 @@
+{
+  "reduced": false,
+  "frames": [
+    {
+      "screen": "review",
+      "x": -0.506903,
+      "opacity": 0.991589
+    },
+    {
+      "screen": "review",
+      "x": -1.24731,
+      "opacity": 0.939464
+    },
+    {
+      "screen": "review",
+      "x": -3.07571,
+      "opacity": 0.85035
+    },
+    {
+      "screen": "review",
+      "x": -5.49816,
+      "opacity": 0.732776
+    },
+    {
+      "screen": "review",
+      "x": -8.21413,
+      "opacity": 0.592813
+    },
+    {
+      "screen": "review",
+      "x": -11.4965,
+      "opacity": 0.431996
+    },
+    {
+      "screen": "review",
+      "x": -14.9467,
+      "opacity": 0.25397
+    },
+    {
+      "screen": "review",
+      "x": -18.9772,
+      "opacity": 0.0561957
+    },
+    {
+      "screen": "review",
+      "x": -20,
+      "opacity": 0
+    },
+    {
+      "screen": "review",
+      "x": 21.504,
+      "opacity": 0.220063
+    },
+    {
+      "screen": "review",
+      "x": 14.8701,
+      "opacity": 0.467631
+    },
+    {
+      "screen": "review",
+      "x": 9.6221,
+      "opacity": 0.652472
+    },
+    {
+      "screen": "review",
+      "x": 6.05834,
+      "opacity": 0.778802
+    },
+    {
+      "screen": "review",
+      "x": 3.84394,
+      "opacity": 0.862393
+    },
+    {
+      "screen": "review",
+      "x": 2.31736,
+      "opacity": 0.915878
+    },
+    {
+      "screen": "review",
+      "x": 1.36145,
+      "opacity": 0.950098
+    },
+    {
+      "screen": "review",
+      "x": 0.793899,
+      "opacity": 0.971532
+    },
+    {
+      "screen": "review",
+      "x": 0.423552,
+      "opacity": 0.984663
+    },
+    {
+      "screen": "review",
+      "x": 0.206278,
+      "opacity": 0.992379
+    },
+    {
+      "screen": "review",
+      "x": 0.0920301,
+      "opacity": 0.996697
+    },
+    {
+      "screen": "review",
+      "x": 0.0312784,
+      "opacity": 0.998857
+    },
+    {
+      "screen": "review",
+      "x": 0.0064431,
+      "opacity": 0.999748
+    },
+    {
+      "screen": "review",
+      "x": 0.0003953,
+      "opacity": 0.999985
+    },
+    {
+      "screen": "review",
+      "x": 0,
+      "opacity": 1
+    },
+    {
+      "screen": "review",
+      "x": 0,
+      "opacity": 1
+    }
+  ]
+}
