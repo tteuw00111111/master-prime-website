@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { FiCheck, FiChevronDown, FiCode, FiGrid, FiHelpCircle, FiMapPin, FiPlus, FiSearch, FiTruck, FiX } from 'react-icons/fi'
@@ -87,6 +87,15 @@ export const PcBuildDisclosure = ({ title, children, reducedMotion }: { title: s
 
 export const PcBuildCasePreview = ({ color, lighting }: { color: PcBuildQuoteDraft['caseColor']; lighting: PcBuildQuoteDraft['lighting'] }) => {
   const reducedMotion = useReducedMotion() === true
+  const [paused, setPaused] = useState(false)
+  const stageRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const node = stageRef.current
+    if (!node || typeof IntersectionObserver === 'undefined') return
+    const observer = new IntersectionObserver(([entry]) => setPaused(!entry.isIntersecting), { rootMargin: '80px' })
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
   const white = color === 'white'
   const rgb = lighting === 'rgb'
   const fan = (x: number, y: number, radius: number, speed: string) => <g transform={`translate(${x} ${y})`}>
@@ -102,7 +111,7 @@ export const PcBuildCasePreview = ({ color, lighting }: { color: PcBuildQuoteDra
   const colorText = white ? 'Gabinete branco' : color === 'black' ? 'Gabinete preto' : color === 'any' ? 'Gabinete em cor a definir' : ''
   const lightText = rgb ? 'com RGB' : lighting === 'none' ? 'sem iluminação' : lighting === 'any' ? 'com iluminação a definir' : ''
   const caption = colorText && lightText ? `${colorText}, ${lightText}` : colorText || lightText ? [colorText, lightText].filter(Boolean).join(', ') : ''
-  return <div className={`pcb-case-preview ${white ? 'pcb-case-white' : ''} ${rgb ? 'pcb-case-rgb' : ''}`} role="img" aria-label={caption ? `Preferência visual: ${caption}` : 'Pré-visualização do gabinete'}>
+  return <div ref={stageRef} className={`pcb-case-preview ${white ? 'pcb-case-white' : ''} ${rgb ? 'pcb-case-rgb' : ''} ${paused ? 'pcb-paused' : ''}`} role="img" aria-label={caption ? `Preferência visual: ${caption}` : 'Pré-visualização do gabinete'}>
     <svg viewBox="35 5 290 265" aria-hidden="true"><defs>
       <linearGradient id="pcb-rgb" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#c5a2ff" /><stop offset=".45" stopColor="#90dce0" /><stop offset="1" stopColor="#f4afb6" /></linearGradient>
       <linearGradient id="pcb-shell" x1="0" y1="0" x2=".9" y2="1"><stop stopColor={white ? '#fbfcfd' : '#77838d'} /><stop offset=".38" stopColor={white ? '#dde5ea' : '#3c4752'} /><stop offset=".72" stopColor={white ? '#bcc8d1' : '#1f2830'} /><stop offset="1" stopColor={white ? '#93a4b1' : '#10161c'} /></linearGradient>

@@ -64,6 +64,8 @@
 @keyframes pcb-halo { 0%, 100% { opacity: .3; } 50% { opacity: .62; } }
 .pcb-fan-blades { transform-box: fill-box; transform-origin: center; animation: pcb-fan-spin var(--fan-speed, 1.7s) linear infinite; }
 @keyframes pcb-fan-spin { to { transform: rotate(360deg); } }
+.pcb-case-preview { contain: layout paint; }
+.pcb-case-preview.pcb-paused :is(.pcb-fan-blades, .pcb-glass-sweep, .pcb-rgb-halo), .pcb-case-preview.pcb-paused::after { animation-play-state: paused; }
 .pcb-glass-sweep { animation: pcb-sweep 5.8s ease-in-out infinite; }
 @keyframes pcb-sweep { 0% { transform: translateX(0) skewX(-8deg); } 55%, 100% { transform: translateX(230px) skewX(-8deg); } }
 .pcb-case-caption { position: relative; z-index: 1; margin: -4px 0 8px; font-size: 13px; line-height: 1.5; color: #cfc1ea; display: inline-flex; align-items: center; gap: 7px; padding: 4px 14px; border-radius: 999px; background: #ffffff08; border: 1px solid #ffffff14; box-shadow: 0 4px 12px #00000045; }
