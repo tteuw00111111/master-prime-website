@@ -11,7 +11,7 @@ import { buildComputerQuoteMessage, getComputerIssues, getComputerKindLabel, get
 import { COMPUTER_EDIT_SCOPES, getFirstIncompleteComputerScreen, getComputerScreenErrors, getComputerScreens, getComputerScreenStep, isComputerScreenInScope, restoreComputerScreen } from '@/utils/computer-quote-flow'
 import type { ComputerEditScope, ComputerQuoteErrors, ComputerQuoteField, ComputerQuoteScreen } from '@/utils/computer-quote-flow'
 import { getQuoteAnswerValues, toggleQuoteAnswer, trackQuoteEvent } from '@/utils/quote'
-import { getWhatsAppMessageUrl, getWhatsAppQuoteUrl } from '@/utils/whatsapp'
+import { getWhatsAppMessageUrl, getWhatsAppQuoteUrl, WHATSAPP_PHONE_PC_GAMER } from '@/utils/whatsapp'
 
 const fieldTargets: Record<ComputerQuoteField, string> = { kind: 'quote-kind', issues: 'quote-issues', delivery: 'quote-delivery', neighborhood: 'quote-neighborhood', city: 'quote-city' }
 
@@ -164,7 +164,7 @@ export const ComputerQuotePage = () => {
     const incomplete = getFirstIncompleteComputerScreen(draft)
     if (incomplete) { goToScreen(incomplete, getComputerScreenErrors(draft, incomplete)); return }
     trackQuoteEvent('quote_whatsapp_click', 4, 'computador')
-    window.open(getWhatsAppMessageUrl(buildComputerQuoteMessage(draft)), '_blank', 'noopener,noreferrer')
+    window.open(getWhatsAppMessageUrl(buildComputerQuoteMessage(draft), draft.kind === 'pc-gamer' ? WHATSAPP_PHONE_PC_GAMER : undefined), '_blank', 'noopener,noreferrer')
     setHandoff(true)
   }
   const copySummary = async () => {

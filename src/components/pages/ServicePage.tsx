@@ -4,7 +4,7 @@ import { InnerHeader } from '@/components/layout/InnerHeader'
 import { ExperienceImage } from '@/components/seo/ExperienceImage'
 import type { ServiceSeoPage } from '@/types/seo'
 import { getBreadcrumbs, MAPS_URL, serviceSeoPages } from '@/utils/seo'
-import { getWhatsAppServiceUrl, trackWhatsAppService } from '@/utils/whatsapp'
+import { getWhatsAppServiceUrl, trackWhatsAppService, WHATSAPP_PHONE_PC_GAMER } from '@/utils/whatsapp'
 import { NOTEBOOK_QUOTE_PATH } from '@/data/notebook-quote'
 import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
 import { SMARTPHONE_QUOTE_PATH } from '@/data/smartphone-quote'
@@ -29,12 +29,12 @@ export const ServicePage = ({ page }: ServicePageProps) => {
   const relatedPages = page.related
     .map((id) => serviceSeoPages.find((candidate) => candidate.id === id))
     .filter((candidate): candidate is ServiceSeoPage => Boolean(candidate))
-  const whatsappUrl = getWhatsAppServiceUrl(page.title)
   const isNotebookPage = page.clusterPath === '/conserto-de-notebook-campo-grande-rj'
   const isControllerPage = page.clusterPath === '/conserto-de-controle'
   const isGamingPage = isControllerPage || page.clusterPath === '/conserto-de-videogame'
   const isSmartphonePage = page.clusterPath === '/conserto-de-celular-campo-grande-rj'
   const isPcGamerPage = page.clusterPath === '/manutencao-de-pc-gamer'
+  const whatsappUrl = getWhatsAppServiceUrl(page.title, isPcGamerPage ? WHATSAPP_PHONE_PC_GAMER : undefined)
   const isComputerPage = isPcGamerPage || page.clusterPath === '/conserto-de-computador-campo-grande-rj'
   const quotePath = isNotebookPage ? NOTEBOOK_QUOTE_PATH : isGamingPage ? `${GAMING_QUOTE_PATH}?aparelho=${isControllerPage ? 'controle' : 'videogame'}` : isSmartphonePage ? SMARTPHONE_QUOTE_PATH : isComputerPage ? `${COMPUTER_QUOTE_PATH}${isPcGamerPage ? '?tipo=pc-gamer' : ''}` : null
 

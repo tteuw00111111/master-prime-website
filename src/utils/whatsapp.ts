@@ -15,11 +15,13 @@ interface WhatsAppClickEvent {
 }
 
 const WHATSAPP_PHONE = '5521967635340'
+// Dedicated service line for PC-gamer inquiries (build quotes and PC-gamer pages).
+export const WHATSAPP_PHONE_PC_GAMER = '5521996613988'
 const WHATSAPP_API_BASE = 'https://api.whatsapp.com/send/'
 
 // Pure URL builder for the guided quote. Tracking must never receive its message.
-export const getWhatsAppMessageUrl = (message: string): string =>
-  `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`
+export const getWhatsAppMessageUrl = (message: string, phone = WHATSAPP_PHONE): string =>
+  `${WHATSAPP_API_BASE}?phone=${phone}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`
 
 const pushWhatsAppEvent = (
   action: WhatsAppClickEvent['whatsapp_action'],
@@ -111,16 +113,16 @@ export const openWhatsAppWithMessage = (message: string): void => {
 }
 
 // URL generators (return URLs without opening)
-export const getWhatsAppQuoteUrl = (): string => {
+export const getWhatsAppQuoteUrl = (phone = WHATSAPP_PHONE): string => {
   const message = 'Olá! Vim do site e quero solicitar um orçamento'
   const encodedMessage = encodeURIComponent(message)
-  return `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
+  return `${WHATSAPP_API_BASE}?phone=${phone}&text=${encodedMessage}&type=phone_number&app_absent=0`
 }
 
-export const getWhatsAppServiceUrl = (serviceName: string): string => {
+export const getWhatsAppServiceUrl = (serviceName: string, phone = WHATSAPP_PHONE): string => {
   const message = `Olá! Vim do site e quero orçamento para ${serviceName}`
   const encodedMessage = encodeURIComponent(message)
-  return `${WHATSAPP_API_BASE}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}&type=phone_number&app_absent=0`
+  return `${WHATSAPP_API_BASE}?phone=${phone}&text=${encodedMessage}&type=phone_number&app_absent=0`
 }
 
 export const getWhatsAppVisitUrl = (): string => {
