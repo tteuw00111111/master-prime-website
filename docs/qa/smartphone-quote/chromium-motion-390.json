@@ -1,0 +1,612 @@
+[
+  {
+    "screen": "review",
+    "x": -5.81842,
+    "opacity": 0.717055
+  },
+  {
+    "screen": "review",
+    "x": -8.57609,
+    "opacity": 0.573644
+  },
+  {
+    "screen": "review",
+    "x": -11.9157,
+    "opacity": 0.411489
+  },
+  {
+    "screen": "review",
+    "x": -15.6295,
+    "opacity": 0.230178
+  },
+  {
+    "screen": "review",
+    "x": -19.483,
+    "opacity": 0.0297099
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 21.504,
+    "opacity": 0.208298
+  },
+  {
+    "screen": "review",
+    "x": 14.8701,
+    "opacity": 0.459788
+  },
+  {
+    "screen": "review",
+    "x": 9.88608,
+    "opacity": 0.645974
+  },
+  {
+    "screen": "review",
+    "x": 6.22241,
+    "opacity": 0.775078
+  },
+  {
+    "screen": "review",
+    "x": 3.84394,
+    "opacity": 0.859574
+  },
+  {
+    "screen": "review",
+    "x": 2.38817,
+    "opacity": 0.914333
+  },
+  {
+    "screen": "review",
+    "x": 1.40563,
+    "opacity": 0.949123
+  },
+  {
+    "screen": "review",
+    "x": 0.793899,
+    "opacity": 0.970927
+  },
+  {
+    "screen": "review",
+    "x": 0.438783,
+    "opacity": 0.984298
+  },
+  {
+    "screen": "review",
+    "x": 0.215736,
+    "opacity": 0.992169
+  },
+  {
+    "screen": "review",
+    "x": 0.0920301,
+    "opacity": 0.996586
+  },
+  {
+    "screen": "review",
+    "x": 0.0335386,
+    "opacity": 0.998797
+  },
+  {
+    "screen": "review",
+    "x": 0.0072443,
+    "opacity": 0.999727
+  },
+  {
+    "screen": "review",
+    "x": 0.0003953,
+    "opacity": 0.999983
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 0.392773,
+    "opacity": 0.983469
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 1.61552,
+    "opacity": 0.921571
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 3.4666,
+    "opacity": 0.825874
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 5.98034,
+    "opacity": 0.703436
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 8.95434,
+    "opacity": 0.557898
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 12.117,
+    "opacity": 0.39281
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 15.8499,
+    "opacity": 0.210705
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 20,
+    "opacity": 0.00785525
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 20,
+    "opacity": 0
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -28,
+    "opacity": 0
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -21.0599,
+    "opacity": 0.489392
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -14.1556,
+    "opacity": 0.666941
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -9.12774,
+    "opacity": 0.789053
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -5.89719,
+    "opacity": 0.868644
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -3.62974,
+    "opacity": 0.920122
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -2.17996,
+    "opacity": 0.952773
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -1.3182,
+    "opacity": 0.973189
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -0.741695,
+    "opacity": 0.985602
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -0.389392,
+    "opacity": 0.992918
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -0.1971,
+    "opacity": 0.996981
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -0.0824123,
+    "opacity": 0.998986
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -0.0266681,
+    "opacity": 0.999791
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -0.0058465,
+    "opacity": 0.999991
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": -0.0002165,
+    "opacity": 0
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": -0.340835,
+    "opacity": 0.983306
+  },
+  {
+    "screen": "review",
+    "x": -1.61552,
+    "opacity": 0.921571
+  },
+  {
+    "screen": "review",
+    "x": -3.60448,
+    "opacity": 0.825211
+  },
+  {
+    "screen": "review",
+    "x": -5.98034,
+    "opacity": 0.701819
+  },
+  {
+    "screen": "review",
+    "x": -8.95434,
+    "opacity": 0.556966
+  },
+  {
+    "screen": "review",
+    "x": -12.3318,
+    "opacity": 0.391767
+  },
+  {
+    "screen": "review",
+    "x": -15.8499,
+    "opacity": 0.208401
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0.00655371
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 28,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 20.5886,
+    "opacity": 0.488131
+  },
+  {
+    "screen": "review",
+    "x": 14.1556,
+    "opacity": 0.666941
+  },
+  {
+    "screen": "review",
+    "x": 9.12774,
+    "opacity": 0.788462
+  },
+  {
+    "screen": "review",
+    "x": 5.89719,
+    "opacity": 0.868644
+  },
+  {
+    "screen": "review",
+    "x": 3.62974,
+    "opacity": 0.920122
+  },
+  {
+    "screen": "review",
+    "x": 2.17996,
+    "opacity": 0.952619
+  },
+  {
+    "screen": "review",
+    "x": 1.3182,
+    "opacity": 0.973094
+  },
+  {
+    "screen": "review",
+    "x": 0.741695,
+    "opacity": 0.985602
+  },
+  {
+    "screen": "review",
+    "x": 0.389392,
+    "opacity": 0.992951
+  },
+  {
+    "screen": "review",
+    "x": 0.1971,
+    "opacity": 0.996998
+  },
+  {
+    "screen": "review",
+    "x": 0.0824123,
+    "opacity": 0.998986
+  },
+  {
+    "screen": "review",
+    "x": 0.0266681,
+    "opacity": 0.999791
+  },
+  {
+    "screen": "review",
+    "x": 0.0058465,
+    "opacity": 0.999991
+  },
+  {
+    "screen": "review",
+    "x": 0.0002165,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "delivery",
+    "x": 0.392773,
+    "opacity": 0.982471
+  },
+  {
+    "screen": "delivery",
+    "x": 1.61552,
+    "opacity": 0.919628
+  },
+  {
+    "screen": "delivery",
+    "x": 3.60448,
+    "opacity": 0.823216
+  },
+  {
+    "screen": "delivery",
+    "x": 5.98034,
+    "opacity": 0.699386
+  },
+  {
+    "screen": "delivery",
+    "x": 8.95434,
+    "opacity": 0.554164
+  },
+  {
+    "screen": "delivery",
+    "x": 12.3318,
+    "opacity": 0.388631
+  },
+  {
+    "screen": "delivery",
+    "x": 15.8499,
+    "opacity": 0.20494
+  },
+  {
+    "screen": "delivery",
+    "x": 20,
+    "opacity": 0.0026331
+  },
+  {
+    "screen": "delivery",
+    "x": 20,
+    "opacity": 0
+  },
+  {
+    "screen": "delivery",
+    "x": -28,
+    "opacity": 0
+  },
+  {
+    "screen": "delivery",
+    "x": -21.0599,
+    "opacity": 0.483063
+  },
+  {
+    "screen": "delivery",
+    "x": -14.1556,
+    "opacity": 0.663374
+  },
+  {
+    "screen": "delivery",
+    "x": -9.38264,
+    "opacity": 0.786681
+  },
+  {
+    "screen": "delivery",
+    "x": -5.89719,
+    "opacity": 0.867492
+  },
+  {
+    "screen": "delivery",
+    "x": -3.62974,
+    "opacity": 0.919141
+  },
+  {
+    "screen": "delivery",
+    "x": -2.24796,
+    "opacity": 0.952155
+  },
+  {
+    "screen": "delivery",
+    "x": -1.3182,
+    "opacity": 0.97271
+  },
+  {
+    "screen": "delivery",
+    "x": -0.741695,
+    "opacity": 0.985372
+  },
+  {
+    "screen": "delivery",
+    "x": -0.406232,
+    "opacity": 0.992819
+  },
+  {
+    "screen": "delivery",
+    "x": -0.1971,
+    "opacity": 0.996929
+  },
+  {
+    "screen": "delivery",
+    "x": -0.0824123,
+    "opacity": 0.998955
+  },
+  {
+    "screen": "delivery",
+    "x": -0.028703,
+    "opacity": 0.999778
+  },
+  {
+    "screen": "delivery",
+    "x": -0.0058465,
+    "opacity": 0.99999
+  },
+  {
+    "screen": "delivery",
+    "x": -0.0002165,
+    "opacity": 0
+  },
+  {
+    "screen": "delivery",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": -0.340835,
+    "opacity": 0.984759
+  },
+  {
+    "screen": "review",
+    "x": -1.52378,
+    "opacity": 0.924922
+  },
+  {
+    "screen": "review",
+    "x": -3.4666,
+    "opacity": 0.829176
+  },
+  {
+    "screen": "review",
+    "x": -5.98034,
+    "opacity": 0.707466
+  },
+  {
+    "screen": "review",
+    "x": -8.76502,
+    "opacity": 0.562551
+  },
+  {
+    "screen": "review",
+    "x": -12.117,
+    "opacity": 0.39906
+  },
+  {
+    "screen": "review",
+    "x": -15.8499,
+    "opacity": 0.216452
+  },
+  {
+    "screen": "review",
+    "x": -19.738,
+    "opacity": 0.0143318
+  },
+  {
+    "screen": "review",
+    "x": -20,
+    "opacity": 0
+  },
+  {
+    "screen": "review",
+    "x": 21.0599,
+    "opacity": 0.244936
+  },
+  {
+    "screen": "review",
+    "x": 14.1556,
+    "opacity": 0.488131
+  },
+  {
+    "screen": "review",
+    "x": 9.38264,
+    "opacity": 0.666941
+  },
+  {
+    "screen": "review",
+    "x": 5.89719,
+    "opacity": 0.788462
+  },
+  {
+    "screen": "review",
+    "x": 3.62974,
+    "opacity": 0.868644
+  },
+  {
+    "screen": "review",
+    "x": 2.17996,
+    "opacity": 0.920122
+  },
+  {
+    "screen": "review",
+    "x": 1.3182,
+    "opacity": 0.952619
+  },
+  {
+    "screen": "review",
+    "x": 0.741695,
+    "opacity": 0.973094
+  },
+  {
+    "screen": "review",
+    "x": 0.389392,
+    "opacity": 0.985602
+  },
+  {
+    "screen": "review",
+    "x": 0.1971,
+    "opacity": 0.992918
+  },
+  {
+    "screen": "review",
+    "x": 0.0824123,
+    "opacity": 0.996981
+  },
+  {
+    "screen": "review",
+    "x": 0.028703,
+    "opacity": 0.998986
+  },
+  {
+    "screen": "review",
+    "x": 0.0058465,
+    "opacity": 0.999789
+  },
+  {
+    "screen": "review",
+    "x": 0.0002165,
+    "opacity": 0.999991
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  }
+]

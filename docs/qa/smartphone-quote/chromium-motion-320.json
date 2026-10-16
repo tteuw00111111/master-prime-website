@@ -1,0 +1,27 @@
+[
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "question:battery-signs",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "delivery",
+    "x": 0,
+    "opacity": 1
+  },
+  {
+    "screen": "review",
+    "x": 0,
+    "opacity": 1
+  }
+]
