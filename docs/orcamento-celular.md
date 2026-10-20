@@ -56,7 +56,7 @@ Notebook e videogame mantêm suas chaves e regras próprias. Não há banco de p
 
 A mensagem personalizada usa o número comercial existente `5521967635340`; a URL só é montada no clique final. Abrir a conversa não comprova envio: o cliente precisa tocar em Enviar. Há cópia via Clipboard API e textarea selecionável quando a cópia falha.
 
-Eventos: `quote_started`, `quote_step_completed`, `quote_reviewed`, `quote_whatsapp_click`. Payload restrito a evento, `quote_category: celular` e grupo de 1 a 5. A função compartilhada mantém notebook como categoria default. Dados do aparelho, localização, respostas, observações e URL personalizada não entram nos eventos. O formulário mantém máscara do Clarity.
+Rastreamento específico de celular: `quote_viewed`, `quote_started`, `quote_step_completed`, `quote_reviewed` e `quote_whatsapp_click`, com eventos personalizados correspondentes no Pixel existente. Conta cada marco uma vez por tentativa, preserva origem permitida durante o preenchimento e mantém IDs aleatórios para correlação. A função compartilhada dos outros formulários mantém notebook como categoria default. Dados do aparelho, localização, respostas, observações e URL personalizada não entram nos eventos. O formulário mantém máscara do Clarity. Implementação, limites, validação e configuração do teste P02 em [rastreamento-celular-p02.md](rastreamento-celular-p02.md).
 
 ## Entradas e SEO
 

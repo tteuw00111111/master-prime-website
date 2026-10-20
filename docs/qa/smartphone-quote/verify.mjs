@@ -194,7 +194,7 @@ for (const [name, engine] of engines) {
       const events = await page.evaluate(() => window.dataLayer.filter(event => String(event.event).startsWith('quote_')))
       assert(events.some(event => event.event === 'quote_whatsapp_click'))
       for (const event of events) {
-        assert.deepEqual(Object.keys(event).sort(), ['event', 'quote_category', 'quote_step'])
+        assert.deepEqual(Object.keys(event).sort(), ['event', 'event_id', 'quote_ad_id', 'quote_adset_id', 'quote_attempt_id', 'quote_campaign', 'quote_campaign_id', 'quote_category', 'quote_medium', 'quote_source', 'quote_step', 'quote_tracking_version'])
         assert.equal(event.quote_category, 'celular')
       }
       assert.doesNotMatch(JSON.stringify(events), /Paciência|Apple|Galaxy|diagnóstico|text=/)

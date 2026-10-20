@@ -1,0 +1,32 @@
+[
+  {
+    "browser": "chromium",
+    "status": "pass",
+    "checks": [
+      "full funnel",
+      "Pixel destination and event IDs",
+      "no personal responses in analytics",
+      "original WhatsApp summary and phone",
+      "repeat suppression",
+      "refresh attribution",
+      "new ad starts new attempt",
+      "required validation",
+      "blocked tags and storage"
+    ]
+  },
+  {
+    "browser": "webkit",
+    "status": "pass",
+    "checks": [
+      "full funnel",
+      "Pixel destination and event IDs",
+      "no personal responses in analytics",
+      "original WhatsApp summary and phone",
+      "repeat suppression",
+      "refresh attribution",
+      "new ad starts new attempt",
+      "required validation",
+      "blocked tags and storage"
+    ]
+  }
+]

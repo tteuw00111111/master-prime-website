@@ -10,7 +10,9 @@ import type { SmartphoneQuoteDraft } from '@/types/smartphone-quote'
 import { buildSmartphoneQuoteMessage, getSmartphoneAnswerValues, getSmartphoneBrand, getSmartphoneIssues, getSmartphoneQuestions, restoreSmartphoneQuoteDraft, searchSmartphoneModels, toggleSmartphoneAnswer, toggleSmartphoneIssue, updateSmartphoneQuote } from '@/utils/smartphone-quote'
 import { SMARTPHONE_EDIT_SCOPES, getFirstIncompleteSmartphoneScreen, getSmartphoneScreenErrors, getSmartphoneScreens, getSmartphoneScreenStep, isSmartphoneScreenInScope, restoreSmartphoneScreen } from '@/utils/smartphone-quote-flow'
 import type { SmartphoneEditScope, SmartphoneQuoteErrors, SmartphoneQuoteField, SmartphoneQuoteScreen } from '@/utils/smartphone-quote-flow'
-import { normalizeCatalogSearch, trackQuoteEvent } from '@/utils/quote'
+import { normalizeCatalogSearch } from '@/utils/quote'
+import { createSmartphoneQuoteTracker } from '@/utils/smartphone-quote-tracking'
+import type { SmartphoneQuoteTracker } from '@/utils/smartphone-quote-tracking'
 import { getWhatsAppMessageUrl, getWhatsAppQuoteUrl } from '@/utils/whatsapp'
 
 const fieldTargets: Record<SmartphoneQuoteField, string> = { brand: 'quote-brand', model: 'smartphone-model', issues: 'quote-issues', delivery: 'quote-delivery', neighborhood: 'quote-neighborhood', city: 'quote-city' }
@@ -32,7 +34,7 @@ export const SmartphoneQuotePage = () => {
   const [copyStatus, setCopyStatus] = useState('')
   const [showCopyFallback, setShowCopyFallback] = useState(false)
   const headingRef = useRef<HTMLHeadingElement>(null)
-  const startedRef = useRef(false)
+  const trackerRef = useRef<SmartphoneQuoteTracker | null>(null)
   const pendingScroll = useRef(false)
   const focusFrame = useRef<number | null>(null)
   const reducedMotion = useReducedMotion() === true
@@ -67,6 +69,10 @@ export const SmartphoneQuotePage = () => {
     : headings[screen]
 
   useEffect(() => {
+    // Keep the ref through StrictMode effect replay, including when storage is
+    // disabled, so development checks cannot inflate the entry count.
+    if (!trackerRef.current) trackerRef.current = createSmartphoneQuoteTracker()
+    trackerRef.current.track('quote_viewed', 0)
     try {
       const raw = sessionStorage.getItem(SMARTPHONE_STORAGE_KEY)
       const savedDraft = restoreSmartphoneQuoteDraft(raw)
@@ -82,6 +88,10 @@ export const SmartphoneQuotePage = () => {
   }, [])
 
   useEffect(() => {
+    if (restored && !transitioning && screen === 'review' && !getFirstIncompleteSmartphoneScreen(draft)) trackerRef.current?.track('quote_reviewed', 4)
+  }, [restored, transitioning, screen, draft])
+
+  useEffect(() => {
     if (!restored) return
     try { sessionStorage.setItem(SMARTPHONE_STORAGE_KEY, JSON.stringify({ draft, screen, step, editScope, savedAt: Date.now() })) }
     catch { /* WhatsApp handoff remains available without persistence. */ }
@@ -90,7 +100,7 @@ export const SmartphoneQuotePage = () => {
   useEffect(() => () => { if (focusFrame.current !== null) window.cancelAnimationFrame(focusFrame.current) }, [])
 
   const markStarted = () => {
-    if (!startedRef.current) { trackQuoteEvent('quote_started', 0, 'celular'); startedRef.current = true }
+    trackerRef.current?.track('quote_started', 0)
     setErrors({})
     setHandoff(false)
     setCopyStatus('')
@@ -135,7 +145,7 @@ export const SmartphoneQuotePage = () => {
     setModelSelected(false)
     setModelHelpOpen(false)
     setScreen(next)
-    if (next === 'review') { setEditScope(null); trackQuoteEvent('quote_reviewed', 4, 'celular') }
+    if (next === 'review') setEditScope(null)
   }
   const returnToReview = () => {
     const incomplete = getFirstIncompleteSmartphoneScreen(draft)
@@ -146,7 +156,7 @@ export const SmartphoneQuotePage = () => {
     const invalid = getSmartphoneScreenErrors(draft, screen)
     if (Object.keys(invalid).length) { setErrors(invalid); focusFrame.current = window.requestAnimationFrame(() => focusError(invalid)); return }
     markStarted()
-    if (!nextScreen || getSmartphoneScreenStep(nextScreen) !== step) trackQuoteEvent('quote_step_completed', step, 'celular')
+    if (!nextScreen || getSmartphoneScreenStep(nextScreen) !== step) trackerRef.current?.track('quote_step_completed', step)
     if (returnsToReview || nextScreen === 'review') returnToReview()
     else if (nextScreen) goToScreen(nextScreen)
   }
@@ -161,14 +171,14 @@ export const SmartphoneQuotePage = () => {
   }
   const skipDetails = () => {
     markStarted()
-    trackQuoteEvent('quote_step_completed', 2, 'celular')
+    trackerRef.current?.track('quote_step_completed', 2)
     if (editScope) returnToReview()
     else goToScreen('delivery')
   }
   const openSummary = () => {
     const incomplete = getFirstIncompleteSmartphoneScreen(draft)
     if (incomplete) { goToScreen(incomplete, getSmartphoneScreenErrors(draft, incomplete)); return }
-    trackQuoteEvent('quote_whatsapp_click', 4, 'celular')
+    trackerRef.current?.track('quote_whatsapp_click', 4)
     window.open(getWhatsAppMessageUrl(buildSmartphoneQuoteMessage(draft)), '_blank', 'noopener,noreferrer')
     setHandoff(true)
   }
