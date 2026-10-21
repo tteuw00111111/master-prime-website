@@ -95,8 +95,6 @@ try {
       assert((await page.locator('.iphone-credit-summary').textContent()).includes(money(total)))
     }
     await button('3 parcelas').click(); await next()
-    await button('Nos próximos dias').click(); await next()
-    await button('Comprar sem troca').click(); await next()
     for (const color of colors) assert((await page.locator('.quote-review').textContent()).includes(color.name))
     await button('Copiar resumo').click()
     const message = await page.evaluate(() => window.__copy)

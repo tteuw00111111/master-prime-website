@@ -89,8 +89,6 @@ try {
     await ready(); await assertURL()
     await page.locator('.iphone-color').filter({ hasText: 'Laranja' }).click()
     await next(); await button('À vista').click(); await button('Pix').click(); await next()
-    await button('Nos próximos dias').click(); await next()
-    await button('Comprar sem troca').click(); await next()
     await button('Copiar resumo').click()
     const message = await page.evaluate(() => window.__qaCopied)
     assert.doesNotMatch(message, /fbclid|IwQA|PRIVATE|utm_/)

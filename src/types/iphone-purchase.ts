@@ -18,35 +18,13 @@ export interface IPhoneSelection {
   colorId: string
 }
 
-export interface IPhoneTradeIn {
-  modelId: string
-  otherModel: string
-  capacity: string
-  color: string
-  battery: string
-  batteryUnknown: boolean
-  screen: string
-  back: string
-  sides: string
-  repairs: string
-  repairParts: string[]
-  repairOther: string
-  faults: string[]
-  faultOther: string
-  liquid: string
-  activation: string
-  notes: string
-}
-
+/** Journey v2 retains only choices collected by the three-step form. */
 export interface IPhonePurchaseDraft {
-  version: 1
+  version: 2
   selection: IPhoneSelection
   preferredColorIds: string[]
   payment: string
   paymentDetail: string
-  timing: string
-  tradeChoice: '' | 'no' | 'yes'
-  trade: IPhoneTradeIn
 }
 
-export type IPhoneScreen = 'product' | 'payment' | 'timing' | 'trade' | 'device' | 'condition' | 'history' | 'review'
+export type IPhoneScreen = 'product' | 'payment' | 'review'

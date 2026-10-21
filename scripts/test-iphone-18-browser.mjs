@@ -105,8 +105,6 @@ try {
     }
     await button(page, '2 parcelas').click()
     await page.locator('.quote-next').click()
-    await button(page, 'Nos próximos dias').click(); await page.locator('.quote-next').click()
-    await button(page, 'Comprar sem troca').click(); await page.locator('.quote-next').click()
     await button(page, 'Copiar resumo').click()
     const message = await page.evaluate(() => window.__copy)
     assert(message.includes(`iPhone 18 Pro Max · 256 GB · Lacrado · ${name}`))

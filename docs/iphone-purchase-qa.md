@@ -1,3 +1,5 @@
+> Estado atual: jornada reduzida `2026-10-21.reduced-v1`, descrita na seção final. As seções anteriores registram os testes das versões históricas, incluindo a triagem removida.
+
 # QA — orçamento de compra de iPhone
 
 Execução local em 21/10/2026. Commit e push autorizados pelo usuário; deploy ainda não confirmado por este relatório. Catálogo comercial `2026-10-21.v2`.
@@ -124,3 +126,26 @@ Pedido de origem: `/home/wayne/master-prime-meta-ads/planejamento/iphone/AJUSTE-
 Lint, typecheck, build, 108 testes e auditoria SEO de 38 URLs passaram. Contra uma cópia estável do build, passaram as suítes de catálogo, compra (Chromium e WebKit) e a nova `npm run test:iphone-attribution-browser`. Esta cobre seis cenários: navegação e href para nova aba; Pixel liberado depois de completar o formulário; leitura adiada por consentimento simulado; Pixel/storage bloqueados; ausência de fbclid; valor inválido com query privada. Casos sem bloqueio de storage também revalidam restauração e deduplicação após reload. As suítes dos reparos e seus eventos passaram em `npm test`.
 
 Relatórios e logs locais: `.cache/iphone-fbclid/`. O script Meta é substituído por um observador, que lê a URL após liberação; não é o SDK real. Os testes não criam `_fbc`, não contornam consentimento e não comprovam transporte/recebimento na Meta ou GA4. GTM/Clarity continuam ausentes na compra, e os sete eventos permanecem com o contrato anterior. A estratégia e os limites estão no handoff de mídia.
+
+## Jornada reduzida para teste de aquisição — 21/10/2026
+
+Pedido: `PROMPT-SIMPLIFICAR-SITE-PARA-TESTE.md`. Jornada `2026-10-21.reduced-v1`: **Seu iPhone → Pagamento → Revisar → WhatsApp**. Removidas as perguntas de prazo, oferta de usado e descrição técnica. Revisão/mensagem contêm somente produto, capacidade, condição, cores/preferências, valores do catálogo, pagamento e confirmação de preço/disponibilidade. Abertura exata: “Olá! Fiz uma consulta de iPhone no site da Master Prime e quero confirmar disponibilidade e condições.” Não são criadas respostas presumidas para as informações não coletadas.
+
+O rascunho usa `draft.version=2`, mantendo a chave existente para migração de v1. Restauração reaproveita apenas escolhas atuais válidas e apaga prazo/dados do usado. Telas removidas vão para Revisar ou para a primeira etapa atual incompleta. Origem, tentativa e marcos compatíveis permanecem; antigos marcos/eventos de triagem são descartados, sem StepCompleted retroativo. A nova propriedade `quote_journey_version` diferencia o fluxo; os cinco nomes aplicáveis e a semântica de intenção do WhatsApp são preservados.
+
+Validação contra o build de produção:
+
+- Lint, typecheck (incluído no build), build cliente/SSR e pré-renderização concluídos; **103 testes passaram**, zero falhas. O total substitui os testes da triagem removida por migração e jornada atual, sem manter asserções das etapas excluídas.
+- Auditoria SEO: **38 URLs indexáveis**, links internos, title/description/H1/canonical, sitemap, robots, JSON-LD, NAP e referências a impressoras; regressão dos demais orçamentos e dos eventos SmartphoneQuote passou em `npm test`.
+- Compra: link direto 17 Pro Max 256 lacrado, cor explícita, pagamento Pix/Cartão à vista e crédito 2–12, validação, edição/volta, revisão, cópia/fallback, abertura/reabertura interceptadas, catálogo alterado, storage bloqueado, offline, deduplicação, 320px, texto 200% e WebKit 375×667.
+- Catálogo: links de modelos/condições, filtros, retorno, refresh/back/forward, link compartilhado canônico e ausência de parâmetros privados.
+- Atribuição: seis cenários com Pixel observado/substituído, incluindo carregamento lento, consentimento simulado, bloqueio de Pixel/storage, ausência/invalidade de fbclid; preservação da caixa e do valor no catálogo/configurador/retorno e exclusão de payload próprio, storage, compartilhamento e WhatsApp.
+- Migração: `npm run test:iphone-migration-browser` substitui a antiga suíte de triagem. **21 casos** (17 Pro Max, 18 Pro Max e seminovo, nas cinco telas removidas, revisão já emitida e pagamento incompleto), com descarte de respostas, preservação de marcos/origem, ausência de eventos removidos, cópia/abertura e reload sem duplicação. Testes unitários também cobrem produto inválido, expiração e preferências em todas as 22 variantes.
+- Mídia: regressões de 17/18 Pro Max, imagens, controles 3D/CSP, todas as cores do 18 e 13 ofertas/58 renders de seminovos; preferências, totais de parcelamento e resumo na jornada reduzida.
+- Revisão visual conferida em 390px e 1440px: progresso 3/3, dois blocos de revisão, ação do WhatsApp e ausência de overflow.
+
+Comandos: `npm run lint`, `npm run build`, `npm test` e as oito suítes `test:iphone-{purchase,catalog,attribution,migration,used,18,csp,media}-browser`. Ambiente Playwright/Chrome local; evidências da rodada em `.cache/iphone-reduced/`, com relatórios auxiliares nos diretórios próprios das suítes.
+
+Todos os testes bloqueiam rede externa e interceptam a abertura de WhatsApp. Não enviam eventos reais nem mensagens comerciais fictícias. O observador de Meta valida disponibilidade da URL/contrato e chamada de transporte, não o SDK real, entrega ou recebimento na Meta/GA4. Validação real de consentimento, conversão e identificação da conversa permanece com a mídia; nenhuma campanha/conversão foi alterada.
+
+Commit, push e deploy estão autorizados. O hash e o resultado final de publicação serão informados na entrega após verificação da Vercel e da jornada pública com transports externos bloqueados.

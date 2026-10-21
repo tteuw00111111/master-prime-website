@@ -1,4 +1,4 @@
-import { IPHONE_CATALOG_VERSION, IPHONE_MAX_AGE } from '@/data/iphone-purchase'
+import { IPHONE_CATALOG_VERSION, IPHONE_JOURNEY_VERSION, IPHONE_MAX_AGE } from '@/data/iphone-purchase'
 import type { IPhoneScreen, IPhoneSelection } from '@/types/iphone-purchase'
 import { getIPhoneVariant, iPhoneSelectionKey, normalizeIPhoneSelection } from './iphone-purchase'
 import { getIPhoneInstallmentPlan } from './iphone-pricing'
@@ -9,15 +9,14 @@ export const IPHONE_PIXEL_ID = '1430740015202870'
 export const IPHONE_TRACKING_KEY = 'master-prime:iphone-purchase-tracking:v1'
 export const IPHONE_EVENTS = {
   viewed: 'IPhonePurchaseQuoteViewed', started: 'IPhonePurchaseQuoteStarted', step: 'IPhonePurchaseQuoteStepCompleted',
-  tradeStarted: 'IPhoneTradeInStarted', tradeCompleted: 'IPhoneTradeInCompleted',
   reviewed: 'IPhonePurchaseQuoteReviewed', whatsapp: 'IPhonePurchaseQuoteWhatsAppClick',
 } as const
 type Event = keyof typeof IPHONE_EVENTS
 const KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'campaign_id', 'adset_id'] as const
 type Attribution = Partial<Record<typeof KEYS[number], string>>
-const SCREENS: readonly IPhoneScreen[] = ['product', 'payment', 'timing', 'trade', 'device', 'condition', 'history', 'review']
+const SCREENS: readonly IPhoneScreen[] = ['product', 'payment', 'review']
 const MILESTONES = new Set([
-  'viewed', 'started', 'tradeStarted', 'tradeCompleted', 'reviewed', 'whatsapp',
+  'viewed', 'started', 'reviewed', 'whatsapp',
   ...SCREENS.filter(s => s !== 'review').map(s => `step:${s}`),
 ])
 export const cleanIPhoneAttribution = (params: URLSearchParams): Attribution => {
@@ -66,7 +65,7 @@ export const createIPhonePurchaseTracker = (initial: IPhoneSelection): IPhonePur
     // Explicit allowlist: never spread the draft, triage answers or a message into telemetry.
     // null/empty defaults clear GTM data-model values left by earlier offers.
     const properties = {
-      quote_category: 'iphone_purchase', quote_tracking_version: 1, quote_attempt_id: state.attemptId,
+      quote_category: 'iphone_purchase', quote_tracking_version: 1, quote_journey_version: IPHONE_JOURNEY_VERSION, quote_attempt_id: state.attemptId,
       quote_step: screen && SCREENS.includes(screen) ? screen : '',
       quote_initial_product: iPhoneSelectionKey(state.initial), quote_selected_product: iPhoneSelectionKey(cleanSelection),
       quote_variant_id: variant?.id ?? '', catalog_version: IPHONE_CATALOG_VERSION,

@@ -1,13 +1,38 @@
 # Handoff — compra de iPhone no site
 
-Preparado em 21/10/2026. **Commit e push autorizados pelo usuário; deploy ainda não confirmado por este documento. Nenhum evento novo foi confirmado no Gerenciador de Eventos.**
+Atualizado em 21/10/2026 para a jornada `2026-10-21.reduced-v1`, conforme `PROMPT-SIMPLIFICAR-SITE-PARA-TESTE.md`. Commit, push e deploy autorizados; o estado final da publicação será informado na entrega. Nenhum recebimento de evento foi confirmado no Gerenciador de Eventos.
+
+## Jornada reduzida
+
+1. **Seu iPhone:** produto, capacidade, condição e cor; seminovos mantêm preferências múltiplas de cor.
+2. **Pagamento:** À vista (Pix ou Cartão) ou Cartão de crédito (2–12 parcelas).
+3. **Revisar:** somente aparelho e pagamento, com edição, cópia e abertura do WhatsApp +55 21 96763-5340.
+
+Prazo de compra, oferta de usado e perguntas de modelo/bateria/estado/reparos/funcionamento do usado foram retirados. Não se presume compra imediata nem compra sem troca. Esses assuntos ficam para a equipe no WhatsApp. A possibilidade de troca permanece sujeita à avaliação; não há crédito estimado nem ampliação da política: para compra do 17 Pro Max, a referência confirmada continua sendo linha iPhone 15 em diante; para outros produtos, a política depende de confirmação da equipe. O site não implementa cobrança, checkout, reserva ou confirmação de compra.
+
+### Mensagem exata de exemplo
+
+Exemplo: 17 Pro Max, 256 GB, lacrado laranja, preferência À vista/Pix. As linhas de aparelho, cores e pagamento variam apenas conforme as escolhas e a tabela atual. A primeira frase é fixa e identifica a consulta no site; o cliente pode alterá-la, portanto não garante associação com a conversa recebida.
+
+```text
+Olá! Fiz uma consulta de iPhone no site da Master Prime e quero confirmar disponibilidade e condições.
+
+APARELHO DESEJADO
+iPhone 17 Pro Max · 256 GB · Lacrado · Laranja
+À vista: R$ 7.699,99
+Cartão: 12× de R$ 696,66 (última de R$ 696,62) · Total: R$ 8.359,88
+Pagamento pretendido: À vista · Pix
+Valores consultados na tabela de 21/10/2026. Gostaria de confirmar valores e disponibilidade.
+```
+
+No crédito, o resumo informa a quantidade escolhida, total e eventual ajuste da última parcela. Para seminovos, inclui as cores aceitas e aviso de confirmação da condição/disponibilidade. Não inclui prazo, usado oferecido, Ref., códigos, IDs de anúncio, UTMs, fbclid ou identificador de tentativa.
 
 ## URLs preparadas
 
-- Canônica planejada: `https://master-prime.com/orcamento/iphone`.
+- Canônica: `https://master-prime.com/orcamento/iphone`.
 - Link inicial: `https://master-prime.com/orcamento/iphone?model=iphone-17-pro-max&capacity=256&condition=sealed`.
 - Alternativa: `https://master-prime.com/orcamento/iphone?model=iphone-17-pro-max&capacity=512&condition=sealed`.
-- As URLs públicas são planejadas para a publicação autorizada, não uma afirmação de que já estão no ar. Localmente usar o mesmo caminho no servidor de desenvolvimento/preview.
+- As URLs existentes são preservadas. Localmente usar o mesmo caminho no servidor de desenvolvimento/preview.
 - O modelo e a capacidade chegam selecionados; a cor precisa de escolha explícita. A URL sem parâmetros abre o catálogo compartilhável. A entrada genérica direta do configurador usa `?view=quote` e destaca o 17 Pro Max 256 GB, oferecendo os outros produtos na mesma jornada. Navegar no catálogo não inicia uma tentativa de orçamento; a seleção de um modelo preserva a atribuição validada da URL.
 
 Campo futuro de parâmetros de URL na Meta, a ser configurado pelo chat de mídia:
@@ -27,18 +52,18 @@ Pixel **1430740015202870**, já existente em `index.html`. Único transporte Met
 | `IPhonePurchaseQuoteViewed` | Entrada na tentativa, após leitura do link/restauração | Uma vez/tentativa |
 | `IPhonePurchaseQuoteStarted` | Primeira escolha/edição real ou avanço válido; link pré-selecionado não conta | Uma vez/tentativa |
 | `IPhonePurchaseQuoteStepCompleted` | Avanço validado; `quote_step` identifica a tela | Uma vez/tentativa/tela |
-| `IPhoneTradeInStarted` | Primeira interação com informação do usado | Uma vez/tentativa |
-| `IPhoneTradeInCompleted` | Revisão exibida com triagem reconhecida elegível e campos mínimos válidos | Uma vez/tentativa |
 | `IPhonePurchaseQuoteReviewed` | Resumo exibido após validação de todo o caminho aplicável | Uma vez/tentativa |
 | `IPhonePurchaseQuoteWhatsAppClick` | Ação válida de abrir WhatsApp a partir da revisão, com destino configurado | Uma vez/tentativa |
 
-Telas permitidas em `quote_step`: `product`, `payment`, `timing`, `trade`, `device`, `condition`, `history`, `review`. StepCompleted nunca é emitido para `review`; o resumo tem evento próprio. Quando não há contexto de tela, o valor é `''`. Não é usado um enum restrito de reparo.
+Telas permitidas em `quote_step`: `product`, `payment`, `review`. StepCompleted só é emitido no avanço validado de `product` e `payment`; `review` tem evento próprio. Sem contexto de tela, o valor é `''`.
 
-`IPhoneTradeInCompleted` não é aprovação. Modelos desconhecidos e política pendente para compra de outros produtos não emitem esse marco. O evento final representa **intenção de contato**, não mensagem recebida, lead, qualificação, compra ou receita. Copiar resumo não emite WhatsAppClick.
+**Deixam de ocorrer:** `IPhoneTradeInStarted`, `IPhoneTradeInCompleted` e StepCompleted de `timing`, `trade`, `device`, `condition`, `history`. Nenhum marco é fabricado para compensar as remoções.
+
+O evento final representa **intenção de abrir o WhatsApp**, não mensagem enviada/recebida, lead qualificado, compra ou receita. Copiar resumo não emite WhatsAppClick. O código não emite Lead, Purchase ou parâmetro padrão `value`.
 
 ## Payload permitido
 
-Campos fixos: `quote_category=iphone_purchase`, `quote_tracking_version=1`.
+Campos fixos: `quote_category=iphone_purchase`, `quote_tracking_version=1`, `quote_journey_version=2026-10-21.reduced-v1`. A versão da jornada distingue a simplificação sem renomear os eventos aplicáveis.
 
 IDs internos: `quote_attempt_id`, `event_id` no dataLayer, `eventID` na opção do Pixel. IDs aleatórios de tentativa não entram na mensagem e não comprovam vínculo com conversa recebida.
 
@@ -62,13 +87,21 @@ O identificador permanece na URL durante a visita, sem timeout nem limpeza poste
 
 O site deixa a captura e eventual `_fbc` a cargo do mecanismo legítimo do Pixel existente, respeitando bloqueios e consentimento do ambiente. Não escreve `_fbc`/`_fbp`, não instala outro Pixel e não cria backend, CAPI ou CRM. O código local não contém uma CMP/banner de consentimento; o ajuste não acrescenta `grant` nem contorna uma permissão negada. Permissões remotas e comportamento real de cookies devem ser validados no ambiente aplicável. Referência indicada no pedido: [Meta — fbp e fbc](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc/).
 
-`fbclid` não entra no estado do tracker, rascunho, payload personalizado do Pixel/dataLayer ou mensagem de WhatsApp. Os sete nomes de evento, origem inicial, deduplicação, preços de catálogo e regras dos reparos permanecem iguais. O Pixel pode usar a URL atual no seu próprio mecanismo de atribuição; isso é distinto de acrescentar o identificador aos parâmetros personalizados.
+`fbclid` não entra no estado do tracker, rascunho, payload personalizado do Pixel/dataLayer ou mensagem de WhatsApp. Os cinco nomes de evento de compra aplicáveis, origem inicial, deduplicação, preços de catálogo e regras dos reparos são preservados. Os dois eventos de triagem foram desativados na jornada reduzida. O Pixel pode usar a URL atual no seu próprio mecanismo de atribuição; isso é distinto de acrescentar o identificador aos parâmetros personalizados.
 
 QA usa um identificador explicitamente fictício somente em navegadores isolados com todos os transports Meta interceptados. O teste substitui o script por um observador e verifica a disponibilidade da URL quando ele é liberado e quando uma leitura é adiada por permissão simulada. Não escreve cookies `_fbc`, não demonstra captura pelo SDK real e não comprova transporte/recebimento na Meta. Visita sem identificador, valor inválido, query privada, navegação, Pixel bloqueado, storage bloqueado, rascunho, WhatsApp interceptado e deduplicação são cobertos em `npm run test:iphone-attribution-browser`.
 
 As seis propriedades originais ficam separadas do produto final, com validade de duas horas por tentativa em sessionStorage próprio. Refresh/retorno sem nova origem preserva a origem anterior. Nova origem validada diferente em qualquer um desses campos abre nova tentativa e não reaproveita o rascunho da anterior. Um link de outro produto pode mudar a seleção, mas não reescreve a origem da tentativa ativa.
 
 Cada marco tem chave persistida por tentativa; voltar/editar/reabrir/recarregar não recontam o mesmo marco. Sem storage, deduplicação apenas em memória na montagem atual; uma nova carga pode contar novamente. Tags indisponíveis não são reenviadas retroativamente: evitar duplicação não garante entrega. O evento de abertura não comprova que popup abriu, que o aplicativo funcionou ou que o cliente enviou a mensagem.
+
+### Migração dos rascunhos
+
+Mantida a chave `master-prime:iphone-purchase:v1` para ler os rascunhos legados, mas o objeto `draft.version` passa de 1 para 2. A restauração aceita ambas as versões e grava somente `selection`, `preferredColorIds`, `payment` e `paymentDetail`, todos revalidados. Prazo, escolha de troca e dados técnicos/notas do usado são descartados e removidos da próxima gravação; nunca entram no resumo novo.
+
+Rascunhos nas telas removidas vão para Revisar se produto e pagamento estiverem válidos; caso contrário, para a primeira tela necessária (Seu iPhone ou Pagamento). Telas desconhecidas e catálogo alterado voltam ao produto. O aviso de alteração de tabela continua exigindo confirmação. Validade de duas horas, vínculo com tentativa/entrada e reinício por nova origem continuam vigentes.
+
+O tracker mantém a chave/versão de storage e `attemptId`, origem inicial e os marcos compatíveis já emitidos: viewed, started, product/payment, reviewed e whatsapp. Descarta marcos das telas/eventos removidos. Abrir uma revisão migrada pode emitir Reviewed se nunca emitido; não produz StepCompleted retroativo. Se Reviewed/WhatsAppClick já ocorreram, não os repete. Sem storage, a deduplicação segue limitada à montagem atual.
 
 ## Captura global
 
@@ -85,15 +118,12 @@ As outras rotas preservam GTM, Clarity e Pixel. A configuração remota de GTM/P
 - Preservados reparo `/orcamento/celular`, eventos `SmartphoneQuote*` e a referência histórica à conversão `2173738083498471`. Não reutilizar essa regra como conversão de compra de iPhone. Nenhuma conversão personalizada foi alterada/criada.
 - Valor de lead, custo alvo, orçamento de mídia e ROAS não são definidos pelo site.
 
-## Validação: separar quatro estados
+## Validação e publicação
 
-1. **Implementação local:** catálogo, formulário, triagem, eventos e testes implementados. Detalhes/evidências em `docs/iphone-purchase-qa.md`.
-2. **Publicação:** commit e push autorizados em 21/10/2026; verificar a conclusão do deploy no provedor.
-3. **Transporte real de evento:** não validado; QA intercepta Pixel, rede externa, clipboard e abertura de WhatsApp. Mocks validam contrato e gatilhos, não conectividade com a Meta.
-4. **Recebimento no Gerenciador de Eventos:** não consultado/confirmado. Validar com acesso autenticado após publicação autorizada. Configuração de campanha/conversão pertence ao chat de mídia.
+A implementação e os testes da jornada reduzida estão descritos em `docs/iphone-purchase-qa.md`. O commit/publicação desta revisão será confirmado na entrega após os checks e a conclusão na Vercel. As URLs e a versão anterior `c7cbea8` já estavam publicadas antes desta simplificação.
 
-Pendências: confirmação atual da tabela antes de publicação; eventual política de troca em outros produtos; condições de venda ainda não fornecidas; testes em aparelhos físicos e navegadores internos; validação externa de privacidade/transporte/recebimento com responsável de mídia. Não é necessário contratar CRM, central, bot ou serviços adicionais para usar o fluxo.
+O QA automatizado intercepta rede externa, Meta, clipboard e abertura do WhatsApp. Valida o contrato do evento e o acionamento da chamada de transporte; não executa o SDK real nem comprova transporte ou recebimento na Meta/GA4. Como GTM não carrega nesta rota, dataLayer sozinho não comprova recebimento no GA4. A tentativa de abrir o WhatsApp não prova envio ou recebimento de mensagem.
 
-A revisão solicitada pelo usuário inclui pagamento restrito a À vista (Pix ou Cartão) e Cartão de crédito (12 parcelas confirmadas), prazo obrigatório em tela `timing`, e lista de cor do usado. Esses dados continuam fora do payload de publicidade. `quote_step=timing` acrescenta um marco deduplicado por tentativa; os nomes e a versão de tracking permanecem os mesmos, ainda sem publicação ou validação externa. A etapa inicial mostra apenas à vista/12×; totais do catálogo continuam na revisão, mensagem e campos de telemetria já definidos.
+Pendências reais para a mídia: validar consentimento e rastreamento real/rota da conversão, recebimento no Gerenciador de Eventos e identificação da conversa no ambiente autorizado. A frase de origem pode ser alterada pelo cliente. Testes em aparelhos físicos e navegadores internos continuam separados da emulação. Nenhuma campanha, conversão, orçamento de mídia ou criativo foi criado/alterado; a configuração dos dois braços depende da aprovação específica descrita no pedido.
 
-Confirmação comercial de 21/10/2026: o cartão aplica acréscimo único de 8,57% de 2 a 12 parcelas. O total de catálogo considera o valor à vista com esse acréscimo e arredondamento em centavos; não usa a multiplicação da parcela arredondada. Os campos de telemetria de catálogo continuam representando a referência de 12×. A revisão e a mensagem usam a quantidade escolhida e informam o ajuste de centavos na última parcela.
+Confirmação comercial de 21/10/2026: o cartão aplica acréscimo único de 8,57% de 2 a 12 parcelas. O total considera valor à vista, acréscimo e arredondamento em centavos; não multiplica a parcela arredondada pela quantidade. Os campos de telemetria de catálogo continuam representando a referência de 12×. A revisão e a mensagem usam a quantidade escolhida e informam o ajuste na última parcela.

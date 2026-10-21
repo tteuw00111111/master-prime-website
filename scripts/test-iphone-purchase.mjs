@@ -16,9 +16,7 @@ const pricing = await load('src/utils/iphone-pricing.ts')
 const q = await load('src/utils/iphone-purchase.ts')
 const tracking = await load('src/utils/iphone-purchase-tracking.ts')
 const whatsapp = await load('src/utils/whatsapp.ts')
-const complete = () => ({ ...data.createIPhonePurchaseDraft(), selection: { modelId: 'iphone-17-pro-max', capacity: 256, condition: 'sealed', colorId: 'orange' }, payment: 'À vista', paymentDetail: 'Pix', timing: 'Nos próximos dias', tradeChoice: 'no' })
-const tradeModel = name => data.IPHONE_TRADE_MODELS.find(v => v.name === name).id
-const withTrade = () => ({ ...complete(), tradeChoice: 'yes', trade: { ...data.createIPhoneTrade(), modelId: tradeModel('iPhone 15 Pro'), capacity: 'unknown', batteryUnknown: true, screen: 'Não sei', back: 'Marcas ou riscos', sides: 'Não sei', repairs: 'Houve troca ou reparo', repairParts: ['Tela'], faults: ['Face ID'], liquid: 'Não sei', activation: 'Não sei', notes: 'NOTA_PRIVADA_QA', color: 'Azul' } })
+const complete = () => ({ ...data.createIPhonePurchaseDraft(), selection: { modelId: 'iphone-17-pro-max', capacity: 256, condition: 'sealed', colorId: 'orange' }, payment: 'À vista', paymentDetail: 'Pix' })
 const envelope = (draft, overrides = {}) => JSON.stringify({ draft, screen: 'review', savedAt: Date.now(), attemptId: 'ip_12345678', entryKey: q.iPhoneSelectionKey(draft.selection), catalogFingerprint: q.iPhoneCatalogFingerprint(), ...overrides })
 
 test('catalog groups comparable conditions and excludes unavailable prices and models', () => {
@@ -86,77 +84,40 @@ test('selection changes retain compatible colors and capacities and remove incom
   assert.equal(d.selection.capacity, 256)
   assert.equal(d.selection.colorId, '')
 })
-test('purchase without trade has a short path and a natural complete message', () => {
+test('three-step purchase has a natural site-origin message without uncollected answers', () => {
   const d = complete()
   assert.equal(q.firstIncompleteIPhoneScreen(d), null)
-  assert.deepEqual(q.getIPhoneScreens(d), ['product', 'payment', 'timing', 'trade', 'review'])
+  assert.deepEqual(q.getIPhoneScreens(d), ['product', 'payment', 'review'])
   const message = q.buildIPhonePurchaseMessage(d)
   assert.match(message, /APARELHO DESEJADO/)
   assert.match(message, /8\.359,88/)
-  assert.match(message, /Compra sem oferecer usado/)
-  assert.doesNotMatch(message, /OFERECIDO NA TROCA|bateria|UTM|UUID|Ref\.|sem juros|crédito|margem/)
+  assert(message.startsWith('Olá! Fiz uma consulta de iPhone no site da Master Prime e quero confirmar disponibilidade e condições.'))
+  assert.doesNotMatch(message, /OFERECIDO NA TROCA|bateria|Quando|prazo|sem oferecer|UTM|UUID|Ref\.|sem juros|crédito|margem/)
   assert.throws(() => q.buildIPhonePurchaseMessage(data.createIPhonePurchaseDraft()))
 })
-test('eligible, incompatible and unknown models never rely on a typed model number', () => {
-  const d = withTrade()
-  assert.equal(q.getIPhoneTradeEligibility(d), 'eligible')
-  assert.equal(q.getIPhoneTradeEligibility({ ...d, trade: { ...d.trade, modelId: tradeModel('iPhone 14 Pro') } }), 'incompatible')
-  const unknown = { ...d, trade: { ...data.createIPhoneTrade(), modelId: 'other', otherModel: 'iPhone 999 inventado' } }
-  assert.equal(q.getIPhoneTradeEligibility(unknown), 'unknown')
-  assert.equal(q.firstIncompleteIPhoneScreen(unknown), null)
-  assert.match(q.buildIPhonePurchaseMessage(unknown), /Modelo não reconhecido/)
-  assert(!q.getIPhoneScreens(unknown).includes('history'))
-  const incompatible = { ...d, trade: { ...d.trade, modelId: tradeModel('iPhone 13') } }
-  assert.equal(q.firstIncompleteIPhoneScreen(incompatible), 'device')
-  assert.equal(q.firstIncompleteIPhoneScreen(q.updateIPhonePurchase(incompatible, { tradeChoice: 'no' })), null)
+test('v1 drafts on removed screens migrate only valid collected choices to a current screen', () => {
+  for (const screen of ['timing', 'trade', 'device', 'condition', 'history', 'review']) {
+    for (const trade of [undefined, null, { notes: 'PRIVATE_LEGACY_NOTE', battery: '87', repairParts: ['Tela'] }]) {
+      const legacy = { ...complete(), version: 1, timing: 'Nos próximos dias', tradeChoice: 'yes', trade }
+      const restored = q.restoreIPhonePurchase(envelope(legacy, { screen }))
+      assert.equal(restored.screen, 'review')
+      assert.deepEqual(restored.draft, complete())
+      assert.doesNotMatch(JSON.stringify(restored.draft), /PRIVATE|timing|trade|battery|repairParts/)
+      assert.doesNotMatch(q.buildIPhonePurchaseMessage(restored.draft), /PRIVATE|troca|Nos próximos dias|bateria/)
+      assert.equal(q.restoreIPhonePurchase(envelope({ ...legacy, paymentDetail: '' }, { screen })).screen, 'payment')
+      assert.equal(q.restoreIPhonePurchase(envelope({ ...legacy, selection: { ...legacy.selection, colorId: '' } }, { screen })).screen, 'product')
+    }
+  }
+  const injected = { ...complete(), trade: { notes: 'PRIVATE' }, timing: 'imediata' }
+  assert.deepEqual(q.updateIPhonePurchase(injected, {}), complete())
+  assert.equal(q.restoreIPhonePurchase(envelope(complete(), { screen: 'invented' })).screen, 'product')
 })
-test('trade descriptions stay complete for other purchase products while policy remains pending', () => {
-  let changed = q.updateIPhonePurchase(withTrade(), { selection: { modelId: 'iphone-15-pro', capacity: 256, condition: 'used', colorId: '' } })
-  changed = q.updateIPhonePurchase(changed, { preferredColorIds: ['naturaltitanium'] })
-  assert.equal(q.getIPhoneTradeEligibility(changed), 'pending')
-  assert.equal(changed.trade.screen, withTrade().trade.screen)
-  assert(q.canDescribeIPhoneTrade(changed))
-  assert(q.getIPhoneScreens(changed).includes('history'))
-  assert.equal(q.firstIncompleteIPhoneScreen(changed), null)
-  assert.match(q.buildIPhonePurchaseMessage(changed), /política a confirmar/)
-})
-test('unknown battery and appearance are valid; percent accepts zero and 100, rejects malformed/range', () => {
-  const d = withTrade()
-  assert.equal(q.firstIncompleteIPhoneScreen(d), null)
-  assert.match(q.buildIPhonePurchaseMessage(d), /Saúde da bateria: Não sei/)
-  for (const battery of ['0', '100', '87']) assert.deepEqual(q.getIPhoneErrors({ ...d, trade: { ...d.trade, battery, batteryUnknown: false } }, 'device'), {})
-  for (const battery of ['', '-1', '101', '1.5', '1e2', 'NaN']) assert(q.getIPhoneErrors({ ...d, trade: { ...d.trade, battery, batteryUnknown: false } }, 'device').battery)
-})
-test('trade history has conditional requirements, exclusive unknowns and clears hidden fields', () => {
-  let d = withTrade()
-  assert(q.getIPhoneErrors({ ...d, trade: { ...d.trade, repairParts: [] } }, 'history').repairParts)
-  assert(q.getIPhoneErrors({ ...d, trade: { ...d.trade, repairParts: ['Outro'] } }, 'history').repairOther)
-  d = q.updateIPhonePurchase(d, { trade: { ...d.trade, repairs: 'Não sei', faults: ['Não sei'], faultOther: 'stale', repairOther: 'stale' } })
-  assert.deepEqual(d.trade.repairParts, [])
-  assert.equal(d.trade.repairOther, '')
-  assert.equal(d.trade.faultOther, '')
-  assert.deepEqual(q.toggleIPhoneChoice(['Face ID'], 'Não sei', ['Não sei']), ['Não sei'])
-  assert.deepEqual(q.toggleIPhoneChoice(['Não sei'], 'Carga', ['Não sei']), ['Carga'])
-  assert.equal(q.sanitizeIPhoneTrade({ notes: 'x'.repeat(900) }).notes.length, 600)
-  assert.deepEqual(q.updateIPhonePurchase(d, { tradeChoice: 'no' }).trade, data.createIPhoneTrade())
-})
-test('trade review distinctly names both devices, reports repairs without inferring approval', () => {
-  const message = q.buildIPhonePurchaseMessage(withTrade())
-  assert.match(message, /APARELHO DESEJADO[\s\S]*iPhone 17 Pro Max[\s\S]*APARELHO OFERECIDO NA TROCA[\s\S]*iPhone 15 Pro/)
-  assert.match(message, /Tela/)
-  assert.match(message, /dependem de avaliação técnica/)
-  assert.doesNotMatch(message, /crédito|diferença a pagar|aprovado|originalidade|500,00/)
-})
-test('restore preserves complete answers, validates TTL, malformed storage and screen position', () => {
-  const restored = q.restoreIPhonePurchase(envelope(withTrade()))
-  assert.equal(restored.screen, 'review')
-  assert.equal(restored.draft.trade.notes, 'NOTA_PRIVADA_QA')
-  assert.equal(restored.draft.trade.screen, 'Não sei')
+test('restore validates TTL, malformed storage, current screen and payment', () => {
+  assert.equal(q.restoreIPhonePurchase(envelope(complete())).screen, 'review')
   assert.equal(q.restoreIPhonePurchase(envelope(complete(), { savedAt: Date.now() - data.IPHONE_MAX_AGE - 1000 })), null)
   assert.equal(q.restoreIPhonePurchase(envelope(complete(), { savedAt: Date.now() + 10000 })), null)
-  for (const raw of ['null', '[]', '{', '', '{}']) assert.equal(q.restoreIPhonePurchase(raw), null)
-  const d = withTrade(); d.trade.capacity = ''
-  assert.equal(q.restoreIPhonePurchase(envelope(d)).screen, 'device')
+  for (const raw of ['null', '[]', '{', '', '{}', envelope({ ...complete(), version: 3 })]) assert.equal(q.restoreIPhonePurchase(raw), null)
+  assert.equal(q.restoreIPhonePurchase(envelope({ ...complete(), paymentDetail: '' })).screen, 'payment')
 })
 test('catalog change, removal or unavailability returns to product with explicit notice state', () => {
   const changed = data.IPHONE_VARIANTS.map(v => ({ ...v, cashCents: v.cashCents + 100, installmentCents: v.installmentCents + 1 }))
@@ -187,14 +148,14 @@ const browser = (search = attribution) => {
 const withBrowser = run => { const previous = globalThis.window; const mock = browser(); globalThis.window = mock; try { run(mock) } finally { if (previous === undefined) delete globalThis.window; else globalThis.window = previous } }
 test('purchase namespace is exact, deduplicated across edits, review, reload and reopening', () => withBrowser(mock => {
   let tracker = tracking.createIPhonePurchaseTracker(complete().selection)
-  const milestones = [['viewed'], ['started'], ...['product', 'payment', 'timing', 'trade', 'device', 'condition', 'history'].map(s => ['step', s]), ['tradeStarted'], ['tradeCompleted'], ['reviewed'], ['whatsapp']]
+  const milestones = [['viewed'], ['started'], ...['product', 'payment'].map(s => ['step', s]), ['reviewed'], ['whatsapp']]
   for (const [event, screen] of milestones) { tracker.track(event, complete().selection, screen); tracker.track(event, complete().selection, screen) }
   mock.location.search = ''
   tracker = tracking.createIPhonePurchaseTracker(complete().selection)
   for (const [event, screen] of milestones) tracker.track(event, complete().selection, screen)
-  assert.equal(mock.dataLayer.length, 13)
-  assert.equal(mock.calls.length, 13)
-  assert.equal(new Set(mock.dataLayer.map(v => v.event_id)).size, 13)
+  assert.equal(mock.dataLayer.length, 6)
+  assert.equal(mock.calls.length, 6)
+  assert.equal(new Set(mock.dataLayer.map(v => v.event_id)).size, 6)
   for (const [index, call] of mock.calls.entries()) {
     assert.equal(call[0], 'trackSingleCustom'); assert.equal(call[1], '1430740015202870')
     assert.equal(call[2], mock.dataLayer[index].event)
@@ -204,7 +165,7 @@ test('purchase namespace is exact, deduplicated across edits, review, reload and
     assert(!['Lead', 'Purchase', 'SmartphoneQuoteWhatsAppClick'].includes(call[2]))
   }
   tracker.track('step', complete().selection, 'invented')
-  assert.equal(mock.calls.length, 13)
+  assert.equal(mock.calls.length, 6)
 }))
 test('payload allows only catalog values and attribution, never triage, free text, personal data or value', () => withBrowser(mock => {
   const malicious = { ...complete().selection, notes: 'NOTA_PRIVADA_QA', battery: '87', phone: 'PRIVATE_PHONE', cashCents: 1 }
@@ -322,7 +283,7 @@ test('fbclid stays outside custom events, drafts and WhatsApp, without changing 
   assert.equal(mock.dataLayer.length, 1)
   assert.doesNotMatch(JSON.stringify([...mock.values]), /fbclid|IwQA/)
   assert.doesNotMatch(JSON.stringify(mock.calls), /fbclid|IwQA/)
-  assert.doesNotMatch(q.buildIPhonePurchaseMessage(withTrade()), /fbclid|IwQA/)
+  assert.doesNotMatch(q.buildIPhonePurchaseMessage(complete()), /fbclid|IwQA/)
 }))
 
 
@@ -352,26 +313,13 @@ test('payment quotes the chosen installment count in the summary and WhatsApp me
   assert.match(q.buildIPhonePurchaseMessage(credit), /Cartão de crédito · 12 parcelas/)
   assert.match(q.buildIPhonePurchaseMessage(complete()), /À vista · Pix/)
 })
-test('purchase timing is a required separate step and restored drafts cannot bypass new payment requirements', () => {
-  const d = { ...complete(), timing: '' }
-  assert.equal(q.firstIncompleteIPhoneScreen(d), 'timing')
-  assert(q.getIPhoneErrors(d, 'timing').timing)
-  assert(q.getIPhoneErrors({ ...d, timing: 'Prefiro não informar' }, 'timing').timing)
-  assert.equal(q.restoreIPhonePurchase(envelope(d)).screen, 'timing')
-  const old = complete(); delete old.paymentDetail
+test('legacy payment requirements still apply without collecting timing or trade', () => {
+  const old = { ...complete(), version: 1 }; delete old.paymentDetail
   assert.equal(q.restoreIPhonePurchase(envelope(old)).screen, 'payment')
   for (const payment of ['Decidir pelo WhatsApp', 'Cartão em 12 parcelas']) {
-    assert.equal(q.restoreIPhonePurchase(envelope({ ...complete(), payment })).screen, 'payment')
+    assert.equal(q.restoreIPhonePurchase(envelope({ ...old, payment })).screen, 'payment')
   }
-  assert.equal(q.restoreIPhonePurchase(envelope(complete())).draft.paymentDetail, 'Pix')
-  assert.deepEqual(['product','payment','timing','trade','review'].map(q.getIPhoneStep), [0,1,2,3,4])
-})
-test('used color is a bounded reported-color choice without changing trade eligibility', () => {
-  assert.equal(q.sanitizeIPhoneTrade({ color: 'Azul' }).color, 'Azul')
-  assert.equal(q.sanitizeIPhoneTrade({ color: 'Outra cor' }).color, 'Outra cor')
-  assert.equal(q.sanitizeIPhoneTrade({ color: 'cor digitada livre' }).color, '')
-  assert.equal(q.getIPhoneTradeEligibility(withTrade()), 'eligible')
-  assert.match(q.buildIPhonePurchaseMessage(withTrade()), /Cor informada: Azul/)
+  assert.deepEqual(['product', 'payment', 'review'].map(q.getIPhoneStep), [0, 1, 2])
 })
 
 test('the one-time markup keeps the total fixed from 2 to 12 and reconciles cents', () => {
@@ -432,51 +380,29 @@ test('color preferences survive capacity changes, reset across models/conditions
   })
 })
 
-test('the original battery, condition and repair checklist is available for every purchase model', () => {
+test('legacy tracker keeps compatible milestones and source but cannot emit removed events', () => withBrowser(mock => {
+  const state = { version: 1, attemptId: 'ip_legacy12345678', createdAt: Date.now(), initial: complete().selection,
+    attribution: { utm_source: 'ig' }, sent: ['viewed', 'started', 'step:product', 'step:payment', 'step:timing', 'step:trade', 'step:device', 'step:condition', 'step:history', 'tradeStarted', 'tradeCompleted', 'reviewed', 'whatsapp'] }
+  mock.values.set(tracking.IPHONE_TRACKING_KEY, JSON.stringify(state))
+  mock.location.search = ''
+  const tracker = tracking.createIPhonePurchaseTracker(complete().selection)
+  assert.equal(tracker.attemptId, state.attemptId)
+  for (const event of ['viewed', 'started', 'reviewed', 'whatsapp', 'tradeStarted', 'tradeCompleted']) tracker.track(event, complete().selection, 'review')
+  for (const screen of ['product', 'payment', 'timing', 'trade', 'device', 'condition', 'history', 'review']) tracker.track('step', complete().selection, screen)
+  assert.deepEqual(mock.calls, [])
+  assert.deepEqual(JSON.parse(mock.values.get(tracking.IPHONE_TRACKING_KEY)).sent, ['viewed', 'started', 'step:product', 'step:payment', 'reviewed', 'whatsapp'])
+}))
+test('every product finishes without timing or trade and legacy preferences survive migration', () => {
   for (const variant of data.IPHONE_VARIANTS) {
-    let draft = q.updateIPhonePurchase(withTrade(), { selection: { modelId: variant.modelId, capacity: variant.capacity, condition: variant.condition, colorId: variant.colorId } })
+    let draft = q.updateIPhonePurchase(complete(), { selection: { modelId: variant.modelId, capacity: variant.capacity, condition: variant.condition, colorId: variant.colorId } })
     if (variant.condition === 'used') draft = q.updateIPhonePurchase(draft, { preferredColorIds: [usedColors.getIPhoneUsedColors(variant.modelId)[0].id] })
-    assert(q.canDescribeIPhoneTrade(draft), variant.id)
-    assert(q.getIPhoneScreens(draft).includes('condition'))
-    assert(q.getIPhoneScreens(draft).includes('history'))
+    assert.deepEqual(q.getIPhoneScreens(), ['product', 'payment', 'review'])
     assert.equal(q.firstIncompleteIPhoneScreen(draft), null)
-    const message = q.buildIPhonePurchaseMessage(draft)
-    assert.match(message, /Saúde da bateria: Não sei/)
-    assert.match(message, /Reparos: Houve troca ou reparo — Tela/)
-    assert.match(message, /Falhas conhecidas: Face ID/)
-    assert.match(message, /NOTA_PRIVADA_QA/)
-    if (variant.modelId !== 'iphone-17-pro-max') {
-      assert.equal(q.getIPhoneTradeEligibility(draft), 'pending')
-      assert.match(message, /política a confirmar pela equipe/)
-    }
-    const restored = q.restoreIPhonePurchase(envelope(draft))
+    const restored = q.restoreIPhonePurchase(envelope({ ...draft, version: 1, trade: { notes: 'PRIVATE_LEGACY_NOTE' }, timing: 'Nos próximos dias' }, { screen: 'history' }))
+    assert.deepEqual(restored.draft, draft)
     assert.equal(restored.screen, 'review')
-    assert.deepEqual(restored.draft.trade, draft.trade)
-    const incomplete = { ...draft, trade: { ...draft.trade, capacity: '', batteryUnknown: false, battery: '' } }
-    assert.equal(q.firstIncompleteIPhoneScreen(incomplete), 'device')
-    assert(q.getIPhoneErrors(incomplete, 'device').battery)
-    assert(q.getIPhoneErrors({ ...draft, trade: { ...draft.trade, repairParts: [] } }, 'history').repairParts)
-    assert(!q.getIPhoneScreens(q.updateIPhonePurchase(draft, { tradeChoice: 'no' })).includes('history'))
+    const message = q.buildIPhonePurchaseMessage(restored.draft)
+    assert.doesNotMatch(message, /PRIVATE|Quando|Nos próximos dias|troca|bateria|Ref\.|utm_|fbclid/)
+    assert(message.includes(variant.model))
   }
-})
-test('collecting an older recognized trade phone for another purchase does not change the confirmed 17 policy', () => {
-  let draft = q.updateIPhonePurchase(withTrade(), { selection: { modelId: 'iphone-18-pro-max', capacity: 256, condition: 'sealed', colorId: 'black' } })
-  draft = q.updateIPhonePurchase(draft, { trade: { ...draft.trade, modelId: tradeModel('iPhone 13') } })
-  assert(q.canDescribeIPhoneTrade(draft))
-  assert.equal(q.getIPhoneTradeEligibility(draft), 'pending')
-  assert.equal(q.firstIncompleteIPhoneScreen(draft), 'device')
-  assert.equal(draft.trade.repairs, '', 'changing offered phones clears the earlier condition answers')
-  const for17 = q.updateIPhonePurchase(draft, { selection: complete().selection })
-  assert.equal(q.getIPhoneTradeEligibility(for17), 'incompatible')
-  assert(!q.canDescribeIPhoneTrade(for17))
-  assert(q.getIPhoneErrors(for17, 'device').modelId)
-  let unknown = q.updateIPhonePurchase(draft, { trade: { ...draft.trade, modelId: 'other' } })
-  unknown = q.updateIPhonePurchase(unknown, { trade: { ...unknown.trade, otherModel: 'Modelo a esclarecer', notes: 'PRIVATE_TRADE_NOTE' } })
-  assert(!q.canDescribeIPhoneTrade(unknown))
-  assert(!q.getIPhoneScreens(unknown).includes('history'))
-  assert.match(q.buildIPhonePurchaseMessage(unknown), /PRIVATE_TRADE_NOTE/)
-  withBrowser(mock => {
-    tracking.createIPhonePurchaseTracker(draft.selection).track('reviewed', draft.selection, 'review')
-    assert.doesNotMatch(JSON.stringify(mock.dataLayer), /PRIVATE_TRADE_NOTE|battery|repairParts|faults/)
-  })
 })

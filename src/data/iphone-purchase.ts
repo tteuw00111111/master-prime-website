@@ -1,13 +1,13 @@
-import type { IPhonePurchaseDraft, IPhoneTradeIn, IPhoneVariant } from '@/types/iphone-purchase'
+import type { IPhonePurchaseDraft, IPhoneVariant } from '@/types/iphone-purchase'
 import { getIPhoneInstallmentPlan } from '../utils/iphone-pricing'
-import { SMARTPHONE_MODELS } from './smartphone-models'
 
 export const IPHONE_PURCHASE_PATH = '/orcamento/iphone'
 export const IPHONE_CATALOG_VERSION = '2026-10-21.v2'
 export const IPHONE_CATALOG_DATE_LABEL = '21/10/2026'
 export const IPHONE_STORAGE_KEY = 'master-prime:iphone-purchase:v1'
 export const IPHONE_MAX_AGE = 2 * 60 * 60 * 1000
-export const IPHONE_STEPS = ['Seu iPhone', 'Pagamento', 'Quando comprar', 'Troca opcional', 'Revisar'] as const
+export const IPHONE_JOURNEY_VERSION = '2026-10-21.reduced-v1'
+export const IPHONE_STEPS = ['Seu iPhone', 'Pagamento', 'Revisar'] as const
 
 // Source: commercial table supplied by Master Prime, 21/10/2026.
 // Installments use the 8.57% markup subsequently confirmed by Master Prime.
@@ -51,27 +51,11 @@ export const IPHONE_VARIANTS: readonly IPhoneVariant[] = [
   })),
 ].map(variant => ({ ...variant, availability: unavailableVariantIds.has(variant.id) ? 'unavailable' : 'consult' }))
 
-// Model recognition reuses the repository's sourced catalog, never a number typed by the visitor.
-export const IPHONE_TRADE_MODELS = SMARTPHONE_MODELS.filter(model => model.brandId === 'apple')
 export const IPHONE_PAYMENTS = ['À vista', 'Cartão de crédito'] as const
 export const IPHONE_CASH_METHODS = ['Pix', 'Cartão'] as const
 // The same 8.57% markup applies to every supported installment count.
 export const IPHONE_INSTALLMENTS = ['2 parcelas', '3 parcelas', '4 parcelas', '5 parcelas', '6 parcelas', '7 parcelas', '8 parcelas', '9 parcelas', '10 parcelas', '11 parcelas', '12 parcelas'] as const
-export const IPHONE_TIMINGS = ['Assim que confirmar as condições', 'Nos próximos dias', 'Estou pesquisando'] as const
-// Visitor-reported colors; these options do not describe store inventory.
-export const IPHONE_TRADE_COLORS = ['Preto', 'Branco', 'Prateado', 'Cinza', 'Azul', 'Verde', 'Rosa', 'Roxo', 'Vermelho', 'Amarelo', 'Dourado', 'Natural', 'Laranja', 'Bordô', 'Outra cor', 'Não sei'] as const
-export const IPHONE_APPEARANCE = ['Sem dano percebido', 'Marcas ou riscos', 'Trinca ou quebra', 'Não sei'] as const
-export const IPHONE_REPAIRS = ['Não conheço reparos anteriores', 'Houve troca ou reparo', 'Não sei'] as const
-export const IPHONE_PARTS = ['Tela', 'Bateria', 'Câmeras', 'Placa', 'Outro', 'Não sei qual'] as const
-export const IPHONE_FAULTS = ['Nenhuma falha conhecida', 'Face ID', 'Câmeras', 'Carga', 'Tela/toque', 'Outra', 'Não sei'] as const
-export const IPHONE_LIQUID = ['Não tenho conhecimento', 'Sim', 'Não sei'] as const
-export const IPHONE_ACTIVATION = ['Sem bloqueio conhecido', 'Há bloqueio de ativação', 'Há gestão corporativa', 'Não sei'] as const
-export const IPHONE_TRADE_NOTICE = 'As informações serão analisadas pela equipe. A aceitação e o valor do aparelho usado dependem de avaliação técnica.'
-export const createIPhoneTrade = (): IPhoneTradeIn => ({
-  modelId: '', otherModel: '', capacity: '', color: '', battery: '', batteryUnknown: false,
-  screen: '', back: '', sides: '', repairs: '', repairParts: [], repairOther: '', faults: [], faultOther: '', liquid: '', activation: '', notes: '',
-})
 export const createIPhonePurchaseDraft = (): IPhonePurchaseDraft => ({
-  version: 1, selection: { modelId: 'iphone-17-pro-max', capacity: 256, condition: 'sealed', colorId: '' },
-  preferredColorIds: [], payment: '', paymentDetail: '', timing: '', tradeChoice: '', trade: createIPhoneTrade(),
+  version: 2, selection: { modelId: 'iphone-17-pro-max', capacity: 256, condition: 'sealed', colorId: '' },
+  preferredColorIds: [], payment: '', paymentDetail: '',
 })
