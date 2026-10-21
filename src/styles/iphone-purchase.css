@@ -1,0 +1,233 @@
+.iphone-purchase { min-width: 0; }
+.iphone-purchase fieldset { min-width: 0; }
+.iphone-purchase .iphone-form-content { border: 0; margin: 0; padding: 0; }
+.iphone-purchase legend { margin-bottom: 12px; font-size: 1rem; font-weight: 500; color: #e1e1e5; }
+.iphone-purchase legend > span { display: block; font-size: .875rem; font-weight: 400; color: var(--quote-muted); margin-top: 4px; }
+.iphone-recap { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; padding: 10px 14px; border: 1px solid var(--quote-border); border-radius: 12px; background: #121212; }
+.iphone-recap img { height: 56px; width: auto; flex-shrink: 0; border-radius: 8px; }
+.iphone-recap p { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.iphone-recap strong { font-size: .9375rem; line-height: 1.4; }
+.iphone-recap span { color: var(--quote-muted); font-size: .8125rem; line-height: 1.4; }
+.iphone-purchase .quote-small-print { color: #b6b6be; }
+.iphone-installment-choices .quote-answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: 8px; }
+.iphone-purchase .iphone-installment-choices .quote-answer { position: relative; min-height: 80px; padding: 12px 36px 12px 12px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; }
+.iphone-installment-choices .iphone-payment-amount { margin-left: 0; font-size: .9375rem; text-align: left; }
+.iphone-installment-choices .quote-radio-mark { position: absolute; top: 12px; right: 10px; width: 18px; height: 18px; }
+.iphone-credit-summary p + p { margin-top: 6px; }
+.iphone-gallery-stage.is-used { background: transparent; border-radius: 16px; overflow: hidden; }
+.iphone-reference-note { margin-top: 8px; text-align: center; font-size: .875rem; line-height: 1.5; color: var(--iphone-secondary); }
+.iphone-used-colors { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 8px; margin-top: 12px; }
+.iphone-used-color.quote-answer { min-height: 68px; padding: 12px; gap: 10px; }
+.iphone-used-color > span:nth-child(2) { flex: 1; }
+.iphone-used-color .quote-radio-mark { width: 18px; height: 18px; }
+.iphone-all-colors { min-height: 44px; margin: 4px 0; padding: 10px 0; color: #e4d074; text-decoration: underline; text-underline-offset: 4px; }
+.iphone-all-colors[aria-pressed='true'] { font-weight: 600; }
+.iphone-purchase .quote-radio-mark { border-color: #ffffff59; }
+.iphone-product { display: flex; align-items: center; gap: 18px; padding: 8px 0 22px; border-bottom: 1px solid var(--quote-border); }
+.iphone-product-icon { display: grid; place-items: center; flex-shrink: 0; width: 64px; height: 82px; border: 1px solid #ffd70040; border-radius: 18px; background: #ffd70008; }
+.iphone-product-icon svg { width: 34px; height: 44px; color: #e6d787; }
+.iphone-eyebrow { display: block; font-size: .75rem; line-height: 1.6; color: #c3b887; }
+.iphone-product h3 { font-size: clamp(1.4rem, 5vw, 1.8rem); font-weight: 700; letter-spacing: -.035em; line-height: 1.3; margin-top: 6px; }
+.iphone-product p { color: var(--quote-muted); font-size: .875rem; margin-top: 5px; line-height: 1.6; }
+.iphone-segments { display: flex; gap: 10px; flex-wrap: wrap; }
+.iphone-segments button { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 12px 26px; border: 1px solid var(--quote-border); border-radius: 12px; color: #dedee4; background: #161616; font-size: 1rem; font-weight: 600; }
+.iphone-purchase .selected { border-color: #b69b34; background: #ffd7000a; }
+.iphone-alternatives { border-top: 1px solid var(--quote-border); padding-top: 4px; }
+.iphone-alternatives summary { display: flex; align-items: center; padding: 12px 0; color: #e4d074; cursor: pointer; font-size: 1rem; line-height: 1.6; }
+.iphone-alternatives summary::after { content: '+'; margin-left: auto; padding-left: 12px; font-size: 1.4rem; }
+.iphone-alternatives[open] summary::after { content: '−'; }
+.iphone-alternatives > div { padding: 12px 0; }
+.iphone-purchase select { display: block; width: 100%; min-width: 0; min-height: 56px; background: #161616; border: 1px solid var(--quote-border); border-radius: 12px; color: #f1f1f4; font-size: 1rem; padding: 14px 12px; color-scheme: dark; }
+.iphone-purchase :is(select, button, summary):focus-visible { outline: 2px solid var(--quote-accent); outline-offset: 4px; }
+.iphone-purchase select[aria-invalid="true"] { border-color: #ffb6a7; }
+.iphone-purchase .quote-check { min-height: 48px; }
+.iphone-purchase .quote-check input { flex-shrink: 0; }
+.iphone-notice { padding: 16px; border: 1px solid #b8a35860; border-radius: 10px; background: #ffd70007; color: #cac6b6; font-size: .875rem; line-height: 1.8; margin-bottom: 12px; }
+.iphone-notice p { margin: 8px 0; }
+.iphone-notice button { min-height: 48px; display: flex; align-items: center; gap: 12px; color: #f2d96e; text-align: left; text-decoration: underline; text-underline-offset: 4px; }
+.iphone-used-price { border: 1px solid var(--quote-border); padding: 20px; border-radius: 16px; line-height: 1.8; }
+.iphone-used-price p { color: #c5c5cc; }
+.iphone-mini-summary { display: flex; align-items: center; gap: 18px; line-height: 1.8; }
+.iphone-mini-summary img { height: 96px; width: auto; flex-shrink: 0; border-radius: 10px; }
+.iphone-mini-summary strong { font-size: 1.05rem; }
+.iphone-mini-summary .iphone-mini-summary-price { font-weight: 600; color: #f6f4e9; margin-top: 4px; }
+.iphone-used-price > strong { font-size: 1.8rem; }
+.iphone-mini-summary p { color: #c5c5cc; }
+.iphone-review-edits { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; }
+.iphone-review-edits button { text-align: left; font-size: .875rem; text-decoration: underline; text-underline-offset: 4px; color: #e4d074; }
+.iphone-footer { padding: 32px 24px; border-top: 1px solid #ffffff14; text-align: center; color: #a5a5ad; font-size: .875rem; line-height: 1.8; }
+.iphone-footer strong { color: #d6d6dd; }
+.iphone-footer p { margin: 8px 0; }
+.iphone-footer a { display: flex; justify-content: center; align-items: center; min-height: 48px; color: #e4d074; }
+.iphone-purchase .quote-progress li button { min-height: 48px; top: -22px; bottom: -22px; }
+.iphone-purchase .quote-progress-top { margin-bottom: 24px; }
+.iphone-purchase .quote-progress { padding-bottom: 18px; }
+@media (hover: hover) { .iphone-color:hover, .iphone-segments button:hover { border-color: #ffd70080; } }
+@media (prefers-reduced-motion: reduce) { .iphone-hero-stage img { transition: none; transform: none; } .iphone-hero-price-value { animation: none; } }
+@media (max-width: 800px) { .iphone-purchase .quote-progress { padding-bottom: 28px; } }
+@media (max-width: 360px) { .iphone-color { padding: 16px; } .iphone-color-price { font-size: 1.45rem; } .iphone-product { gap: 12px; } .iphone-product-icon { width: 44px; height: 60px; } }
+
+/* One product stage; visual previews never select a commercial variant. */
+.iphone-purchase-page { --iphone-surface: #151515; --iphone-text: #f5f5f7; --iphone-secondary: #b6b6be; }
+.iphone-purchase-page .quote-help svg { color: #d3c077; }
+.iphone-purchase-page .quote-header { min-height: 72px; }
+.iphone-purchase-page .quote-layout { padding-top: 20px; }
+.iphone-purchase-page .quote-workspace { margin-top: 20px; }
+.iphone-purchase-page .quote-progress { margin-bottom: 24px; }
+.iphone-purchase-page .quote-progress-top { margin-bottom: 12px; }
+.iphone-purchase-page .quote-form-heading { margin-bottom: 22px; }
+.iphone-purchase-page .quote-form-heading h2 { font-size: clamp(1.65rem, 4vw, 2rem); }
+.iphone-purchase-page.is-configuring .quote-layout { max-width: 1120px; }
+.iphone-purchase-page.is-configuring .quote-progress { max-width: 560px; margin-left: auto; margin-right: auto; }
+.iphone-purchase-page.is-configuring .quote-form-heading { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); margin: 0; padding: 0; }
+.iphone-configurator { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); column-gap: 64px; align-items: start; }
+.iphone-model-heading { grid-column: 2; grid-row: 1; margin-bottom: 16px; }
+.iphone-model-heading > p { font-size: .875rem; color: #d9c77f; margin-bottom: 4px; }
+.iphone-model-heading h3 { font-size: clamp(1.8rem, 4vw, 2.75rem); line-height: 1.15; font-weight: 700; letter-spacing: -.045em; }
+.iphone-product-media { min-width: 0; grid-column: 1; grid-row: 1 / 3; position: sticky; top: 24px; }
+.iphone-configuration { grid-column: 2; display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.iphone-price-summary { padding-bottom: 18px; border-bottom: 1px solid var(--quote-border); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.iphone-selection-label { font-size: .9375rem; color: var(--iphone-secondary); margin-bottom: 8px; }
+.iphone-hero-price { line-height: 1.2; display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+.iphone-hero-price strong { font-size: clamp(1.85rem, 3vw, 2.35rem); letter-spacing: -.04em; font-weight: 650; font-variant-numeric: tabular-nums; }
+.iphone-hero-price > span { font-size: .875rem; color: var(--iphone-secondary); }
+.iphone-hero-price .iphone-from { width: 100%; font-size: .875rem; margin-bottom: 2px; }
+.iphone-hero-installment { margin-top: 8px; font-size: .9375rem; color: #d3d3d9; line-height: 1.5; }
+.iphone-gallery-stage { position: relative; height: 500px; overflow: hidden; isolation: isolate; background: #0a0a0a; }
+.iphone-gallery-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 12px 20px; pointer-events: none; }
+/* Anchor each model's handset position to the center of the gallery. */
+.iphone-gallery-image[data-angle='detail'] { left: 50%; right: auto; width: auto; max-width: none; object-fit: contain; padding: 0; transform: translateX(calc(-1 * var(--iphone-detail-anchor, 63.2%))); mix-blend-mode: lighten; }
+.iphone-gallery-image.active { z-index: 1; }
+.iphone-gallery-image.is-entering { animation: iphone-image-in .42s cubic-bezier(.4, 0, .2, 1) both; }
+.iphone-gallery-image.outgoing { animation: iphone-image-out .42s cubic-bezier(.4, 0, .2, 1) both; }
+.iphone-gallery-stage.is-changing-view .iphone-gallery-image.is-entering { animation-name: iphone-image-in, iphone-image-settle; }
+/* Keep the camera detail's source anchor fixed during its gentle zoom. */
+.iphone-gallery-image[data-angle='detail'] { transform-origin: var(--iphone-detail-anchor, 63.2%) 50%; }
+@keyframes iphone-image-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes iphone-image-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes iphone-image-settle { from { scale: 1.025; } to { scale: 1; } }
+.iphone-gallery-views, .iphone-model-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
+.iphone-gallery-views { margin-top: 8px; }
+.iphone-gallery-views button, .iphone-model-controls button { min-height: 44px; min-width: 44px; padding: 10px 12px; font-size: .875rem; border-radius: 9px; color: var(--iphone-secondary); border: 1px solid transparent; transition: color .16s, background-color .16s, transform .12s; }
+.iphone-gallery-views button[aria-pressed='true'], .iphone-model-controls button[aria-pressed='true'] { color: var(--iphone-text); background: #242424; border-color: #ffffff20; }
+.iphone-gallery-views .iphone-explore { display: inline-flex; align-items: center; justify-content: center; gap: 7px; color: #e4d074; }
+.iphone-gallery-empty { min-height: 300px; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; text-align: center; background: var(--iphone-surface); border-radius: 16px; padding: 16px; }
+.iphone-gallery-empty svg { width: 48px; height: 64px; color: #d3c077; stroke-width: 1; }
+.iphone-gallery-empty p { font-size: 1.25rem; }
+.iphone-gallery-empty span { color: var(--iphone-secondary); font-size: .875rem; }
+.iphone-gallery-empty button { color: #e4d074; text-decoration: underline; padding: 8px 12px; }
+.iphone-model { position: relative; height: 100%; display: flex; flex-direction: column; }
+.iphone-model-canvas { position: relative; flex: 1; min-height: 0; }
+.iphone-model model-viewer { width: 100%; height: 100%; --poster-color: transparent; --progress-bar-height: 0; touch-action: pan-y; }
+.iphone-model model-viewer::part(default-progress-bar) { display: none; }
+.iphone-model-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 12px 20px; background: #0a0a0a; pointer-events: none; }
+.iphone-model-status { position: absolute; bottom: 8px; left: 12px; right: 12px; padding: 8px; border-radius: 8px; text-align: center; font-size: .875rem; color: var(--iphone-secondary); background: #151515; }
+.iphone-model-controls { flex-shrink: 0; align-items: center; }
+.iphone-model-controls span { color: var(--iphone-secondary); font-size: .875rem; padding: 0 8px; }
+.iphone-purchase .iphone-segments { gap: 8px; }
+.iphone-purchase .iphone-segments button { min-height: 48px; flex: 1; padding: 10px 16px; border-radius: 10px; background: var(--iphone-surface); flex-wrap: wrap; }
+.iphone-segments button > span { white-space: nowrap; }
+.iphone-purchase .iphone-segments button svg { width: 16px; }
+.iphone-colors { display: grid; gap: 8px; }
+.iphone-color { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; width: 100%; text-align: left; border: 1px solid var(--quote-border); border-radius: 10px; padding: 12px 14px; background: var(--iphone-surface); transition: border-color .16s, background-color .16s, transform .12s; }
+.iphone-color-top { display: flex; align-items: center; gap: 10px; grid-row: 1 / 3; }
+.iphone-color-top strong { font-size: 1rem; font-weight: 500; }
+.iphone-color .quote-radio-mark { display: none; }
+.iphone-swatch { width: 22px; height: 22px; border: 1px solid #ffffff70; border-radius: 50%; flex-shrink: 0; }
+.iphone-color.selected .iphone-swatch { outline: 2px solid #e0ca71; outline-offset: 3px; }
+.iphone-color-price, .iphone-installment, .iphone-payment-amount { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-variant-numeric: tabular-nums; }
+.iphone-color-price { font-size: 1rem; font-weight: 600; text-align: right; color: var(--iphone-text); }
+.iphone-color-price small { font-size: .875rem; color: var(--iphone-secondary); font-weight: 400; }
+.iphone-installment { font-size: .875rem; color: var(--iphone-secondary); text-align: right; }
+.iphone-payment-amount { margin-left: auto; font-size: 1rem; color: var(--iphone-text); font-weight: 600; text-align: right; }
+.iphone-purchase #iphone-payment .quote-answer { flex-wrap: wrap; }
+.iphone-purchase #iphone-payment .quote-radio-mark { flex-shrink: 0; }
+.iphone-other-models { border: 0; margin: 24px 0 0; padding: 0; }
+.iphone-alternatives { margin: 0; }
+.iphone-purchase-page .quote-actions { animation: none; }
+.iphone-purchase-page.is-configuring .quote-actions { width: calc((100% - 64px) / 2.2); margin-left: auto; margin-top: 20px; padding-top: 0; border-top: 0; }
+.iphone-purchase-page.is-configuring .quote-actions .quote-next { width: 100%; }
+.iphone-action-summary { display: none; }
+.iphone-recap img, .iphone-mini-summary img { object-fit: contain; border-radius: 0; }
+.iphone-recap span { font-size: .875rem; }
+.iphone-mini-summary { align-items: flex-start; }
+.iphone-purchase .quote-small-print { font-size: .875rem; line-height: 1.65; }
+.iphone-purchase-page .quote-privacy-note, .iphone-purchase-page .quote-breadcrumb { text-align: center; justify-content: center; margin-top: 18px; }
+.iphone-purchase-page .quote-bottom-context { padding-top: 0; padding-bottom: 24px; }
+.iphone-footer { padding-top: 24px; padding-bottom: 24px; }
+.iphone-purchase :is(.iphone-color, .iphone-segments button, .iphone-gallery-views button, .iphone-model-controls button):active { transform: scale(.98); }
+.iphone-purchase :is(button, fieldset, input, select, textarea, summary) { scroll-margin-top: 100px; scroll-margin-bottom: calc(var(--quote-actions-height, 110px) + 24px); }
+@media (max-width: 800px) {
+  .iphone-purchase-page .quote-header { min-height: 56px; padding: 4px 20px; }
+  .iphone-purchase-page .quote-header img { width: 72px; }
+  .iphone-purchase-page .quote-layout { padding: 12px 20px 20px; min-height: auto; }
+  .iphone-purchase-page .quote-workspace { margin-top: 16px; }
+  .iphone-purchase-page.is-configuring .quote-layout { max-width: 560px; }
+  .iphone-purchase-page.is-configuring .quote-page-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .iphone-purchase-page.is-configuring .quote-workspace { margin-top: 0; }
+  .iphone-purchase-page .quote-progress { margin: 0 0 18px; padding: 8px 0 12px; }
+  .iphone-purchase-page .quote-progress-top { margin-bottom: 8px; }
+  .iphone-purchase-page.is-configuring .quote-progress { margin-bottom: 8px; }
+  .iphone-configurator { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .iphone-model-heading { grid-column: 1; grid-row: auto; text-align: center; margin-bottom: 4px; }
+  .iphone-model-heading > p { display: none; }
+  .iphone-model-heading h3 { font-size: 1.875rem; }
+  .iphone-product-media { grid-column: 1; grid-row: auto; position: static; margin-bottom: 16px; }
+  .iphone-gallery-stage { height: 240px; }
+  .iphone-gallery-image { padding: 4px 12px; }
+  .iphone-gallery-views { margin-top: 4px; gap: 0; }
+  .iphone-gallery-views button { padding: 8px 10px; }
+  .iphone-model-controls { gap: 0; }
+  .iphone-model-controls button { padding: 8px 12px; }
+  .iphone-model-controls span { display: none; }
+  .iphone-gallery-empty { min-height: 224px; }
+  .iphone-configuration { grid-column: 1; gap: 18px; }
+  .iphone-price-summary { display: none; }
+  .iphone-purchase legend { margin-bottom: 8px; }
+  .iphone-colors { grid-template-columns: repeat(auto-fit, minmax(min(100%, 6.5rem), 1fr)); gap: 8px; }
+  .iphone-color { display: flex; flex-direction: column; gap: 4px; padding: 10px 6px; text-align: center; }
+  .iphone-color-top { flex-direction: column; gap: 8px; }
+  .iphone-color-top strong { display: grid; align-items: center; min-height: 1.25em; font-size: .875rem; line-height: 1.25; }
+  .iphone-color-price { font-size: .9375rem; text-align: center; }
+  .iphone-color-price small { display: block; }
+  .iphone-installment { text-align: center; line-height: 1.4; }
+  .iphone-installment-qualifier { display: none; }
+  /* The page already reserves the measured action height; keep supporting links close. */
+  .iphone-purchase-page .quote-form { padding-bottom: 16px; }
+  .iphone-purchase-page .quote-actions, .iphone-purchase-page.is-configuring .quote-actions { width: auto; margin: 0; padding: 10px 20px max(10px, env(safe-area-inset-bottom)); border-top: 1px solid #ffffff20; }
+  .iphone-purchase-page.is-configuring .quote-actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .iphone-purchase-page .quote-actions > .iphone-action-summary:first-child { display: block; max-width: none; width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: .875rem; line-height: 1.45; color: var(--iphone-secondary); }
+  .iphone-action-summary p + p { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2px 12px; }
+  .iphone-action-summary strong { font-weight: 600; color: var(--iphone-text); }
+  .iphone-purchase-page .quote-actions .quote-next { min-height: 48px; }
+  .iphone-other-models { margin-top: 20px; }
+  .iphone-purchase-page .quote-privacy-note { margin-top: 0; }
+}
+@media (max-width: 360px) {
+  .iphone-purchase-page .quote-header { padding-left: 16px; padding-right: 16px; }
+  .iphone-purchase-page .quote-layout { padding-left: 16px; padding-right: 16px; }
+  .iphone-model-heading h3 { font-size: 1.65rem; }
+  .iphone-gallery-views button { padding-left: 7px; padding-right: 7px; }
+  .iphone-colors { grid-template-columns: minmax(0, 1fr); }
+  .iphone-color { display: grid; grid-template-columns: 1fr auto; padding: 12px; gap: 6px; }
+  .iphone-color-top { flex-direction: row; text-align: left; }
+  .iphone-color-top strong { min-height: 28px; }
+  .iphone-color-price, .iphone-installment { text-align: right; }
+  .iphone-color-price small { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .iphone-gallery-image, .iphone-gallery-stage.is-changing-view .iphone-gallery-image.is-entering, .iphone-color, .iphone-gallery-views button, .iphone-model-controls button { animation: none; transition: none; }
+  .iphone-gallery-image.outgoing { display: none; }
+  .iphone-purchase :is(.iphone-color, .iphone-segments button, .iphone-gallery-views button, .iphone-model-controls button):active { transform: none; }
+}
+@media (prefers-reduced-transparency: reduce) { .iphone-purchase-page .quote-actions { background: #101010; } }
+.iphone-purchase .iphone-configuration legend { margin-bottom: 8px; }
+@media (min-width: 801px) {
+  .iphone-purchase-page .quote-layout { padding-top: 16px; }
+  .iphone-purchase-page .quote-workspace { margin-top: 16px; }
+  .iphone-purchase-page .quote-progress { margin-bottom: 20px; }
+  .iphone-model-heading { margin-bottom: 12px; }
+  .iphone-configuration { gap: 16px; }
+  .iphone-price-summary { padding-bottom: 12px; }
+  .iphone-color { padding-top: 10px; padding-bottom: 10px; }
+}

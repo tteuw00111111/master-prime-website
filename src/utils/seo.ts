@@ -5,6 +5,7 @@ import { GAMING_QUOTE_PATH } from '@/data/gaming-quote'
 import { SMARTPHONE_QUOTE_PATH } from '@/data/smartphone-quote'
 import { COMPUTER_QUOTE_PATH } from '@/data/computer-quote'
 import { PC_BUILD_QUOTE_PATH } from '@/data/pc-build-quote'
+import { IPHONE_PURCHASE_PATH } from '@/data/iphone-purchase'
 
 export const SITE_URL = 'https://master-prime.com'
 export const BUSINESS_ID = `${SITE_URL}/#localbusiness`
@@ -45,6 +46,12 @@ export const getPageMetadata = (pathname: string): PageMetadata => {
   const path = normalizePath(pathname)
   if (path === '/') return HOME_METADATA
   if (path === '/servicos') return SERVICES_METADATA
+  if (path === IPHONE_PURCHASE_PATH) return {
+    title: 'iPhones lacrados e seminovos | Master Prime Campo Grande',
+    description: 'Compare modelos, capacidades e preços de iPhones lacrados e seminovos na Master Prime em Campo Grande, RJ. Escolha seu iPhone e consulte a disponibilidade com a equipe.',
+    canonical: `${SITE_URL}${IPHONE_PURCHASE_PATH}`,
+    ogType: 'website',
+  }
   if (path === PC_BUILD_QUOTE_PATH) return {
     title: 'Orçamento de PC gamer e para trabalho | Master Prime',
     description: 'Planeje seu PC para jogos ou trabalho. Informe investimento, programas e peças que já possui, revise suas preferências e consulte a montagem pelo WhatsApp.',
@@ -193,6 +200,15 @@ export const getPageSchemas = (pathname: string) => {
   const path = normalizePath(pathname)
   const localBusiness = getLocalBusinessSchema()
 
+  if (path === IPHONE_PURCHASE_PATH) return [{
+    '@context': 'https://schema.org',
+    '@graph': [
+      localBusiness,
+      { '@type': 'WebPage', '@id': `${SITE_URL}${IPHONE_PURCHASE_PATH}#webpage`, url: `${SITE_URL}${IPHONE_PURCHASE_PATH}`, name: 'iPhones lacrados e seminovos', publisher: { '@id': BUSINESS_ID } },
+      breadcrumbSchema([{ name: 'Início', path: '/' }, { name: 'iPhones', path: IPHONE_PURCHASE_PATH }]),
+    ],
+  }]
+
   if (path === PC_BUILD_QUOTE_PATH) return [{
     '@context': 'https://schema.org',
     '@graph': [
@@ -312,6 +328,7 @@ export const PUBLIC_INDEXABLE_PATHS = [
   SMARTPHONE_QUOTE_PATH,
   COMPUTER_QUOTE_PATH,
   PC_BUILD_QUOTE_PATH,
+  IPHONE_PURCHASE_PATH,
   ...serviceSeoPages.map((page) => page.path),
   '/politica-de-privacidade',
 ]

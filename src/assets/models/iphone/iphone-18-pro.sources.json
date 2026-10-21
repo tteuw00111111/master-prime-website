@@ -1,0 +1,207 @@
+{
+  "source": "/home/wayne/Downloads/18_pro_max/3d/web-viewer",
+  "geometry": "iPhone 18 Pro; shared design presentation from the owner-supplied Pro / Pro Max media package",
+  "processing": "Handset only; Apple global color states translated to KHR_materials_variants; upright metre scale; maps resized to at most 1024px and encoded WebP quality 85; deduplicated and welded. Standard PBR lighting replaces Apple Lotus custom shaders.",
+  "bytes": 2955212,
+  "sha256": "56891948a975813200a33ccfcd57fd9e7a4ed9b4c5a52baee76ca57e658f4244",
+  "variants": [
+    "black",
+    "burgundy",
+    "silver"
+  ],
+  "sourceStates": {
+    "black": "Black",
+    "burgundy": "Plum",
+    "silver": "Silver"
+  },
+  "decoderFallbacks": [
+    "ZxcbuilpnNGTAof.avif",
+    "NiPHuqKrcxGlHsB.avif"
+  ],
+  "sources": [
+    {
+      "path": "scenes/iPhone18Pro_US_L_avif.lsd",
+      "sha256": "f7713af7ecdedf611e40a8b63ec5ab8c657e68e3fafdd72cd3284dbc6f752fa0"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/NkxxOAjhmlfGMZG.lsd",
+      "sha256": "bc1b289d8c07dd58e5cdd7bbd857cc69d17a147e008d062047a347ff2ee4670a"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/BbKLAUVtHYKwhZB.avif",
+      "sha256": "5ee93fefcdb73acff0b3c3c944cf579138b0a067d9de82d4581f76af73e9099d"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/BfziwMBqFMRzzeE.avif",
+      "sha256": "530a60f05ee9b243378a4ae5ed3c56046c0d74c87ff04b80fe85603c51835be8"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/BuKjpyaaugXwrYe.avif",
+      "sha256": "eae29bcb7528d5245a2a4c6e401171c7c4b7c2b1f19ee5cd646052641c851dbf"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/ENOOHgwiucFCbVu.avif",
+      "sha256": "a073d12657b3cce073cf5c092b790045ebd9b765e47e85fe825cd494b8d7cfb8"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/EiwcZOyqZWjzyGK.jpg",
+      "sha256": "919a84a2d9026b6f58492c70460da35d6ac8db9c058b50fe19689e7064d3bca9"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/GITXhrhGQNOHKLl.avif",
+      "sha256": "6427580321bb22250afd9b1ab35d63cb2bec961c2d6f0693173a35922a51148c"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/GXNLFozFVeojISK.avif",
+      "sha256": "6d549ef28ee2ff1c7b4cd10b98068a2649deabf998d7efbf7f207b01b6cfeab8"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/HPojIkMfOpiNizO.lsd",
+      "sha256": "80f3f3b63ad94d28b3ea9c4806ca3efa1721e9e577461cd9c4cbcc42c10bda07"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/HveVAEqyFtENxzu.avif",
+      "sha256": "225a34271a74a7579b497d075ea6c1828633f8a655804129b4946e3058f5a000"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/IvNciVKjUnjphlz.avif",
+      "sha256": "15e006027b0c86165182296a6c8eebcba5820b32adae635067fa870edafc31b1"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/KGQyXkyukDkZPYm.jpg",
+      "sha256": "bfe63d0e7fdc076bcbefada0b91200519462f8cc6a820981f98d8a730b4c6ee6"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/KbvkTfuGqrASJdt.avif",
+      "sha256": "9164866f45938aa8bf7f6b19d98c48c299d73a525bf4cabd6330988d13309657"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/KeEuEeMYumUPtva.png",
+      "sha256": "a5ee548b2daf7ffb8506d07fb65c232a9da6545c1d161fd2530aa5b1ae87a502"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/LWTsGCVwwbCFMnl.jpg",
+      "sha256": "759436e2e63f981f59b90d727f73506a8d54d76616936a0a30681ac25a2e8458"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/NiPHuqKrcxGlHsB.avif",
+      "sha256": "1a5861713ec5ee4a98c23d962d0f3e20a9947b245fb7933a7f45194f1da14a4d"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/QqoRrDEZDJkZWqq.bin",
+      "sha256": "8426ce4845c9c30a7cc63ff6f087993667129d7d1b988872e97d3233330a7e15"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/QqoRrDEZDJkZWqq.gltf",
+      "sha256": "b3b1da7ba2fc9cc985775bcd6df9f887d5649376ba8cfb4c4324517fff488e00"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/RJuXRRPQgytOYJu.avif",
+      "sha256": "48c280c33a60d181f9baaf9fa229c623d3e0a625334d0ac0ba38755c3f6fbc02"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/RPbwHJsLMSUIvgU.jpg",
+      "sha256": "0ae2abdd13008411ab5e80c291d58141aee70747f2efb7e965b28441442432a3"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/RVgiCWHJvuxglrJ.avif",
+      "sha256": "49cbcea206da8b27ffd92c4dc9e150cff2a1dbc4e20f47322cfba7c6322c4bf6"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/VTNItiiJDQzLRPw.avif",
+      "sha256": "071ae53e41a7776b391523378308ea07b4a78f50faa170fd791af9e59d8059fd"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/XkJXvNnnIyEivnH.avif",
+      "sha256": "ce1e5f6567caef21c69a8530f840d0c37f2730bd758b596ed2248a7b3bd5e01b"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/YELQPopiwHvtzna.avif",
+      "sha256": "5f92537d832891a5b67a1b4b7674f8e63efabfaf753f377747b2bf6e66a8d38a"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/ZxcbuilpnNGTAof.avif",
+      "sha256": "097c5f9f252ae9d48407853802bad8a19e53b379ca620dce35789010c85de6d6"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/aZqkEeTujOoBroI.avif",
+      "sha256": "2993d24011f365239c3b1def9966a88fc75c39843a2bc58cc2d370f01d6257ef"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/aomyMZiipfNbBlY.avif",
+      "sha256": "89a651ca1f4126b1ca10f4d4d9ea500f4a727f1c2068de165700629f6282f757"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/bAxYibJwQKnuZFc.avif",
+      "sha256": "cf248e2c1870c6b335b1e643a1820f913cfac6438936b9ef45c1b3a7c9f9108a"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/dHwNQrnkkKzcHjm.avif",
+      "sha256": "e1e575df24b2ec4b1df3a34b3fd7c82b63ada98633d5e5d6e3c4a4073a90d2ca"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/dsIMEGJSWDcWKxd.avif",
+      "sha256": "669fd4a24aeb9fae76242fb39f772ed9ed4866b90c34be023547b828e861fa1c"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/eSjEBaycYaTuXLp.avif",
+      "sha256": "87e6f74f8f3dec6f59a0f0e7e5d339b1dc49756391c810fcd2b69bd9eb80a94f"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/hxSAwXgabTOtMYX.avif",
+      "sha256": "13fe7033c482e0b67f2b93e9e633159ba0879360842747289381beb772e72756"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/iCxTDJPecXDvUWF.avif",
+      "sha256": "2d693ad1aaacc34f32873bce1555f23186dd4a46defc6ffd1ccad175ab155ecb"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/iMEgPyFsAckIbWj.avif",
+      "sha256": "9576788ca5a5764ea8b2483d8e2c74bb0fb7a7a3548ea666e7881abe9bdb2301"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/kaRYEReFGmslghq.avif",
+      "sha256": "96cfb1213b3fa59cb7d9fce3d62430ed1c22849165ec1e3d6e0c25ab2ae8011d"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/lEuGFodqIxJnFqQ.avif",
+      "sha256": "e4060b1efc8f0d4ec487ff1d1c89516868d5d9b3844425dcd129c96e970647e0"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/lilpyGwXZDwUQHc.avif",
+      "sha256": "f0657780a6a30fb91d599d4bac08d72cfe9c7c96aa7a98e87d17a3e9e05ba5f0"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/mxoJVhqPdjlZrtE.avif",
+      "sha256": "c84645ddc2689eb2b28eb748a515aef9e82aa85717cfedee42b73b9699ce2d73"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/nFKywPOhESksUhB.avif",
+      "sha256": "724c6a746ce6e358b0c281b07039803282cb630177a13539de8437f1563bbbc1"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/ocrCBZxRmwmxmEP.avif",
+      "sha256": "18d382fabd3c60dce5e9b8cde0790b1f0f0815db8dcce4d2942e107d081e0399"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/pfnXrKOIzbBALsc.avif",
+      "sha256": "cf451b195c3a5336636f30372b3d31fc8fdbaaf8e72c98656e5d0d9ffbe13378"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/syXTPFBVIsmJTyV.avif",
+      "sha256": "f9f72ee31acbef42a0c03c911ece0778e40a508eed591ee08573f21115288ead"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/vxwqGmrKRWKwCCE.avif",
+      "sha256": "a0256c8d87e7bb6dc8d275bdf3f5682e4ecc801290a9fee5dcb58cd27bb5ce52"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/yGjGbBBvTqqLltU.avif",
+      "sha256": "1810246c111a5f9f839c32d8c9aa465b235f4da7ff0059d95de2189fea738ed0"
+    },
+    {
+      "path": "uploads/dIFKSKvliUSYOBw/MszYeqEKDgnBqxc/pxNeLtyNKmhwUzW/megyEIopJyvbcOt/kifhkaVQkSALvmb/ymqNGGuBPrAEMeD.avif",
+      "sha256": "22ed3c68fc61b85714a3dae731fa992808f2acbbae855e547d4f91a77f311081"
+    }
+  ]
+}

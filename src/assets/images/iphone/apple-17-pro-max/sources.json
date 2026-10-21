@@ -1,0 +1,80 @@
+[
+  {
+    "path": "images/pro-max-colors/iphone-17-pro-max-finish-select-cosmicorange-202509.png",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-max-finish-select-cosmicorange-202509?wid=6000&hei=6000&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-17-pro",
+    "model_scope": "iPhone 17 Pro Max",
+    "description": "Apple Store Pro Max front/back color render, transparent PNG.",
+    "bytes": 19217082,
+    "width": 6000,
+    "height": 6000,
+    "sha256": "aac8bdea3de337972a0fb47901c281a3073280a7b49b6d19e707021b2e3561e7",
+    "workspace_path": "src/assets/images/iphone/apple-17-pro-max/orange.webp",
+    "processing": "Transparent-margin trim, resize to 1400px height, WebP encode. No AI editing or recoloring."
+  },
+  {
+    "path": "images/pro-max-colors/iphone-17-pro-max-finish-select-deepblue-202509.png",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-max-finish-select-deepblue-202509?wid=6000&hei=6000&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-17-pro",
+    "model_scope": "iPhone 17 Pro Max",
+    "description": "Apple Store Pro Max front/back color render, transparent PNG.",
+    "bytes": 15549145,
+    "width": 6000,
+    "height": 6000,
+    "sha256": "f1d534c83b5c0cae0d5a53cadf30425582ee2b7257cd13c08a465da60b94197e",
+    "workspace_path": "src/assets/images/iphone/apple-17-pro-max/blue.webp",
+    "processing": "Transparent-margin trim, resize to 1400px height, WebP encode. No AI editing or recoloring."
+  },
+  {
+    "path": "images/pro-max-colors/iphone-17-pro-max-silver.png",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-max-finish-select-silver-202509?wid=6000&hei=6000&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-17-pro",
+    "model_scope": "iPhone 17 Pro Max",
+    "description": "Apple Store original Pro Max color render.",
+    "bytes": 14200141,
+    "sha256": "545d80bb434d6d8c763085f1fb15c6905893d8a350a98c0a670a227ffa070350",
+    "width": 6000,
+    "height": 6000,
+    "workspace_path": "src/assets/images/iphone/apple-17-pro-max/silver.webp",
+    "processing": "Transparent-margin trim, resize to 1400px height, WebP encode. No AI editing or recoloring."
+  },
+  {
+    "url": "https://www.apple.com/v/iphone-17-pro/c/images/overview/product-viewer/colors_orange__f2ug4x6ry8uq_large_2x.jpg",
+    "path": "images/product-page/product-viewer/colors_orange__f2ug4x6ry8uq_large_2x.jpg",
+    "source_page": "https://www.apple.com/mk/iphone-17-pro/",
+    "description": "",
+    "model_scope": "Shared Pro / Pro Max campaign",
+    "bytes": 390935,
+    "sha256": "63a1001098aefc44005586e25cb4e8708a4d5178b1bc2dacd1601a69abbe4db8",
+    "width": 3456,
+    "height": 1824,
+    "workspace_path": "src/assets/images/iphone/apple-17-pro-max/orange-detail.webp",
+    "processing": "Resize and WebP encode. Pro shared-design detail, explicitly approved by user."
+  },
+  {
+    "url": "https://www.apple.com/v/iphone-17-pro/c/images/overview/product-viewer/colors_blue__ct0n7mo30vwy_large_2x.jpg",
+    "path": "images/product-page/product-viewer/colors_blue__ct0n7mo30vwy_large_2x.jpg",
+    "source_page": "https://www.apple.com/mk/iphone-17-pro/",
+    "description": "",
+    "model_scope": "Shared Pro / Pro Max campaign",
+    "bytes": 295985,
+    "sha256": "b4070369ed6736a475d2729922371b9425946b03dd9890b117aea976726a4602",
+    "width": 3456,
+    "height": 1824,
+    "workspace_path": "src/assets/images/iphone/apple-17-pro-max/blue-detail.webp",
+    "processing": "Resize and WebP encode. Pro shared-design detail, explicitly approved by user."
+  },
+  {
+    "url": "https://www.apple.com/v/iphone-17-pro/c/images/overview/product-viewer/colors_silver__52ec2bh9xaqe_large_2x.jpg",
+    "path": "images/product-page/product-viewer/colors_silver__52ec2bh9xaqe_large_2x.jpg",
+    "source_page": "https://www.apple.com/mk/iphone-17-pro/",
+    "description": "",
+    "model_scope": "Shared Pro / Pro Max campaign",
+    "bytes": 343249,
+    "sha256": "7ee1087d02a9761134fdd7ce75aae344ce00c5b7737601e87cf23f0d9abaa5f3",
+    "width": 3456,
+    "height": 1824,
+    "workspace_path": "src/assets/images/iphone/apple-17-pro-max/silver-detail.webp",
+    "processing": "Resize and WebP encode. Pro shared-design detail, explicitly approved by user."
+  }
+]

@@ -49,6 +49,10 @@ export const QuoteEntry = () => (
           </span>
           <FiArrowRight aria-hidden="true" className="home-quote-arrow shrink-0 text-xl text-gold" />
         </a>
+        <a href="/orcamento/iphone" className="mt-4 flex min-h-12 items-center justify-between gap-4 rounded-2xl border border-white/15 p-5 text-white">
+          <span><strong className="block text-lg">Quer comprar um iPhone?</strong><span className="mt-1 block text-sm leading-6 text-gray-400">Consulte modelos, valores e a possibilidade de oferecer um usado.</span></span>
+          <FiArrowRight aria-hidden="true" className="shrink-0 text-gold" />
+        </a>
       </div>
     </div>
   </section>

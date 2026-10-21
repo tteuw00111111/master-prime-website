@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 const root = resolve(import.meta.dirname, '..')
 const siteUrl = 'https://master-prime.com'
 const seoPages = JSON.parse(readFileSync(resolve(root, 'src/data/seo-pages.json'), 'utf8'))
-const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', '/orcamento/celular', '/orcamento/computador', '/orcamento/pc-gamer', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
+const expectedPaths = ['/', '/servicos', '/orcamento/notebook', '/orcamento/videogame', '/orcamento/celular', '/orcamento/computador', '/orcamento/pc-gamer', '/orcamento/iphone', ...seoPages.map((page) => page.path), '/politica-de-privacidade']
 const expectedPathSet = new Set(expectedPaths)
 
 const read = (path) => readFileSync(resolve(root, path), 'utf8')
@@ -72,6 +72,9 @@ for (const pathname of expectedPaths) {
     assert(serializedSchema.includes('Avenida Cesário de Melo, 2571'), `${pathname}: NAP ausente no schema`)
     if (pathname === '/servicos') {
       assert(types.has('ItemList') && types.has('BreadcrumbList'), '/servicos: ItemList ou breadcrumb ausente')
+    } else if (pathname === '/orcamento/iphone') {
+      assert(types.has('WebPage') && types.has('BreadcrumbList'), 'compra de iPhone: WebPage ou breadcrumb ausente')
+      assert(!types.has('Service') && !types.has('Offer'), 'compra de produto não deve herdar schema de reparo ou promessa de estoque')
     } else if (pathname !== '/') {
       assert(types.has('Service') && types.has('BreadcrumbList'), `${pathname}: Service ou breadcrumb ausente`)
     }
@@ -91,6 +94,16 @@ for (const pathname of expectedPaths) {
 }
 
 const titles = pageReports.map((page) => page.title)
+const iphonePurchase = pageReports.find(page => page.pathname === '/orcamento/iphone')
+assert(iphonePurchase.html.includes('Seu próximo') && iphonePurchase.html.includes('iPhone 17 Pro Max'), 'catálogo iPhone: conteúdo principal ausente no HTML')
+assert(iphonePurchase.html.includes('696,66') && iphonePurchase.html.includes('208,09'), 'catálogo iPhone: parcelas de lacrados e seminovos ausentes no HTML')
+assert(iphonePurchase.html.includes('iPhone 18 Pro Max') && iphonePurchase.html.includes('895,70') && iphonePurchase.html.includes('model=iphone-18-pro-max&amp;capacity=256&amp;condition=sealed'), 'catálogo iPhone: oferta e link do 18 Pro Max ausentes')
+assert(!iphonePurchase.html.includes('Total parcelado'), 'compra iPhone: etapa inicial não deve exibir total parcelado')
+assert(iphonePurchase.html.includes('Lacrados') && iphonePurchase.html.includes('Seminovos') && iphonePurchase.html.includes('iPhone 13'), 'catálogo iPhone: alternativas não rastreáveis')
+assert(iphonePurchase.html.includes('model=iphone-13&amp;capacity=128&amp;condition=used'), 'catálogo iPhone: link para consulta do seminovo ausente')
+assert(iphonePurchase.html.includes('Disponibilidade e condições confirmadas pela equipe.'), 'catálogo iPhone: confirmação de disponibilidade ausente')
+assert(!/<noscript>[\s\S]*?(?:googletagmanager|facebook\.com\/tr)[\s\S]*?<\/noscript>/i.test(iphonePurchase.html), 'compra iPhone: transporte noscript indevido')
+assert(pageReports.find(page => page.pathname === '/').html.includes('href="/orcamento/iphone"'), 'compra iPhone: link natural na home ausente')
 const descriptions = pageReports.map((page) => page.description)
 assert(new Set(titles).size === titles.length, 'titles duplicados entre páginas indexáveis')
 assert(new Set(descriptions).size === descriptions.length, 'descriptions duplicadas entre páginas indexáveis')

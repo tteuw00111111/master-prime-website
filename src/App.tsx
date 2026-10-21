@@ -14,6 +14,8 @@ import { GamingQuotePage } from '@/components/pages/GamingQuotePage'
 import { SmartphoneQuotePage } from '@/components/pages/SmartphoneQuotePage'
 import { ComputerQuotePage } from '@/components/pages/ComputerQuotePage'
 import { PcBuildQuotePage } from '@/components/pages/PcBuildQuotePage'
+import { IPhoneCatalogPage } from '@/components/pages/IPhoneCatalogPage'
+import { IPHONE_PURCHASE_PATH } from '@/data/iphone-purchase'
 import { PC_BUILD_QUOTE_PATH } from '@/data/pc-build-quote'
 import { COMPUTER_QUOTE_PATH } from '@/data/computer-quote'
 import { SMARTPHONE_QUOTE_PATH } from '@/data/smartphone-quote'
@@ -92,6 +94,7 @@ function App({ pathname }: AppProps) {
   else if (path === SMARTPHONE_QUOTE_PATH) pageContent = <SmartphoneQuotePage />
   else if (path === COMPUTER_QUOTE_PATH) pageContent = <ComputerQuotePage />
   else if (path === PC_BUILD_QUOTE_PATH) pageContent = <PcBuildQuotePage />
+  else if (path === IPHONE_PURCHASE_PATH) pageContent = <IPhoneCatalogPage />
   else if (servicePage) pageContent = <ServicePage page={servicePage} />
   else pageContent = <NotFoundPage />
 

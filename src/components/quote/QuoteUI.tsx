@@ -104,14 +104,14 @@ export const IssueChoice = ({ issue, selected, onToggle }: { issue: QuoteIssue; 
 }
 
 
-export const QuoteLayout = ({ title, breadcrumbs, helpContent, helpUrl, children }: { title: ReactNode; breadcrumbs: ReactNode; helpContent: ReactNode; helpUrl?: string; children: ReactNode }) => {
+export const QuoteLayout = ({ title, breadcrumbs, helpContent, helpUrl, headerAction, footerContent, className = '', children }: { className?: string; title: ReactNode; breadcrumbs: ReactNode; helpContent: ReactNode; helpUrl?: string; headerAction?: ReactNode; footerContent?: ReactNode; children: ReactNode }) => {
   const [helpOpen, setHelpOpen] = useState(false)
   const reducedMotion = useReducedMotion() === true
-  return <div className="quote-page min-h-screen bg-dark text-white">
+  return <div className={`quote-page min-h-screen bg-dark text-white ${className}`}>
     <a href="#quote-form" className="quote-skip">Pular para o orçamento</a>
     <header className="quote-header">
       <a href="/" aria-label="Master Prime Assistência — início"><img src={logoImage} alt="Master Prime Assistência" width="639" height="376" /></a>
-      <a href={helpUrl ?? getWhatsAppQuoteUrl()} target="_blank" rel="noopener noreferrer" className="quote-help"><FaWhatsapp aria-hidden="true" /><span>Ajuda no WhatsApp</span></a>
+      {headerAction ?? <a href={helpUrl ?? getWhatsAppQuoteUrl()} target="_blank" rel="noopener noreferrer" className="quote-help"><FaWhatsapp aria-hidden="true" /><span>Ajuda no WhatsApp</span></a>}
     </header>
     <main className="quote-layout">
       <div className="quote-page-title"><h1>{title}</h1></div>
@@ -121,11 +121,11 @@ export const QuoteLayout = ({ title, breadcrumbs, helpContent, helpUrl, children
         <nav aria-label="Breadcrumb" className="quote-breadcrumb">{breadcrumbs}</nav>
       </div>
     </main>
-    <section className="quote-bottom-context" aria-label="Sobre o orçamento">
+    <section id="quote-about" className="quote-bottom-context" aria-label="Sobre o orçamento">
       <button type="button" aria-expanded={helpOpen} aria-controls={helpOpen ? 'quote-help-content' : undefined} onClick={() => setHelpOpen(!helpOpen)}>Como funciona o orçamento? <FiChevronDown className="quote-disclosure-chevron" aria-hidden="true" /></button>
       <AnimatePresence initial={false}>{helpOpen && <QuoteReveal key="quote-help" reducedMotion={reducedMotion}><div id="quote-help-content">{helpContent}</div></QuoteReveal>}</AnimatePresence>
     </section>
-    <Footer />
+    {footerContent ?? <Footer />}
   </div>
 }
 

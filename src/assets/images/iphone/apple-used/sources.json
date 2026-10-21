@@ -1,0 +1,1574 @@
+[
+  {
+    "path": "iphone_13_128gb/product-colors/iphone-13-blue.png",
+    "model": "iPhone 13",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-blue-select-2021?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13",
+    "description": "iPhone 13 Apple Store render in blue. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 670412,
+    "sha256": "569432f699e815936f3fd34c6482a959a79d4aa4cb5a53a2b6a38e7aab5c000d",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-blue.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 486,
+    "output_height": 663,
+    "output_bytes": 191524,
+    "output_sha256": "82e21bc442cde35306d14232552e4caf92db6e0e5aa18bc5fdeae2a5ec42dcb8"
+  },
+  {
+    "path": "iphone_13_128gb/product-colors/iphone-13-green.png",
+    "model": "iPhone 13",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-green-select?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13",
+    "description": "iPhone 13 Apple Store render in green.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 650283,
+    "sha256": "bb90177f543872c6108062e9d99ff129d1e648f3ab227a81ad868ddc3ea2f20d",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-green.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 486,
+    "output_height": 663,
+    "output_bytes": 179724,
+    "output_sha256": "e8dd81b95f825a8523b577bc2f0d63074c3282065a478e4b0fd889a31c40afde"
+  },
+  {
+    "path": "iphone_13_128gb/product-colors/iphone-13-midnight.png",
+    "model": "iPhone 13",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-midnight-select-2021?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13",
+    "description": "iPhone 13 Apple Store render in midnight. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 623812,
+    "sha256": "914eecd330ae12b8a77a39f1d5c11bd52bd87944a7365a5882740e776a17d9bc",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-midnight.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 486,
+    "output_height": 663,
+    "output_bytes": 186608,
+    "output_sha256": "b925a7233492c4ec11b120a9b505280d1ff04d5bc29a6278608eb4873d8f9e0f"
+  },
+  {
+    "path": "iphone_13_128gb/product-colors/iphone-13-pink.png",
+    "model": "iPhone 13",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pink-select-2021?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13",
+    "description": "iPhone 13 Apple Store render in pink. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 609960,
+    "sha256": "c9bb33e0a4e659d78c31da6a8c7a59a2ffd13558402ac073c6862333f449bbec",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-pink.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 486,
+    "output_height": 663,
+    "output_bytes": 196696,
+    "output_sha256": "4686a188bf5672867a5e3cedeaded0d9ed975565887a4ea9974f4b1f5bfd9108"
+  },
+  {
+    "path": "iphone_13_128gb/product-colors/iphone-13-product-red.png",
+    "model": "iPhone 13",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-product-red-select-2021?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13",
+    "description": "iPhone 13 Apple Store render in product-red. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 686052,
+    "sha256": "c3c8b05fdaaf9979db63af658d98bd6bf65388fed8d7ee1be61cbae3dc0c9d9e",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-red.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 486,
+    "output_height": 663,
+    "output_bytes": 197094,
+    "output_sha256": "cdc0b55289c0de9422d9fd400fbf6d57d1ffe5aea07899d466aef1ca6fee8d74"
+  },
+  {
+    "path": "iphone_13_128gb/product-colors/iphone-13-starlight.png",
+    "model": "iPhone 13",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-starlight-select-2021?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13",
+    "description": "iPhone 13 Apple Store render in starlight. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 638964,
+    "sha256": "129d505c93679cffa6a80a952eb83d0ceb2976439731cf88ad70a07a1a000726",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-starlight.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 486,
+    "output_height": 663,
+    "output_bytes": 198240,
+    "output_sha256": "6a999ece59f3566a29bd86f34f2e7ac26a7ef4b2f8110572c764c75823a23b4c"
+  },
+  {
+    "path": "iphone_13_pro_max_128gb/product-colors/iphone-13-pro-max-blue.png",
+    "model": "iPhone 13 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-blue-select?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13-pro-max",
+    "description": "iPhone 13 Pro Max Apple Store render in blue. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 851205,
+    "sha256": "264009a441641cea726164e40d92781ea029586f0a305d9fb642fb860791ad01",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-pro-max-blue.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 561,
+    "output_height": 727,
+    "output_bytes": 260284,
+    "output_sha256": "5e15b844e60a3bffc8b4fe2d71123b75a4c1009b368fe23f6390bd566e8ea43a"
+  },
+  {
+    "path": "iphone_13_pro_max_128gb/product-colors/iphone-13-pro-max-gold.png",
+    "model": "iPhone 13 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13-pro-max",
+    "description": "iPhone 13 Pro Max Apple Store render in gold. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 750701,
+    "sha256": "e3b2f568d7d5a4192ced58fbb71b5e3147abfa0d36b214c06c5db23ba8daa10e",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-pro-max-gold.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 561,
+    "output_height": 727,
+    "output_bytes": 247964,
+    "output_sha256": "6a9136bfd527693176cfed0b8ad9278f7be5a836113cfa5907b4eb19b9fcdc53"
+  },
+  {
+    "path": "iphone_13_pro_max_128gb/product-colors/iphone-13-pro-max-graphite.png",
+    "model": "iPhone 13 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13-pro-max",
+    "description": "iPhone 13 Pro Max Apple Store render in graphite. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 804282,
+    "sha256": "0d38701a3e0acc358aa4f562cb0f48387ceb7f97e4624aa7cd9859a9edf48e12",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-pro-max-graphite.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 561,
+    "output_height": 727,
+    "output_bytes": 241494,
+    "output_sha256": "432e6313e45e4b95ca969fb0ceff47c13ffc42f3b33b4c58d018a89784180242"
+  },
+  {
+    "path": "iphone_13_pro_max_128gb/product-colors/iphone-13-pro-max-green.png",
+    "model": "iPhone 13 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-green-select?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13-pro-max",
+    "description": "iPhone 13 Pro Max Apple Store render in green. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 737538,
+    "sha256": "b364e4c38e38095b6fa221eaaeb6f36dd557daea36427dad64e6f6a5afa9b6f3",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-pro-max-green.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 561,
+    "output_height": 727,
+    "output_bytes": 225914,
+    "output_sha256": "8bac1b38f482dcb252c566811cd76450738544015a4d506805c73406042966f9"
+  },
+  {
+    "path": "iphone_13_pro_max_128gb/product-colors/iphone-13-pro-max-silver.png",
+    "model": "iPhone 13 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-silver-select?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-13-pro-max",
+    "description": "iPhone 13 Pro Max Apple Store render in silver. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 707378,
+    "sha256": "07c6754826c6228424b9f371e7e4a1332d8165e4a365158bb699b96cc216b812",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-13-pro-max-silver.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 561,
+    "output_height": 727,
+    "output_bytes": 203978,
+    "output_sha256": "5daa5a4453af31c7899e2ca3f34f5418d875f5f6130d8f6625f4dd469f73da52"
+  },
+  {
+    "path": "iphone_14_128gb/product-colors/iphone-14-blue.png",
+    "model": "iPhone 14",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-blue?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14",
+    "description": "iPhone 14 Apple Store render in blue. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1211463,
+    "sha256": "120d1acafb339a29a1081a77f472601285d8b18832555cd335f823349872e619",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-blue.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9170
+    },
+    "output_width": 700,
+    "output_height": 930,
+    "output_bytes": 378476,
+    "output_sha256": "33f513e99b937898223fc9127b821990855511ae2da79cbbfea8ccac5da8cf62"
+  },
+  {
+    "path": "iphone_14_128gb/product-colors/iphone-14-midnight.png",
+    "model": "iPhone 14",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14",
+    "description": "iPhone 14 Apple Store render in midnight. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1119862,
+    "sha256": "44839dd6dd1d675af8db7cd9b1fa5e1ba68e39b3ee49f39671d90cb0e3a2ff80",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-midnight.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 8451
+    },
+    "output_width": 700,
+    "output_height": 930,
+    "output_bytes": 359980,
+    "output_sha256": "a97105f521ee75e0510760c51edbfee14f7ad38f24afb08566ccddd3d4c72a6c"
+  },
+  {
+    "path": "iphone_14_128gb/product-colors/iphone-14-productred.png",
+    "model": "iPhone 14",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-red-select-202209?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14",
+    "description": "iPhone 14 Apple Store render in (PRODUCT)RED.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 6531644,
+    "sha256": "7352615fec212909b6ee8f71fc7c04a5497f0adf4c76c760859062d834f3372b",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-red.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 1718,
+    "output_height": 2284,
+    "output_bytes": 2820230,
+    "output_sha256": "8aeba7bd4713c35b73d55897bf09b35a864bd6e3c40a85ec1212a8d70d258b67"
+  },
+  {
+    "path": "iphone_14_128gb/product-colors/iphone-14-purple.png",
+    "model": "iPhone 14",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-purple?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14",
+    "description": "iPhone 14 Apple Store render in purple. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1188344,
+    "sha256": "ba6db94b093b6a1cde478a9b314e0ab15e7812d7cd1af0231d0f85ed86961ffe",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-purple.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9422
+    },
+    "output_width": 700,
+    "output_height": 930,
+    "output_bytes": 382078,
+    "output_sha256": "f52856d0b049ccfa923f3bcdf41f53906e901677acf354305ee825dbe1a1287a"
+  },
+  {
+    "path": "iphone_14_128gb/product-colors/iphone-14-starlight.png",
+    "model": "iPhone 14",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-starlight?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14",
+    "description": "iPhone 14 Apple Store render in starlight. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1201280,
+    "sha256": "b005ae666f6e8f9beb418d16b35417bbba1c8a65f9742b854927c3afd4cee160",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-starlight.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 10020
+    },
+    "output_width": 700,
+    "output_height": 930,
+    "output_bytes": 395298,
+    "output_sha256": "b6b8124b6bb406af9bf4a5d604d17f10376346001947ab0029762790aa4de4db"
+  },
+  {
+    "path": "iphone_14_128gb/product-colors/iphone-14-yellow.png",
+    "model": "iPhone 14",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-yellow?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14",
+    "description": "iPhone 14 Apple Store render in yellow. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1209376,
+    "sha256": "fe92aa0e273fbfb5f7f691392e819ee694e2b4348cf09d53bd5e7fb80e86f2b2",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-yellow.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 8465
+    },
+    "output_width": 700,
+    "output_height": 930,
+    "output_bytes": 396050,
+    "output_sha256": "7883d3f24279e42a864f3d15f84ede6f01632db37a9b4a23e9b7db013c8fdd05"
+  },
+  {
+    "path": "iphone_14_plus_128gb/product-colors/iphone-14-plus-blue.png",
+    "model": "iPhone 14 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch-blue?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-plus",
+    "description": "iPhone 14 Plus Apple Store render in blue. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1361156,
+    "sha256": "0e79174415730cbe2ae75c01d126c4f02f36726ce667edb20139571c48ddd6ae",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-plus-blue.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9355
+    },
+    "output_width": 740,
+    "output_height": 1012,
+    "output_bytes": 438200,
+    "output_sha256": "9716098502bdfaea6c55bd7328f6816ca87fe8cda928820484c864be2ca8e33c"
+  },
+  {
+    "path": "iphone_14_plus_128gb/product-colors/iphone-14-plus-midnight.png",
+    "model": "iPhone 14 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch-midnight?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-plus",
+    "description": "iPhone 14 Plus Apple Store render in midnight. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1257731,
+    "sha256": "39463dd4f6147425d63cc99d9e44200518f69127289ee508a74fcead2f9d920c",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-plus-midnight.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9280
+    },
+    "output_width": 740,
+    "output_height": 1012,
+    "output_bytes": 416208,
+    "output_sha256": "3f2575d2b13afeb595ad40f592457e6db8601181adc1c1d271ca5afa879d5438"
+  },
+  {
+    "path": "iphone_14_plus_128gb/product-colors/iphone-14-plus-productred.png",
+    "model": "iPhone 14 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-plus-red-select-202209?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14",
+    "description": "iPhone 14 Plus Apple Store render in (PRODUCT)RED.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 7659772,
+    "sha256": "4cc357681f17457e85f8d6d10ba2187bc9e1a515e113fb3fa9f69d01eb3870fc",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-plus-red.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": null,
+      "removed_pixels": 0
+    },
+    "output_width": 1829,
+    "output_height": 2504,
+    "output_bytes": 3308932,
+    "output_sha256": "3559ba0c1bce54f6283817b92e76f52c8e35bd46a74fd00c3a8d450cfb415c90"
+  },
+  {
+    "path": "iphone_14_plus_128gb/product-colors/iphone-14-plus-purple.png",
+    "model": "iPhone 14 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch-purple?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-plus",
+    "description": "iPhone 14 Plus Apple Store render in purple. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1339469,
+    "sha256": "8cd72f381b8a72013894e3d73d197328d4b932f4701fcff1df98f1e63bc0f0cd",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-plus-purple.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9408
+    },
+    "output_width": 740,
+    "output_height": 1012,
+    "output_bytes": 440198,
+    "output_sha256": "faca9fbc6872e614e0bf86d3ee2633b53fb5d015d1b90dd2c52ea31676fec967"
+  },
+  {
+    "path": "iphone_14_plus_128gb/product-colors/iphone-14-plus-starlight.png",
+    "model": "iPhone 14 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch-starlight?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-plus",
+    "description": "iPhone 14 Plus Apple Store render in starlight. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1359805,
+    "sha256": "17fed0f3a5b566bd7b833b318f339db384a0a1c51d6f4f343d5ddf9fa98d35d6",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-plus-starlight.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 10329
+    },
+    "output_width": 740,
+    "output_height": 1012,
+    "output_bytes": 451790,
+    "output_sha256": "1f6dcf002d7d3d2b2bd74cc14a800e609571b20f5da864b2eb0e60549d4d07c2"
+  },
+  {
+    "path": "iphone_14_plus_128gb/product-colors/iphone-14-plus-yellow.png",
+    "model": "iPhone 14 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch-yellow?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-plus",
+    "description": "iPhone 14 Plus Apple Store render in yellow. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1366481,
+    "sha256": "61d627d8e5511347791244c766ae8708d47a80677f41dd410323d3c01a92e3b3",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-plus-yellow.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9297
+    },
+    "output_width": 740,
+    "output_height": 1012,
+    "output_bytes": 459412,
+    "output_sha256": "947baee35bbbfed018ba46c0d86f1c4ff759957f6dd5af780450ce41d1d6e9dd"
+  },
+  {
+    "path": "iphone_14_pro_128gb/product-colors/iphone-14-pro-deeppurple.png",
+    "model": "iPhone 14 Pro",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-deeppurple?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-pro",
+    "description": "iPhone 14 Pro Apple Store render in deeppurple. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 945793,
+    "sha256": "1574f5a983761efe97ed02eae1d39b4e3a1d11f09101f5e08aea06283b4269a5",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-pro-deeppurple.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9134
+    },
+    "output_width": 753,
+    "output_height": 930,
+    "output_bytes": 408216,
+    "output_sha256": "061da7d4befff35d1c836dba748732a5ea63c87a2a736b230eca6b2b573154c2"
+  },
+  {
+    "path": "iphone_14_pro_128gb/product-colors/iphone-14-pro-gold.png",
+    "model": "iPhone 14 Pro",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-gold?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-pro",
+    "description": "iPhone 14 Pro Apple Store render in gold. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 937871,
+    "sha256": "d6f734ad3b4dc0657db84d9cadaba6cf13fecef64166a73ff9647eccf1ed9356",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-pro-gold.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9163
+    },
+    "output_width": 753,
+    "output_height": 930,
+    "output_bytes": 403684,
+    "output_sha256": "8c513969753f9fc4a8415b825db6f0b3d30f6146c8723945b55d3dd8f5c3659e"
+  },
+  {
+    "path": "iphone_14_pro_128gb/product-colors/iphone-14-pro-silver.png",
+    "model": "iPhone 14 Pro",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-silver?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-pro",
+    "description": "iPhone 14 Pro Apple Store render in silver. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 843159,
+    "sha256": "f79ad7a75a0d46c68b4056ae78ce072c2755ec3acf0deb12ec9473c17d248310",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-pro-silver.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9148
+    },
+    "output_width": 753,
+    "output_height": 930,
+    "output_bytes": 349788,
+    "output_sha256": "0ed52fa7a44c907c817f17f1dac5de9901cd35272c23419a884ae4f832ecc43e"
+  },
+  {
+    "path": "iphone_14_pro_128gb/product-colors/iphone-14-pro-spaceblack.png",
+    "model": "iPhone 14 Pro",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-spaceblack?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-pro",
+    "description": "iPhone 14 Pro Apple Store render in spaceblack. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 882208,
+    "sha256": "d7ed5f30a746db56d5dbf2f21c6058480399f8ba6ffad11f8b8a6c8512d8ab98",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-pro-spaceblack.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9133
+    },
+    "output_width": 753,
+    "output_height": 930,
+    "output_bytes": 378878,
+    "output_sha256": "09029035666660c65ee559d1e04f4151eba80e4a552ecd8117738c2bf4f8e8ca"
+  },
+  {
+    "path": "iphone_14_pro_max_128gb/product-colors/iphone-14-pro-max-deeppurple.png",
+    "model": "iPhone 14 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-deeppurple?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-pro-max",
+    "description": "iPhone 14 Pro Max Apple Store render in deeppurple. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1058628,
+    "sha256": "cfad20af28f63fc07ba0ccafbc9eddc53d1e749ddf6070f9cf648d337aae28e5",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-pro-max-deeppurple.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9690
+    },
+    "output_width": 809,
+    "output_height": 1015,
+    "output_bytes": 467038,
+    "output_sha256": "27e77cd8aaf9f02acd3303214e3d19cdd2361ea899076bff33626f46bf25666e"
+  },
+  {
+    "path": "iphone_14_pro_max_128gb/product-colors/iphone-14-pro-max-gold.png",
+    "model": "iPhone 14 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-gold?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-pro-max",
+    "description": "iPhone 14 Pro Max Apple Store render in gold. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1051919,
+    "sha256": "ecf6f792d4465c18483ea625a84997407c5ea2a7a17597c22a3e1f2586c7b9bf",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-pro-max-gold.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9775
+    },
+    "output_width": 809,
+    "output_height": 1015,
+    "output_bytes": 470308,
+    "output_sha256": "dd2eabc92bff5c665ed0bdcae71930ff9af55ab03e3242e1e1f0dfd2ed5df288"
+  },
+  {
+    "path": "iphone_14_pro_max_128gb/product-colors/iphone-14-pro-max-silver.png",
+    "model": "iPhone 14 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-silver?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-pro-max",
+    "description": "iPhone 14 Pro Max Apple Store render in silver. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 936202,
+    "sha256": "e8a1cdd0720239813a0ebcf84ede5e554dc0834caae77e7eb2e8689e581147c1",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-pro-max-silver.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9738
+    },
+    "output_width": 809,
+    "output_height": 1015,
+    "output_bytes": 402272,
+    "output_sha256": "767bb820ce07a862280a811a180e5c26d8b459f8b0b0bfc94cd0bb0c65407255"
+  },
+  {
+    "path": "iphone_14_pro_max_128gb/product-colors/iphone-14-pro-max-spaceblack.png",
+    "model": "iPhone 14 Pro Max",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-spaceblack?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-14-pro-max",
+    "description": "iPhone 14 Pro Max Apple Store render in spaceblack. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 986748,
+    "sha256": "e0719a6cf1051b0d452ac2eb89918ada53fb0d93efbf9ced286b918a7f43d234",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-14-pro-max-spaceblack.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9707
+    },
+    "output_width": 809,
+    "output_height": 1015,
+    "output_bytes": 436678,
+    "output_sha256": "1399ba6c88ab3e1fcab3f9707006dec785923c4095a99827bfada5f5ac71d2b9"
+  },
+  {
+    "path": "iphone_15_128gb/product-colors/iphone-15-black.png",
+    "model": "iPhone 15",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15",
+    "description": "iPhone 15 Apple Store render in black. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1195027,
+    "sha256": "792d1a134b119c852dd6d4a43116390d6065c151344c627eb26f3d0e3cf5f616",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-black.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 8752
+    },
+    "output_width": 706,
+    "output_height": 930,
+    "output_bytes": 449818,
+    "output_sha256": "d7299b683a2c77945764f7aeffb8748a8861ce39d03ccdd16f0d3b7bf8f66bd0"
+  },
+  {
+    "path": "iphone_15_128gb/product-colors/iphone-15-blue.png",
+    "model": "iPhone 15",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15",
+    "description": "iPhone 15 Apple Store render in blue. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1301101,
+    "sha256": "8220561e4804940535da192f6023bdc4dd7ab8b4949d068293213705fdc5ce72",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-blue.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9519
+    },
+    "output_width": 706,
+    "output_height": 930,
+    "output_bytes": 498562,
+    "output_sha256": "43bc5bfb7a6d7cc5251dd04246afd8b329324b5d47af8abdf8cac58815c4eb18"
+  },
+  {
+    "path": "iphone_15_128gb/product-colors/iphone-15-green.png",
+    "model": "iPhone 15",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-green?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15",
+    "description": "iPhone 15 Apple Store render in green. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1372522,
+    "sha256": "ff90424393428b8dc093e4e0bf4cc4d00072347b5a13c26c5ebedc5f373d60d9",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-green.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9510
+    },
+    "output_width": 706,
+    "output_height": 930,
+    "output_bytes": 524204,
+    "output_sha256": "21d5c81c5717713e26ddef3db0140ac0dbd399dbfb88c7cd5724edf24d40e127"
+  },
+  {
+    "path": "iphone_15_128gb/product-colors/iphone-15-pink.png",
+    "model": "iPhone 15",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-pink?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15",
+    "description": "iPhone 15 Apple Store render in pink. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1355287,
+    "sha256": "2a4b31a5efbd6873c5faf8d645a56206d1ecadb0c73b379245547fc3cda41667",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pink.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9531
+    },
+    "output_width": 706,
+    "output_height": 930,
+    "output_bytes": 533108,
+    "output_sha256": "0e38f07d5fca57c103c503c5fe65902c8fcf5073ec132a27e758e43ac2e18c2c"
+  },
+  {
+    "path": "iphone_15_128gb/product-colors/iphone-15-yellow.png",
+    "model": "iPhone 15",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-yellow?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15",
+    "description": "iPhone 15 Apple Store render in yellow. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1412566,
+    "sha256": "7c1a0fd87cef43a1dfb2c2d87f15e7f3d04ac013de4b717fc17cb9acb4bbe35e",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-yellow.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9488
+    },
+    "output_width": 706,
+    "output_height": 930,
+    "output_bytes": 552628,
+    "output_sha256": "4d7916f6f169e64b465432278af430eb9fa7c86483db4cb37af21f1f0f511612"
+  },
+  {
+    "path": "iphone_15_plus_128gb/product-colors/iphone-15-plus-black.png",
+    "model": "iPhone 15 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-black?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-plus",
+    "description": "iPhone 15 Plus Apple Store render in black. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1370372,
+    "sha256": "a930e6fcc4ea87f651fc5b95972366ce01fc25aedff92a56bdfeebbf5e02df72",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-plus-black.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9283
+    },
+    "output_width": 756,
+    "output_height": 1014,
+    "output_bytes": 534612,
+    "output_sha256": "a4e6552d849dc3d9147dcf0f7804bfebadd146405afdc9d2cd2ccfa6d6aa1cdf"
+  },
+  {
+    "path": "iphone_15_plus_128gb/product-colors/iphone-15-plus-blue.png",
+    "model": "iPhone 15 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-blue?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-plus",
+    "description": "iPhone 15 Plus Apple Store render in blue. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1484787,
+    "sha256": "cbd757aad5a0b0d33f2323d29b2bf1a72640693dc662fc0d2607a9144b18a174",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-plus-blue.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9367
+    },
+    "output_width": 756,
+    "output_height": 1014,
+    "output_bytes": 584410,
+    "output_sha256": "6b45701b578b93d8d9b9df02afb859181435519f361ec50dcd3a7b24af1ab38c"
+  },
+  {
+    "path": "iphone_15_plus_128gb/product-colors/iphone-15-plus-green.png",
+    "model": "iPhone 15 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-green?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-plus",
+    "description": "iPhone 15 Plus Apple Store render in green. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1567505,
+    "sha256": "2f43fe6be46b7580fcb646fe817152f03ace1563afef913218841b2b870aed43",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-plus-green.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9349
+    },
+    "output_width": 756,
+    "output_height": 1014,
+    "output_bytes": 614692,
+    "output_sha256": "5894efb46aad79425cb5d7b0a1e2286391dae03d9a5fb403368b1520ce75fcfc"
+  },
+  {
+    "path": "iphone_15_plus_128gb/product-colors/iphone-15-plus-pink.png",
+    "model": "iPhone 15 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-pink?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-plus",
+    "description": "iPhone 15 Plus Apple Store render in pink. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1527065,
+    "sha256": "fd4d9b0bfb6ecac06216fe66837fcae175bae9be4a44ca6534b8e8bdaa3cd458",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-plus-pink.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9366
+    },
+    "output_width": 756,
+    "output_height": 1014,
+    "output_bytes": 610380,
+    "output_sha256": "1667bdd1190cd7e7a617710c9ec96650eb07d86b4802a52aba5eac1c95b89ed2"
+  },
+  {
+    "path": "iphone_15_plus_128gb/product-colors/iphone-15-plus-yellow.png",
+    "model": "iPhone 15 Plus",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-yellow?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-plus",
+    "description": "iPhone 15 Plus Apple Store render in yellow. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1617599,
+    "sha256": "e31d9e15fc4f2f0740b523e14baca442a023bedd5f4f7f4702cc465316132c88",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-plus-yellow.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        244,
+        244,
+        246
+      ],
+      "removed_pixels": 9342
+    },
+    "output_width": 756,
+    "output_height": 1014,
+    "output_bytes": 647150,
+    "output_sha256": "b7efad42d957925a42783d3527a17122ad5ec7f90069121d8c591e8a430e1fdd"
+  },
+  {
+    "path": "iphone_15_pro_128gb/product-colors/iphone-15-pro-blacktitanium.png",
+    "model": "iPhone 15 Pro",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-pro",
+    "description": "iPhone 15 Pro Apple Store render in blacktitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1415767,
+    "sha256": "a5d410f0ab73a52a85cd6eae115f1102a541cd725bd69af57a333bfba45fdf85",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pro-blacktitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9349
+    },
+    "output_width": 752,
+    "output_height": 928,
+    "output_bytes": 687720,
+    "output_sha256": "924a3613e56ff212f25e9d2a80a6ca7382a7df4e0712c987cbe83ce6fa491ea5"
+  },
+  {
+    "path": "iphone_15_pro_128gb/product-colors/iphone-15-pro-bluetitanium.png",
+    "model": "iPhone 15 Pro",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-bluetitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-pro",
+    "description": "iPhone 15 Pro Apple Store render in bluetitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1628490,
+    "sha256": "75ab8477889d3d7f0a4690b7d0f7bbe79965a43b90ae0679822f9c3cf27ffe11",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pro-bluetitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9360
+    },
+    "output_width": 752,
+    "output_height": 928,
+    "output_bytes": 774286,
+    "output_sha256": "c2af1d77f1593eb324fbc2f7b69ea4dd411213d1e7b60d2fa75806e9cc4167ad"
+  },
+  {
+    "path": "iphone_15_pro_128gb/product-colors/iphone-15-pro-naturaltitanium.png",
+    "model": "iPhone 15 Pro",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-pro",
+    "description": "iPhone 15 Pro Apple Store render in naturaltitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1631094,
+    "sha256": "b7fb165ceb177cae26dc5ec740f84d8925c3652b1db1c383811dba1ab24260b1",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pro-naturaltitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 8929
+    },
+    "output_width": 751,
+    "output_height": 928,
+    "output_bytes": 780318,
+    "output_sha256": "d6f3e09d9fcda95d0cfe366c42d394345f846c52e2ddc4f5b668f644f4a96289"
+  },
+  {
+    "path": "iphone_15_pro_128gb/product-colors/iphone-15-pro-whitetitanium.png",
+    "model": "iPhone 15 Pro",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-whitetitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-pro",
+    "description": "iPhone 15 Pro Apple Store render in whitetitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1386184,
+    "sha256": "4eaf9c0466d72e31edd01800c6de38bb1fc15b2cbcce624276f98c596a00944b",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pro-whitetitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 8935
+    },
+    "output_width": 751,
+    "output_height": 927,
+    "output_bytes": 651404,
+    "output_sha256": "396c0e3cb93261bf605bb0c88248dd306818ce25414ddeac371753ec57100d93"
+  },
+  {
+    "path": "iphone_15_pro_max_256gb/product-colors/iphone-15-pro-max-blacktitanium.png",
+    "model": "iPhone 15 Pro Max",
+    "capacity": "256GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-blacktitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-pro-max",
+    "description": "iPhone 15 Pro Max Apple Store render in blacktitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1624130,
+    "sha256": "3341a0210a5837817f78be0eebd50e4757f123ad3950899ac2a5cf5734b99ef7",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pro-max-blacktitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 8838
+    },
+    "output_width": 808,
+    "output_height": 1005,
+    "output_bytes": 805690,
+    "output_sha256": "bb063fca9645b034421a8772d41a46e87a3440505b355af7ff706f09d46182d0"
+  },
+  {
+    "path": "iphone_15_pro_max_256gb/product-colors/iphone-15-pro-max-bluetitanium.png",
+    "model": "iPhone 15 Pro Max",
+    "capacity": "256GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-bluetitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-pro-max",
+    "description": "iPhone 15 Pro Max Apple Store render in bluetitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1885514,
+    "sha256": "4fb524c8085b0307ce111167af54e9faf337ff6f97c6ae428a6a15eaa361e47f",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pro-max-bluetitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 8845
+    },
+    "output_width": 808,
+    "output_height": 1005,
+    "output_bytes": 901490,
+    "output_sha256": "f5f05218d7a55c693862e63807ac2d7eb5fad423e9545dc2df2139c31bff39ab"
+  },
+  {
+    "path": "iphone_15_pro_max_256gb/product-colors/iphone-15-pro-max-naturaltitanium.png",
+    "model": "iPhone 15 Pro Max",
+    "capacity": "256GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-pro-max",
+    "description": "iPhone 15 Pro Max Apple Store render in naturaltitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1887684,
+    "sha256": "d9f06a6979446a82b4fffb45c6199ba8ce40082cac68c900682a07c2d050bf55",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pro-max-naturaltitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9857
+    },
+    "output_width": 808,
+    "output_height": 1005,
+    "output_bytes": 913654,
+    "output_sha256": "a4df6bf36c3a5c9ac76b1fc191fb667ace409acbcc3da4d284532ce1aca4ecc6"
+  },
+  {
+    "path": "iphone_15_pro_max_256gb/product-colors/iphone-15-pro-max-whitetitanium.png",
+    "model": "iPhone 15 Pro Max",
+    "capacity": "256GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-whitetitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-15-pro-max",
+    "description": "iPhone 15 Pro Max Apple Store render in whitetitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1645460,
+    "sha256": "d1b424ebbaddefadeca2f16f6be414f360bd66989a6c6023487878f44f040b55",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-15-pro-max-whitetitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 10452
+    },
+    "output_width": 808,
+    "output_height": 1005,
+    "output_bytes": 799172,
+    "output_sha256": "fd1fa4ee08617b48fac0122a1ef826d541566462db4f5276c5ac59e56026ee34"
+  },
+  {
+    "path": "iphone_16_128gb/product-colors/iphone-16-black.png",
+    "model": "iPhone 16",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-black?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16",
+    "description": "iPhone 16 Apple Store render in black. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1306749,
+    "sha256": "e9e70c6ee530552b8dd036d565727f99fe09b741e69eaf9ee18ecf2c9c975ba5",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-black.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9673
+    },
+    "output_width": 759,
+    "output_height": 931,
+    "output_bytes": 541250,
+    "output_sha256": "45781517a66ea36ae002857cbeaeaa63c35263b6a351e0aaf2fd0fe91e20f560"
+  },
+  {
+    "path": "iphone_16_128gb/product-colors/iphone-16-pink.png",
+    "model": "iPhone 16",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-pink?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16",
+    "description": "iPhone 16 Apple Store render in pink. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1492546,
+    "sha256": "38f38f3f2929def0a2f10c0faec010f0fd058f140237f465caff98e966c10b65",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-pink.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9702
+    },
+    "output_width": 759,
+    "output_height": 931,
+    "output_bytes": 565980,
+    "output_sha256": "4fbb0e49466a354782dd1149dcdfac81c54e9c697131e47eeb5eb0b352ee486b"
+  },
+  {
+    "path": "iphone_16_128gb/product-colors/iphone-16-teal.png",
+    "model": "iPhone 16",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-teal?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16",
+    "description": "iPhone 16 Apple Store render in teal. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1388764,
+    "sha256": "fdd60f8201437c06987d71dbfb953c268c3a797e6caf9e4655f304450cc0e8cb",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-teal.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9720
+    },
+    "output_width": 759,
+    "output_height": 931,
+    "output_bytes": 555370,
+    "output_sha256": "b44dbb586eeb5539b6e7851062dc5890e29ecdbf01a943689d30d6b1eb0e7084"
+  },
+  {
+    "path": "iphone_16_128gb/product-colors/iphone-16-ultramarine.png",
+    "model": "iPhone 16",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16",
+    "description": "iPhone 16 Apple Store render in ultramarine. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1509114,
+    "sha256": "485d63f2d5723c4d8f36227067998db7320d0569a614b953ae5b3494d19ca4bd",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-ultramarine.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9696
+    },
+    "output_width": 759,
+    "output_height": 931,
+    "output_bytes": 592660,
+    "output_sha256": "7baf0e10c76c648f0c07a68bdb09e86738f2b03b7c58e11f7ebc81e444c9412b"
+  },
+  {
+    "path": "iphone_16_128gb/product-colors/iphone-16-white.png",
+    "model": "iPhone 16",
+    "capacity": "128GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-white?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16",
+    "description": "iPhone 16 Apple Store render in white. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1234980,
+    "sha256": "3cb8ae8116973be570401694f383ea0bc3a37c4eb75540a1a47bdaecc9db35b4",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-white.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 10536
+    },
+    "output_width": 759,
+    "output_height": 931,
+    "output_bytes": 468772,
+    "output_sha256": "a36682998a2a428c5159acfdf57b9b0db5e395398d3fcc5a81345bfa164c4a68"
+  },
+  {
+    "path": "iphone_16_pro_max_256gb/product-colors/iphone-16-pro-max-blacktitanium.png",
+    "model": "iPhone 16 Pro Max",
+    "capacity": "256GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-blacktitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16-pro-max",
+    "description": "iPhone 16 Pro Max Apple Store render in blacktitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1160757,
+    "sha256": "fbde6c45c5f8a59902e546bd06197377fbb5af601785d05ec29511406b295936",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-pro-max-blacktitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 9932
+    },
+    "output_width": 799,
+    "output_height": 1005,
+    "output_bytes": 488204,
+    "output_sha256": "2a87230a36001ef5799598815a96634a72571f912d48faf36e0c6dcb1e43f1e5"
+  },
+  {
+    "path": "iphone_16_pro_max_256gb/product-colors/iphone-16-pro-max-deserttitanium.png",
+    "model": "iPhone 16 Pro Max",
+    "capacity": "256GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-deserttitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16-pro-max",
+    "description": "iPhone 16 Pro Max Apple Store render in deserttitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1271449,
+    "sha256": "aa3849362f33c234fb01d162b331f791767d9edbe6c730c524941a6c7b589864",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-pro-max-deserttitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 10015
+    },
+    "output_width": 799,
+    "output_height": 1005,
+    "output_bytes": 517120,
+    "output_sha256": "c0bd5684006f09787aaf5a3dc6c7545676b6a0fe9e19eca6d0abea1bc8366e6d"
+  },
+  {
+    "path": "iphone_16_pro_max_256gb/product-colors/iphone-16-pro-max-naturaltitanium.png",
+    "model": "iPhone 16 Pro Max",
+    "capacity": "256GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-naturaltitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16-pro-max",
+    "description": "iPhone 16 Pro Max Apple Store render in naturaltitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1239438,
+    "sha256": "b5f4ea972020215197d5e37657271d0570a5db199cc4114e813a57447ae29b19",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-pro-max-naturaltitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 10037
+    },
+    "output_width": 799,
+    "output_height": 1005,
+    "output_bytes": 500110,
+    "output_sha256": "75d7273f304c6748f0e614b18219fb1d4deeeb049dd9e6a17e6c1f8b63a0de90"
+  },
+  {
+    "path": "iphone_16_pro_max_256gb/product-colors/iphone-16-pro-max-whitetitanium.png",
+    "model": "iPhone 16 Pro Max",
+    "capacity": "256GB",
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-whitetitanium?wid=3000&hei=3549&fmt=png-alpha",
+    "source_page": "https://www.apple.com/shop/buy-iphone/iphone-16-pro-max",
+    "description": "iPhone 16 Pro Max Apple Store render in whitetitanium. CDN export dimensions do not establish native render resolution.",
+    "scope": "Model-specific store render",
+    "width": 3000,
+    "height": 3549,
+    "bytes": 1131823,
+    "sha256": "4336fabdac2196e46a8e80fab911281c6204d4ee3a3be3500309269c60235707",
+    "source_directory": "/home/wayne/Downloads/iphone_promotional_images",
+    "workspace_path": "src/assets/images/iphone/apple-used/iphone-16-pro-max-whitetitanium.webp",
+    "processing": "Crop source padding; remove only edge-connected flat bright background with a deterministic alpha mask. Preserve original handset RGB pixels, dimensions and colors; no AI editing or recoloring. Lossless WebP with transparency.",
+    "background_mask": {
+      "background_rgb": [
+        245,
+        245,
+        247
+      ],
+      "removed_pixels": 10078
+    },
+    "output_width": 799,
+    "output_height": 1005,
+    "output_bytes": 460812,
+    "output_sha256": "f5c9770753b7eb3e722c642ad1b7ca49460965f78be7d7693dae7833674f347e"
+  }
+]

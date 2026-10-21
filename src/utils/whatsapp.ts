@@ -14,7 +14,7 @@ interface WhatsAppClickEvent {
   whatsapp_url: string
 }
 
-const WHATSAPP_PHONE = '5521967635340'
+export const WHATSAPP_PHONE = '5521967635340'
 // Dedicated service line for PC-gamer inquiries (build quotes and PC-gamer pages).
 export const WHATSAPP_PHONE_PC_GAMER = '5521996613988'
 const WHATSAPP_API_BASE = 'https://api.whatsapp.com/send/'

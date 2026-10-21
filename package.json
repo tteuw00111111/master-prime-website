@@ -11,7 +11,7 @@
     "prerender": "node scripts/prerender.mjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
-    "test": "node scripts/test-quote.mjs && node scripts/test-gaming-quote.mjs && node scripts/test-smartphone-quote.mjs && node scripts/test-smartphone-tracking.mjs && node scripts/test-computer-quote.mjs && node scripts/test-pc-build-quote.mjs && node scripts/validate-seo.mjs",
+    "test": "node scripts/test-quote.mjs && node scripts/test-gaming-quote.mjs && node scripts/test-smartphone-quote.mjs && node scripts/test-smartphone-tracking.mjs && node scripts/test-computer-quote.mjs && node scripts/test-pc-build-quote.mjs && node scripts/test-iphone-purchase.mjs && node scripts/test-iphone-backgrounds.mjs && node scripts/validate-seo.mjs",
     "test:quote": "node scripts/test-quote.mjs",
     "catalog:import": "python3 scripts/import-notebook-catalog.py",
     "preview": "vite preview",
@@ -20,9 +20,18 @@
     "test:smartphone-tracking": "node scripts/test-smartphone-tracking.mjs",
     "test:computer": "node scripts/test-computer-quote.mjs",
     "test:pc-build": "node scripts/test-pc-build-quote.mjs",
-    "catalog:games": "node scripts/import-pc-games.mjs"
+    "catalog:games": "node scripts/import-pc-games.mjs",
+    "test:iphone-purchase": "node scripts/test-iphone-purchase.mjs",
+    "test:iphone-catalog-browser": "node scripts/test-iphone-catalog-browser.mjs",
+    "test:iphone-purchase-browser": "node scripts/test-iphone-purchase-browser.mjs",
+    "test:iphone-media-browser": "node scripts/test-iphone-media-browser.mjs",
+    "test:iphone-18-browser": "node scripts/test-iphone-18-browser.mjs",
+    "test:iphone-used-browser": "node scripts/test-iphone-used-browser.mjs",
+    "test:iphone-trade-browser": "node scripts/test-iphone-trade-browser.mjs",
+    "test:iphone-csp-browser": "node scripts/test-iphone-csp-browser.mjs"
   },
   "dependencies": {
+    "@google/model-viewer": "^4.4.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.5.4",
     "react": "^18.3.1",
@@ -32,6 +41,9 @@
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
+    "@gltf-transform/core": "^4.5.1",
+    "@gltf-transform/extensions": "^4.5.1",
+    "@gltf-transform/functions": "^4.5.1",
     "@types/node": "^22.5.5",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",

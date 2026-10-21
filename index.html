@@ -4,14 +4,40 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- Purchase answers must never reach global click listeners or session replay. -->
+    <script>
+    window.__MP_IPHONE_PURCHASE = /^\/orcamento\/iphone\/?$/.test(location.pathname);
+    if (window.__MP_IPHONE_PURCHASE) {
+      var purchaseParams = new URLSearchParams(location.search);
+      var safePurchaseParams = new URLSearchParams();
+      var purchaseRules = {
+        view: /^quote$/,
+        model: /^iphone-(?:13|14|15|16|17|18)(?:-plus|-pro|-pro-max)?$/,
+        capacity: /^(?:128|256|512)$/, condition: /^(?:used|sealed)$/,
+        utm_source: /^[a-z0-9_-]{1,80}$/, utm_medium: /^[a-z0-9_-]{1,80}$/,
+        utm_campaign: /^[a-z0-9_-]{1,80}$/, utm_content: /^\d{5,30}$/,
+        campaign_id: /^\d{5,30}$/, adset_id: /^\d{5,30}$/
+      };
+      Object.keys(purchaseRules).forEach(function(key) {
+        var value = purchaseParams.get(key);
+        if (value && purchaseRules[key].test(value)) safePurchaseParams.set(key, value);
+      });
+      var purchaseQuery = safePurchaseParams.toString();
+      try { history.replaceState(history.state, '', location.pathname + (purchaseQuery ? '?' + purchaseQuery : '')); } catch (_) {}
+    }
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
     window.dataLayer = window.dataLayer || [];
+    if (!window.__MP_IPHONE_PURCHASE) {
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P3RV75ZD');</script>
+    })(window,document,'script','dataLayer','GTM-P3RV75ZD');
+    }
+    </script>
     <!-- End Google Tag Manager -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -70,6 +96,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    if (window.__MP_IPHONE_PURCHASE) fbq('set', 'autoConfig', false, '1430740015202870');
     fbq('init', '1430740015202870');
     fbq('track', 'PageView');
     </script>
@@ -77,11 +104,13 @@
 
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
+    if (!window.__MP_IPHONE_PURCHASE) {
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "v6kk9ke9ye");
+    }
     </script>
   </head>
   <body>

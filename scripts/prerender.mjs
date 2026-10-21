@@ -60,6 +60,13 @@ const renderDocument = (pathname) => {
     html = html.replace(/^.*asset_phone_main_page.*\n?/gm, '')
   }
 
+  if (pathname === '/orcamento/iphone') {
+    // Script guards do not run in noscript mode. Remove these transports from
+    // the purchase document as well; keep other pages' integrations unchanged.
+    html = html.replace(/<noscript><iframe[\s\S]*?<\/iframe><\/noscript>/gi, '')
+      .replace(/<noscript><img[\s\S]*?<\/noscript>/gi, '')
+  }
+
   return html
 }
 
