@@ -7,8 +7,8 @@ Execução local em 21/10/2026. Commit e push autorizados pelo usuário; deploy 
 - `npm run lint`: passou, sem warnings.
 - `npm run typecheck`: passou; também integra `npm run build`.
 - `npm run build`: passou, incluindo cliente, SSR e pré-renderização de 37 páginas React; 38 URLs no sitemap contando privacidade.
-- `npm test`: passaram **106 testes** dos fluxos de notebook, videogame, celular/reparo, rastreamento do reparo, computador, PC e compra de iPhone, incluindo preservação das imagens, além da auditoria SEO.
-- `npm run test:iphone-purchase`: 28 testes específicos de catálogo/regras/restauração/tracking/privacidade.
+- `npm test`: passaram **108 testes** dos fluxos de notebook, videogame, celular/reparo, rastreamento do reparo, computador, PC e compra de iPhone, incluindo preservação das imagens, além da auditoria SEO.
+- `npm run test:iphone-purchase`: 30 testes específicos de catálogo/regras/restauração/tracking/privacidade.
 - QA de navegador: passou em Chromium 152.0.7977.64; teste adicional de hidratação e compra sem troca em WebKit 375×667. Não são aparelhos físicos.
 - `git diff --check`: passou.
 
@@ -103,7 +103,7 @@ O 3D passa a ser a apresentação inicial por preferência posterior do usuário
 
 Modelo de 2,76MB, três acabamentos, presets, zoom limitado, sem rotação contínua. O script adicional `npm run test:iphone-media-browser` cobre download automático/adaptativo, mudança rápida de cor/vista, preservação da câmera, carregamento lento, imagem quebrada e retry, falha de modelo, ausência de WebGL, navegação entre etapas e toque emulado (rolagem vertical e rotação horizontal). Evidências e logs em `.cache/iphone-refine/`; o desenho e o resultado da revisão independente estão em `docs/iphone-product-design.md`.
 
-Validações estáticas atuais: lint, typecheck, build e 106 testes de domínio/tracking/imagens, além da auditoria de 38 URLs indexáveis (links, metadata, H1, canonical, sitemap, robots, JSON-LD, NAP e impressoras). O teste de mídia mede 320px, 390px, tablet, desktop e texto a 200%. Em 390×844, capacidade termina em aproximadamente 552px e a barra começa em 746px na entrada. Em alturas menores, as opções precisam de rolagem.
+Validações estáticas atuais: lint, typecheck, build e 108 testes de domínio/tracking/imagens, além da auditoria de 38 URLs indexáveis (links, metadata, H1, canonical, sitemap, robots, JSON-LD, NAP e impressoras). O teste de mídia mede 320px, 390px, tablet, desktop e texto a 200%. Em 390×844, capacidade termina em aproximadamente 552px e a barra começa em 746px na entrada. Em alturas menores, as opções precisam de rolagem.
 
 O WebKit local exercita a jornada sem troca; não equivale a Safari físico nem ao navegador interno real da Meta. Safe areas e teclado real continuam como aceitação em dispositivo. O teste de teclado automatizado é uma simulação de viewport, não prova de hardware. As mensagens continuam interceptadas: nenhum envio de WhatsApp ou evento real é comprovado por QA.
 
@@ -113,6 +113,14 @@ O teste `npm run test:iphone-csp-browser` aplica o cabeçalho real de `vercel.js
 
 Os testes de WebKit devem usar uma porta aceita pelo navegador, como 4178 ou 4189; 4190 é uma porta de rede restrita nesse runtime. Os logs da revisão final ficam em `.cache/iphone-final-check/`.
 
-## Revisão final antes do commit — 21/10/2026
+## Revisão antes do commit 1f512da — 21/10/2026
 
 Lint, typecheck, build, 106 testes e auditoria SEO de 38 URLs passaram novamente. As sete suítes de navegador passaram contra uma cópia estável do build: catálogo, compra, mídia/3D do 17, 18 Pro Max, seminovos, troca e CSP de produção. A suíte de compra também passou em WebKit 375×667. Seminovos cobrem 13 ofertas e 58 cores; a triagem cobre compras do 17, 18 e seminovo com revisão, restauração, edição e resumo de WhatsApp. Nenhum teste envia mensagem ou evento externo.
+
+## Ajuste de atribuição fbclid — 21/10/2026
+
+Pedido de origem: `/home/wayne/master-prime-meta-ads/planejamento/iphone/AJUSTE-ATRIBUICAO-FBCLID.md`. O identificador recebido permanece íntegro na URL sanitizada e na navegação catálogo/configurador, sem geração de cookies pelo site nem inclusão em payload personalizado, rascunho ou WhatsApp. Produto e seis UTMs/IDs mantêm as mesmas regras.
+
+Lint, typecheck, build, 108 testes e auditoria SEO de 38 URLs passaram. Contra uma cópia estável do build, passaram as suítes de catálogo, compra (Chromium e WebKit) e a nova `npm run test:iphone-attribution-browser`. Esta cobre seis cenários: navegação e href para nova aba; Pixel liberado depois de completar o formulário; leitura adiada por consentimento simulado; Pixel/storage bloqueados; ausência de fbclid; valor inválido com query privada. Casos sem bloqueio de storage também revalidam restauração e deduplicação após reload. As suítes dos reparos e seus eventos passaram em `npm test`.
+
+Relatórios e logs locais: `.cache/iphone-fbclid/`. O script Meta é substituído por um observador, que lê a URL após liberação; não é o SDK real. Os testes não criam `_fbc`, não contornam consentimento e não comprovam transporte/recebimento na Meta ou GA4. GTM/Clarity continuam ausentes na compra, e os sete eventos permanecem com o contrato anterior. A estratégia e os limites estão no handoff de mídia.

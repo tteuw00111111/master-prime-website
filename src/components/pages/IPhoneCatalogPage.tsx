@@ -6,9 +6,8 @@ import { IPHONE_CATALOG_DATE_LABEL, IPHONE_PURCHASE_PATH } from '@/data/iphone-p
 import { getIPhoneThumbnail } from '@/data/iphone-product-images'
 import type { IPhoneVariant } from '@/types/iphone-purchase'
 import { buildIPhoneSalesUrl, formatIPhoneMoney } from '@/utils/iphone-purchase'
-import { getIPhoneCatalogGroups, getIPhoneCatalogLink, isIPhoneQuoteEntry } from '@/utils/iphone-catalog'
+import { getIPhoneCatalogGroups, getIPhoneCatalogLink, getIPhoneNavigationAttribution, isIPhoneQuoteEntry } from '@/utils/iphone-catalog'
 import { WHATSAPP_PHONE } from '@/utils/whatsapp'
-import { cleanIPhoneAttribution } from '@/utils/iphone-purchase-tracking'
 import { IPhonePurchaseQuotePage } from './IPhonePurchaseQuotePage'
 import '@/styles/iphone-catalog.css'
 
@@ -17,7 +16,7 @@ const filters = [{ id: 'all', label: 'Todos' }, { id: 'sealed', label: 'Lacrados
 const catalogUrl = `https://master-prime.com${IPHONE_PURCHASE_PATH}`
 const groups = getIPhoneCatalogGroups()
 
-const IPhoneCatalog = ({ onChoose }: { onChoose: (event: React.MouseEvent<HTMLAnchorElement>) => void }) => {
+const IPhoneCatalog = ({ onChoose, search }: { onChoose: (event: React.MouseEvent<HTMLAnchorElement>) => void; search: string }) => {
   const [filter, setFilter] = useState<Filter>('all')
   const [copyStatus, setCopyStatus] = useState('')
   const [copyFallback, setCopyFallback] = useState(false)
@@ -69,13 +68,13 @@ const IPhoneCatalog = ({ onChoose }: { onChoose: (event: React.MouseEvent<HTMLAn
               const capacities = [...new Set(group.variants.map(variant => variant.capacity))]
               const from = group.variants.some(variant => variant.cashCents !== group.cheapest.cashCents)
               return <article key={`${group.modelId}-${condition}`} className={`catalog-product ${condition === 'sealed' ? 'catalog-product-sealed' : 'catalog-product-used'}`}>
-                {thumbnail && <a className="catalog-product-image" href={getIPhoneCatalogLink(group.cheapest)} onClick={onChoose} tabIndex={-1} aria-hidden="true"><img src={thumbnail} alt="" width={1090} height={1400} loading={condition === 'sealed' ? 'eager' : 'lazy'} decoding="async" /></a>}
+                {thumbnail && <a className="catalog-product-image" href={getIPhoneCatalogLink(group.cheapest, search)} onClick={onChoose} tabIndex={-1} aria-hidden="true"><img src={thumbnail} alt="" width={1090} height={1400} loading={condition === 'sealed' ? 'eager' : 'lazy'} decoding="async" /></a>}
                 <div className="catalog-product-info">
                   <h3>{group.model}</h3>
                   <p className="catalog-capacities">{capacities.map(capacity => `${capacity} GB`).join(' ou ')}</p>
                   {condition === 'sealed' && <p className="catalog-colors">{[...new Set(group.variants.map(variant => variant.colorId))].length} cores para consultar</p>}
                   <div className="catalog-price">{from && <p className="catalog-from">A partir de</p>}<p><strong>{formatIPhoneMoney(group.cheapest.cashCents)}</strong><span> à vista</span></p><p className="catalog-installments">ou 12× de {formatIPhoneMoney(group.cheapest.installmentCents)} no cartão</p></div>
-                  <a className="catalog-product-action" href={getIPhoneCatalogLink(group.cheapest)} onClick={onChoose} aria-label={`Ver opções de ${group.model} ${condition === 'used' ? 'seminovo' : 'lacrado'}`}>Ver opções <FiArrowRight aria-hidden="true" /></a>
+                  <a className="catalog-product-action" href={getIPhoneCatalogLink(group.cheapest, search)} onClick={onChoose} aria-label={`Ver opções de ${group.model} ${condition === 'used' ? 'seminovo' : 'lacrado'}`}>Ver opções <FiArrowRight aria-hidden="true" /></a>
                 </div>
               </article>
             })}</div>
@@ -93,8 +92,12 @@ const IPhoneCatalog = ({ onChoose }: { onChoose: (event: React.MouseEvent<HTMLAn
 // In-page navigation keeps model entry immediate and supports browser back/forward.
 export const IPhoneCatalogPage = () => {
   const [showQuote, setShowQuote] = useState(false)
+  const [search, setSearch] = useState('')
   useEffect(() => {
-    const sync = () => setShowQuote(isIPhoneQuoteEntry(window.location.search))
+    const sync = () => {
+      setSearch(window.location.search)
+      setShowQuote(isIPhoneQuoteEntry(window.location.search))
+    }
     sync()
     window.addEventListener('popstate', sync)
     return () => window.removeEventListener('popstate', sync)
@@ -103,11 +106,10 @@ export const IPhoneCatalogPage = () => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
     const url = new URL(event.currentTarget.href)
-    const attribution = cleanIPhoneAttribution(new URLSearchParams(window.location.search))
-    for (const [key, value] of Object.entries(attribution)) url.searchParams.set(key, value)
+    for (const [key, value] of getIPhoneNavigationAttribution(window.location.search)) url.searchParams.set(key, value)
     window.history.pushState(null, '', `${url.pathname}${url.search}`)
     setShowQuote(true)
     window.scrollTo(0, 0)
   }
-  return showQuote ? <IPhonePurchaseQuotePage /> : <IPhoneCatalog onChoose={choose} />
+  return showQuote ? <IPhonePurchaseQuotePage /> : <IPhoneCatalog onChoose={choose} search={search} />
 }

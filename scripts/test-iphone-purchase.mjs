@@ -246,28 +246,84 @@ test('blocked storage and throwing tags keep the quote usable and deduplicate wi
   assert.doesNotThrow(() => tracker.track('whatsapp', complete().selection))
   assert.match(q.buildIPhonePurchaseMessage(complete()), /APARELHO DESEJADO/)
 }))
-test('global transport guards isolate purchase while preserving repair; query is sanitized before Pixel', () => {
+const simulateTemplate = (pathname, search = `${attribution}&notes=PRIVATE&fbclid=IwQA_MixedCase-123&color=orange&price=1`) => {
   const template = readFileSync(resolve(import.meta.dirname, '../index.html'), 'utf8')
   const inline = [...template.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m => m[1]).filter(Boolean)
-  const simulate = pathname => {
-    const loaded = [], history = []
-    const context = { URLSearchParams, location: { pathname, search: `${attribution}&notes=PRIVATE&fbclid=PRIVATE&color=orange&price=1`, hash: '#PRIVATE' }, history: { state: null, replaceState: (_, __, value) => history.push(value) }, document: { createElement: () => ({}), getElementsByTagName: () => [{ parentNode: { insertBefore: node => loaded.push(node.src) } }] } }
-    context.window = context
-    vm.createContext(context)
-    for (const source of inline) vm.runInContext(source, context)
-    return { loaded, history, calls: context.fbq.queue }
+  const loaded = [], history = [], pixelLocations = []
+  const location = { pathname, search, hash: '#PRIVATE' }
+  const context = {
+    URLSearchParams, location,
+    history: { state: null, replaceState: (_, __, value) => {
+      history.push(value)
+      const url = new URL(value, 'https://master-prime.com')
+      Object.assign(location, { pathname: url.pathname, search: url.search, hash: url.hash })
+    } },
+    document: { createElement: () => ({}), getElementsByTagName: () => [{ parentNode: { insertBefore: node => {
+      loaded.push(node.src)
+      if (/fbevents/.test(node.src)) pixelLocations.push(location.pathname + location.search + location.hash)
+    } } }] },
   }
-  const purchase = simulate('/orcamento/iphone')
+  context.window = context
+  vm.createContext(context)
+  for (const source of inline) vm.runInContext(source, context)
+  return { loaded, history, pixelLocations, calls: context.fbq.queue }
+}
+test('global transport guards isolate purchase while preserving repair; query is sanitized before Pixel', () => {
+  const purchase = simulateTemplate('/orcamento/iphone')
   assert(!purchase.loaded.some(url => /googletagmanager|clarity/.test(url)))
   assert.equal(purchase.loaded.filter(url => /fbevents/.test(url)).length, 1)
   assert.equal(purchase.calls.filter(args => args[0] === 'init').length, 1)
   assert(purchase.calls.some(args => args[0] === 'set' && args[1] === 'autoConfig' && args[2] === false))
-  assert.doesNotMatch(purchase.history[0], /PRIVATE|notes|fbclid|price|color=/)
-  const repair = simulate('/orcamento/celular')
+  assert.doesNotMatch(purchase.history[0], /PRIVATE|notes|price|color=/)
+  assert.equal(new URL(purchase.pixelLocations[0], 'https://master-prime.com').searchParams.get('fbclid'), 'IwQA_MixedCase-123')
+  const repair = simulateTemplate('/orcamento/celular')
   assert(repair.loaded.some(url => /googletagmanager/.test(url)))
   assert(repair.loaded.some(url => /clarity/.test(url)))
   assert.equal(repair.history.length, 0)
 })
+
+test('the template and catalog navigation preserve opaque click IDs intact without inventing them', () => {
+  const base = '?utm_source=ig&utm_content=99000000000001&notes=PRIVATE'
+  for (const clickId of ['IwQA_MixedCase-123', `IwQA_${'aB9_-'.repeat(500)}`]) {
+    const search = `${base}&fbclid=${encodeURIComponent(clickId)}`
+    for (const pathname of ['/orcamento/iphone', '/orcamento/iphone/']) {
+      const template = simulateTemplate(pathname, search)
+      const url = new URL(template.pixelLocations[0], 'https://master-prime.com')
+      assert.equal(url.searchParams.get('fbclid'), clickId)
+      assert.equal(url.searchParams.get('utm_source'), 'ig')
+      assert.equal(url.hash, '')
+      assert(!url.searchParams.has('notes'))
+    }
+    for (const link of [catalog.getIPhoneCatalogLink(data.IPHONE_VARIANTS[0], search), catalog.getIPhoneCatalogHomeLink(search)]) {
+      const params = new URL(link, 'https://master-prime.com').searchParams
+      assert.equal(params.get('fbclid'), clickId)
+      assert.equal(params.get('utm_content'), '99000000000001')
+      assert(!params.has('notes'))
+    }
+  }
+  for (const suffix of ['', '&fbclid=', '&fbclid={{fbclid}}', '&fbclid=person%40mail.com', '&fbclid=PRIVATE%20NOTE', '&fbclid=%0Aprivate', '&fbclid=%3Cscript%3E']) {
+    const search = base + suffix
+    const template = simulateTemplate('/orcamento/iphone', search)
+    for (const url of [template.pixelLocations[0], catalog.getIPhoneCatalogLink(data.IPHONE_VARIANTS[0], search), catalog.getIPhoneCatalogHomeLink(search)]) {
+      assert(!new URL(url, 'https://master-prime.com').searchParams.has('fbclid'))
+    }
+  }
+})
+
+test('fbclid stays outside custom events, drafts and WhatsApp, without changing attempt deduplication', () => withBrowser(mock => {
+  const clickId = 'IwQA_OriginalCase-987'
+  mock.location.search = `${attribution}&fbclid=${clickId}`
+  const initial = tracking.createIPhonePurchaseTracker(complete().selection)
+  initial.track('viewed', complete().selection)
+  mock.location.search = `${attribution}&fbclid=IwQA_AnotherClick-123`
+  const restored = tracking.createIPhonePurchaseTracker(complete().selection)
+  assert.equal(restored.attemptId, initial.attemptId)
+  restored.track('viewed', complete().selection)
+  assert.equal(mock.dataLayer.length, 1)
+  assert.doesNotMatch(JSON.stringify([...mock.values]), /fbclid|IwQA/)
+  assert.doesNotMatch(JSON.stringify(mock.calls), /fbclid|IwQA/)
+  assert.doesNotMatch(q.buildIPhonePurchaseMessage(withTrade()), /fbclid|IwQA/)
+}))
 
 
 test('payment quotes the chosen installment count in the summary and WhatsApp message', () => {

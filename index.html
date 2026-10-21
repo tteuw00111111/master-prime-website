@@ -16,7 +16,10 @@
         capacity: /^(?:128|256|512)$/, condition: /^(?:used|sealed)$/,
         utm_source: /^[a-z0-9_-]{1,80}$/, utm_medium: /^[a-z0-9_-]{1,80}$/,
         utm_campaign: /^[a-z0-9_-]{1,80}$/, utm_content: /^\d{5,30}$/,
-        campaign_id: /^\d{5,30}$/, adset_id: /^\d{5,30}$/
+        campaign_id: /^\d{5,30}$/, adset_id: /^\d{5,30}$/,
+        // Leave the original click ID available to the existing Pixel, including
+        // delayed loading/consent. Never synthesize it or write _fbc ourselves.
+        fbclid: /^[A-Za-z0-9_-]+$/
       };
       Object.keys(purchaseRules).forEach(function(key) {
         var value = purchaseParams.get(key);

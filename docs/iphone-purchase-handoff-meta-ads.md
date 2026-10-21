@@ -52,7 +52,19 @@ Exemplo do 17 Pro Max 256 GB laranja: `7699.99`, `696.66`, `12`, `8359.88`, `BRL
 
 ## Atribuição e deduplicação
 
-UTM source/medium/campaign aceitam somente `[a-z0-9_-]` com até 80 caracteres. utm_content/campaign_id/adset_id aceitam somente 5–30 dígitos. Querys arbitrárias, placeholders, fbclid manual, hashes e texto livre são excluídos. O template limpa a URL de compra antes de tags externas; a atribuição não usa UTM para preço ou seleção de produto.
+UTM source/medium/campaign aceitam somente `[a-z0-9_-]` com até 80 caracteres. utm_content/campaign_id/adset_id aceitam somente 5–30 dígitos. Querys arbitrárias, placeholders, hashes e texto livre são excluídos. O template limpa a URL de compra antes de tags externas; a atribuição não usa UTM para preço ou seleção de produto. A exceção de `fbclid` está descrita abaixo e não faz parte dos seis campos personalizados.
+
+### Preservação do fbclid — ajuste solicitado em 21/10/2026
+
+O sanitizador anterior removia `fbclid` antes do Pixel. Agora preserva o valor recebido na URL quando não vazio e composto por letras ASCII maiúsculas/minúsculas, números, `_` e `-`. Essa é uma validação sintática da aplicação, não uma prova de autenticidade do clique. O valor não é truncado, normalizado para minúsculas, reconstruído a partir de UTM ou criado em visitas sem identificador. `URLSearchParams` pode normalizar a codificação da query; o valor decodificado permanece idêntico.
+
+O identificador permanece na URL durante a visita, sem timeout nem limpeza posterior que dependa de suposta captura. Assim, continua disponível se o Pixel só puder ler a página depois, por carregamento lento ou permissão adiada. Links de produto, inclusive abertura em outra aba, e o retorno ao catálogo carregam o mesmo valor e as seis UTMs/IDs permitidas. A cópia do link compartilhável continua usando somente a canônica, sem atribuição individual.
+
+O site deixa a captura e eventual `_fbc` a cargo do mecanismo legítimo do Pixel existente, respeitando bloqueios e consentimento do ambiente. Não escreve `_fbc`/`_fbp`, não instala outro Pixel e não cria backend, CAPI ou CRM. O código local não contém uma CMP/banner de consentimento; o ajuste não acrescenta `grant` nem contorna uma permissão negada. Permissões remotas e comportamento real de cookies devem ser validados no ambiente aplicável. Referência indicada no pedido: [Meta — fbp e fbc](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc/).
+
+`fbclid` não entra no estado do tracker, rascunho, payload personalizado do Pixel/dataLayer ou mensagem de WhatsApp. Os sete nomes de evento, origem inicial, deduplicação, preços de catálogo e regras dos reparos permanecem iguais. O Pixel pode usar a URL atual no seu próprio mecanismo de atribuição; isso é distinto de acrescentar o identificador aos parâmetros personalizados.
+
+QA usa um identificador explicitamente fictício somente em navegadores isolados com todos os transports Meta interceptados. O teste substitui o script por um observador e verifica a disponibilidade da URL quando ele é liberado e quando uma leitura é adiada por permissão simulada. Não escreve cookies `_fbc`, não demonstra captura pelo SDK real e não comprova transporte/recebimento na Meta. Visita sem identificador, valor inválido, query privada, navegação, Pixel bloqueado, storage bloqueado, rascunho, WhatsApp interceptado e deduplicação são cobertos em `npm run test:iphone-attribution-browser`.
 
 As seis propriedades originais ficam separadas do produto final, com validade de duas horas por tentativa em sessionStorage próprio. Refresh/retorno sem nova origem preserva a origem anterior. Nova origem validada diferente em qualquer um desses campos abre nova tentativa e não reaproveita o rascunho da anterior. Um link de outro produto pode mudar a seleção, mas não reescreve a origem da tentativa ativa.
 
@@ -62,7 +74,7 @@ Cada marco tem chave persistida por tentativa; voltar/editar/reabrir/recarregar 
 
 Na nova rota, GTM e Clarity não são carregados, incluindo fallback noscript no HTML pré-renderizado. O Pixel existente recebe `autoConfig=false` antes de init para impedir captura automática de botão/formulário; preserva seu PageView existente. O formulário e a revisão também estão mascarados.
 
-As outras rotas preservam GTM, Clarity e Pixel. A configuração remota de GTM/Pixel e permissões externas não foi auditada por acesso à conta; a proteção local evita depender desses listeners nesta rota. A remoção de `fbclid` da URL limita atribuição automática baseada nele; não há transporte manual desse campo. O chat de mídia deve considerar essa limitação e validar consentimento/entrega no ambiente real.
+As outras rotas preservam GTM, Clarity e Pixel. A configuração remota de GTM/Pixel e permissões externas não foi auditada por acesso à conta; a proteção local evita depender desses listeners nesta rota. `fbclid` permanece disponível na URL para o Pixel conforme a estratégia acima. O chat de mídia deve validar consentimento, captura e entrega no ambiente real. Como GTM não carrega nesta rota, o conteúdo de `dataLayer` sozinho não comprova recepção no GA4; GTM e Clarity não foram reativados neste ajuste.
 
 ## Estado comercial e responsabilidade da mídia
 

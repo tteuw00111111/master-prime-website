@@ -28,7 +28,8 @@
     "test:iphone-18-browser": "node scripts/test-iphone-18-browser.mjs",
     "test:iphone-used-browser": "node scripts/test-iphone-used-browser.mjs",
     "test:iphone-trade-browser": "node scripts/test-iphone-trade-browser.mjs",
-    "test:iphone-csp-browser": "node scripts/test-iphone-csp-browser.mjs"
+    "test:iphone-csp-browser": "node scripts/test-iphone-csp-browser.mjs",
+    "test:iphone-attribution-browser": "node scripts/test-iphone-attribution-browser.mjs"
   },
   "dependencies": {
     "@google/model-viewer": "^4.4.0",
