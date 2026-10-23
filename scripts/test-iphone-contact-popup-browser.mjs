@@ -92,7 +92,7 @@ try {
     await f.page.evaluate(() => window.postMessage(JSON.stringify({ event: 'Tally.FormSubmitted', payload: { formId: 'QAonly7', fields: [{ answer: { value: 'PRIVATE_PHONE' } }] } }), '*'))
     assert.equal(await f.page.evaluate(() => JSON.stringify(window.dataLayer)), before)
     assert.doesNotMatch(await f.dialog.textContent(), /salvo|recebido|sucesso/i)
-    assert.equal(await f.page.evaluate(key => sessionStorage.getItem(key), sessionKey), '1')
+    assert.equal(await f.page.evaluate(key => sessionStorage.getItem(key), sessionKey), null, 'Automatic display does not persist a cross-visit suppression flag')
     // Vite's development-only HMR websocket is not in the production CSP.
     assert.deepEqual(await f.page.evaluate(() => window.__csp.filter(item => !item.uri.startsWith('ws://127.0.0.1:'))), [])
     await f.page.screenshot({ path: resolve(evidence, 'mobile-390.png') })
@@ -110,9 +110,9 @@ try {
     assert.equal(await f.page.evaluate(() => document.documentElement.style.overflow), '')
     await f.tick(15000); await f.scroll(); assert.equal(await f.isOpen(), false)
     await f.page.reload({ waitUntil: 'networkidle' }); await f.tick(9000)
-    assert.equal(await f.isOpen(), false)
-    assert.equal(f.requests.length, 1)
-    await f.context.close(); report.checks.push('7s visible time, StrictMode, exact static embed URL, CSP, autofocus, keyboard containment, Escape on host, no claimed save/events, session suppression and refresh; Chromium iframe Escape limitation reproduced')
+    assert.equal(await f.isOpen(), true, 'A fresh page visit can open automatically again')
+    assert.equal(f.requests.length, 2)
+    await f.context.close(); report.checks.push('7s visible time, StrictMode, exact static embed URL, CSP, autofocus, keyboard containment, Escape on host, no claimed save/events, same-document suppression and fresh-visit reopening; Chromium iframe Escape limitation reproduced')
   }
   {
     const f = await fixture()
