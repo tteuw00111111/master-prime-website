@@ -13,7 +13,7 @@ import { buildPcBuildQuoteMessage, formatPcBudget, getPcFeasibilityNotice, getPc
 import { getFirstIncompletePcBuildScreen, getPcBuildScreenErrors, getPcBuildScreens, getPcBuildScreenStep, isPcBuildScreenInScope, PC_BUILD_EDIT_SCOPES, restorePcBuildScreen } from '@/utils/pc-build-quote-flow'
 import type { PcBuildEditScope, PcBuildErrors, PcBuildField, PcBuildScreen } from '@/utils/pc-build-quote-flow'
 import { trackQuoteEvent } from '@/utils/quote'
-import { getWhatsAppMessageUrl, getWhatsAppQuoteUrl, WHATSAPP_PHONE_PC_GAMER } from '@/utils/whatsapp'
+import { getWhatsAppMessageUrl, getWhatsAppQuoteUrl, WHATSAPP_PHONE_PC_GAMER_SALES } from '@/utils/whatsapp'
 import '@/styles/pc-build-quote.css'
 
 const fieldTargets: Record<PcBuildField, string> = { mode: 'pcb-mode', purpose: 'pcb-purpose', budget: 'pcb-budget', budgetScope: 'pcb-budgetScope', games: 'pcb-games', programs: 'pcb-programs', customFps: 'pcb-customFps', fulfillment: 'pcb-fulfillment', neighborhood: 'pcb-neighborhood', city: 'pcb-city' }
@@ -161,7 +161,7 @@ export const PcBuildQuotePage = () => {
     const incomplete = getFirstIncompletePcBuildScreen(draft)
     if (incomplete) { goToScreen(incomplete, getPcBuildScreenErrors(draft, incomplete)); return }
     trackQuoteEvent('quote_whatsapp_click', 4, 'montagem-pc')
-    window.open(getWhatsAppMessageUrl(buildPcBuildQuoteMessage(draft), WHATSAPP_PHONE_PC_GAMER), '_blank', 'noopener,noreferrer')
+    window.open(getWhatsAppMessageUrl(buildPcBuildQuoteMessage(draft), WHATSAPP_PHONE_PC_GAMER_SALES), '_blank', 'noopener,noreferrer')
     setHandoff(true)
   }
   const copySummary = async () => {
@@ -176,12 +176,12 @@ export const PcBuildQuotePage = () => {
   const textarea = (field: 'ownedParts' | 'objective' | 'workload' | 'notes', label: string, placeholder: string, limit: number) => <label className="quote-field" htmlFor={`pcb-${field}`}><span className="sr-only">{label}</span><textarea id={`pcb-${field}`} rows={3} maxLength={limit} value={draft[field]} onChange={event => update({ [field]: event.target.value })} placeholder={placeholder} /><span className="quote-field-counter">{draft[field].length}/{limit}</span></label>
 
   return <div className="pc-build-page"><QuoteLayout title={<>Orçamento para <span>montar seu PC.</span></>}
-    helpUrl={getWhatsAppQuoteUrl(WHATSAPP_PHONE_PC_GAMER)}
+    helpUrl={getWhatsAppQuoteUrl(WHATSAPP_PHONE_PC_GAMER_SALES)}
     breadcrumbs={<><a href="/">Início</a><span aria-hidden="true">/</span><a href="/servicos">Serviços</a><span aria-hidden="true">/</span><span aria-current="page">Montar seu PC</span></>}
     helpContent={<><p>Conte como quer usar seu PC, quanto pretende investir e quais peças já possui. Você revisa as preferências e continua pelo WhatsApp para consultar o planejamento e a montagem com a Master Prime. A equipe avalia compatibilidade, configuração, valores e condições. Metas de FPS e preferências de marcas orientam a conversa; o desempenho depende do conjunto, do jogo e dos ajustes. Entrega depende da disponibilidade e dos custos para o endereço.</p><a href="/upgrade-de-pc-gamer">Já tem um PC e procura um upgrade? <FiArrowRight aria-hidden="true" /></a><ExperienceImage {...PC_EXPERIENCE_IMAGE} /></>}>
     <QuoteProgress steps={PC_BUILD_STEPS} step={step} transitioning={transitioning} onNavigate={index => { const target = screens.find(item => getPcBuildScreenStep(item) === index); if (target && !transitioningRef.current) { setEditScope(null); goToScreen(target) } }} />
     {screen !== 'mode' && screen !== 'review' && <PcBuildLiveSummary draft={draft} reducedMotion={reducedMotion} />}
-    <noscript><div className="quote-noscript">Para preencher por etapas, ative o JavaScript. Você também pode <a href={getWhatsAppQuoteUrl(WHATSAPP_PHONE_PC_GAMER)}>solicitar seu orçamento pelo WhatsApp</a>, informando seu investimento, jogos ou programas e se já possui peças.</div></noscript>
+    <noscript><div className="quote-noscript">Para preencher por etapas, ative o JavaScript. Você também pode <a href={getWhatsAppQuoteUrl(WHATSAPP_PHONE_PC_GAMER_SALES)}>solicitar seu orçamento pelo WhatsApp</a>, informando seu investimento, jogos ou programas e se já possui peças.</div></noscript>
     <form className="quote-form" data-screen={screen} aria-busy={transitioning} noValidate onSubmit={event => { event.preventDefault(); if (restored && !transitioningRef.current) { if (screen === 'review') openSummary(); else next() } }}>
       <div className="quote-private clarity-mask" data-clarity-mask="true" style={{ pointerEvents: transitioning ? 'none' : undefined }}><AnimatePresence key={restored ? 'ready' : 'initial'} initial={false} mode="wait" custom={direction}><QuoteStepTransition key={screen} direction={direction} reducedMotion={reducedMotion} nodeRef={revealStep} onVisible={() => { transitioningRef.current = false; if (transitioning) { setTransitioning(false); focusError(errors) } }}>
         <div className="quote-form-heading"><div className={screen === 'mode' ? 'pcb-opening' : undefined}><h2 id={`pcb-heading-${screen}`} ref={headingRef} tabIndex={-1}>{title}</h2>{screen === 'mode' && <img src={pcImage} alt="" width="720" height="720" loading="eager" />}</div>{subtitle && <p>{subtitle}</p>}</div>
