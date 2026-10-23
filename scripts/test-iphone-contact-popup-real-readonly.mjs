@@ -52,7 +52,7 @@ function checkFields(state) {
 }
 try {
   for (const viewport of [{width:320,height:568},{width:390,height:844},{width:1440,height:900}]) {
-    for (const mode of ['direct', 'host']) {
+    for (const mode of (process.env.IPHONE_POPUP_REAL_QA_MODE === 'host' ? ['host'] : ['direct', 'host'])) {
       const context = await browser.newContext({ viewport, reducedMotion: 'reduce' })
       const tallyDocuments = []
       await context.route('**/*', async route => {
@@ -120,6 +120,9 @@ try {
       assert(tabToContact)
       assert.equal(await frame.locator('input[type=checkbox]').isChecked(),false)
       await frame.locator('button[type=submit]').scrollIntoViewIfNeeded()
+      await page.waitForTimeout(300)
+      await frame.locator('button[type=submit]').evaluate(e => e.scrollIntoView({behavior:'instant',block:'center'}))
+      assert(await frame.locator('button[type=submit]').evaluate(e => {const r=e.getBoundingClientRect();return r.top>=-1 && r.bottom<=innerHeight+1}), `Submit must be reachable by scrolling without clicking it (${viewport.width}px)`)
       await page.screenshot({path:resolve(dir,`${mode}-${viewport.width}-bottom.png`),fullPage:mode==='direct'})
       let iframeEscapeLimitation = null
       if (mode === 'host') {
@@ -131,8 +134,11 @@ try {
         await close.click()
         assert.equal(await page.locator('dialog').evaluate(node => node.open),false)
         assert.notEqual(await page.evaluate(() => getComputedStyle(document.documentElement).overflowY),'hidden')
-        await page.locator('.iphone-contact-popup-frame').waitFor({state:'detached'})
-        assert.equal(await page.locator('iframe').count(),0)
+        assert.equal(await page.locator('.iphone-contact-popup-frame').count(),1, 'Keep the loaded frame for immediate manual reopening without discarding entries')
+        await page.getByRole('button',{name:'Quero receber contato da equipe'}).click()
+        assert.equal(await page.locator('dialog').evaluate(node => node.open),true)
+        assert.equal(tallyDocuments.length,1,'Manual reopen reuses the loaded form')
+        await page.getByRole('button',{name:'Fechar convite de contato'}).click()
         if (viewport.width <= 390) {
           await page.reload({waitUntil:'networkidle'})
           await page.evaluate(() => {const r=document.documentElement;window.scrollTo(0,Math.ceil((r.scrollHeight-r.clientHeight)*.3))})

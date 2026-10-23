@@ -146,3 +146,6 @@
   .catalog-product-used { gap: 12px; }
   .catalog-product-used .catalog-product-image { flex-basis: 70px; height: 100px; padding: 6px; }
 }
+
+.catalog-contact { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 12px; padding-block: 8px; color: var(--catalog-accent); text-decoration: underline; text-underline-offset: 4px; font-size: .9375rem; }
+.catalog-contact svg { flex-shrink: 0; }

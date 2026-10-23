@@ -17,7 +17,7 @@ const filters = [{ id: 'all', label: 'Todos' }, { id: 'sealed', label: 'Lacrados
 const catalogUrl = `https://master-prime.com${IPHONE_PURCHASE_PATH}`
 const groups = getIPhoneCatalogGroups()
 
-const IPhoneCatalog = ({ onChoose, search }: { onChoose: (event: React.MouseEvent<HTMLAnchorElement>) => void; search: string }) => {
+const IPhoneCatalog = ({ onChoose, search, onContact }: { onChoose: (event: React.MouseEvent<HTMLAnchorElement>) => void; search: string; onContact: () => void }) => {
   const [filter, setFilter] = useState<Filter>('all')
   const [copyStatus, setCopyStatus] = useState('')
   const [copyFallback, setCopyFallback] = useState(false)
@@ -45,6 +45,7 @@ const IPhoneCatalog = ({ onChoose, search }: { onChoose: (event: React.MouseEven
       <motion.div className="catalog-intro" initial={false} animate={reducedMotion ? {} : { y: [8, 0] }} transition={{ duration: .45, ease: [.22, 1, .36, 1] }}>
         <h1>Seu próximo <span>iPhone.</span></h1>
         <p>Lacrados e seminovos. Escolha um modelo para consultar com a equipe.</p>
+        <button type="button" className="catalog-contact" onClick={onContact}>Quero receber contato da equipe <FiArrowRight aria-hidden="true" /></button>
       </motion.div>
       <div className="catalog-share-feedback" role="status" aria-live="polite">{copyStatus}</div>
       {copyFallback && <div className="catalog-copy-fallback"><label htmlFor="catalog-link">Link do catálogo</label><input id="catalog-link" type="text" value={catalogUrl} readOnly onFocus={event => event.currentTarget.select()} /></div>}
@@ -94,6 +95,7 @@ const IPhoneCatalog = ({ onChoose, search }: { onChoose: (event: React.MouseEven
 export const IPhoneCatalogPage = () => {
   const [showQuote, setShowQuote] = useState(false)
   const [search, setSearch] = useState('')
+  const [contactRequest, setContactRequest] = useState(0)
   useEffect(() => {
     const sync = () => {
       setSearch(window.location.search)
@@ -113,7 +115,7 @@ export const IPhoneCatalogPage = () => {
     window.scrollTo(0, 0)
   }
   return <>
-    {showQuote ? <IPhonePurchaseQuotePage /> : <IPhoneCatalog onChoose={choose} search={search} />}
-    <IPhoneContactPopup />
+    {showQuote ? <IPhonePurchaseQuotePage onContact={() => setContactRequest(value => value + 1)} /> : <IPhoneCatalog onChoose={choose} search={search} onContact={() => setContactRequest(value => value + 1)} />}
+    <IPhoneContactPopup openRequest={contactRequest} />
   </>
 }
