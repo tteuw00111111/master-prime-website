@@ -29,7 +29,9 @@
     "test:iphone-used-browser": "node scripts/test-iphone-used-browser.mjs",
     "test:iphone-migration-browser": "node scripts/test-iphone-migration-browser.mjs",
     "test:iphone-csp-browser": "node scripts/test-iphone-csp-browser.mjs",
-    "test:iphone-attribution-browser": "node scripts/test-iphone-attribution-browser.mjs"
+    "test:iphone-attribution-browser": "node scripts/test-iphone-attribution-browser.mjs",
+    "test:iphone-contact-popup-browser": "node scripts/test-iphone-contact-popup-browser.mjs",
+    "test:iphone-contact-popup-real-readonly": "node scripts/test-iphone-contact-popup-real-readonly.mjs"
   },
   "dependencies": {
     "@google/model-viewer": "^4.4.0",
