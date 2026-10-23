@@ -84,12 +84,6 @@ export const IPhonePurchaseQuotePage = () => {
     setReady(true)
     tracker.current.track('viewed', initial)
   }, [])
-  // Reattach after StrictMode's effect replay; release callbacks on real unmount.
-  useEffect(() => {
-    const current = tracker.current
-    current?.resume()
-    return () => current?.dispose()
-  }, [])
   useEffect(() => {
     if (!ready) return
     try { sessionStorage.setItem(IPHONE_STORAGE_KEY, JSON.stringify({ draft, screen, savedAt: Date.now(), attemptId: tracker.current?.attemptId, entryKey: entryKey.current, catalogFingerprint: fingerprint })) } catch { /* No persistence required to prepare a message. */ }
@@ -173,7 +167,7 @@ export const IPhonePurchaseQuotePage = () => {
       <noscript><p className="quote-noscript">Ative o JavaScript para escolher a variante e preparar o resumo. A compra e a eventual troca dependem de confirmação com a equipe na loja.</p></noscript>
       {offline && <p className="iphone-notice" role="status">Você está sem conexão. Pode continuar preenchendo e copiar o resumo. O WhatsApp precisa de internet para enviar.</p>}
       {catalogChanged && <div className="iphone-notice" role="alert"><strong>A tabela mudou desde o seu rascunho.</strong><p>Confira os valores e a disponibilidade atuais antes de continuar. Sua consulta usará os novos valores.</p><button type="button" onClick={() => { setCatalogChanged(false); setFingerprint(iPhoneCatalogFingerprint()); setErrors({}) }}>Entendi, vou conferir os valores atuais</button></div>}
-      <form className="quote-form clarity-mask" data-clarity-mask="true" data-screen={screen} noValidate onSubmit={event => { event.preventDefault(); if (screen === 'review') openWhatsApp(); else next() }}>
+      <form className="quote-form" data-screen={screen} noValidate onSubmit={event => { event.preventDefault(); if (screen === 'review') openWhatsApp(); else next() }}>
         <motion.fieldset key={screen} initial={ready && !reducedMotion ? { opacity: .6 } : false} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : .18 }} className="iphone-form-content quote-private clarity-mask" data-clarity-mask="true" disabled={!ready}>
           <legend className="sr-only">Consulta de compra de iPhone</legend>
           <div className="quote-form-heading"><h2 ref={heading} tabIndex={-1}>{headings[screen][0]}</h2>{headings[screen][1] && <p>{headings[screen][1]}</p>}</div>

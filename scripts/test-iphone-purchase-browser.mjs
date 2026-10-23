@@ -20,13 +20,11 @@ const setup = async (options = {}) => {
     const url = new URL(route.request().url())
     if (['localhost', '127.0.0.1'].includes(url.hostname)) return route.continue()
     report.thirdPartyBlocked++
-    if (url.href === 'https://www.clarity.ms/tag/v6kk9ke9ye') return route.fulfill({ status: 200, contentType: 'application/javascript', body: 'window.__qaClarityLoaded = true;' })
     return route.fulfill({ status: 200, contentType: 'application/javascript', body: '' })
   })
   await context.addInitScript(() => {
     window.__qaPixel = []; window.__qaOpen = []; window.__qaCopy = []; window.__qaCopyFails = false
     window.fbq = (...args) => window.__qaPixel.push(args)
-    window.fbq.callMethod = window.fbq
     window.open = (...args) => { window.__qaOpen.push(args); return null }
     Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async text => { if (window.__qaCopyFails) throw Error('QA clipboard blocked'); window.__qaCopy.push(text) } } })
   })
@@ -238,8 +236,7 @@ try {
   }))
   assert.deepEqual(report.measures.controlsBelowMinimum, [])
   assert.equal(report.measures.horizontalOverflow, false)
-  assert(!report.measures.externalScripts.some(s => /googletagmanager/.test(s)))
-  assert.equal(report.measures.externalScripts.filter(s => s === 'https://www.clarity.ms/tag/v6kk9ke9ye').length, 1)
+  assert(!report.measures.externalScripts.some(s => /clarity|googletagmanager/.test(s)))
   await perf.page.evaluate(() => { document.documentElement.style.fontSize = '200%' })
   assert(await perf.page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '200% text has no horizontal overflow')
   await perf.page.evaluate(() => { document.documentElement.style.fontSize = '' })

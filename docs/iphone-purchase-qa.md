@@ -1,5 +1,3 @@
-> Atualização Clarity de 23/10/2026: a ausência de Clarity descrita nas execuções históricas abaixo foi substituída pelo carregamento do projeto existente `v6kk9ke9ye`, mantendo GTM bloqueado e máscaras. Ver a seção final específica; nenhuma mudança no tracker faz parte desta contribuição.
-
 > Estado atual: jornada reduzida `2026-10-21.reduced-v1`, descrita na seção final. As seções anteriores registram os testes das versões históricas, incluindo a triagem removida.
 
 # QA — orçamento de compra de iPhone
@@ -151,14 +149,3 @@ Comandos: `npm run lint`, `npm run build`, `npm test` e as oito suítes `test:ip
 Todos os testes bloqueiam rede externa e interceptam a abertura de WhatsApp. Não enviam eventos reais nem mensagens comerciais fictícias. O observador de Meta valida disponibilidade da URL/contrato e chamada de transporte, não o SDK real, entrega ou recebimento na Meta/GA4. Validação real de consentimento, conversão e identificação da conversa permanece com a mídia; nenhuma campanha/conversão foi alterada.
 
 Commit, push e deploy estão autorizados. O hash e o resultado final de publicação serão informados na entrega após verificação da Vercel e da jornada pública com transports externos bloqueados.
-
-
-## Reativação isolada do Clarity — 23/10/2026
-
-O projeto existente `v6kk9ke9ye` volta a carregar em catálogo e configurador. GTM continua ausente; `autoConfig=false` do Pixel precede init. O formulário inteiro recebeu `clarity-mask` e `data-clarity-mask="true"`, preservando também a máscara interna da revisão/textarea. A rota não coleta nome, telefone nem notas livres; URL e hash privados são limpos antes dos transportes. Nenhum identify, evento ou tag personalizada de Clarity foi acrescentado.
-
-A CSP adicional de `/orcamento/iphone/:path*` permite `scripts.clarity.ms` em script-src e `c.clarity.ms` em img-src; connect-src já permite os coletores Clarity. A política global e os demais transportes ficam preservados. Pré-renderização continua removendo noscript de GTM/Pixel na compra; Clarity não possui esse fallback.
-
-`node scripts/test-iphone-clarity-browser.mjs` usa somente localhost e SDKs simulados: tag Clarity, segundo estágio do runtime, imagem e collect são stubs locais interceptados; Pixel/GTM e toda rede externa/API/WhatsApp são interceptados. Aplica a CSP efetiva do vercel.json ao documento e verifica catálogo, link direto, barra final, etapas, revisão, cópia com falha, navegação/retorno/reload, URL limpa antes do stub, ausência de dados privados nos eventos e preservação de reparo/home. Não é o SDK real nem prova de sessão gravada, máscara no servidor, recebimento Meta ou consentimento real. As regras de máscara vêm da [documentação Microsoft](https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-masking).
-
-A execução e os logs desta contribuição ficam no relatório de integração de 23/10 em `relatorios/2026-10-23-iphone-republicacao/clarity/` no repositório de mídia. Sem commit/push/deploy nesta etapa; o pai integra o tracking e valida uma publicação única. As seções históricas acima são mantidas como registro das execuções anteriores.

@@ -6,7 +6,7 @@ const base = process.env.IPHONE_QA_URL || 'http://127.0.0.1:4178'
 assert(['127.0.0.1', 'localhost'].includes(new URL(base).hostname), 'QA must use localhost')
 await mkdir('.cache/iphone-final-check', { recursive: true })
 const config = JSON.parse(await readFile('vercel.json', 'utf8'))
-const csp = config.headers.find(item => item.source === '/orcamento/iphone/:path*').headers.find(header => header.key === 'Content-Security-Policy').value
+const csp = config.headers.flatMap(item => item.headers).find(header => header.key === 'Content-Security-Policy').value
 assert(csp, 'Deployment must define a CSP')
 const browser = await chromium.launch({headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE || undefined, args: ['--enable-unsafe-swiftshader']})
 try {
