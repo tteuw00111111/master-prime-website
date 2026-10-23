@@ -62,7 +62,8 @@ const renderDocument = (pathname) => {
 
   if (pathname === '/orcamento/iphone') {
     // Script guards do not run in noscript mode. Remove these transports from
-    // the purchase document as well; keep other pages' integrations unchanged.
+    // the purchase document as well. Clarity has no noscript fallback; its
+    // masked replay bootstrap stays enabled. Keep other pages unchanged.
     html = html.replace(/<noscript><iframe[\s\S]*?<\/iframe><\/noscript>/gi, '')
       .replace(/<noscript><img[\s\S]*?<\/noscript>/gi, '')
   }
