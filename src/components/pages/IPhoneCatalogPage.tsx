@@ -9,6 +9,7 @@ import { buildIPhoneSalesUrl, formatIPhoneMoney } from '@/utils/iphone-purchase'
 import { getIPhoneCatalogGroups, getIPhoneCatalogLink, getIPhoneNavigationAttribution, isIPhoneQuoteEntry } from '@/utils/iphone-catalog'
 import { WHATSAPP_PHONE } from '@/utils/whatsapp'
 import { IPhonePurchaseQuotePage } from './IPhonePurchaseQuotePage'
+import { IPhoneContactPopup } from '@/components/quote/IPhoneContactPopup'
 import '@/styles/iphone-catalog.css'
 
 type Filter = 'all' | IPhoneVariant['condition']
@@ -111,5 +112,8 @@ export const IPhoneCatalogPage = () => {
     setShowQuote(true)
     window.scrollTo(0, 0)
   }
-  return showQuote ? <IPhonePurchaseQuotePage /> : <IPhoneCatalog onChoose={choose} search={search} />
+  return <>
+    {showQuote ? <IPhonePurchaseQuotePage /> : <IPhoneCatalog onChoose={choose} search={search} />}
+    <IPhoneContactPopup />
+  </>
 }

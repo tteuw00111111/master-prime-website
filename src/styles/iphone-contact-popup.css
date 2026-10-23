@@ -1,0 +1,14 @@
+.iphone-contact-popup { width: min(520px, calc(100% - 32px)); max-width: 100%; max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow-x: hidden; overflow-y: auto; border: 1px solid #ffffff26; border-radius: 20px; background: #151515; color: #f5f5f7; color-scheme: dark; box-shadow: 0 24px 90px #0009; }
+.iphone-contact-popup::backdrop { background: #000b; }
+:root:has(.iphone-contact-popup[open]) { overflow: hidden; }
+.iphone-contact-popup-heading { padding: 24px 24px 12px; position: relative; }
+.iphone-contact-popup-eyebrow { display: block; padding-right: 44px; color: #ffd700; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
+.iphone-contact-popup h2 { margin-top: 18px; max-width: 390px; font-size: clamp(1.5rem, 6vw, 1.875rem); line-height: 1.2; letter-spacing: -.035em; font-weight: 700; text-wrap: balance; }
+.iphone-contact-popup p { margin-top: 12px; color: #bdbdc4; font-size: .9375rem; line-height: 1.6; }
+.iphone-contact-popup-close { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; color: #d2d2d7; background: #ffffff0a; touch-action: manipulation; }
+.iphone-contact-popup-close:hover { background: #ffffff18; }
+.iphone-contact-popup-close svg { width: 22px; height: 22px; }
+.iphone-contact-popup :is(button, a):focus-visible { outline: 2px solid #ffd700; outline-offset: 3px; }
+.iphone-contact-popup-frame { display: block; width: 100%; height: min(620px, calc(100dvh - 170px)); min-height: 240px; border: 0; background: #151515; }
+.iphone-contact-popup-privacy { display: block; width: fit-content; padding: 14px 24px 20px; min-height: 44px; color: #bdbdc4; font-size: .8125rem; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 360px) { .iphone-contact-popup-heading { padding-inline: 20px; } }
