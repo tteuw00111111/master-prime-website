@@ -29,7 +29,7 @@ const headings: Record<IPhoneScreen, [string, string]> = {
 const modelOptions = [...new Map(IPHONE_VARIANTS.map(v => [v.modelId, v.model])).entries()]
 const swatches: Record<string, string> = { orange: '#dc8d55', silver: '#d4d4d5', blue: '#516888', black: '#3d3d3f', burgundy: '#854354' }
 
-export const IPhonePurchaseQuotePage = () => {
+export const IPhonePurchaseQuotePage = ({ onContact }: { onContact?: () => void }) => {
   const [draft, setDraft] = useState(createIPhonePurchaseDraft)
   const [screen, setScreen] = useState<IPhoneScreen>('product')
   const [ready, setReady] = useState(false)
@@ -165,7 +165,7 @@ export const IPhonePurchaseQuotePage = () => {
 
   return <QuoteLayout className={`iphone-purchase-page ${screen === 'product' ? 'is-configuring' : ''}`} title={<>Orçamento de <span>iPhone.</span></>}
     headerAction={<a href={getIPhoneCatalogHomeLink(ready ? window.location.search : '')} className="quote-help"><FiArrowLeft aria-hidden="true" /> Ver todos os iPhones</a>}
-    footerContent={<footer className="iphone-footer"><strong>Master Prime Assistência</strong><p>Avenida Cesário de Melo, 2571<br />Campo Grande, Rio de Janeiro/RJ</p><a href="/">Voltar ao site</a><a href="/orcamento/celular">Preciso de reparo no meu celular</a></footer>}
+    footerContent={<footer className="iphone-footer">{onContact && <button type="button" className="iphone-contact-reopen" onClick={onContact}>Quero receber contato da equipe</button>}<strong>Master Prime Assistência</strong><p>Avenida Cesário de Melo, 2571<br />Campo Grande, Rio de Janeiro/RJ</p><a href="/">Voltar ao site</a><a href="/orcamento/celular">Preciso de reparo no meu celular</a></footer>}
     breadcrumbs={<><a href="/">Início</a><span aria-hidden="true">/</span><span aria-current="page">Orçamento de iPhone</span></>}
     helpContent={<div id="iphone-how"><p>Escolha o iPhone, confira os valores e indique como pretende pagar. A disponibilidade e as condições são confirmadas pela equipe. Prazo de compra e eventual troca são conversados no WhatsApp. A aceitação e o valor de um usado dependem de avaliação técnica.</p><a href="/orcamento/celular">Precisa consertar um celular? Solicite reparo aqui.</a></div>}>
     <div className="iphone-purchase">

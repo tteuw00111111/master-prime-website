@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { FiX } from 'react-icons/fi'
 import { IPHONE_CONTACT_POPUP } from '@/data/iphone-contact-popup'
 import { getIPhoneContactEmbedUrl, IPHONE_POPUP_SESSION_KEY, IPHONE_POPUP_VISIBLE_MS } from '@/utils/iphone-contact-popup'
@@ -11,10 +11,43 @@ const isEditing = () => document.activeElement instanceof HTMLElement && (
   document.activeElement.matches('input, select, textarea') || document.activeElement.isContentEditable
 )
 
-export const IPhoneContactPopup = () => {
+export const IPhoneContactPopup = ({ openRequest = 0 }: { openRequest?: number }) => {
   const dialogRef = useRef<HTMLDialogElement>(null)
   const [isOpen, setIsOpen] = useState(false)
+  const [shouldLoad, setShouldLoad] = useState(false)
+  const [frameLoaded, setFrameLoaded] = useState(false)
+  const [loadTimedOut, setLoadTimedOut] = useState(false)
+  const [frameVersion, setFrameVersion] = useState(0)
+  const manualRequestRef = useRef(0)
   const embedUrl = getIPhoneContactEmbedUrl(IPHONE_CONTACT_POPUP)
+
+  const openDialog = useCallback(() => {
+    const dialog = dialogRef.current
+    if (!embedUrl || !dialog || typeof dialog.showModal !== 'function' || dialog.open || document.hidden) return
+    setShouldLoad(true)
+    dialog.showModal()
+    shownInDocument = true
+    try { sessionStorage.setItem(IPHONE_POPUP_SESSION_KEY, '1') } catch { /* Document fallback. */ }
+    setIsOpen(true)
+  }, [embedUrl])
+
+  useEffect(() => {
+    if (openRequest <= manualRequestRef.current) return
+    manualRequestRef.current = openRequest
+    openDialog()
+  }, [openRequest, openDialog])
+
+  useEffect(() => {
+    if (!shouldLoad || frameLoaded) return
+    const timeout = setTimeout(() => setLoadTimedOut(true), 8000)
+    return () => clearTimeout(timeout)
+  }, [shouldLoad, frameLoaded, frameVersion])
+
+  const retry = () => {
+    setFrameLoaded(false)
+    setLoadTimedOut(false)
+    setFrameVersion(value => value + 1)
+  }
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -27,22 +60,21 @@ export const IPhoneContactPopup = () => {
     let visibleSince: number | null = null
     let timer: ReturnType<typeof setTimeout> | undefined
     let focusTimer: ReturnType<typeof setTimeout> | undefined
+    let warmTimer: ReturnType<typeof setTimeout> | undefined
     let previousScrollTop = document.documentElement.scrollTop
 
     const show = () => {
       if (shown || shownInDocument || document.hidden || isEditing()) return
       // A second mounted instance must also respect the shared session guard.
       try { if (sessionStorage.getItem(IPHONE_POPUP_SESSION_KEY) === '1') return } catch { /* Memory fallback. */ }
-      dialog.showModal()
       shown = true
-      shownInDocument = true
       clearTimeout(timer)
-      try { sessionStorage.setItem(IPHONE_POPUP_SESSION_KEY, '1') } catch { /* No personal data is stored. */ }
-      setIsOpen(true)
+      openDialog()
     }
     const requestShow = () => { pending = true; show() }
     const pauseTimer = () => {
       clearTimeout(timer)
+      clearTimeout(warmTimer)
       if (visibleSince !== null) remaining = Math.max(0, remaining - (performance.now() - visibleSince))
       visibleSince = null
     }
@@ -50,6 +82,9 @@ export const IPhoneContactPopup = () => {
       if (shown || document.hidden || pending) return
       visibleSince = performance.now()
       timer = setTimeout(requestShow, remaining)
+      // Use the existing wait before automatic display to fetch the external form.
+      // No preload for sessions already dismissed; manual reopening still works.
+      warmTimer = setTimeout(() => { if (!document.hidden) setShouldLoad(true) }, Math.min(1000, remaining))
     }
     const visibility = () => {
       pauseTimer()
@@ -83,7 +118,7 @@ export const IPhoneContactPopup = () => {
       window.removeEventListener('scroll', scroll)
       if (dialog.open) dialog.close()
     }
-  }, [embedUrl])
+  }, [embedUrl, openDialog])
 
   if (!embedUrl) return null
   return <dialog ref={dialogRef} className="iphone-contact-popup" aria-labelledby="iphone-contact-title" aria-describedby="iphone-contact-description" onClose={() => setIsOpen(false)} data-clarity-mask="true" data-hj-suppress>
@@ -93,7 +128,18 @@ export const IPhoneContactPopup = () => {
       <h2 id="iphone-contact-title" className="sr-only">Quer ajuda para escolher seu iPhone?</h2>
       <p id="iphone-contact-description" className="sr-only">Deixe seu nome e WhatsApp para a equipe falar com você sobre modelos e condições.</p>
     </div>
-    {isOpen && <iframe src={embedUrl} title="Solicitar contato da equipe Master Prime" className="iphone-contact-popup-frame" referrerPolicy="no-referrer" />}
+    <div className="iphone-contact-popup-body" aria-busy={!frameLoaded}>
+      {isOpen && !frameLoaded && <div className="iphone-contact-popup-loading" role="status">
+        <span className="iphone-contact-popup-spinner" aria-hidden="true" />
+        <p>{loadTimedOut ? 'O formulário está demorando para carregar.' : 'Carregando formulário…'}</p>
+        {loadTimedOut && <button type="button" onClick={retry}>Tentar novamente</button>}
+      </div>}
+      {shouldLoad && <iframe key={frameVersion} src={embedUrl} title="Solicitar contato da equipe Master Prime" className={`iphone-contact-popup-frame${frameLoaded ? '' : ' is-loading'}`} referrerPolicy="no-referrer" loading="eager" tabIndex={frameLoaded ? 0 : -1} onLoad={() => { setFrameLoaded(true); setLoadTimedOut(false) }} onError={() => setLoadTimedOut(true)} />}
+    </div>
+    <div className="iphone-contact-popup-alternatives">
+      <button type="button" onClick={retry}>Recarregar formulário</button>
+      <a href={embedUrl.replace('/embed/', '/r/')} target="_blank" rel="noopener noreferrer">Abrir em outra aba</a>
+    </div>
     <a className="iphone-contact-popup-privacy" href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer">Política de privacidade</a>
   </dialog>
 }

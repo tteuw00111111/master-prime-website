@@ -31,7 +31,8 @@
     "test:iphone-csp-browser": "node scripts/test-iphone-csp-browser.mjs",
     "test:iphone-attribution-browser": "node scripts/test-iphone-attribution-browser.mjs",
     "test:iphone-contact-popup-browser": "node scripts/test-iphone-contact-popup-browser.mjs",
-    "test:iphone-contact-popup-real-readonly": "node scripts/test-iphone-contact-popup-real-readonly.mjs"
+    "test:iphone-contact-popup-real-readonly": "node scripts/test-iphone-contact-popup-real-readonly.mjs",
+    "test:iphone-contact-popup-loading": "node scripts/test-iphone-contact-popup-loading.mjs"
   },
   "dependencies": {
     "@google/model-viewer": "^4.4.0",
