@@ -1,6 +1,5 @@
 import type { IPhoneContactPopupConfig } from '@/data/iphone-contact-popup'
 
-export const IPHONE_POPUP_SESSION_KEY = 'master-prime:iphone-contact-popup:shown:v1'
 export const IPHONE_POPUP_VISIBLE_MS = 7000
 
 export function getIPhoneContactEmbedUrl(config: IPhoneContactPopupConfig): string | null {

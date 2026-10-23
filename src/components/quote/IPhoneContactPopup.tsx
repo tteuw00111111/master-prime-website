@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { FiX } from 'react-icons/fi'
 import { IPHONE_CONTACT_POPUP } from '@/data/iphone-contact-popup'
-import { getIPhoneContactEmbedUrl, IPHONE_POPUP_SESSION_KEY, IPHONE_POPUP_VISIBLE_MS } from '@/utils/iphone-contact-popup'
+import { getIPhoneContactEmbedUrl, IPHONE_POPUP_VISIBLE_MS } from '@/utils/iphone-contact-popup'
 import '@/styles/iphone-contact-popup.css'
 
-// Fallback only for this document when sessionStorage is unavailable.
+// One automatic display per loaded document; a new visit starts fresh.
 let shownInDocument = false
 
 const isEditing = () => document.activeElement instanceof HTMLElement && (
@@ -27,7 +27,6 @@ export const IPhoneContactPopup = ({ openRequest = 0 }: { openRequest?: number }
     setShouldLoad(true)
     dialog.showModal()
     shownInDocument = true
-    try { sessionStorage.setItem(IPHONE_POPUP_SESSION_KEY, '1') } catch { /* Document fallback. */ }
     setIsOpen(true)
   }, [embedUrl])
 
@@ -52,7 +51,6 @@ export const IPhoneContactPopup = ({ openRequest = 0 }: { openRequest?: number }
   useEffect(() => {
     const dialog = dialogRef.current
     if (!embedUrl || !dialog || typeof dialog.showModal !== 'function' || shownInDocument) return
-    try { if (sessionStorage.getItem(IPHONE_POPUP_SESSION_KEY) === '1') return } catch { /* Memory fallback. */ }
 
     let shown = false
     let pending = false
@@ -65,8 +63,6 @@ export const IPhoneContactPopup = ({ openRequest = 0 }: { openRequest?: number }
 
     const show = () => {
       if (shown || shownInDocument || document.hidden || isEditing()) return
-      // A second mounted instance must also respect the shared session guard.
-      try { if (sessionStorage.getItem(IPHONE_POPUP_SESSION_KEY) === '1') return } catch { /* Memory fallback. */ }
       shown = true
       clearTimeout(timer)
       openDialog()
@@ -83,7 +79,7 @@ export const IPhoneContactPopup = ({ openRequest = 0 }: { openRequest?: number }
       visibleSince = performance.now()
       timer = setTimeout(requestShow, remaining)
       // Use the existing wait before automatic display to fetch the external form.
-      // No preload for sessions already dismissed; manual reopening still works.
+      // A dismissed document does not reopen automatically; manual reopening works.
       warmTimer = setTimeout(() => { if (!document.hidden) setShouldLoad(true) }, Math.min(1000, remaining))
     }
     const visibility = () => {

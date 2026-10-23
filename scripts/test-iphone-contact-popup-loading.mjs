@@ -13,7 +13,7 @@ const report={checks:[],errors:[],realExternalAllowed:0}
 const html='<!doctype html><html lang="pt-BR"><body style="background:#1a1917;color:white"><label>Nome<input name="nome"></label><label>WhatsApp<input name="whatsapp" type="tel"></label><button>Enviar simulado</button></body></html>'
 for (const [name, engine, executablePath] of [['Chromium',chromium,process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE],['WebKit',webkit,process.env.PLAYWRIGHT_WEBKIT_EXECUTABLE]]) {
  const browser=await engine.launch({headless:true,executablePath:executablePath||undefined})
- async function fixture(){
+ async function fixture({legacyFlag=false}={}){
   const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'})
   const requests=[], releases=[]
   let allow=false
@@ -31,6 +31,7 @@ for (const [name, engine, executablePath] of [['Chromium',chromium,process.env.P
    const response=await route.fetch()
    return route.fulfill({response,headers:{...response.headers(),'content-security-policy':cspFor(url.href)}})
   })
+  if(legacyFlag)await context.addInitScript(()=>sessionStorage.setItem('master-prime:iphone-contact-popup:shown:v1','1'))
   const page=await context.newPage()
   page.on('pageerror',e=>report.errors.push(`${name}: ${e.message}`))
   await page.clock.install();await page.clock.pauseAt(new Date(Date.now()+100))
@@ -76,9 +77,10 @@ for (const [name, engine, executablePath] of [['Chromium',chromium,process.env.P
    assert.equal(f.requests.length,2,'Reopen reuses the frame')
    await f.page.getByRole('button',{name:'Fechar convite de contato'}).click()
    await f.page.reload({waitUntil:'networkidle'});await f.tick(9000)
-   assert.equal(await f.dialog.evaluate(d=>d.open),false)
-   assert.equal(f.requests.length,2,'Dismissed session does not preload or reopen automatically')
-   await f.page.getByRole('button',{name:'Quero receber contato da equipe'}).click();await f.waitRequests(3);await f.loaded()
+   assert.equal(await f.dialog.evaluate(d=>d.open),true,'A new page visit opens automatically again')
+   assert.equal(f.requests.length,3,'Fresh document prepares its own form')
+   await f.page.getByRole('button',{name:'Fechar convite de contato'}).click()
+   await f.page.getByRole('button',{name:'Quero receber contato da equipe'}).click();await f.loaded()
    assert.equal(await f.dialog.evaluate(d=>d.open),true)
    await f.page.getByRole('button',{name:'Fechar convite de contato'}).click()
    await f.page.getByRole('link',{name:'Ver opções de iPhone 17 Pro Max lacrado',exact:true}).click()
@@ -87,6 +89,15 @@ for (const [name, engine, executablePath] of [['Chromium',chromium,process.env.P
    assert.equal(await f.dialog.evaluate(d=>d.open),true)
    assert.equal(f.requests.length,3,'Configurator manual action also reuses the prepared frame')
    await f.context.close();report.checks.push(`${name}: early scroll gives loading status, slow response offers retry, manual reopen in same session/after refresh works without automatic repetition`)
+  }
+  {
+   const f=await fixture({legacyFlag:true})
+   await f.tick(1000);await f.waitRequests(1);f.release();await f.loaded();await f.tick(6000)
+   assert.equal(await f.dialog.evaluate(d=>d.open),true,'Legacy session flag cannot block a new visit')
+   await f.page.getByRole('button',{name:'Fechar convite de contato'}).click()
+   await f.tick(15000);await f.scroll()
+   assert.equal(await f.dialog.evaluate(d=>d.open),false,'Closing prevents automatic repeat in the same document')
+   await f.context.close();report.checks.push(`${name}: legacy suppression flag ignored on a new visit; close still prevents same-document repetition`)
   }
  }finally{await browser.close()}
 }

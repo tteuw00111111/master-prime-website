@@ -143,8 +143,8 @@ try {
           await page.reload({waitUntil:'networkidle'})
           await page.evaluate(() => {const r=document.documentElement;window.scrollTo(0,Math.ceil((r.scrollHeight-r.clientHeight)*.3))})
           await page.waitForTimeout(7200)
-          assert.equal(await page.locator('dialog').evaluate(node => node.open),false)
-          assert.equal(await page.locator('iframe').count(),0)
+          assert.equal(await page.locator('dialog').evaluate(node => node.open),true,'A fresh visit opens automatically, even after closing the previous page')
+          assert.equal(await page.locator('iframe').count(),1)
         }
       }
       report.checks.push({mode,viewport,form:state,host,tabToPhone,tabToContact,iframeEscapeLimitation})
