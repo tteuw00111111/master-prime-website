@@ -142,10 +142,13 @@ test('sales URL validates destination and shares the confirmed cellphone quote n
 const attribution = '?utm_source=ig&utm_medium=paid_social&utm_campaign=qa_iphone_site&utm_content=99000000000001&campaign_id=99000000000002&adset_id=99000000000003'
 const browser = (search = attribution) => {
   const values = new Map(), calls = []
+  const fbq = (...args) => calls.push(args)
+  fbq.callMethod = fbq
   return { values, calls, dataLayer: [], location: { search }, crypto: globalThis.crypto,
-    fbq: (...args) => calls.push(args), sessionStorage: { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) } }
+    fbq, addEventListener: () => {}, removeEventListener: () => {},
+    setTimeout: () => 1, clearTimeout: () => {}, sessionStorage: { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) } }
 }
-const withBrowser = run => { const previous = globalThis.window; const mock = browser(); globalThis.window = mock; try { run(mock) } finally { if (previous === undefined) delete globalThis.window; else globalThis.window = previous } }
+const withBrowser = run => { const priorDocument = globalThis.document; globalThis.document = { addEventListener() {}, removeEventListener() {} }; const previous = globalThis.window; const mock = browser(); globalThis.window = mock; try { run(mock) } finally { if (priorDocument === undefined) delete globalThis.document; else globalThis.document = priorDocument; if (previous === undefined) delete globalThis.window; else globalThis.window = previous } }
 test('purchase namespace is exact, deduplicated across edits, review, reload and reopening', () => withBrowser(mock => {
   let tracker = tracking.createIPhonePurchaseTracker(complete().selection)
   const milestones = [['viewed'], ['started'], ...['product', 'payment'].map(s => ['step', s]), ['reviewed'], ['whatsapp']]

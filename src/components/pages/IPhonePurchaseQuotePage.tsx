@@ -84,6 +84,12 @@ export const IPhonePurchaseQuotePage = () => {
     setReady(true)
     tracker.current.track('viewed', initial)
   }, [])
+  // Reattach after StrictMode's effect replay; release callbacks on real unmount.
+  useEffect(() => {
+    const current = tracker.current
+    current?.resume()
+    return () => current?.dispose()
+  }, [])
   useEffect(() => {
     if (!ready) return
     try { sessionStorage.setItem(IPHONE_STORAGE_KEY, JSON.stringify({ draft, screen, savedAt: Date.now(), attemptId: tracker.current?.attemptId, entryKey: entryKey.current, catalogFingerprint: fingerprint })) } catch { /* No persistence required to prepare a message. */ }

@@ -25,6 +25,7 @@ const setup = async (options = {}) => {
   await context.addInitScript(() => {
     window.__qaPixel = []; window.__qaOpen = []; window.__qaCopy = []; window.__qaCopyFails = false
     window.fbq = (...args) => window.__qaPixel.push(args)
+    window.fbq.callMethod = window.fbq
     window.open = (...args) => { window.__qaOpen.push(args); return null }
     Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async text => { if (window.__qaCopyFails) throw Error('QA clipboard blocked'); window.__qaCopy.push(text) } } })
   })
