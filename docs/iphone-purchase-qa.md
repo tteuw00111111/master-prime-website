@@ -1,3 +1,5 @@
+> Atualização Clarity de 23/10/2026: a ausência de Clarity descrita nas execuções históricas abaixo foi substituída pelo carregamento do projeto existente `v6kk9ke9ye`, mantendo GTM bloqueado e máscaras. Ver a seção final específica; nenhuma mudança no tracker faz parte desta contribuição.
+
 > Estado atual: jornada reduzida `2026-10-21.reduced-v1`, descrita na seção final. As seções anteriores registram os testes das versões históricas, incluindo a triagem removida.
 
 # QA — orçamento de compra de iPhone
@@ -149,3 +151,33 @@ Comandos: `npm run lint`, `npm run build`, `npm test` e as oito suítes `test:ip
 Todos os testes bloqueiam rede externa e interceptam a abertura de WhatsApp. Não enviam eventos reais nem mensagens comerciais fictícias. O observador de Meta valida disponibilidade da URL/contrato e chamada de transporte, não o SDK real, entrega ou recebimento na Meta/GA4. Validação real de consentimento, conversão e identificação da conversa permanece com a mídia; nenhuma campanha/conversão foi alterada.
 
 Commit, push e deploy estão autorizados. O hash e o resultado final de publicação serão informados na entrega após verificação da Vercel e da jornada pública com transports externos bloqueados.
+
+
+## Reativação isolada do Clarity — 23/10/2026
+
+O projeto existente `v6kk9ke9ye` volta a carregar em catálogo e configurador. GTM continua ausente; `autoConfig=false` do Pixel precede init. O formulário inteiro recebeu `clarity-mask` e `data-clarity-mask="true"`, preservando também a máscara interna da revisão/textarea. A rota não coleta nome, telefone nem notas livres; URL e hash privados são limpos antes dos transportes. Nenhum identify, evento ou tag personalizada de Clarity foi acrescentado.
+
+A CSP adicional de `/orcamento/iphone/:path*`, complementada pela regra literal `/orcamento/iphone/`, permite `scripts.clarity.ms` em script-src e `c.clarity.ms` em img-src; connect-src já permite os coletores Clarity. A política global e os demais transportes ficam preservados. Pré-renderização continua removendo noscript de GTM/Pixel na compra; Clarity não possui esse fallback.
+
+`node scripts/test-iphone-clarity-browser.mjs` usa somente localhost e SDKs simulados: tag Clarity, segundo estágio do runtime, imagem e collect são stubs locais interceptados; Pixel/GTM e toda rede externa/API/WhatsApp são interceptados. Seleciona a CSP do vercel.json com o parser oficial da Vercel para cada pathname e a aplica ao documento local e verifica catálogo, link direto, barra final, etapas, revisão, cópia com falha, navegação/retorno/reload, URL limpa antes do stub, ausência de dados privados nos eventos e preservação de reparo/home. Não é o SDK real nem prova de sessão gravada, máscara no servidor, recebimento Meta ou consentimento real. As regras de máscara vêm da [documentação Microsoft](https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-masking).
+
+A execução e os logs desta contribuição ficam no relatório de integração de 23/10 em `relatorios/2026-10-23-iphone-republicacao/clarity/` no repositório de mídia. Sem commit/push/deploy nesta etapa; o pai integra o tracking e valida uma publicação única. As seções históricas acima são mantidas como registro das execuções anteriores.
+
+
+## Correção CSP da barra final — 23/10/2026, R3
+
+O QA público da R2 recebeu a CSP da compra em `/orcamento/iphone`, mas a global em `/orcamento/iphone/`, ambas 200, também com query. A R3 acrescenta somente a regra literal `/orcamento/iphone/` com a mesma CSP da compra; conserva a regra existente e todos os bytes da política global. Não altera redirecionamentos nem `trailingSlash`.
+
+A [documentação Vercel](https://vercel.com/docs/project-configuration/vercel-json#headers) define `source` sobre o pathname, excluindo a query. O [parser oficial](https://github.com/vercel/vercel/blob/main/packages/routing-utils/src/superstatic.ts) compila headers via `sourceToRegex` com `strict: true`: na expressão gerada para `/:path*`, o segmento é opcional, mas, se a barra aparece, o conteúdo do segmento não pode ser vazio. Assim, a raiz sem barra casa; a raiz com barra e segmento vazio não. A regra literal cobre essa variante sem estender a política para páginas irmãs. Sem `trailingSlash` configurado, [as duas variantes podem servir conteúdo sem redirecionamento](https://vercel.com/docs/project-configuration/vercel-json#trailingslash).
+
+`node scripts/test-iphone-csp-config.mjs` valida o parser, quatro URLs da compra (duas formas × com/sem query), seis caminhos fora da compra e reproduz a falha ao remover a nova regra. Os testes de navegador CSP/Clarity agora selecionam a política pela configuração interpretada pelo parser, em vez de assumir uma única source ou usar uma regex própria que aceitava indevidamente a barra final.
+
+Ferramentas de QA podem ficar fora da aplicação, sem alterar dependências de produção:
+
+```sh
+npm install --prefix /tmp/iphone-csp-qa-tools --no-audit --no-fund @vercel/routing-utils@6.6.0
+export VERCEL_ROUTING_MODULE=/tmp/iphone-csp-qa-tools/node_modules/@vercel/routing-utils/dist/index.js
+node scripts/test-iphone-csp-config.mjs
+```
+
+Os scripts de navegador mantêm `PLAYWRIGHT_MODULE` e `IPHONE_QA_URL` para tooling/servidor locais. Parser, servidor local e CSP aplicada no navegador não provam o header entregue pelo edge Vercel: antes de aceitar a publicação, conferir os headers reais das quatro URLs públicas, sem substituir CSP na interceptação. SDKs, coletores, APIs e WhatsApp devem continuar interceptados; não enviar eventos reais.
