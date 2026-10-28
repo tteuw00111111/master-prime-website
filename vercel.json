@@ -7,6 +7,36 @@
   "installCommand": "npm install",
   "redirects": [
     {
+      "source": "/videogame/ps4-nao-liga/index.html",
+      "destination": "/videogame/ps4-nao-liga",
+      "statusCode": 301
+    },
+    {
+      "source": "/videogame/ps4-liga-e-desliga/index.html",
+      "destination": "/videogame/ps4-liga-e-desliga",
+      "statusCode": 301
+    },
+    {
+      "source": "/videogame/ps4-sem-imagem/index.html",
+      "destination": "/videogame/ps4-sem-imagem",
+      "statusCode": 301
+    },
+    {
+      "source": "/videogame/limpeza-e-manutencao-ps4/index.html",
+      "destination": "/videogame/limpeza-e-manutencao-ps4",
+      "statusCode": 301
+    },
+    {
+      "source": "/videogame/ps5-sem-imagem/index.html",
+      "destination": "/videogame/ps5-sem-imagem",
+      "statusCode": 301
+    },
+    {
+      "source": "/videogame/limpeza-e-manutencao-ps5/index.html",
+      "destination": "/videogame/limpeza-e-manutencao-ps5",
+      "statusCode": 301
+    },
+    {
       "source": "/presell",
       "destination": "/",
       "statusCode": 301
