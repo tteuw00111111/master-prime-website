@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Personalização de Controle e Console</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Escolha a skin ou capa do seu PS5, PS4 ou Xbox e peça pelo WhatsApp. Aplicação feita pela Master Prime, Campo Grande/RJ.">
+<meta property="og:title" content="Personalização de Controle e Console · Master Prime">
+<meta property="og:description" content="Skins e capas para PS5, PS4, Xbox Series e Xbox One. Escolha o modelo e mande o código no WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@300;700;900&display=swap">
+<style>
+/* Layout: vitrine de loja de bancada — escolha console → tipo → modelo; grade de cards, pedido direto no WhatsApp */
+:root{
+  --bg:#0a0a0a; --surface:#151515; --surface-2:#1e1e1e; --line:#2a2a26;
+  --fg:#f5f5f7; --muted:#a5a5ad; --gold:#ffd700; --gold-soft:#e4d074; --wa:#25d366; --wa-ink:#06260f;
+  --display:"Inter Tight","Inter",system-ui,sans-serif; --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--body)}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+header.top{padding-block:28px 18px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font:900 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase}
+.brand{text-decoration:none}.brand img{height:48px;width:auto}
+h1{font:900 clamp(30px,7vw,52px)/1.02 var(--display);letter-spacing:-.02em;margin:18px 0 10px;text-wrap:balance}
+h1 em{font-style:normal;font-weight:300;color:var(--gold)}
+.lede{color:var(--muted);max-width:60ch;margin:0}
+.steps{display:flex;flex-wrap:wrap;gap:8px 18px;margin:16px 0 0;padding:0;list-style:none;counter-reset:s;font-size:13px;color:var(--muted)}
+.steps li{counter-increment:s;display:flex;gap:7px;align-items:center}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--surface-2);color:var(--gold);font:700 11px/1 var(--body)}
+
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(10,10,10,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-direction:column;gap:10px;padding-block:12px}
+.consoles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;background:var(--surface);padding:4px;border-radius:12px}
+.consoles button{border:0;background:transparent;padding:10px 4px;border-radius:9px;font:700 14px/1 var(--display);cursor:pointer;color:var(--muted);white-space:nowrap}
+.consoles button[aria-pressed="true"]{background:var(--gold);color:#0a0a0a}
+.row{display:flex;gap:8px;align-items:center;min-width:0}
+.types{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.types::-webkit-scrollbar{display:none}
+.types button{flex:none;border:1px solid var(--line);background:transparent;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:500;cursor:pointer;color:var(--fg)}
+.types button span{color:var(--muted);font-variant-numeric:tabular-nums;margin-left:4px}
+.types button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.types button[aria-pressed="true"] span{color:var(--gold-soft)}
+.search{position:relative}
+.search input{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px 10px 36px;color:var(--fg);font:inherit;font-size:15px}
+.search input::placeholder{color:var(--muted)}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted)}
+
+main{padding-block:18px 40px}
+.meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+@media (max-width:420px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+.card{background:var(--surface);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.card .ph{aspect-ratio:1;background:#f1f1f1;border:0;padding:0;cursor:zoom-in;display:block;width:100%}
+.card .ph img{width:100%;height:100%;object-fit:contain}
+.card .info{padding:10px 10px 12px;display:flex;flex-direction:column;gap:2px;flex:1}
+.code{font:700 14px/1.2 var(--display);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.var{color:var(--muted);font-size:12px;line-height:1.35;min-height:1.35em}
+.want{margin-top:auto;padding-top:8px}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;border:0;border-radius:9px;background:var(--wa);color:var(--wa-ink);font-weight:700;font-size:13px;padding:9px 8px;cursor:pointer;text-decoration:none}
+.btn-wa svg{width:15px;height:15px;fill:currentColor}
+.more{display:flex;justify-content:center;margin-top:20px}
+.more button{background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:999px;padding:11px 22px;font-weight:600;cursor:pointer}
+.empty{padding:40px 0;color:var(--muted);text-align:center}
+
+footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+footer strong{color:var(--fg)}
+
+dialog{border:0;padding:0;background:var(--surface);color:var(--fg);border-radius:16px;width:min(560px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.78)}
+dialog .big{background:#f1f1f1;aspect-ratio:1}
+dialog .big img{width:100%;height:100%;object-fit:contain}
+dialog .body{padding:16px;display:flex;flex-direction:column;gap:10px}
+dialog .close{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(10,10,10,.75);color:#fff;font-size:20px;cursor:pointer}
+dialog h2{font:900 22px/1.1 var(--display);margin:0}
+.copy{background:transparent;border:1px solid var(--line);border-radius:9px;padding:9px;cursor:pointer;font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .15s}.card:hover{transform:translateY(-2px)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/" aria-label="Master Prime — página inicial"><img src="/personalizacao/logo.webp" alt="Master Prime" width="639" height="376"></a>
+  <h1>Personalize seu <em>controle</em> e console</h1>
+  <p class="lede">Skins e capas para PS5, PS4, Xbox Series e Xbox One. Escolha o modelo, mande o código no WhatsApp e a gente aplica.</p>
+  <ol class="steps"><li>Escolha o console</li><li>Toque em “Quero esse”</li><li>Combine valor e aplicação no WhatsApp</li></ol>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <div class="consoles" id="consoles" role="group" aria-label="Console"></div>
+  <div class="row"><div class="types" id="types" role="group" aria-label="Tipo"></div></div>
+  <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Buscar pelo código (ex.: 029)" autocomplete="off" aria-label="Buscar">
+  </label>
+</div></div>
+
+<main><div class="wrap">
+  <div class="meta"><span id="count"></span><span id="price"></span></div>
+  <div class="grid" id="grid"></div>
+  <div class="more"><button id="more" type="button" hidden>Mostrar mais modelos</button></div>
+</div></main>
+
+<footer><div class="wrap">
+  <span><strong>Master Prime</strong> · Av. Cesário de Melo, 2571 · Campo Grande/RJ</span>
+  <span>WhatsApp <strong id="wa-label"></strong> · Seg–Sex 9h–19h, Sáb 9h–16h</span>
+  <span>Fotos ilustrativas. Disponibilidade e prazo confirmados no atendimento.</span>
+</div></footer>
+
+<dialog id="dlg" aria-label="Detalhes do modelo">
+  <button class="close" id="dlg-close" type="button" aria-label="Fechar">×</button>
+  <div class="big"><img id="dlg-img" alt=""></div>
+  <div class="body">
+    <h2 id="dlg-code"></h2><div class="var" id="dlg-var"></div>
+    <a class="btn-wa" id="dlg-wa" target="_blank" rel="noopener"></a>
+    <button class="copy" id="dlg-copy" type="button">Copiar código</button>
+  </div>
+</dialog>
+
+<script>
+let DATA=[];
+const CONSOLES={"ps5": "PS5", "ps4": "PS4", "xsx": "Xbox Series", "xone": "Xbox One"};
+const TYPES={"skin_controle": "Skin de controle", "skin_console": "Skin de console", "capa_console": "Capa antipoeira", "capa_controle": "Case para guardar controle"};
+const CFG={"whatsapp": "5521996527406", "whatsappLabel": "(21) 99652-7406", "preco": "Valor sob consulta no WhatsApp"};
+const PAGE=40;
+const WA_ICON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>';
+const img=(id,s)=>`https://http2.mlstatic.com/D_Q_NP_${id}-${s}.webp`;
+const label=it=>`${CONSOLES[it.c]} · ${TYPES[it.t]}`;
+const waLink=it=>`https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(`Olá! Quero a personalização ${it.k} (${label(it)}${it.v?' · '+it.v:''}). Qual o valor?`)}`;
+let state={c:'ps5',t:'all',q:'',shown:PAGE};
+const $=id=>document.getElementById(id);
+
+function readHash(){const h=location.hash.slice(1);if(CONSOLES[h])state.c=h;}
+function filtered(byType=true){
+  const q=state.q.trim().toLowerCase();
+  return DATA.filter(it=>it.c===state.c&&(!byType||state.t==='all'||it.t===state.t)&&(!q||it.k.toLowerCase().includes(q)||(it.v||"").toLowerCase().includes(q)));
+}
+function renderConsoles(){
+  $('consoles').innerHTML=Object.entries(CONSOLES).map(([k,v])=>`<button type="button" data-c="${k}" aria-pressed="${state.c===k}">${v}</button>`).join('');
+}
+function renderTypes(){
+  const base=filtered(false);const cnt={};base.forEach(it=>cnt[it.t]=(cnt[it.t]||0)+1);
+  if(state.t!=='all'&&!cnt[state.t])state.t='all';
+  const btns=[['all','Todos',base.length],...Object.keys(TYPES).filter(t=>cnt[t]).map(t=>[t,TYPES[t],cnt[t]])];
+  $('types').innerHTML=btns.map(([k,v,n])=>`<button type="button" data-t="${k}" aria-pressed="${state.t===k}">${v}<span>${n}</span></button>`).join('');
+}
+function card(it,i){
+  return `<article class="card"><button class="ph" type="button" data-i="${i}" aria-label="Ampliar ${it.k}"><img loading="lazy" decoding="async" src="${img(it.i,'V')}" alt="${label(it)} ${it.k}"></button>
+  <div class="info"><span class="code">${it.k}</span><span class="var">${it.v||TYPES[it.t]}</span>
+  <div class="want"><a class="btn-wa" href="${waLink(it)}" target="_blank" rel="noopener">${WA_ICON}Quero esse</a></div></div></article>`;
+}
+let current=[];
+function renderGrid(){
+  current=filtered();
+  const list=current.slice(0,state.shown);
+  $('grid').innerHTML=list.length?list.map(card).join(''):'<p class="empty">Nenhum modelo com esse código. Confira o número ou troque o console.</p>';
+  $('count').textContent=`${current.length} modelos · ${CONSOLES[state.c]}`;
+  $('more').hidden=current.length<=state.shown;
+}
+function render(){renderConsoles();renderTypes();renderGrid();}
+
+$('consoles').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;state.c=b.dataset.c;state.t='all';state.shown=PAGE;history.replaceState(null,'','#'+state.c);render();});
+$('types').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;state.t=b.dataset.t;state.shown=PAGE;renderTypes();renderGrid();});
+let qt;$('q').addEventListener('input',e=>{clearTimeout(qt);qt=setTimeout(()=>{state.q=e.target.value;state.shown=PAGE;renderTypes();renderGrid();},150);});
+$('more').addEventListener('click',()=>{state.shown+=PAGE;renderGrid();});
+window.addEventListener('hashchange',()=>{readHash();state.t='all';state.shown=PAGE;render();});
+
+const dlg=$('dlg');let dlgItem=null;
+$('grid').addEventListener('click',e=>{const b=e.target.closest('.ph');if(!b)return;const it=current[+b.dataset.i];dlgItem=it;
+  $('dlg-img').src=img(it.i,'B');$('dlg-img').alt=`${label(it)} ${it.k}`;$('dlg-code').textContent=it.k;
+  $('dlg-var').textContent=label(it)+(it.v?' · '+it.v:'');$('dlg-wa').href=waLink(it);$('dlg-wa').innerHTML=WA_ICON+'Quero esse modelo';
+  $('dlg-copy').textContent='Copiar código';dlg.showModal();});
+$('dlg-close').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
+$('dlg-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(dlgItem.k);$('dlg-copy').textContent='Código copiado';}catch{$('dlg-copy').textContent=dlgItem.k;}});
+
+$('wa-label').textContent=CFG.whatsappLabel;$('price').textContent=CFG.preco;
+readHash();render();
+$('count').textContent='Carregando modelos…';
+fetch('/personalizacao/modelos.json').then(r=>r.json()).then(d=>{DATA=d;render();}).catch(()=>{$('grid').innerHTML='<p class="empty">Não foi possível carregar os modelos. Atualize a página ou chame no WhatsApp.</p>';});
+</script>
+</body>
+</html>
